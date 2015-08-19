@@ -3,7 +3,6 @@ var hierarchy =
     [ "PV::_Drop", "structPV_1_1__Drop.html", null ],
     [ "PV::BaseConnection", "classPV_1_1BaseConnection.html", [
       [ "PV::HyPerConn", "classPV_1_1HyPerConn.html", [
-        [ "PV::BiLinearConn", "classPV_1_1BiLinearConn.html", null ],
         [ "PV::CloneConn", "classPV_1_1CloneConn.html", [
           [ "PV::CloneKernelConn", "classPV_1_1CloneKernelConn.html", null ],
           [ "PV::PlasticCloneConn", "classPV_1_1PlasticCloneConn.html", null ]
@@ -13,9 +12,7 @@ var hierarchy =
         [ "PV::IdentConn", "classPV_1_1IdentConn.html", null ],
         [ "PV::ImprintConn", "classPV_1_1ImprintConn.html", null ],
         [ "PV::KernelConn", "classPV_1_1KernelConn.html", null ],
-        [ "PV::LCALIFLateralConn", "classPV_1_1LCALIFLateralConn.html", null ],
         [ "PV::MomentumConn", "classPV_1_1MomentumConn.html", null ],
-        [ "PV::OjaSTDPConn", "classPV_1_1OjaSTDPConn.html", null ],
         [ "PV::PoolingConn", "classPV_1_1PoolingConn.html", null ],
         [ "PV::privateTransposeConn", "classPV_1_1privateTransposeConn.html", null ],
         [ "PV::TransposeConn", "classPV_1_1TransposeConn.html", [
@@ -26,6 +23,16 @@ var hierarchy =
     ] ],
     [ "PV::BaseLayer", "classPV_1_1BaseLayer.html", [
       [ "PV::HyPerLayer", "classPV_1_1HyPerLayer.html", [
+        [ "PV::BaseInput", "classPV_1_1BaseInput.html", [
+          [ "PV::Image", "classPV_1_1Image.html", [
+            [ "PV::Movie", "classPV_1_1Movie.html", null ]
+          ] ],
+          [ "PV::ImageFromMemoryBuffer", "classPV_1_1ImageFromMemoryBuffer.html", null ],
+          [ "PV::ImagePvp", "classPV_1_1ImagePvp.html", [
+            [ "PV::MoviePvp", "classPV_1_1MoviePvp.html", null ]
+          ] ],
+          [ "PV::Patterns", "classPV_1_1Patterns.html", null ]
+        ] ],
         [ "PV::BinningLayer", "classPV_1_1BinningLayer.html", null ],
         [ "PV::CloneVLayer", "classPV_1_1CloneVLayer.html", [
           [ "PV::BackgroundLayer", "classPV_1_1BackgroundLayer.html", null ],
@@ -34,12 +41,6 @@ var hierarchy =
           [ "PV::RunningAverageLayer", "classPV_1_1RunningAverageLayer.html", null ],
           [ "PV::ShuffleLayer", "classPV_1_1ShuffleLayer.html", null ],
           [ "PV::SigmoidLayer", "classPV_1_1SigmoidLayer.html", null ]
-        ] ],
-        [ "PV::Image", "classPV_1_1Image.html", [
-          [ "PV::CreateMovies", "classPV_1_1CreateMovies.html", null ],
-          [ "PV::ImageFromMemoryBuffer", "classPV_1_1ImageFromMemoryBuffer.html", null ],
-          [ "PV::Movie", "classPV_1_1Movie.html", null ],
-          [ "PV::Patterns", "classPV_1_1Patterns.html", null ]
         ] ],
         [ "PV::KmeansLayer", "classPV_1_1KmeansLayer.html", null ],
         [ "PV::LabelLayer", "classPV_1_1LabelLayer.html", null ],
@@ -59,12 +60,11 @@ var hierarchy =
             [ "PV::ConstantLayer", "classPV_1_1ConstantLayer.html", null ],
             [ "PV::FilenameParsingGroundTruthLayer", "classPV_1_1FilenameParsingGroundTruthLayer.html", null ],
             [ "PV::HyPerLCALayer", "classPV_1_1HyPerLCALayer.html", null ],
-            [ "PV::IncrementLayer", "classPV_1_1IncrementLayer.html", null ],
+            [ "PV::ISTALayer", "classPV_1_1ISTALayer.html", null ],
             [ "PV::LabelErrorLayer", "classPV_1_1LabelErrorLayer.html", null ],
             [ "PV::LeakyIntegrator", "classPV_1_1LeakyIntegrator.html", null ],
             [ "PV::MaskLayer", "classPV_1_1MaskLayer.html", null ],
-            [ "PV::PtwiseProductLayer", "classPV_1_1PtwiseProductLayer.html", null ],
-            [ "PV::TrainingLayer", "classPV_1_1TrainingLayer.html", null ]
+            [ "PV::PtwiseProductLayer", "classPV_1_1PtwiseProductLayer.html", null ]
           ] ]
         ] ],
         [ "PV::Retina", "classPV_1_1Retina.html", null ],
@@ -77,18 +77,19 @@ var hierarchy =
           [ "PV::KernelProbe", "classPV_1_1KernelProbe.html", [
             [ "PV::L2ConnProbe", "classPV_1_1L2ConnProbe.html", null ]
           ] ]
-        ] ],
-        [ "PV::ConnFunctionProbe", "classPV_1_1ConnFunctionProbe.html", null ]
+        ] ]
       ] ],
       [ "PV::LayerProbe", "classPV_1_1LayerProbe.html", [
+        [ "PV::AbstractNormProbe", "classPV_1_1AbstractNormProbe.html", [
+          [ "PV::FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", null ],
+          [ "PV::L0NormProbe", "classPV_1_1L0NormProbe.html", null ],
+          [ "PV::L1NormProbe", "classPV_1_1L1NormProbe.html", null ],
+          [ "PV::L2NormProbe", "classPV_1_1L2NormProbe.html", null ]
+        ] ],
         [ "PV::PointProbe", "classPV_1_1PointProbe.html", [
           [ "PV::PointLIFProbe", "classPV_1_1PointLIFProbe.html", null ]
         ] ],
-        [ "PV::SparsityLayerProbe", "classPV_1_1SparsityLayerProbe.html", null ],
         [ "PV::StatsProbe", "classPV_1_1StatsProbe.html", [
-          [ "PV::LayerFunctionProbe", "classPV_1_1LayerFunctionProbe.html", [
-            [ "PV::L2NormProbe", "classPV_1_1L2NormProbe.html", null ]
-          ] ],
           [ "PV::RequireAllZeroActivityProbe", "classPV_1_1RequireAllZeroActivityProbe.html", null ]
         ] ]
       ] ]
@@ -96,20 +97,19 @@ var hierarchy =
     [ "box_muller_data", "structbox__muller__data.html", null ],
     [ "box_muller_state", "structbox__muller__state.html", null ],
     [ "PV::ColProbe", "classPV_1_1ColProbe.html", [
-      [ "PV::GenColProbe", "classPV_1_1GenColProbe.html", null ]
+      [ "PV::ColumnEnergyProbe", "classPV_1_1ColumnEnergyProbe.html", null ]
     ] ],
     [ "PV::Communicator", "classPV_1_1Communicator.html", [
       [ "PV::InterColComm", "classPV_1_1InterColComm.html", null ]
     ] ],
-    [ "CreateMovies_Params_", "structCreateMovies__Params__.html", null ],
     [ "CudaKernel", null, [
       [ "PVCuda::CudaRecvPost", "classPVCuda_1_1CudaRecvPost.html", null ],
       [ "PVCuda::CudaRecvPre", "classPVCuda_1_1CudaRecvPre.html", null ],
-      [ "PVCuda::CudaUpdateHyPerLCALayer", "classPVCuda_1_1CudaUpdateHyPerLCALayer.html", null ]
+      [ "PVCuda::CudaUpdateHyPerLCALayer", "classPVCuda_1_1CudaUpdateHyPerLCALayer.html", null ],
+      [ "PVCuda::CudaUpdateISTALayer", "classPVCuda_1_1CudaUpdateISTALayer.html", null ]
     ] ],
     [ "PV::DataStore", "classPV_1_1DataStore.html", null ],
-    [ "PV::gencolprobconnterm_", "structPV_1_1gencolprobconnterm__.html", null ],
-    [ "PV::gencolprobelayerterm_", "structPV_1_1gencolprobelayerterm__.html", null ],
+    [ "PV::energyterm_", "structPV_1_1energyterm__.html", null ],
     [ "PV::HyPerCol", "classPV_1_1HyPerCol.html", null ],
     [ "PVCuda::HyPerLCAParams", "structPVCuda_1_1HyPerLCAParams.html", null ],
     [ "indexvaluepair_", "structindexvaluepair__.html", null ],
@@ -147,9 +147,8 @@ var hierarchy =
       ] ],
       [ "PV::InitUniformWeightsParams", "classPV_1_1InitUniformWeightsParams.html", null ]
     ] ],
-    [ "PV::LayerFunction", "classPV_1_1LayerFunction.html", [
-      [ "PV::L2NormFunction", "classPV_1_1L2NormFunction.html", null ]
-    ] ],
+    [ "PVCuda::ISTAParams", "structPVCuda_1_1ISTAParams.html", null ],
+    [ "LIF_params_", "structLIF__params__.html", null ],
     [ "PV::NormalizeBase", "classPV_1_1NormalizeBase.html", [
       [ "PV::NormalizeContrastZeroMean", "classPV_1_1NormalizeContrastZeroMean.html", null ],
       [ "PV::NormalizeMultiply", "classPV_1_1NormalizeMultiply.html", [
@@ -186,5 +185,6 @@ var hierarchy =
     ] ],
     [ "PVCuda::recv_post_params", "structPVCuda_1_1recv__post__params.html", null ],
     [ "PVCuda::recv_pre_params", "structPVCuda_1_1recv__pre__params.html", null ],
+    [ "Retina_params_", "structRetina__params__.html", null ],
     [ "PV::Timer", "classPV_1_1Timer.html", null ]
 ];

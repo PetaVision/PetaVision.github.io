@@ -3,6 +3,7 @@ var structPVCuda_1_1recv__post__params =
     [ "dt_factor", "structPVCuda_1_1recv__post__params.html#aa8ef2cdb4a74e1eb0f2c4fc12379297f", null ],
     [ "localBufSizeX", "structPVCuda_1_1recv__post__params.html#a482055f4cdd173bc0be9f6bfcaef8add", null ],
     [ "localBufSizeY", "structPVCuda_1_1recv__post__params.html#adf376057924a46de6cb6806c1c51d4c0", null ],
+    [ "nbatch", "structPVCuda_1_1recv__post__params.html#a0aac21855d9c0dd5ff10099866a457c3", null ],
     [ "nbdn", "structPVCuda_1_1recv__post__params.html#a364253f375414879b0293f4a463c2961", null ],
     [ "nblt", "structPVCuda_1_1recv__post__params.html#aba86ae7ed6ac60109010684104c1472d", null ],
     [ "nbrt", "structPVCuda_1_1recv__post__params.html#a8505e0e26a3dd0df485382d5711cc091", null ],

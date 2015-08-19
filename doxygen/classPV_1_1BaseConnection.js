@@ -69,7 +69,7 @@ var classPV_1_1BaseConnection =
     [ "setPreLayerName", "classPV_1_1BaseConnection.html#aee5a7a38697c6e7ab61502d44daea61f", null ],
     [ "setPreSynapticLayer", "classPV_1_1BaseConnection.html#ac9ac6677b9533df9fbc991a5788de1c1", null ],
     [ "setReceiveGpu", "classPV_1_1BaseConnection.html#a84b67261072e5e282f54ac1e5785fa8a", null ],
-    [ "updateStateWrapper", "classPV_1_1BaseConnection.html#a25c05fd9460b34359571fde2f83eb4a9", null ],
+    [ "updateState", "classPV_1_1BaseConnection.html#a4d78988ac21c175c9cbd17b1ad9cf553", null ],
     [ "writeTimers", "classPV_1_1BaseConnection.html#adf4a1a8ae010fdaa5b3c4b507965a021", null ],
     [ "channel", "classPV_1_1BaseConnection.html#ab85bfd842d7406c7a0f2668fdf31fe38", null ],
     [ "connId", "classPV_1_1BaseConnection.html#a174e35722eaab21cd38eb2908f8903a7", null ],

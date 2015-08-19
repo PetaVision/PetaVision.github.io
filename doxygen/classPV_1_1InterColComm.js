@@ -37,6 +37,7 @@ var classPV_1_1InterColComm =
     [ "sendOffset", "classPV_1_1InterColComm.html#ab6dd1a4adb7211b9b60b176f9d38451c", null ],
     [ "subscribe", "classPV_1_1InterColComm.html#afc98111c6c654487f0337066a4ca91d1", null ],
     [ "updateActiveIndices", "classPV_1_1InterColComm.html#a54ed0dbdcdcf6cdac2a307d0ae0ab140", null ],
+    [ "updateAllActiveIndices", "classPV_1_1InterColComm.html#ae21587f05f946fb19cd5f6156c90fd26", null ],
     [ "wait", "classPV_1_1InterColComm.html#ab8141143cce754f7781dd5aba64664c8", null ],
     [ "borders", "classPV_1_1InterColComm.html#a25cab1490a56778e0ed0aea986b45116", null ],
     [ "neighbors", "classPV_1_1InterColComm.html#af994c24d7f2a15d7384848c1523ccf71", null ],
