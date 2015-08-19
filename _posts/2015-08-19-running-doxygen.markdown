@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Changes to Triggering"
+title:  "Updating doxygen-generated documentation"
 author: Pete Schultz
 categories: doxygen
 ---
