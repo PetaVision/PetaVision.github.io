@@ -113,7 +113,7 @@ var classPV_1_1CloneConn =
     [ "getPostNonextStrides", "classPV_1_1CloneConn.html#abcdddb3f6004287c0322076a0213124d", null ],
     [ "getPostToPreActivity", "classPV_1_1CloneConn.html#a5beee1ccca69ee24ce29167f9622b119", null ],
     [ "getPre", "classPV_1_1CloneConn.html#af01b5de07581cb4989e617d08c2ef77e", null ],
-    [ "getPreAndPostLayerNames", "classPV_1_1CloneConn.html#a6655f465c3758ccf16762bb29c3924f7", null ],
+    [ "getPreAndPostLayerNames", "classPV_1_1CloneConn.html#a5971614aa9ddc817be36c8e18e473aaf", null ],
     [ "getPreDataLocal", "classPV_1_1CloneConn.html#aec5c7e8040d583f50f1e903618a3cf68", null ],
     [ "getPreLayerName", "classPV_1_1CloneConn.html#a8183d3bbd51d0a21c50ee31e32d7d138", null ],
     [ "getProbe", "classPV_1_1CloneConn.html#a33f3a5e41b57a6d58e1c41e2b2254ff9", null ],

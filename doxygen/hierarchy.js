@@ -171,6 +171,7 @@ var hierarchy =
       [ "PV::CoreParamGroupHandler", "classPV_1_1CoreParamGroupHandler.html", null ]
     ] ],
     [ "PV::Publisher", "classPV_1_1Publisher.html", null ],
+    [ "PV::PV_Init", "classPV_1_1PV__Init.html", null ],
     [ "PV_Stream_", "structPV__Stream__.html", null ],
     [ "PVHalo_", "structPVHalo__.html", null ],
     [ "PVLayer_", "structPVLayer__.html", null ],

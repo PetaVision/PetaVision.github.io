@@ -154,6 +154,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac96d9dd9e441f16a94e3f40533f1567c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac96d9dd9e441f16a94e3f40533f1567c"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getMessage</b> ()</td></tr>
 <tr class="separator:ac96d9dd9e441f16a94e3f40533f1567c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f246b475a0a8c6934023e36f647aec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f246b475a0a8c6934023e36f647aec3"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getNormDescription</b> ()</td></tr>
+<tr class="separator:a0f246b475a0a8c6934023e36f647aec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad4d1dc8000229f262c9c45460593d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afad4d1dc8000229f262c9c45460593d4"></a>
 <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getParent</b> ()</td></tr>
 <tr class="separator:afad4d1dc8000229f262c9c45460593d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,8 +182,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initOutputStre
 <tr class="memitem:a08177a9ef6b9a12ff72566fbf10b6981"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08177a9ef6b9a12ff72566fbf10b6981"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParamsFillGroup</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:a08177a9ef6b9a12ff72566fbf10b6981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe78e9e6a4d8f3366634f4a91bd6a99"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1L2NormProbe.html#a4fe78e9e6a4d8f3366634f4a91bd6a99">outputState</a> (double timevalue)</td></tr>
-<tr class="separator:a4fe78e9e6a4d8f3366634f4a91bd6a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ebee9a1f793ab586828d9e2b0594bc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a98ebee9a1f793ab586828d9e2b0594bc">outputState</a> (double timevalue)</td></tr>
+<tr class="separator:a98ebee9a1f793ab586828d9e2b0594bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acded1e64e3fd0ae012fb264a60862e25"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1L2NormProbe.html#acded1e64e3fd0ae012fb264a60862e25">setNormDescription</a> ()</td></tr>
+<tr class="separator:acded1e64e3fd0ae012fb264a60862e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f47608eb5b9c941e2a92c6692b13e66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a4f47608eb5b9c941e2a92c6692b13e66">setNormDescriptionToString</a> (char const *s)</td></tr>
+<tr class="separator:a4f47608eb5b9c941e2a92c6692b13e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -573,7 +580,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a class="anchor" id="a4fe78e9e6a4d8f3366634f4a91bd6a99"></a>
+<a class="anchor" id="a98ebee9a1f793ab586828d9e2b0594bc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -581,7 +588,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::L2NormProbe::outputState </td>
+          <td class="memname">int PV::AbstractNormProbe::outputState </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timevalue</em></td><td>)</td>
@@ -590,13 +597,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Prints to the outputFile the probe message, timestamp, number of neurons, and norm value for each batch element </p>
+<p>Implements the outputState method required by classes derived from <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a>. Prints to the outputFile the probe message, timestamp, number of neurons, and norm value for each batch element. </p>
 
-<p>Reimplemented from <a class="el" href="classPV_1_1AbstractNormProbe.html#a98ebee9a1f793ab586828d9e2b0594bc">PV::AbstractNormProbe</a>.</p>
+<p>Implements <a class="el" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">PV::BaseProbe</a>.</p>
 
 </div>
 </div>
@@ -632,6 +639,57 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 <p>The public interface for calling the outputState method. BaseConnection::outputStateWrapper calls <a class="el" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">outputState()</a> if <a class="el" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate()</a> returns true. This behavior is intended to be general, but the method can be overridden if needed. </p>
+
+</div>
+</div>
+<a class="anchor" id="acded1e64e3fd0ae012fb264a60862e25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PV::L2NormProbe::setNormDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overrides <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">AbstractNormProbe::setNormDescription()</a>. If exponent == 1.0, normDescription is set to "L2-Norm". If exponent == 2.0, normDescription is set to "L2-Norm squared". Otherwise, it is set to "(L2-Norm)^exp", with "exp" replaced by the value of exponent. Return values and errno are set by a call to setNormDescriptionToString. </p>
+
+<p>Reimplemented from <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">PV::AbstractNormProbe</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f47608eb5b9c941e2a92c6692b13e66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PV::AbstractNormProbe::setNormDescriptionToString </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A generic method for <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">setNormDescription()</a> implementations to call. It frees normDescription if it has already been set, and then copies the string in the input argument to the normDescription member variable. It returns PV_SUCCESS or PV_FAILURE; on failure it sets errno. </p>
 
 </div>
 </div>

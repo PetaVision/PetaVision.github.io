@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"classPV_1_1BackgroundLayer.html#ab454e004f244b8ed564f128c125ffc80":[4,0,0,7,62],
+"classPV_1_1BackgroundLayer.html#ab5f02be99cb68ab3dff491508aca3547":[4,0,0,7,42],
+"classPV_1_1BackgroundLayer.html#ab8850f171b71fc6910824f471efdb17a":[4,0,0,7,24],
+"classPV_1_1BackgroundLayer.html#ab8a2312dc16b736d4959442ca0997136":[4,0,0,7,229],
 "classPV_1_1BackgroundLayer.html#aba0ae6d553d2ba41543da811c2589de9":[4,0,0,7,22],
 "classPV_1_1BackgroundLayer.html#abc557232b6bb1f6adc03f8915c729e3a":[4,0,0,7,60],
 "classPV_1_1BackgroundLayer.html#abc79d6b03883e6fa9c30bc7892c962ae":[4,0,0,7,114],
@@ -102,12 +106,12 @@ var NAVTREEINDEX7 =
 "classPV_1_1BaseConnection.html#a53366232c096004e249317148d8e6be3":[4,0,0,8,57],
 "classPV_1_1BaseConnection.html#a556aa9907b6bd34efb829825fb4d96cd":[4,0,0,8,33],
 "classPV_1_1BaseConnection.html#a583611025463b1d6f01069548417f018":[4,0,0,8,52],
+"classPV_1_1BaseConnection.html#a5971614aa9ddc817be36c8e18e473aaf":[4,0,0,8,24],
 "classPV_1_1BaseConnection.html#a60370ef49a456d96e388a646c55112b8":[4,0,0,8,32],
 "classPV_1_1BaseConnection.html#a605ab0c6f896a76244f1775551a7dc7e":[4,0,0,8,60],
 "classPV_1_1BaseConnection.html#a63f62714f2f1410c51bcdd4fe2214920":[4,0,0,8,55],
 "classPV_1_1BaseConnection.html#a6526e6b9a61301ebd6b5cc1df265b9ee":[4,0,0,8,1],
 "classPV_1_1BaseConnection.html#a663d09deb4f978c513ac5e4b6b8dbc89":[4,0,0,8,48],
-"classPV_1_1BaseConnection.html#a6655f465c3758ccf16762bb29c3924f7":[4,0,0,8,24],
 "classPV_1_1BaseConnection.html#a67eb85575bd12f1fc83d41efc0773dab":[4,0,0,8,88],
 "classPV_1_1BaseConnection.html#a6acb8e53bffb55c4fabaef0ebf88b35f":[4,0,0,8,38],
 "classPV_1_1BaseConnection.html#a6b2742c810f7fcfc91219f09b3174825":[4,0,0,8,46],
@@ -245,9 +249,5 @@ var NAVTREEINDEX7 =
 "classPV_1_1BaseHyPerConnProbe.html#ad07ed7f72fe06b751c2f035c649f2d36":[4,0,0,10,1],
 "classPV_1_1BaseHyPerConnProbe.html#ad2666829b95ae4d17b5ed55e5d3eb9db":[4,0,0,10,43],
 "classPV_1_1BaseHyPerConnProbe.html#ad33e1e7e438c2889ab8867735a9b824c":[4,0,0,10,2],
-"classPV_1_1BaseHyPerConnProbe.html#ad45e1dc390d1ba4265e0d8d5ed64f1bf":[4,0,0,10,22],
-"classPV_1_1BaseHyPerConnProbe.html#ad561490fdc55b6e43c4544dcc884fde7":[4,0,0,10,0],
-"classPV_1_1BaseHyPerConnProbe.html#ad7e767adce6ecd1e2870b2280cfda394":[4,0,0,10,29],
-"classPV_1_1BaseHyPerConnProbe.html#ade041c54546ce9a0592a02af31190c13":[4,0,0,10,32],
-"classPV_1_1BaseHyPerConnProbe.html#ae200c21c9a0f93986f06ecd115379c80":[4,0,0,10,10]
+"classPV_1_1BaseHyPerConnProbe.html#ad45e1dc390d1ba4265e0d8d5ed64f1bf":[4,0,0,10,22]
 };

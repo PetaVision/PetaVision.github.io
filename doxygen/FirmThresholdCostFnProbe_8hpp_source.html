@@ -115,26 +115,29 @@ $(document).ready(function(){initNavTree('FirmThresholdCostFnProbe_8hpp_source.h
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPV_1_1FirmThresholdCostFnProbe.html#a77ccd4cb4e4269a80f9b6053985ce881">ioParam_VThresh</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPV_1_1FirmThresholdCostFnProbe.html#a081bf3a75ec7e459e98692eb1b494261">ioParam_VWidth</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordtype">int</span> initFirmThresholdCostFnProbe_base();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// Member variables</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   pvpotentialdata_t VThresh;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   pvpotentialdata_t VWidth;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}; <span class="comment">// end class FirmThresholdCostFnProbe</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPV_1_1FirmThresholdCostFnProbe.html#a678657b902edb9e85a0f04127f6ee21d">setNormDescription</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordtype">int</span> initFirmThresholdCostFnProbe_base();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}  <span class="comment">// end namespace PV</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FIRMTHRESHOLDCOSTFNPROBE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// Member variables</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   pvpotentialdata_t VThresh;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   pvpotentialdata_t VWidth;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}; <span class="comment">// end class FirmThresholdCostFnProbe</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}  <span class="comment">// end namespace PV</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FIRMTHRESHOLDCOSTFNPROBE_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html">PV::FirmThresholdCostFnProbe</a></div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.hpp:25</div></div>
 <div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_a77ccd4cb4e4269a80f9b6053985ce881"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#a77ccd4cb4e4269a80f9b6053985ce881">PV::FirmThresholdCostFnProbe::ioParam_VThresh</a></div><div class="ttdeci">virtual void ioParam_VThresh(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">VThresh: The threshold where the transfer function returns 0 if |V|<VThresh. The default is zero...</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:44</div></div>
 <div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_a081bf3a75ec7e459e98692eb1b494261"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#a081bf3a75ec7e459e98692eb1b494261">PV::FirmThresholdCostFnProbe::ioParam_VWidth</a></div><div class="ttdeci">virtual void ioParam_VWidth(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">VWidth: The width of the interval over which the transfer function changes from hard to soft threshol...</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:48</div></div>
-<div class="ttc" id="classPV_1_1HyPerCol_html"><div class="ttname"><a href="classPV_1_1HyPerCol.html">PV::HyPerCol</a></div><div class="ttdef"><b>Definition:</b> HyPerCol.hpp:48</div></div>
+<div class="ttc" id="classPV_1_1HyPerCol_html"><div class="ttname"><a href="classPV_1_1HyPerCol.html">PV::HyPerCol</a></div><div class="ttdef"><b>Definition:</b> HyPerCol.hpp:50</div></div>
+<div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_a678657b902edb9e85a0f04127f6ee21d"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#a678657b902edb9e85a0f04127f6ee21d">PV::FirmThresholdCostFnProbe::setNormDescription</a></div><div class="ttdeci">virtual int setNormDescription()</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:52</div></div>
 <div class="ttc" id="classPV_1_1AbstractNormProbe_html"><div class="ttname"><a href="classPV_1_1AbstractNormProbe.html">PV::AbstractNormProbe</a></div><div class="ttdef"><b>Definition:</b> AbstractNormProbe.hpp:25</div></div>
-<div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_aa53b4454c99fd731a185ebf11282b058"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#aa53b4454c99fd731a185ebf11282b058">PV::FirmThresholdCostFnProbe::getValueInternal</a></div><div class="ttdeci">virtual double getValueInternal(double timevalue, int index)</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:71</div></div>
+<div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_aa53b4454c99fd731a185ebf11282b058"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#aa53b4454c99fd731a185ebf11282b058">PV::FirmThresholdCostFnProbe::getValueInternal</a></div><div class="ttdeci">virtual double getValueInternal(double timevalue, int index)</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:75</div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> Communicator.cpp:15</div></div>
-<div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_aba5208f5792afc150669f33c8bd2ce13"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#aba5208f5792afc150669f33c8bd2ce13">PV::FirmThresholdCostFnProbe::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:52</div></div>
+<div class="ttc" id="classPV_1_1FirmThresholdCostFnProbe_html_aba5208f5792afc150669f33c8bd2ce13"><div class="ttname"><a href="classPV_1_1FirmThresholdCostFnProbe.html#aba5208f5792afc150669f33c8bd2ce13">PV::FirmThresholdCostFnProbe::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> FirmThresholdCostFnProbe.cpp:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

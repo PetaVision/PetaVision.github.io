@@ -1,5 +1,9 @@
 var NAVTREEINDEX10 =
 {
+"classPV_1_1BinningLayer.html#a53363a4df2f6446cdf39fdad2f2205c9":[4,0,0,14,13],
+"classPV_1_1BinningLayer.html#a55e92203c60a642b8ba9aa10768b896a":[4,0,0,14,250],
+"classPV_1_1BinningLayer.html#a576cd5321889528e1b49cd264ebdbfac":[4,0,0,14,156],
+"classPV_1_1BinningLayer.html#a5843eb1ee2edb3a3793fafa0d39b6b98":[4,0,0,14,58],
 "classPV_1_1BinningLayer.html#a595ea824a70db5d9bd2b07fbb55cd7ba":[4,0,0,14,153],
 "classPV_1_1BinningLayer.html#a599fd1ee1d3ebcff627999f85ed3273a":[4,0,0,14,39],
 "classPV_1_1BinningLayer.html#a5a62318fb95ae0fbb23096a2d2e655d6":[4,0,0,14,175],
@@ -245,9 +249,5 @@ var NAVTREEINDEX10 =
 "classPV_1_1CloneConn.html#a2e5d33843da268e5be4f4375cd752e55":[4,0,0,15,6],
 "classPV_1_1CloneConn.html#a2fbebbeb8e8b7471364e624e76d5bcb0":[4,0,0,15,364],
 "classPV_1_1CloneConn.html#a2fec7baf4333f5cb9562f586c966c854":[4,0,0,15,54],
-"classPV_1_1CloneConn.html#a305b16e794769ffa39e2e5557025c7c3":[4,0,0,15,244],
-"classPV_1_1CloneConn.html#a30e244dbee394987eb35c71e6aa763de":[4,0,0,15,191],
-"classPV_1_1CloneConn.html#a311e4554e4af6ff9ee7500c035406e12":[4,0,0,15,287],
-"classPV_1_1CloneConn.html#a3175839735c7cf21fb1db433f527ad88":[4,0,0,15,22],
-"classPV_1_1CloneConn.html#a33079bdedddee7cedc555077c2d2a2bd":[4,0,0,15,0]
+"classPV_1_1CloneConn.html#a305b16e794769ffa39e2e5557025c7c3":[4,0,0,15,244]
 };

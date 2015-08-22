@@ -114,6 +114,7 @@ var namespacePV =
     [ "PtwiseLinearTransferLayer", "classPV_1_1PtwiseLinearTransferLayer.html", "classPV_1_1PtwiseLinearTransferLayer" ],
     [ "PtwiseProductLayer", "classPV_1_1PtwiseProductLayer.html", "classPV_1_1PtwiseProductLayer" ],
     [ "Publisher", "classPV_1_1Publisher.html", "classPV_1_1Publisher" ],
+    [ "PV_Init", "classPV_1_1PV__Init.html", "classPV_1_1PV__Init" ],
     [ "PVParams", "classPV_1_1PVParams.html", "classPV_1_1PVParams" ],
     [ "Random", "classPV_1_1Random.html", "classPV_1_1Random" ],
     [ "RequireAllZeroActivityProbe", "classPV_1_1RequireAllZeroActivityProbe.html", "classPV_1_1RequireAllZeroActivityProbe" ],

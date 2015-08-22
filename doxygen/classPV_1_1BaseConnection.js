@@ -24,7 +24,7 @@ var classPV_1_1BaseConnection =
     [ "getPost", "classPV_1_1BaseConnection.html#af41b3bfa3e307b90a82278f77fa1fd71", null ],
     [ "getPostLayerName", "classPV_1_1BaseConnection.html#abd989c8655830efd1bbc5d0d8068657f", null ],
     [ "getPre", "classPV_1_1BaseConnection.html#af01b5de07581cb4989e617d08c2ef77e", null ],
-    [ "getPreAndPostLayerNames", "classPV_1_1BaseConnection.html#a6655f465c3758ccf16762bb29c3924f7", null ],
+    [ "getPreAndPostLayerNames", "classPV_1_1BaseConnection.html#a5971614aa9ddc817be36c8e18e473aaf", null ],
     [ "getPreLayerName", "classPV_1_1BaseConnection.html#a8183d3bbd51d0a21c50ee31e32d7d138", null ],
     [ "getProbe", "classPV_1_1BaseConnection.html#a33f3a5e41b57a6d58e1c41e2b2254ff9", null ],
     [ "getReceiveGpu", "classPV_1_1BaseConnection.html#af8b875e9de5267029f3675a9cd781b39", null ],

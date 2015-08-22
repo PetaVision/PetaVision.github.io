@@ -100,9 +100,9 @@ $(document).ready(function(){initNavTree('classPV_1_1HyPerCol.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a86914bc6207469fb0bd74b078e81ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a86914bc6207469fb0bd74b078e81ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HyPerCol</b> (const char *name, int argc, char *argv[], <a class="el" href="classPV_1_1PVParams.html">PV::PVParams</a> *params=NULL)</td></tr>
-<tr class="separator:a8a86914bc6207469fb0bd74b078e81ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bb021ec8dc999c8368dd6457bb210d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7bb021ec8dc999c8368dd6457bb210d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HyPerCol</b> (const char *name, int argc, char *argv[], <a class="el" href="classPV_1_1PV__Init.html">PV_Init</a> *initObj)</td></tr>
+<tr class="separator:ae7bb021ec8dc999c8368dd6457bb210d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2857afa06a95f83693e1c82280a64b12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2857afa06a95f83693e1c82280a64b12"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>addBaseProbe</b> (<a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a> *p)</td></tr>
 <tr class="separator:a2857afa06a95f83693e1c82280a64b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,12 +124,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>advanceTime</b> (doubl
 <tr class="memitem:ac25150accdc1f3db886812e9731c254e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac25150accdc1f3db886812e9731c254e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>columnId</b> ()</td></tr>
 <tr class="separator:ac25150accdc1f3db886812e9731c254e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcfd37f8e89bb95e88f29e1e5cfbf714"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcfd37f8e89bb95e88f29e1e5cfbf714"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>commColumn</b> (int colId)</td></tr>
-<tr class="separator:adcfd37f8e89bb95e88f29e1e5cfbf714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af683b30197e35c432dc1e69b864dca0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af683b30197e35c432dc1e69b864dca0b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>commRow</b> (int colId)</td></tr>
-<tr class="separator:af683b30197e35c432dc1e69b864dca0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcd21970668608774f885ef267b6175"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bcd21970668608774f885ef267b6175"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>commBatch</b> ()</td></tr>
+<tr class="separator:a7bcd21970668608774f885ef267b6175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb831d67c9542111dd68aa20a7559d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb831d67c9542111dd68aa20a7559d58"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>commColumn</b> ()</td></tr>
+<tr class="separator:acb831d67c9542111dd68aa20a7559d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85be31347b4cc50b72c01234d9188cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac85be31347b4cc50b72c01234d9188cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>commRow</b> ()</td></tr>
+<tr class="separator:ac85be31347b4cc50b72c01234d9188cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a88c8f89d27d9de3f8cbea3e2a43d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c0a88c8f89d27d9de3f8cbea3e2a43d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>ensureDirExists</b> (const char *dirname)</td></tr>
 <tr class="separator:a8c0a88c8f89d27d9de3f8cbea3e2a43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +211,9 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td>
 <tr class="memitem:a14c3a31a521c47df0964260ea4e1cae7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14c3a31a521c47df0964260ea4e1cae7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getNBatch</b> ()</td></tr>
 <tr class="separator:a14c3a31a521c47df0964260ea4e1cae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82746e864e9dcaeb548021d0b8c19bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae82746e864e9dcaeb548021d0b8c19bb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNBatchGlobal</b> ()</td></tr>
+<tr class="separator:ae82746e864e9dcaeb548021d0b8c19bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523df5779809cd700fefe0e37f398c5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a523df5779809cd700fefe0e37f398c5a"></a>
 <a class="el" href="classPV_1_1NormalizeBase.html">NormalizeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNormalizer</b> (int which)</td></tr>
 <tr class="separator:a523df5779809cd700fefe0e37f398c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,9 +262,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getSuppressLastOutput
 <tr class="memitem:a2ccdda85c5c152c82388f1e839303551"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ccdda85c5c152c82388f1e839303551"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getSuppressNonplasticCheckpoints</b> ()</td></tr>
 <tr class="separator:a2ccdda85c5c152c82388f1e839303551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48a8722ab5a1891940ac2d4f41e5ecd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48a8722ab5a1891940ac2d4f41e5ecd6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getThreadBatch</b> ()</td></tr>
-<tr class="separator:a48a8722ab5a1891940ac2d4f41e5ecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4868b6174385172b6c6ba48f71a6af58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4868b6174385172b6c6ba48f71a6af58"></a>
 double *&#160;</td><td class="memItemRight" valign="bottom"><b>getTimeScale</b> ()</td></tr>
 <tr class="separator:a4868b6174385172b6c6ba48f71a6af58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,6 +279,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getTimeScaleMin</b>
 <tr class="memitem:a4fd9d11e949174feb000188e13cea842"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fd9d11e949174feb000188e13cea842"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getWriteTimescales</b> ()</td></tr>
 <tr class="separator:a4fd9d11e949174feb000188e13cea842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2428f41de3b1ef1ee6357f5f65dfe390"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2428f41de3b1ef1ee6357f5f65dfe390"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>globalRank</b> ()</td></tr>
+<tr class="separator:a2428f41de3b1ef1ee6357f5f65dfe390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5216d3b55ef4d5467bb8a920b032efc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5216d3b55ef4d5467bb8a920b032efc7"></a>
 <a class="el" href="classPV_1_1InterColComm.html">InterColComm</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>icCommunicator</b> ()</td></tr>
 <tr class="separator:a5216d3b55ef4d5467bb8a920b032efc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -326,6 +332,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfColumns</b> ()
 <tr class="memitem:ac39a7541dd0bbd195e3bf9722446c321"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac39a7541dd0bbd195e3bf9722446c321"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfConnections</b> ()</td></tr>
 <tr class="separator:ac39a7541dd0bbd195e3bf9722446c321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de3e801caf9d7c88a17e2645ff288b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de3e801caf9d7c88a17e2645ff288b2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfGlobalColumns</b> ()</td></tr>
+<tr class="separator:a1de3e801caf9d7c88a17e2645ff288b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7ea3514d9029b796c801046aa81357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b7ea3514d9029b796c801046aa81357"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfLayers</b> ()</td></tr>
 <tr class="separator:a0b7ea3514d9029b796c801046aa81357"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,6 +344,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfNormalizers</b
 <tr class="memitem:a6a1e9937c79578aeeebc3535eeea534b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1e9937c79578aeeebc3535eeea534b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfProbes</b> ()</td></tr>
 <tr class="separator:a6a1e9937c79578aeeebc3535eeea534b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cdc161b72b1feb928ecb507ef82138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25cdc161b72b1feb928ecb507ef82138"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>numCommBatches</b> ()</td></tr>
+<tr class="separator:a25cdc161b72b1feb928ecb507ef82138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff683823f59780b3b7bd65c40032e38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afff683823f59780b3b7bd65c40032e38"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>numCommColumns</b> ()</td></tr>
 <tr class="separator:afff683823f59780b3b7bd65c40032e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,18 +379,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (double startT
 <tr class="memitem:a8807672e9025a6dd5cffaba40e85d76a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8807672e9025a6dd5cffaba40e85d76a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>simulationTime</b> ()</td></tr>
 <tr class="separator:a8807672e9025a6dd5cffaba40e85d76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e95a6b4308b9eec44739dc089fa825"><td class="memTemplParams" colspan="2"><a class="anchor" id="a76e95a6b4308b9eec44739dc089fa825"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a76e95a6b4308b9eec44739dc089fa825"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>valueIntoString</b> (float value, std::stringstream *vstr)</td></tr>
-<tr class="separator:a76e95a6b4308b9eec44739dc089fa825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0536dcac0ef44895a7eb31b9f054c528"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0536dcac0ef44895a7eb31b9f054c528"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a0536dcac0ef44895a7eb31b9f054c528"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>valueIntoString</b> (double value, std::stringstream *vstr)</td></tr>
-<tr class="separator:a0536dcac0ef44895a7eb31b9f054c528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac28aa49027fcc11efa2c50e1d437a10f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac28aa49027fcc11efa2c50e1d437a10f"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ac28aa49027fcc11efa2c50e1d437a10f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>valueIntoString</b> (bool value, std::stringstream *vstr)</td></tr>
-<tr class="separator:ac28aa49027fcc11efa2c50e1d437a10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad75f698bde5abb1e12e21c65c394527b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad75f698bde5abb1e12e21c65c394527b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>warmStartup</b> ()</td></tr>
 <tr class="separator:ad75f698bde5abb1e12e21c65c394527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -434,9 +434,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>doInitializationStage<
 <tr class="memitem:a6421b89c932f011d8e0620cb3faa3d68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6421b89c932f011d8e0620cb3faa3d68"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getAutoGPUDevice</b> ()</td></tr>
 <tr class="separator:a6421b89c932f011d8e0620cb3faa3d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f8afec1c7b2e5bf2b771f957464256"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52f8afec1c7b2e5bf2b771f957464256"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const char *name, int argc, char **argv, <a class="el" href="classPV_1_1PVParams.html">PVParams</a> *inparams)</td></tr>
-<tr class="separator:a52f8afec1c7b2e5bf2b771f957464256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237aafdb51233190165313c947678bec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a237aafdb51233190165313c947678bec"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const char *name, int argc, char **argv, <a class="el" href="classPV_1_1PV__Init.html">PV_Init</a> *initObj)</td></tr>
+<tr class="separator:a237aafdb51233190165313c947678bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1846d96c8b43017f904af32e238f18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1846d96c8b43017f904af32e238f18"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()</td></tr>
 <tr class="separator:abf1846d96c8b43017f904af32e238f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -467,10 +467,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>normalizeWeights</b> (
 <tr class="memitem:aa22d5b82de159b398c7ff290cdd4619a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa22d5b82de159b398c7ff290cdd4619a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>outputParams</b> (char const *path)</td></tr>
 <tr class="separator:aa22d5b82de159b398c7ff290cdd4619a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2d0c13af6ced6290b400ccfcbc11e71"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa2d0c13af6ced6290b400ccfcbc11e71"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa2d0c13af6ced6290b400ccfcbc11e71"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>valueIntoString</b> (T value, std::stringstream *vstr)</td></tr>
-<tr class="separator:aa2d0c13af6ced6290b400ccfcbc11e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0300ffc11fc27e31e06ec469f98c0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb0300ffc11fc27e31e06ec469f98c0a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>writeTimers</b> (FILE *stream)</td></tr>
 <tr class="separator:aeb0300ffc11fc27e31e06ec469f98c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -621,6 +617,9 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="memitem:a34006d61cd26ee8f2fbb77a404562e8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34006d61cd26ee8f2fbb77a404562e8d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>nbatch</b></td></tr>
 <tr class="separator:a34006d61cd26ee8f2fbb77a404562e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652456f9af8a640e4b2cc4422d06ec84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a652456f9af8a640e4b2cc4422d06ec84"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>nbatchGlobal</b></td></tr>
+<tr class="separator:a652456f9af8a640e4b2cc4422d06ec84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6eac958256204083736398564656078"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6eac958256204083736398564656078"></a>
 time_t&#160;</td><td class="memItemRight" valign="bottom"><b>nextCPWriteClock</b></td></tr>
 <tr class="separator:ab6eac958256204083736398564656078"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -732,9 +731,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppressLastOutput</b
 <tr class="memitem:a250197fcfbb8fc5e8664f0b9e4a2ceb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a250197fcfbb8fc5e8664f0b9e4a2ceb8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppressNonplasticCheckpoints</b></td></tr>
 <tr class="separator:a250197fcfbb8fc5e8664f0b9e4a2ceb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13e7db1e4b3e7a211efb623bd56af7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad13e7db1e4b3e7a211efb623bd56af7d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>threadBatch</b></td></tr>
-<tr class="separator:ad13e7db1e4b3e7a211efb623bd56af7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d720a192e94d2ea38cfa8079e56507"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d720a192e94d2ea38cfa8079e56507"></a>
 double *&#160;</td><td class="memItemRight" valign="bottom"><b>timeScale</b></td></tr>
 <tr class="separator:a55d720a192e94d2ea38cfa8079e56507"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -838,9 +834,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a7e0e26a50036d689e774928e82bf08a4">ioParam_nBatch</a> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="memdesc:a7e0e26a50036d689e774928e82bf08a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ny: Specifies the batch size of the column <br /></td></tr>
 <tr class="separator:a7e0e26a50036d689e774928e82bf08a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f824b28d33842234b50c2e57d3eeaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8f824b28d33842234b50c2e57d3eeaa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_threadBatch</b> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="separator:af8f824b28d33842234b50c2e57d3eeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eac7bbbc526d2f46cb185a631d1d0f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a3eac7bbbc526d2f46cb185a631d1d0f9">ioParam_filenamesContainLayerNames</a> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="memdesc:a3eac7bbbc526d2f46cb185a631d1d0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">filenamesContainLayerNames: Specifies if layer names gets printed out to output connection pvp files  <a href="#a3eac7bbbc526d2f46cb185a631d1d0f9">More...</a><br /></td></tr>
 <tr class="separator:a3eac7bbbc526d2f46cb185a631d1d0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
