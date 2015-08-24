@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "PetaVision", "index.html", [
+    [ "Adding a user to the PetaVision AWS account", "md_docs_doxygen_src_aws_pv_internal.html", null ],
     [ "AWS Installation", "md_docs_doxygen_src_install_aws.html", null ],
     [ "OS X Installation", "md_docs_doxygen_src_install_osx.html", null ],
     [ "Ubuntu Installation", "md_docs_doxygen_src_install_ubuntu.html", null ],
@@ -107,7 +108,7 @@ var NAVTREEINDEX =
 "classPV_1_1WTALayer.html#a7e6c5aed3c8eabf1a2cfc963b40f9d43",
 "classPV_1_1privateTransposeConn.html#a559e082d9e1af16b3572a81a80cb7a6b",
 "classPV_1_1privateTransposeConn.html#afd617b26df9a092467ee4aaeb6e98303",
-"structRetina__params__.html"
+"structPV__Stream__.html#aa2e3c123c26eba76403ba4b335bc0418"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

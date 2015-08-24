@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>PetaVision: Related Pages</title>
+<title>PetaVision: Adding a user to the PetaVision AWS account</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,23 +77,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('pages.html','');});
+$(document).ready(function(){initNavTree('md_docs_doxygen_src_aws_pv_internal.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Adding a user to the PetaVision AWS account </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_doxygen_src_aws_pv_internal.html" target="_self">Adding a user to the PetaVision AWS account</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_doxygen_src_install_aws.html" target="_self">AWS Installation</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_doxygen_src_install_osx.html" target="_self">OS X Installation</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_doxygen_src_install_ubuntu.html" target="_self">Ubuntu Installation</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><h4>User instructions</h4>
+<p>To get added as a user in the PetaVision AWS account, you need to do the following:</p><ul>
+<li>Contact a PetaVision administrator to get a username and temporary password.</li>
+<li>Go to <a href="https://petavision.signin.aws.amazon.com/console">https://petavision.signin.aws.amazon.com/console</a>. Sign in using the username and temporary password.</li>
+<li>Amazon will prompt you to change your password.</li>
+<li>Return to &lt;md_src_install_aws.html&gt; to continue setting up the</li>
+</ul>
+<h4>Administrator instructions</h4>
+<p>To add a user to the PetaVision AWS account, an administrator needs to do the following:</p>
+<ul>
+<li>Log into aws console.</li>
+<li>Under services, click IAM.</li>
+<li>On the left tab, click Users.</li>
+<li>Click Create New Users.</li>
+<li>Enter a new user name.</li>
+<li>Deselect Generate an access key for each user. Each user will create their own access keys to access s3. Click create.</li>
+<li>Find the user that was just created, select it, click actions, and select Manage Password.</li>
+<li>Select Assign an auto-generated password, and select Require user to create a new password at next sign-in. Click apply.</li>
+<li>Click Download Credentials and send the file to the new user.</li>
+<li>Select the user that was just created, select it, click actions, and select Add User to Group.</li>
+<li>Select Developer, and click Add to Groups. </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
