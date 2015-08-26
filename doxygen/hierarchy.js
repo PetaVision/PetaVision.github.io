@@ -79,6 +79,10 @@ var hierarchy =
           ] ]
         ] ]
       ] ],
+      [ "PV::ColProbe", "classPV_1_1ColProbe.html", [
+        [ "PV::ColumnEnergyProbe", "classPV_1_1ColumnEnergyProbe.html", null ],
+        [ "PV::QuotientColProbe", "classPV_1_1QuotientColProbe.html", null ]
+      ] ],
       [ "PV::LayerProbe", "classPV_1_1LayerProbe.html", [
         [ "PV::AbstractNormProbe", "classPV_1_1AbstractNormProbe.html", [
           [ "PV::FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", null ],
@@ -96,9 +100,6 @@ var hierarchy =
     ] ],
     [ "box_muller_data", "structbox__muller__data.html", null ],
     [ "box_muller_state", "structbox__muller__state.html", null ],
-    [ "PV::ColProbe", "classPV_1_1ColProbe.html", [
-      [ "PV::ColumnEnergyProbe", "classPV_1_1ColumnEnergyProbe.html", null ]
-    ] ],
     [ "PV::Communicator", "classPV_1_1Communicator.html", [
       [ "PV::InterColComm", "classPV_1_1InterColComm.html", null ]
     ] ],

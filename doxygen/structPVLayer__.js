@@ -2,7 +2,6 @@ var structPVLayer__ =
 [
     [ "activeFP", "structPVLayer__.html#a8b769064775757963143cb883e978c5e", null ],
     [ "activity", "structPVLayer__.html#a609ef0ce6a9787090a5f22ba1008ddf5", null ],
-    [ "layerType", "structPVLayer__.html#a1477cc34ea448d0930b3062eba5501c1", null ],
     [ "loc", "structPVLayer__.html#adc7c3bd5598b8c6c01cda795846debee", null ],
     [ "numExtended", "structPVLayer__.html#a4115282f0fed4a01ff8f9b9e07e27ed5", null ],
     [ "numExtendedAllBatches", "structPVLayer__.html#abc7816fc5232b89685c762620ec6a0d8", null ],

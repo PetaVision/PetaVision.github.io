@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['parameterstack',['ParameterStack',['../classPV_1_1ParameterStack.html#a275df4e9ee43ebbfe2383d63aaf5c78a',1,'PV::ParameterStack']]],
-  ['point_5fwritestate',['point_writeState',['../classPV_1_1PointProbe.html#ae1b8c542a61ed19deccafe73012cce15',1,'PV::PointProbe']]],
-  ['pointlifprobe',['PointLIFProbe',['../classPV_1_1PointLIFProbe.html#a784bd11b23ec384f2de1c051b625aebb',1,'PV::PointLIFProbe']]],
-  ['pointprobe',['PointProbe',['../classPV_1_1PointProbe.html#aca8bc833a30bcbb610a4798dc2ede584',1,'PV::PointProbe']]],
-  ['postprocess',['postProcess',['../classPV_1_1BaseInput.html#ab8ee6f5da97f1a1a2e0b83444c4d101b',1,'PV::BaseInput']]],
-  ['postsynapticpatchhead',['postSynapticPatchHead',['../classPV_1_1HyPerConn.html#aa967ab7bca24afae03b3cabe9a141fc3',1,'PV::HyPerConn']]],
-  ['present',['present',['../classPV_1_1PVParams.html#ab1216243eb516e4fc5fdb3255005d10f',1,'PV::PVParams']]],
-  ['presynapticpatchhead',['preSynapticPatchHead',['../classPV_1_1HyPerConn.html#a55f0ecd356e28f638f2d646f30c933bb',1,'PV::HyPerConn']]],
-  ['ptwiselineartransferlayer',['PtwiseLinearTransferLayer',['../classPV_1_1PtwiseLinearTransferLayer.html#ad8089871219503496fc39cc9e0a261de',1,'PV::PtwiseLinearTransferLayer']]],
-  ['push',['push',['../classPV_1_1ParameterStack.html#a6f55d7cbbbcf638203538185c0960521',1,'PV::ParameterStack']]],
-  ['pv_5ffwrite',['PV_fwrite',['../namespacePV.html#adb616cc87488824fc1d4bf93fea0814b',1,'PV']]],
-  ['pv_5finit',['PV_Init',['../classPV_1_1PV__Init.html#a761985af2f22dc8b5787f27e0a208bed',1,'PV::PV_Init']]],
-  ['pv_5fsizeof_5fpatch',['pv_sizeof_patch',['../namespacePV.html#a516eab969e76bc7d9419f8d250f2c9f3',1,'PV']]],
-  ['pvp_5fcopy_5fpatches',['pvp_copy_patches',['../namespacePV.html#ac8e8cbb295e7fcd7a3eb0dd3b7dd7e30',1,'PV']]],
-  ['pvp_5fset_5fpatches',['pvp_set_patches',['../namespacePV.html#a02ab5b41df2c42f77803e7b2bf01beca',1,'PV']]],
-  ['pvparams',['PVParams',['../classPV_1_1PVParams.html#a5eaf2f7735201cdcb9cf6ff963497cfd',1,'PV::PVParams']]]
+  ['quotientcolprobe',['QuotientColProbe',['../classPV_1_1QuotientColProbe.html#affae6cd8a5a354f0fe461845970cad54',1,'PV::QuotientColProbe::QuotientColProbe(const char *probename, HyPerCol *hc)'],['../classPV_1_1QuotientColProbe.html#a564e76d9398959520a04a36288753fa4',1,'PV::QuotientColProbe::QuotientColProbe()']]]
 ];

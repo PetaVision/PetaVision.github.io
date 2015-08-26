@@ -17,6 +17,7 @@ var classPV_1_1BaseConnection =
     [ "getDelayArraySize", "classPV_1_1BaseConnection.html#ae67faf9e8d0dec06f57c5db4c596f411", null ],
     [ "getInitialValuesSetFlag", "classPV_1_1BaseConnection.html#a764a2087e925f175e24bd144f4c9c062", null ],
     [ "getInitInfoCommunicatedFlag", "classPV_1_1BaseConnection.html#ad617960920014f253c2244a915ce5543", null ],
+    [ "getKeyword", "classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47", null ],
     [ "getName", "classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e", null ],
     [ "getNumProbes", "classPV_1_1BaseConnection.html#ae110837cca7d61443b745992c253778f", null ],
     [ "getParent", "classPV_1_1BaseConnection.html#aba4b40893e9e1285c43cd407d4958bc0", null ],

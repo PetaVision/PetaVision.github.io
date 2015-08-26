@@ -116,6 +116,7 @@ var namespacePV =
     [ "Publisher", "classPV_1_1Publisher.html", "classPV_1_1Publisher" ],
     [ "PV_Init", "classPV_1_1PV__Init.html", "classPV_1_1PV__Init" ],
     [ "PVParams", "classPV_1_1PVParams.html", "classPV_1_1PVParams" ],
+    [ "QuotientColProbe", "classPV_1_1QuotientColProbe.html", "classPV_1_1QuotientColProbe" ],
     [ "Random", "classPV_1_1Random.html", "classPV_1_1Random" ],
     [ "RequireAllZeroActivityProbe", "classPV_1_1RequireAllZeroActivityProbe.html", "classPV_1_1RequireAllZeroActivityProbe" ],
     [ "RescaleLayer", "classPV_1_1RescaleLayer.html", "classPV_1_1RescaleLayer" ],

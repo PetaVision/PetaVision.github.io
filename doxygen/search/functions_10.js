@@ -2,7 +2,6 @@ var searchData=
 [
   ['sendoffset',['sendOffset',['../classPV_1_1Communicator.html#ab6dd1a4adb7211b9b60b176f9d38451c',1,'PV::Communicator']]],
   ['setchanneltype',['setChannelType',['../classPV_1_1BaseConnection.html#a88fd61a0b40955bb2cb4b5292372a7e8',1,'PV::BaseConnection']]],
-  ['setcolprobename',['setColProbeName',['../classPV_1_1ColProbe.html#a849761a22cb6422636b372edf1efacd5',1,'PV::ColProbe']]],
   ['setconvertratetospikecount',['setConvertRateToSpikeCount',['../classPV_1_1BaseConnection.html#a16596840aabceadcca9eeeb5509bb1a2',1,'PV::BaseConnection']]],
   ['setdatastructuresallocatedflag',['setDataStructuresAllocatedFlag',['../classPV_1_1BaseConnection.html#a63f62714f2f1410c51bcdd4fe2214920',1,'PV::BaseConnection']]],
   ['setdelay',['setDelay',['../classPV_1_1BaseConnection.html#a383eb2713c08082509f74639ee2f8898',1,'PV::BaseConnection']]],

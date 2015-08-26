@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['ubuntu_20installation',['Ubuntu Installation',['../md_docs_doxygen_src_install_ubuntu.html',1,'']]],
-  ['uncompressweight',['uncompressWeight',['../namespacePV.html#a6796ef12bf118a40fcf58cd432c497c0',1,'PV::uncompressWeight(unsigned char w, pvdata_t minVal, pvdata_t maxVal)'],['../namespacePV.html#aade0ba7597a69e2c494ec601bdc43313',1,'PV::uncompressWeight(float w, pvdata_t minVal, pvdata_t maxVal)']]],
-  ['uniformweights',['uniformWeights',['../classPV_1_1InitUniformWeights.html#a2680ea41d2271ad7ac7aef81d555efef',1,'PV::InitUniformWeights']]],
-  ['update_5fdw',['update_dW',['../classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a',1,'PV::HyPerConn::update_dW()'],['../classPV_1_1ImprintConn.html#a41ff94a107c8463c829624bd87108ba9',1,'PV::ImprintConn::update_dW()']]],
-  ['updateframenum',['updateFrameNum',['../classPV_1_1MoviePvp.html#aac4e3006eb51855f9e29cd110278a9ce',1,'PV::MoviePvp']]],
-  ['updateimage',['updateImage',['../classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043',1,'PV::Movie::updateImage()'],['../classPV_1_1MoviePvp.html#a8c54fd4cba182f377b15cba1b0b44537',1,'PV::MoviePvp::updateImage()']]],
-  ['updatenexttriggertime',['updateNextTriggerTime',['../classPV_1_1HyPerLayer.html#a9b3239f15ce417a99807117eb8c2d5ae',1,'PV::HyPerLayer']]],
-  ['updatenextupdatetime',['updateNextUpdateTime',['../classPV_1_1HyPerLayer.html#a3d1e2c023e47a6528f1fb9c988c378cd',1,'PV::HyPerLayer']]],
-  ['updatestate',['updateState',['../classPV_1_1BaseConnection.html#a4d78988ac21c175c9cbd17b1ad9cf553',1,'PV::BaseConnection::updateState()'],['../classPV_1_1CloneConn.html#a289a1cebcd4d8f116e2a4af116718c81',1,'PV::CloneConn::updateState()'],['../classPV_1_1HyPerConn.html#acd875d4f9ac054a35fc9205968878b6f',1,'PV::HyPerConn::updateState()'],['../classPV_1_1privateTransposeConn.html#a67a57c6fdbad384d4f9cd8c7c65f7cd9',1,'PV::privateTransposeConn::updateState()'],['../classPV_1_1TransposeConn.html#a7a1d6d2679e559f9b4e33578fdd520a6',1,'PV::TransposeConn::updateState()'],['../classPV_1_1TransposePoolingConn.html#a6a4bd0548c376ab72987418557e810f0',1,'PV::TransposePoolingConn::updateState()'],['../classPV_1_1Image.html#a51f060d6736bdf7d7d06789597ba47e3',1,'PV::Image::updateState()'],['../classPV_1_1ImageFromMemoryBuffer.html#a52be7a759aed3af7e785b7ccfec9677b',1,'PV::ImageFromMemoryBuffer::updateState()'],['../classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0',1,'PV::Movie::updateState()'],['../classPV_1_1Patterns.html#a02ab4749893cda5bb1cb7160e651bbfd',1,'PV::Patterns::updateState()'],['../classPV_1_1Retina.html#a8c3b686cf640433fd3566d2dede2ae21',1,'PV::Retina::updateState()']]]
+  ['timer',['Timer',['../classPV_1_1Timer.html',1,'PV']]],
+  ['transposeconn',['TransposeConn',['../classPV_1_1TransposeConn.html',1,'PV']]],
+  ['transposepoolingconn',['TransposePoolingConn',['../classPV_1_1TransposePoolingConn.html',1,'PV']]]
 ];
