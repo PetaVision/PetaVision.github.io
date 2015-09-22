@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('md_docs_doxygen_src_install_osx.html',
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;ln -s clang cc</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;ln -s clang++ c++</div>
 </div><!-- fragment --><h3>Install the OMP library</h3>
-<p>Download the most recent version of the OpenMP Runtime Library from <a href="https://www.openmprtl.org/download#stable-releases">https://www.openmprtl.org/download#stable-releases</a>. Make a note of the location of the downloaded file. In what follows, we will be using <code>libomp_20150701_oss.tgz</code>, the most recent version as of this writing; modify as necessary. </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cd ${HOME}/clang_omp</div>
+<p>Download the most recent version of the Intel OpenMP Runtime Library from <a href="https://www.openmprtl.org/download#stable-releases">https://www.openmprtl.org/download#stable-releases</a>. Make a note of the location of the downloaded file. In what follows, we will be using <code>libomp_20150701_oss.tgz</code>, the most recent version as of this writing; modify as necessary. </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cd ${HOME}/clang_omp</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tar xf /path/to/libomp_20150701_oss.tgz</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;cd libomp_oss</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;cmake .</div>
@@ -187,6 +187,7 @@ $(document).ready(function(){initNavTree('md_docs_doxygen_src_install_osx.html',
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;export LIBRARY_PATH=$HOME/clang_omp/libomp_oss/exports/mac_32e/lib.thin:$LIBRARY_PATH</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;export DYLD_LIBRARY_PATH=$HOME/clang_omp/libomp_oss/exports/mac_32e/lib.thin:$DYLD_LIBRARY_PATH</div>
 </div><!-- fragment --><p>If you have any open terminal windows, run <code>source ~/.bash_profile</code> in each of them. Test by running <code>which clang</code> and <code>which clang++</code> to verify that clang and clang++ resolve to the versions just installed.</p>
+<p>When you run cmake or ccmake, you will need to set PV_OPENMP_COMPILER_FLAG to "-fopenmp=libiomp5" in order for the compiler to find the OpenMP Runtime library.</p>
 <h2>CUDA and NVIDIA Driver (optional): </h2>
 <p>To take advantage of CUDA/cuDNN GPU acceleration your Macintosh needs to have an NVIDIA card with compute capabilities 3.0 or above. To find which video card you have, go to "About This Mac" under the Apple menu, select "System Report..." and then Graphics/Displays in the Hardware section. Check at <a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a> to see if your video card supports CUDA. NVIDIA drivers are included with the cuda download. To install cuda:</p><ul>
 <li>Go to <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a></li>
