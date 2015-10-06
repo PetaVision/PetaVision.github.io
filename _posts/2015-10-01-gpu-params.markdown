@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building with OpenMP under OS X"
+title:  "GPU parameters are no longer ignored if compiling without GPUs"
 author: Pete Schultz
 categories: parameters
 ---
