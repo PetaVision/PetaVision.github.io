@@ -16,6 +16,5 @@ var searchData=
   ['annsquaredlayer',['ANNSquaredLayer',['../classPV_1_1ANNSquaredLayer.html',1,'PV']]],
   ['annwhitenedlayer',['ANNWhitenedLayer',['../classPV_1_1ANNWhitenedLayer.html',1,'PV']]],
   ['applyrmin',['applyRMin',['../classPV_1_1NormalizeMultiply.html#a8e2f55bc91fd5d21d091920179af5900',1,'PV::NormalizeMultiply']]],
-  ['applythreshold',['applyThreshold',['../classPV_1_1NormalizeMultiply.html#a61cfa86c8ea76ac888bbcb0c3e507077',1,'PV::NormalizeMultiply']]],
-  ['adding_20a_20user_20to_20the_20petavision_20aws_20account',['Adding a user to the PetaVision AWS account',['../md_docs_doxygen_src_aws_pv_internal.html',1,'']]]
+  ['applythreshold',['applyThreshold',['../classPV_1_1NormalizeMultiply.html#a61cfa86c8ea76ac888bbcb0c3e507077',1,'PV::NormalizeMultiply']]]
 ];

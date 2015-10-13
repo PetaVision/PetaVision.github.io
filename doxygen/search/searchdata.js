@@ -4,8 +4,7 @@ var indexSectionsWithContent =
   1: "_abcdfghiklmnpqrstw",
   2: "p",
   3: "abcdefghilmnopqrsuvw~",
-  4: "os",
-  5: "a"
+  4: "os"
 };
 
 var indexSectionNames =
@@ -14,8 +13,7 @@ var indexSectionNames =
   1: "classes",
   2: "namespaces",
   3: "functions",
-  4: "variables",
-  5: "pages"
+  4: "variables"
 };
 
 var indexSectionLabels =
@@ -24,7 +22,6 @@ var indexSectionLabels =
   1: "Data Structures",
   2: "Namespaces",
   3: "Functions",
-  4: "Variables",
-  5: "Pages"
+  4: "Variables"
 };
 
