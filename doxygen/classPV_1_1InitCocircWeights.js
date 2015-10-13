@@ -11,6 +11,7 @@ var classPV_1_1InitCocircWeights =
     [ "communicateParamsInfo", "classPV_1_1InitCocircWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitCocircWeights.html#a4bb79c26b6e9858ff95696d1007fdbbc", null ],
     [ "initialize", "classPV_1_1InitCocircWeights.html#a6b1fc47ead952b5b9608c0488a362597", null ],
+    [ "initialize", "classPV_1_1InitCocircWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitCocircWeights.html#a6be86dd707d2f1a69fed769a167b9dbf", null ],
     [ "initializeWeights", "classPV_1_1InitCocircWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitCocircWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

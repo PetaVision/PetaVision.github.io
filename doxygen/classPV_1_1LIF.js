@@ -32,7 +32,7 @@ var classPV_1_1LIF =
     [ "doUpdateState", "classPV_1_1LIF.html#a169e6a22d740451296076238d20646d1", null ],
     [ "doUpdateStateGpu", "classPV_1_1LIF.html#a0a5f31f81cd3c5adc21f4539720779fa", null ],
     [ "equalizeMargins", "classPV_1_1LIF.html#a054c96cb432e7b0335b06dcfb99e09bb", null ],
-    [ "findPostSynaptic", "classPV_1_1LIF.html#a0cbfa6595095cded04a0a7a7e43fb98f", null ],
+    [ "findPostSynaptic", "classPV_1_1LIF.html#a719a673f51b2cfdd494486de1e5dfd2f", null ],
     [ "flushOutputStateStream", "classPV_1_1LIF.html#a1caf84875c05362ba40d6929067fef7c", null ],
     [ "freeChannels", "classPV_1_1LIF.html#a5085842fb845b17a8b22aead6cb5a370", null ],
     [ "freeClayer", "classPV_1_1LIF.html#a7ace49167b926fd3973b25f4763c4776", null ],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['handlemissingpreandpostlayernames',['handleMissingPreAndPostLayerNames',['../classPV_1_1BaseConnection.html#af288d6023bba10bc335703cd63d4e8ff',1,'PV::BaseConnection::handleMissingPreAndPostLayerNames()'],['../classPV_1_1FeedbackConn.html#adc5317085f1686eba0f710823e82a044',1,'PV::FeedbackConn::handleMissingPreAndPostLayerNames()']]],
+  ['handleunnecessarystringparameter',['handleUnnecessaryStringParameter',['../classPV_1_1PVParams.html#ad3932ef1bfe04a0e274b8eb1a42c44e5',1,'PV::PVParams::handleUnnecessaryStringParameter(const char *group_name, const char *param_name)'],['../classPV_1_1PVParams.html#adec2e3568ceaa06d33d824b99fbef4c8',1,'PV::PVParams::handleUnnecessaryStringParameter(const char *group_name, const char *param_name, const char *correctValue, bool case_insensitive_flag=false)']]],
   ['haseasternneighbor',['hasEasternNeighbor',['../classPV_1_1Communicator.html#a1ac2c6565c7ef8699b31723d24ba85c8',1,'PV::Communicator']]],
   ['hasneighbor',['hasNeighbor',['../classPV_1_1Communicator.html#a7ec2979e8ab3e4eac9ef33387aa1a69c',1,'PV::Communicator']]],
   ['hasnortheasternneighbor',['hasNortheasternNeighbor',['../classPV_1_1Communicator.html#a84fe200d3db4b702e4aabf73e26d712c',1,'PV::Communicator']]],

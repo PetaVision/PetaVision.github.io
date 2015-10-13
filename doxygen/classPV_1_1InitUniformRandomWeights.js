@@ -9,6 +9,7 @@ var classPV_1_1InitUniformRandomWeights =
     [ "communicateParamsInfo", "classPV_1_1InitUniformRandomWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitUniformRandomWeights.html#a981e1cc98d6b76396687b3fdaeea6f2b", null ],
     [ "initialize", "classPV_1_1InitUniformRandomWeights.html#a0b2cf931100589dac7f92043e7a3acef", null ],
+    [ "initialize", "classPV_1_1InitUniformRandomWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitUniformRandomWeights.html#a0cb951af9dcec1bdf0fdd363c365baed", null ],
     [ "initializeWeights", "classPV_1_1InitUniformRandomWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitUniformRandomWeights.html#a0b6f53bc245221f676d0a2f1c6b45c3c", null ],

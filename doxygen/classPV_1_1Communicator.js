@@ -1,6 +1,6 @@
 var classPV_1_1Communicator =
 [
-    [ "Communicator", "classPV_1_1Communicator.html#aa724d9db5aeb5658f7405439d714eac6", null ],
+    [ "Communicator", "classPV_1_1Communicator.html#adb859f1eebc5fe59f982a7a6a6046312", null ],
     [ "~Communicator", "classPV_1_1Communicator.html#ae696dbb986e6e437f096fcf50e0271bb", null ],
     [ "commBatch", "classPV_1_1Communicator.html#a766476a70d428df96fc77fd9bedb3562", null ],
     [ "commBatch", "classPV_1_1Communicator.html#a637a1bc3334c91d5cad5bba8a7ebb1b9", null ],
@@ -63,7 +63,6 @@ var classPV_1_1Communicator =
     [ "localIcComm", "classPV_1_1Communicator.html#ae3687e44ea8f77e6c4606b6584512b24", null ],
     [ "localRank", "classPV_1_1Communicator.html#a6baf5d4e4d3b859355eced26f78c62d2", null ],
     [ "localSize", "classPV_1_1Communicator.html#a90a5415c61793b515524524a70b0ae9f", null ],
-    [ "mpi_initialized_on_entry", "classPV_1_1Communicator.html#abe7f467a40c5434224d3684a03b21cfa", null ],
     [ "neighbors", "classPV_1_1Communicator.html#af994c24d7f2a15d7384848c1523ccf71", null ],
     [ "numBorders", "classPV_1_1Communicator.html#a171280e62cb123b2d76ea9d95a9d1a76", null ],
     [ "numCols", "classPV_1_1Communicator.html#a5f504babd7c34ae520340d6c9d659976", null ],

@@ -10,6 +10,7 @@ var classPV_1_1InitGaussianRandomWeights =
     [ "communicateParamsInfo", "classPV_1_1InitGaussianRandomWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitGaussianRandomWeights.html#a26bc978952cfaa32a06fcee72bc5b30a", null ],
     [ "initialize", "classPV_1_1InitGaussianRandomWeights.html#ab7d3466ae92327d90d014b3411662476", null ],
+    [ "initialize", "classPV_1_1InitGaussianRandomWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitGaussianRandomWeights.html#a78a69da94647d5bb5e20cdd8b6f3a208", null ],
     [ "initializeWeights", "classPV_1_1InitGaussianRandomWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitGaussianRandomWeights.html#a944fba3b703258c1c47ebdef50b5d63f", null ],

@@ -9,6 +9,7 @@ var classPV_1_1InitMaxPoolingWeights =
     [ "communicateParamsInfo", "classPV_1_1InitMaxPoolingWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitMaxPoolingWeights.html#ae75ba4dc21c37f68f466740fc4caf5d0", null ],
     [ "initialize", "classPV_1_1InitMaxPoolingWeights.html#aa562b82e0ab295eb398ee474f183015a", null ],
+    [ "initialize", "classPV_1_1InitMaxPoolingWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitMaxPoolingWeights.html#abdfbc2abb6f51785ccb80b2b6a52b68a", null ],
     [ "initializeWeights", "classPV_1_1InitMaxPoolingWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitMaxPoolingWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

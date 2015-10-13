@@ -9,6 +9,7 @@ var classPV_1_1InitUniformWeights =
     [ "communicateParamsInfo", "classPV_1_1InitUniformWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitUniformWeights.html#a4dcf85db6dde773ebb14af9115dcd663", null ],
     [ "initialize", "classPV_1_1InitUniformWeights.html#ab96c0790b3680104e402b597f0a5325d", null ],
+    [ "initialize", "classPV_1_1InitUniformWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitUniformWeights.html#a72cc4d8773a25f4b8402780dec849d0e", null ],
     [ "initializeWeights", "classPV_1_1InitUniformWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitUniformWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

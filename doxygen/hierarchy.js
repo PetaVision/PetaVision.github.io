@@ -86,8 +86,12 @@ var hierarchy =
       [ "PV::LayerProbe", "classPV_1_1LayerProbe.html", [
         [ "PV::AbstractNormProbe", "classPV_1_1AbstractNormProbe.html", [
           [ "PV::FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", null ],
-          [ "PV::L0NormProbe", "classPV_1_1L0NormProbe.html", null ],
-          [ "PV::L1NormProbe", "classPV_1_1L1NormProbe.html", null ],
+          [ "PV::L0NormProbe", "classPV_1_1L0NormProbe.html", [
+            [ "PV::L0NormLCAProbe", "classPV_1_1L0NormLCAProbe.html", null ]
+          ] ],
+          [ "PV::L1NormProbe", "classPV_1_1L1NormProbe.html", [
+            [ "PV::L1NormLCAProbe", "classPV_1_1L1NormLCAProbe.html", null ]
+          ] ],
           [ "PV::L2NormProbe", "classPV_1_1L2NormProbe.html", null ]
         ] ],
         [ "PV::PointProbe", "classPV_1_1PointProbe.html", [
@@ -110,7 +114,6 @@ var hierarchy =
       [ "PVCuda::CudaUpdateISTALayer", "classPVCuda_1_1CudaUpdateISTALayer.html", null ]
     ] ],
     [ "PV::DataStore", "classPV_1_1DataStore.html", null ],
-    [ "PV::energyterm_", "structPV_1_1energyterm__.html", null ],
     [ "PV::HyPerCol", "classPV_1_1HyPerCol.html", null ],
     [ "PVCuda::HyPerLCAParams", "structPVCuda_1_1HyPerLCAParams.html", null ],
     [ "indexvaluepair_", "structindexvaluepair__.html", null ],
@@ -172,6 +175,7 @@ var hierarchy =
       [ "PV::CoreParamGroupHandler", "classPV_1_1CoreParamGroupHandler.html", null ]
     ] ],
     [ "PV::Publisher", "classPV_1_1Publisher.html", null ],
+    [ "PV::PV_Arguments", "classPV_1_1PV__Arguments.html", null ],
     [ "PV::PV_Init", "classPV_1_1PV__Init.html", null ],
     [ "PV_Stream_", "structPV__Stream__.html", null ],
     [ "PVHalo_", "structPVHalo__.html", null ],

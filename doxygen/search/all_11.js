@@ -9,6 +9,7 @@ var searchData=
   ['reduce_5fdw',['reduce_dW',['../classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c',1,'PV::HyPerConn']]],
   ['requireallzeroactivityprobe',['RequireAllZeroActivityProbe',['../classPV_1_1RequireAllZeroActivityProbe.html',1,'PV']]],
   ['rescalelayer',['RescaleLayer',['../classPV_1_1RescaleLayer.html',1,'PV']]],
+  ['resetstate',['resetState',['../classPV_1_1PV__Arguments.html#acf60b9fd7487ccc7c5b95c4f815d5cc2',1,'PV::PV_Arguments::resetState(int argc, char *argv[], bool allowUnrecognizedArguments)'],['../classPV_1_1PV__Arguments.html#a305ceb48a9df28387e81bd8f334097cb',1,'PV::PV_Arguments::resetState()']]],
   ['resetstateontrigger',['resetStateOnTrigger',['../classPV_1_1HyPerLayer.html#a595ea824a70db5d9bd2b07fbb55cd7ba',1,'PV::HyPerLayer']]],
   ['retina',['Retina',['../classPV_1_1Retina.html',1,'PV']]],
   ['retina_5fparams_5f',['Retina_params_',['../structRetina__params__.html',1,'']]],

@@ -9,6 +9,7 @@ var classPV_1_1InitSpreadOverArborsWeights =
     [ "communicateParamsInfo", "classPV_1_1InitSpreadOverArborsWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitSpreadOverArborsWeights.html#a4a8010c6ef08dd08202df08c21463bcc", null ],
     [ "initialize", "classPV_1_1InitSpreadOverArborsWeights.html#a5d097827a68e465d3223dbd12769140a", null ],
+    [ "initialize", "classPV_1_1InitSpreadOverArborsWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitSpreadOverArborsWeights.html#a586c748365ba812c679d1836ada54acb", null ],
     [ "initializeWeights", "classPV_1_1InitSpreadOverArborsWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitSpreadOverArborsWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

@@ -35,6 +35,7 @@ var classPV_1_1InitGaussianRandomWeightsParams =
     [ "getxDistHeadPreUnits", "classPV_1_1InitGaussianRandomWeightsParams.html#af19b20fb80e496cb73f783a5e66edb7e", null ],
     [ "getyDistHeadPreUnits", "classPV_1_1InitGaussianRandomWeightsParams.html#a1ac1354b7792cec6409383e09747c3f1", null ],
     [ "initialize", "classPV_1_1InitGaussianRandomWeightsParams.html#a91877fa39fd4dba51f2d1b962caf0135", null ],
+    [ "initialize", "classPV_1_1InitGaussianRandomWeightsParams.html#a29631f73b4375035f94b4785400821d7", null ],
     [ "initialize_base", "classPV_1_1InitGaussianRandomWeightsParams.html#a2bda50fd8dcb0d5c1210b89a82681ea3", null ],
     [ "ioParam_combineWeightFiles", "classPV_1_1InitGaussianRandomWeightsParams.html#a2baff13f17470f3acfde102dff7c40cb", null ],
     [ "ioParam_initWeightsFile", "classPV_1_1InitGaussianRandomWeightsParams.html#a984bdb622e26611cc9683f55eec4816d", null ],

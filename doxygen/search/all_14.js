@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ubuntu_20installation',['Ubuntu Installation',['../md_docs_doxygen_src_install_ubuntu.html',1,'']]],
   ['uncompressweight',['uncompressWeight',['../namespacePV.html#a6796ef12bf118a40fcf58cd432c497c0',1,'PV::uncompressWeight(unsigned char w, pvdata_t minVal, pvdata_t maxVal)'],['../namespacePV.html#aade0ba7597a69e2c494ec601bdc43313',1,'PV::uncompressWeight(float w, pvdata_t minVal, pvdata_t maxVal)']]],
   ['uniformweights',['uniformWeights',['../classPV_1_1InitUniformWeights.html#a2680ea41d2271ad7ac7aef81d555efef',1,'PV::InitUniformWeights']]],
   ['update_5fdw',['update_dW',['../classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a',1,'PV::HyPerConn::update_dW()'],['../classPV_1_1ImprintConn.html#a41ff94a107c8463c829624bd87108ba9',1,'PV::ImprintConn::update_dW()']]],

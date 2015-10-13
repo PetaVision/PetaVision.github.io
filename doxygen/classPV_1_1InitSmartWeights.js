@@ -9,6 +9,7 @@ var classPV_1_1InitSmartWeights =
     [ "communicateParamsInfo", "classPV_1_1InitSmartWeights.html#af66605b5e02bea3ad4b68809e81fc36a", null ],
     [ "createNewWeightParams", "classPV_1_1InitSmartWeights.html#ad741d2244b9cbf09bfe5431f0810c4bf", null ],
     [ "initialize", "classPV_1_1InitSmartWeights.html#aefaffd7157de40186b303bb16f6795a2", null ],
+    [ "initialize", "classPV_1_1InitSmartWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitSmartWeights.html#ad4463749359639feea2c412809487fc6", null ],
     [ "initializeWeights", "classPV_1_1InitSmartWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitSmartWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

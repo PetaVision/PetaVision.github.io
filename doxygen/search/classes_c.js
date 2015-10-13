@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['masklayer',['MaskLayer',['../classPV_1_1MaskLayer.html',1,'PV']]],
-  ['momentumconn',['MomentumConn',['../classPV_1_1MomentumConn.html',1,'PV']]],
-  ['movie',['Movie',['../classPV_1_1Movie.html',1,'PV']]],
-  ['moviepvp',['MoviePvp',['../classPV_1_1MoviePvp.html',1,'PV']]]
+  ['normalizebase',['NormalizeBase',['../classPV_1_1NormalizeBase.html',1,'PV']]],
+  ['normalizecontrastzeromean',['NormalizeContrastZeroMean',['../classPV_1_1NormalizeContrastZeroMean.html',1,'PV']]],
+  ['normalizegap',['NormalizeGap',['../classPV_1_1NormalizeGap.html',1,'PV']]],
+  ['normalizel2',['NormalizeL2',['../classPV_1_1NormalizeL2.html',1,'PV']]],
+  ['normalizemax',['NormalizeMax',['../classPV_1_1NormalizeMax.html',1,'PV']]],
+  ['normalizemultiply',['NormalizeMultiply',['../classPV_1_1NormalizeMultiply.html',1,'PV']]],
+  ['normalizesum',['NormalizeSum',['../classPV_1_1NormalizeSum.html',1,'PV']]]
 ];

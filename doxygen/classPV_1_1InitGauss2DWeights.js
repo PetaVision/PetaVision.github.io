@@ -9,6 +9,7 @@ var classPV_1_1InitGauss2DWeights =
     [ "createNewWeightParams", "classPV_1_1InitGauss2DWeights.html#a11a2819485cd52f76ffc5ad320d0ca69", null ],
     [ "gauss2DCalcWeights", "classPV_1_1InitGauss2DWeights.html#a6b7b70d6238ed8f459b75b78caaead67", null ],
     [ "initialize", "classPV_1_1InitGauss2DWeights.html#a46a89228603664cf4f8ce57439d34e7d", null ],
+    [ "initialize", "classPV_1_1InitGauss2DWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitGauss2DWeights.html#af533f89e4104b4f4c01d35a2ce33a9cd", null ],
     [ "initializeWeights", "classPV_1_1InitGauss2DWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitGauss2DWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],

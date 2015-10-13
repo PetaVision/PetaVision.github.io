@@ -54,6 +54,7 @@ var classPV_1_1InitGauss2DWeightsParams =
     [ "getWMin", "classPV_1_1InitGauss2DWeightsParams.html#a85c28e0465a5930f03e1a52af1275679", null ],
     [ "getxDistHeadPreUnits", "classPV_1_1InitGauss2DWeightsParams.html#af19b20fb80e496cb73f783a5e66edb7e", null ],
     [ "getyDistHeadPreUnits", "classPV_1_1InitGauss2DWeightsParams.html#a1ac1354b7792cec6409383e09747c3f1", null ],
+    [ "initialize", "classPV_1_1InitGauss2DWeightsParams.html#a29631f73b4375035f94b4785400821d7", null ],
     [ "initialize", "classPV_1_1InitGauss2DWeightsParams.html#adb14b0e145d740089b88f0bed4420828", null ],
     [ "initialize_base", "classPV_1_1InitGauss2DWeightsParams.html#acf1913e564871b9a86b0321272425f5d", null ],
     [ "ioParam_aspect", "classPV_1_1InitGauss2DWeightsParams.html#a6b9e6d8949b12ae460cc7959ba013510", null ],

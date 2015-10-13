@@ -35,6 +35,7 @@ var classPV_1_1InitUniformWeightsParams =
     [ "getxDistHeadPreUnits", "classPV_1_1InitUniformWeightsParams.html#af19b20fb80e496cb73f783a5e66edb7e", null ],
     [ "getyDistHeadPreUnits", "classPV_1_1InitUniformWeightsParams.html#a1ac1354b7792cec6409383e09747c3f1", null ],
     [ "initialize", "classPV_1_1InitUniformWeightsParams.html#ae1da0bd25e254fa964775bae14694f2e", null ],
+    [ "initialize", "classPV_1_1InitUniformWeightsParams.html#a29631f73b4375035f94b4785400821d7", null ],
     [ "initialize_base", "classPV_1_1InitUniformWeightsParams.html#af6d681b49cc4b55b102e81ccb8f383c8", null ],
     [ "ioParam_combineWeightFiles", "classPV_1_1InitUniformWeightsParams.html#a2baff13f17470f3acfde102dff7c40cb", null ],
     [ "ioParam_connectOnlySameFeatures", "classPV_1_1InitUniformWeightsParams.html#aae6f672eb8f9352d08a9cac25a96a595", null ],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['os_20x_20installation',['OS X Installation',['../md_docs_doxygen_src_install_osx.html',1,'']]],
   ['originalconnname',['originalConnName',['../classPV_1_1TransposeConn.html#a6336343bf6934af30d8fa447f5f5af24',1,'PV::TransposeConn::originalConnName()'],['../classPV_1_1TransposePoolingConn.html#a72a018046f26f714fa66ce0d8ba1ea48',1,'PV::TransposePoolingConn::originalConnName()']]],
   ['outputheader',['outputHeader',['../classPV_1_1ColProbe.html#a6684cf7cb87b8ad8bb2ddabe11193d9c',1,'PV::ColProbe::outputHeader()'],['../classPV_1_1ColumnEnergyProbe.html#ade7b6aa50e6bc0bf8fdf7077e4352dd4',1,'PV::ColumnEnergyProbe::outputHeader()'],['../classPV_1_1QuotientColProbe.html#a92dd35705da13fb95abda61729b6bc38',1,'PV::QuotientColProbe::outputHeader()']]],
   ['outputprobeparams',['outputProbeParams',['../classPV_1_1BaseConnection.html#a663d09deb4f978c513ac5e4b6b8dbc89',1,'PV::BaseConnection::outputProbeParams()'],['../classPV_1_1HyPerConn.html#a62fb1e130c43fed1d4104aa85ce3fb58',1,'PV::HyPerConn::outputProbeParams()']]],

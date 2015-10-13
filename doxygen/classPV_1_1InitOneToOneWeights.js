@@ -11,6 +11,7 @@ var classPV_1_1InitOneToOneWeights =
     [ "createNewWeightParams", "classPV_1_1InitOneToOneWeights.html#a8d097644a422b913f65daba7e72bd4e4", null ],
     [ "createOneToOneConnection", "classPV_1_1InitOneToOneWeights.html#a2a9ef82c678e1a391273ce8ded4b5375", null ],
     [ "initialize", "classPV_1_1InitOneToOneWeights.html#a3f299969e6added5b1c96afbb1c4cafc", null ],
+    [ "initialize", "classPV_1_1InitOneToOneWeights.html#a26a30359c45d73d7a565125b401e4c76", null ],
     [ "initialize_base", "classPV_1_1InitOneToOneWeights.html#aa5a431dbdde6c95a2a65d26182d54642", null ],
     [ "initializeWeights", "classPV_1_1InitOneToOneWeights.html#aa57d7768f7b480176f83a2e37e96631d", null ],
     [ "initRNGs", "classPV_1_1InitOneToOneWeights.html#afe3bd31567e00d380a9f739e07d60526", null ],
