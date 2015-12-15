@@ -49,6 +49,7 @@ var searchData=
   ['getrestartflag',['getRestartFlag',['../classPV_1_1PV__Arguments.html#a613e0b73d880c42ebf704d6b807203f2',1,'PV::PV_Arguments']]],
   ['getstream',['getStream',['../classPV_1_1BaseProbe.html#acaa9081d8afb12d48fd5e1d1696d6d04',1,'PV::BaseProbe']]],
   ['gettargetname',['getTargetName',['../classPV_1_1BaseProbe.html#ab0627677547cafe51f64513035e6077b',1,'PV::BaseProbe']]],
+  ['getusedefaultnumthreads',['getUseDefaultNumThreads',['../classPV_1_1PV__Arguments.html#a7bd824a2dfeb7db89b5507a258815974',1,'PV::PV_Arguments']]],
   ['getv',['getV',['../classPV_1_1PointProbe.html#a6984b5cb968dd47b144745ab43c466b3',1,'PV::PointProbe']]],
   ['getvalue',['getValue',['../classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0',1,'PV::BaseProbe']]],
   ['getvalueinternal',['getValueInternal',['../classPV_1_1AbstractNormProbe.html#ad8b5ef3d65e17599c5429ddeeb1f1d2d',1,'PV::AbstractNormProbe::getValueInternal()'],['../classPV_1_1FirmThresholdCostFnProbe.html#aa53b4454c99fd731a185ebf11282b058',1,'PV::FirmThresholdCostFnProbe::getValueInternal()'],['../classPV_1_1L0NormProbe.html#a7dd1eac81cf08d29492f6470ca951979',1,'PV::L0NormProbe::getValueInternal()'],['../classPV_1_1L1NormProbe.html#a91e2e921674e12a65be59cfe2a856685',1,'PV::L1NormProbe::getValueInternal()'],['../classPV_1_1L2NormProbe.html#a6258ddcb5754923bbab30a268a107d48',1,'PV::L2NormProbe::getValueInternal()']]],

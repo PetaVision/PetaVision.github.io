@@ -155,6 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5d6773a2b5c9d2e3de33b2a1af5f8c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613e0b73d880c42ebf704d6b807203f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#a613e0b73d880c42ebf704d6b807203f2">getRestartFlag</a> ()</td></tr>
 <tr class="separator:a613e0b73d880c42ebf704d6b807203f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd824a2dfeb7db89b5507a258815974"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#a7bd824a2dfeb7db89b5507a258815974">getUseDefaultNumThreads</a> ()</td></tr>
+<tr class="separator:a7bd824a2dfeb7db89b5507a258815974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb49f683358974be3a5286b7a83c7dc4"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#acb49f683358974be3a5286b7a83c7dc4">getWorkingDir</a> ()</td></tr>
 <tr class="separator:acb49f683358974be3a5286b7a83c7dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acedc624107efd2949fa7750bbd554dc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#acedc624107efd2949fa7750bbd554dc0">printState</a> ()</td></tr>
@@ -187,6 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a375a533e042dcb8b39c56441ddf70779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81bbab2c632ff1b7312481f9369a84f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#a81bbab2c632ff1b7312481f9369a84f9">setRestartFlag</a> (bool val)</td></tr>
 <tr class="separator:a81bbab2c632ff1b7312481f9369a84f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16688f8a13baa1a64a9da59bfb97b21a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#a16688f8a13baa1a64a9da59bfb97b21a">setUseDefaultNumThreads</a> (bool val)</td></tr>
+<tr class="separator:a16688f8a13baa1a64a9da59bfb97b21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25b19f8ae0aab33e9588e0ebdf201d39"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PV__Arguments.html#a25b19f8ae0aab33e9588e0ebdf201d39">setWorkingDir</a> (char const *val)</td></tr>
 <tr class="separator:a25b19f8ae0aab33e9588e0ebdf201d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -264,6 +268,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>requireReturnFlag</b>
 <tr class="memitem:a845281ddab24d1ac9ccb1298a4546f17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a845281ddab24d1ac9ccb1298a4546f17"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>restartFlag</b></td></tr>
 <tr class="separator:a845281ddab24d1ac9ccb1298a4546f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e688a7103d8eb4e50e0abd75b986e35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e688a7103d8eb4e50e0abd75b986e35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useDefaultNumThreads</b></td></tr>
+<tr class="separator:a4e688a7103d8eb4e50e0abd75b986e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9dffae88a6af5d55b652476ba51dfd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9dffae88a6af5d55b652476ba51dfd3"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td></tr>
 <tr class="separator:af9dffae88a6af5d55b652476ba51dfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,7 +316,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 <p>If an option occurs more than once, only the first occurrence is used to set the value.</p>
 <p>If allowUnrecognizedArguments is set to false, the constructor fails if any string in the argv array is not recoginzed. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00015">15</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00016">16</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +343,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#a1b0865a75d8b1e1898bc52aec75766e7">clearState()</a> frees all memory allocated for member variables except for the copy of argv, and resets all member variables to their </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00171">171</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00183">183</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +380,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#ac42029ebf20a2e272dd7f8468f3f9072">copyArgs()</a> is used internally both by the constructor, to copy the argv array into a member variable, and by the getArgs get-method to return a copy of the args array. It returns an array of length argc+1, where the first argc strings are copied from argv and the last one is NULL (i.e. <a class="el" href="classPV_1_1PV__Arguments.html#ac42029ebf20a2e272dd7f8468f3f9072">copyArgs()</a>[argc]==NULL). </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00050">50</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00056">56</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +406,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>prints a message to stderr and returns PV_FAILURE if any error in the state is detected; returns PV_SUCCESS otherwise. Currently, it only checks whether restartFlag and checkpointReadDir are not both set. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00254">254</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00259">259</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +443,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#a462a61f15519e4aac237699dad87755b">errorSettingString()</a> is used internally to provide a common interface for reporting an error encountered by setString. It uses the value of errno. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00150">150</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00162">162</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -473,7 +480,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Deallocates an array, assuming it was created by a call to getArgs(). It frees argv[0], argv[1], ..., argv[argc-1], and then frees argv. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00076">76</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00082">82</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +524,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Returns a copy of the args array. It uses malloc and strdup, so the caller is responsible for freeing getArgs()[k] for each k and for freeing getArgs() (the simplest way to free all the memory at once is to call the static method PV_Argument::freeArgs) The length of the returned array is argc+1, and getArgs()[argc] is NULL. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00082">82</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00088">88</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +577,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Returns the batch width. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00174">174</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00179">179</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -700,7 +707,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Returns the number of columns. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00169">169</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00174">174</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,7 +733,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Returns the number of rows. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00164">164</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00169">169</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -752,7 +759,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Returns the number of threads. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00159">159</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00164">164</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -912,6 +919,32 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 
 </div>
 </div>
+<a class="anchor" id="a7bd824a2dfeb7db89b5507a258815974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PV::PV_Arguments::getUseDefaultNumThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the useDefaultNumThreads flag. </p>
+
+<p>Definition at line <a class="el" href="PV__Arguments_8hpp_source.html#l00159">159</a> of file <a class="el" href="PV__Arguments_8hpp_source.html">PV_Arguments.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acb49f683358974be3a5286b7a83c7dc4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -977,7 +1010,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#ac15575dc0a433f670366c520c7bd7576">initialize()</a> is called by the constructor to parse the argv array and set internal variables accordingly. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00044">44</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00046">46</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1036,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#a68573757179dffe0a406fb556da4a393">initialize_base()</a> is called by the constructor to initialize the internal variables to false for flags, zero for integers, and NULL for strings. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00020">20</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00021">21</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1062,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#a1625b597cbc177e7805ea3367f633cb6">initializeState()</a> sets all member variables except numArgs and args (the copies of argc and argv passed to the constructor) to zero or NULL. It is called by <a class="el" href="classPV_1_1PV__Arguments.html#a68573757179dffe0a406fb556da4a393">initialize_base()</a> and <a class="el" href="classPV_1_1PV__Arguments.html#a1b0865a75d8b1e1898bc52aec75766e7">clearState()</a>. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00027">27</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00028">28</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1080,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Prints the effective command line based on the argc/argv arguments used in instantiation, and any set-methods used since then. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00234">234</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00239">239</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1115,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Reinitializes the object's state based on the new argc and argv array. The allowUnrecognizedArguments flag has the same effect as in the constructor. Any previous pointers returned by get-methods become invalid. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00156">156</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00168">168</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1133,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Resets all member variables to their state after the object was instantiated. That is, the arguments in argv are parsed but the effect of any set-method is discarded. Any previous pointers returned by get-methods, except for getArgsConst, getArgs, . </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00163">163</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00175">175</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1152,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the batch width to the input argument. The old value is discarded. The return value is the new batch width. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00128">128</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00140">140</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1138,7 +1171,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the checkpointRead directory string to a copy of the input argument. If there is an error setting the string, the old value is untouched and the return value is NULL. On success, the old value is deallocated and the return value is a pointer to the new checkpointRead directory string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00113">113</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00119">119</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1190,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the gpu devices string to a copy of the input argument. If there is an error setting the string, the old value is untouched and the return value is NULL. On success, the old value is deallocated and the return value is a pointer to the new gpu devices string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00099">99</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00105">105</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1209,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the log file string to a copy of the input argument. If there is an error setting the string, the old value is untouched and the return value is NULL. On success, the old value is deallocated and the return value is a pointer to the new log file string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00096">96</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00102">102</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1228,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the number of columns to the input argument. The old value is discarded. The return value is the new number of columns. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00124">124</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00136">136</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1214,7 +1247,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the number of rows to the input argument. The old value is discarded. The return value is the new number of rows. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00120">120</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00132">132</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1231,9 +1264,9 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the number of threads to the input argument. The old value is discarded. The return value is the new number of threads. </p>
+<p>Sets the number of threads to the input argument. The old value is discarded. The return value is the new number of threads. Additionally, the useDefaultNumThreads flag is set to false. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00116">116</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00127">127</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1252,7 +1285,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the output path string. The return value is the new value of the output path string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00090">90</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00096">96</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1271,7 +1304,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the params file string to a copy of the input argument. If there is an error setting the string, the old value is untouched and the return value is NULL. On success, the old value is deallocated and the return value is a pointer to the new params file string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00093">93</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00099">99</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1323,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the random seed to the input argument. The old value is discarded. The return value is the new value of the random seed. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00102">102</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00108">108</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1309,7 +1342,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the require-return flag. The return value is the new value of the require-return flag. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00086">86</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00092">92</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1361,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the restart flag. The return value is the new value of the restart flag. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00109">109</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00115">115</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1404,26 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1PV__Arguments.html#ae2a8733d63ee1115820a1c6bffe476d5">setString()</a> is used internally as a common interface for setting the internal string variables. If it encounters an error, it prints an error message and returns NULL with the old value of the parameter untouched. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00133">133</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00145">145</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16688f8a13baa1a64a9da59bfb97b21a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PV::PV_Arguments::setUseDefaultNumThreads </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the useDefaultNumThreads flag to the given argument. The old value is discarded. The return value is the new useDefaultNumThreads flag. If the argument is true, numThreads is set to zero. </p>
+
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00122">122</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>
@@ -1390,7 +1442,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>workingDir</b></td>
 </div><div class="memdoc">
 <p>Sets the value of the working directory string to a copy of the input argument. If there is an error setting the string, the old value is untouched and the return value is NULL. On success, the old value is deallocated and the return value is a pointer to the new working directory string. </p>
 
-<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00106">106</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Arguments_8cpp_source.html#l00112">112</a> of file <a class="el" href="PV__Arguments_8cpp_source.html">PV_Arguments.cpp</a>.</p>
 
 </div>
 </div>

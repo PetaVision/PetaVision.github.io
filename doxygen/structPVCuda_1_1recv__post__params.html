@@ -113,6 +113,18 @@ $(document).ready(function(){initNavTree('structPVCuda_1_1recv__post__params.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:a2a072057c04e9f3103c21a4dc21e99c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a072057c04e9f3103c21a4dc21e99c7"></a>
+float *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_gSyn</b></td></tr>
+<tr class="separator:a2a072057c04e9f3103c21a4dc21e99c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ec32ea508981154a69a3c99206cadc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82ec32ea508981154a69a3c99206cadc"></a>
+float *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_preData</b></td></tr>
+<tr class="separator:a82ec32ea508981154a69a3c99206cadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38acc6d71484e148f7da63ba702042e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38acc6d71484e148f7da63ba702042e4"></a>
+float *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_weights</b></td></tr>
+<tr class="separator:a38acc6d71484e148f7da63ba702042e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa26f3e44f1fb7f2ce3bebad39b74b83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa26f3e44f1fb7f2ce3bebad39b74b83"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_workspace</b></td></tr>
+<tr class="separator:aaa26f3e44f1fb7f2ce3bebad39b74b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ef2cdb4a74e1eb0f2c4fc12379297f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8ef2cdb4a74e1eb0f2c4fc12379297f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>dt_factor</b></td></tr>
 <tr class="separator:aa8ef2cdb4a74e1eb0f2c4fc12379297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,6 +134,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>localBufSizeX</b></td>
 <tr class="memitem:adf376057924a46de6cb6806c1c51d4c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf376057924a46de6cb6806c1c51d4c0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>localBufSizeY</b></td></tr>
 <tr class="separator:adf376057924a46de6cb6806c1c51d4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4b1d0e09ece73cfc4bdee01cb62f9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b4b1d0e09ece73cfc4bdee01cb62f9f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>manyScaleX</b></td></tr>
+<tr class="separator:a3b4b1d0e09ece73cfc4bdee01cb62f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8977652beed6e205d956701adc96a76f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8977652beed6e205d956701adc96a76f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>manyScaleY</b></td></tr>
+<tr class="separator:a8977652beed6e205d956701adc96a76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aac21855d9c0dd5ff10099866a457c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0aac21855d9c0dd5ff10099866a457c3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>nbatch</b></td></tr>
 <tr class="separator:a0aac21855d9c0dd5ff10099866a457c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,6 +233,21 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sy</b></td></tr>
 <tr class="memitem:a92843da970f0edf7caaaf666f9557da4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92843da970f0edf7caaaf666f9557da4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>syp</b></td></tr>
 <tr class="separator:a92843da970f0edf7caaaf666f9557da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bf0ec3e0959c435b5c306fc8160a9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3bf0ec3e0959c435b5c306fc8160a9c"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>v_convAlgo</b></td></tr>
+<tr class="separator:ac3bf0ec3e0959c435b5c306fc8160a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36f86ec50e5f8ee48e04ad27ddc6e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae36f86ec50e5f8ee48e04ad27ddc6e41"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>v_convDescriptor</b></td></tr>
+<tr class="separator:ae36f86ec50e5f8ee48e04ad27ddc6e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65dcc7b82a463722431ab0c5fa64539e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65dcc7b82a463722431ab0c5fa64539e"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>v_filterDescriptor</b></td></tr>
+<tr class="separator:a65dcc7b82a463722431ab0c5fa64539e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48cd78fa8eff92088a70f41b24973b5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48cd78fa8eff92088a70f41b24973b5a"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>v_inputDescriptor</b></td></tr>
+<tr class="separator:a48cd78fa8eff92088a70f41b24973b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12b6325b8b6fa6eec3ca0f0467f6169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad12b6325b8b6fa6eec3ca0f0467f6169"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>v_outputDescriptor</b></td></tr>
+<tr class="separator:ad12b6325b8b6fa6eec3ca0f0467f6169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8022e514bce38a35431ed67873d62707"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8022e514bce38a35431ed67873d62707"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>warpSize</b></td></tr>
 <tr class="separator:a8022e514bce38a35431ed67873d62707"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +257,9 @@ float *&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b></td></
 <tr class="memitem:a3e9187b2fae0a71c41dc691acac7a8b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e9187b2fae0a71c41dc691acac7a8b3"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>weightsBufNum</b></td></tr>
 <tr class="separator:a3e9187b2fae0a71c41dc691acac7a8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1bfb926d00e39129eecdcfaacbbcde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc1bfb926d00e39129eecdcfaacbbcde"></a>
+size_t *&#160;</td><td class="memItemRight" valign="bottom"><b>workspaceSize</b></td></tr>
+<tr class="separator:abc1bfb926d00e39129eecdcfaacbbcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

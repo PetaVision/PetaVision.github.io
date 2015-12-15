@@ -27,6 +27,7 @@ var namespacePV =
     [ "DataStore", "classPV_1_1DataStore.html", "classPV_1_1DataStore" ],
     [ "FeedbackConn", "classPV_1_1FeedbackConn.html", "classPV_1_1FeedbackConn" ],
     [ "FilenameParsingGroundTruthLayer", "classPV_1_1FilenameParsingGroundTruthLayer.html", "classPV_1_1FilenameParsingGroundTruthLayer" ],
+    [ "FirmThresholdCostFnLCAProbe", "classPV_1_1FirmThresholdCostFnLCAProbe.html", "classPV_1_1FirmThresholdCostFnLCAProbe" ],
     [ "FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", "classPV_1_1FirmThresholdCostFnProbe" ],
     [ "GapConn", "classPV_1_1GapConn.html", "classPV_1_1GapConn" ],
     [ "GapLayer", "classPV_1_1GapLayer.html", "classPV_1_1GapLayer" ],

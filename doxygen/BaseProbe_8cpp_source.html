@@ -348,145 +348,148 @@ $(document).ready(function(){initNavTree('BaseProbe_8cpp_source.html','');});
 <div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a05561c458bd5950bdb678804178baca7">  250</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a05561c458bd5950bdb678804178baca7">BaseProbe::communicateInitInfo</a>() {</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   <span class="comment">//Set up output stream</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;   <span class="keywordtype">int</span> status = initOutputStream(probeOutputFilename);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;   <span class="comment">//communicate here only sets up triggering</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   <span class="keywordflow">if</span>(triggerFlag){</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      triggerLayer = parent-&gt;getLayerFromName(triggerLayerName);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">if</span> (triggerLayer==NULL) {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;         <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: triggerLayer \&quot;%s\&quot; is not a layer in the HyPerCol.\n&quot;</span>,</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                  parent-&gt;parameters()-&gt;groupKeywordFromName(name), name, triggerLayerName);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;         }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;         MPI_Barrier(parent-&gt;icCommunicator()-&gt;communicator());</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;         exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   }</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   <span class="keywordflow">if</span> (energyProbe &amp;&amp; energyProbe[0]) {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <a class="code" href="classPV_1_1ColProbe.html">ColProbe</a> * colprobe = <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;getColProbeFromName(energyProbe);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <a class="code" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> * probe = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> *<span class="keyword">&gt;</span>(colprobe);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <span class="keywordflow">if</span> (probe==NULL) {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;         <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;columnId()==0) {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: energyProbe \&quot;%s\&quot; is not a ColumnEnergyProbe in the column.\n&quot;</span>,</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                  <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;parameters()-&gt;groupKeywordFromName(<a class="code" href="classPV_1_1BaseProbe.html#a2da6faa6c1654e753206e51a6840b648">getName</a>()), <a class="code" href="classPV_1_1BaseProbe.html#a2da6faa6c1654e753206e51a6840b648">getName</a>(), energyProbe);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;         }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;         MPI_Barrier(<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;icCommunicator()-&gt;communicator());</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;         exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      status = probe-&gt;<a class="code" href="classPV_1_1ColumnEnergyProbe.html#a6463fb4cf93554af6b8107e19b49bd3a">addTerm</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   }</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">  281</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">BaseProbe::allocateDataStructures</a>(){</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">  285</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">BaseProbe::initMessage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg) {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;   assert(msgstring==NULL);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;   <span class="keywordflow">if</span>( msg != NULL &amp;&amp; msg[0] != <span class="charliteral">&#39;\0&#39;</span> ) {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <span class="keywordtype">size_t</span> msglen = strlen(msg);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      this-&gt;msgstring = (<span class="keywordtype">char</span> *) calloc(msglen+2, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)); <span class="comment">// Allocate room for colon plus null terminator</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordflow">if</span>(this-&gt;msgstring) {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;         memcpy(this-&gt;msgstring, msg, msglen);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;         this-&gt;msgstring[msglen] = <span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;         this-&gt;msgstring[msglen+1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      this-&gt;msgstring = (<span class="keywordtype">char</span> *) calloc(1, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keywordflow">if</span>(this-&gt;msgstring) {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;         this-&gt;msgstring[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;   }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;   <span class="keywordflow">if</span>( !this-&gt;msgstring ) {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot;: Unable to allocate memory for probe&#39;s message.\n&quot;</span>,</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            parent-&gt;parameters()-&gt;groupKeywordFromName(name), name);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      status = PV_FAILURE;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;   }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;   assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">  312</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">BaseProbe::needUpdate</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt){</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;   <span class="keywordflow">if</span>(triggerFlag){</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      assert(triggerLayer);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <span class="keywordtype">double</span> updateTime;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      <span class="comment">//Update if trigger layer updated on this timestep</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordflow">if</span>(fabs(time - triggerLayer-&gt;getLastUpdateTime()) &lt;= (dt/2)){</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;         updateTime = triggerLayer-&gt;getLastUpdateTime();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;         updateTime = triggerLayer-&gt;getNextUpdateTime();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   <span class="comment">// Set up triggering.</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;   <span class="keywordflow">if</span>(triggerFlag){</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      triggerLayer = parent-&gt;getLayerFromName(triggerLayerName);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">if</span> (triggerLayer==NULL) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;         <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: triggerLayer \&quot;%s\&quot; is not a layer in the HyPerCol.\n&quot;</span>,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                  parent-&gt;parameters()-&gt;groupKeywordFromName(name), name, triggerLayerName);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;         }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;         MPI_Barrier(parent-&gt;icCommunicator()-&gt;communicator());</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;         exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="comment">// Add the probe to the ColumnEnergyProbe, if there is one.</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   <span class="keywordflow">if</span> (energyProbe &amp;&amp; energyProbe[0]) {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <a class="code" href="classPV_1_1ColProbe.html">ColProbe</a> * colprobe = <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;getColProbeFromName(energyProbe);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <a class="code" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> * probe = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> *<span class="keyword">&gt;</span>(colprobe);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="keywordflow">if</span> (probe==NULL) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;         <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;columnId()==0) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: energyProbe \&quot;%s\&quot; is not a ColumnEnergyProbe in the column.\n&quot;</span>,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                  <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;parameters()-&gt;groupKeywordFromName(<a class="code" href="classPV_1_1BaseProbe.html#a2da6faa6c1654e753206e51a6840b648">getName</a>()), <a class="code" href="classPV_1_1BaseProbe.html#a2da6faa6c1654e753206e51a6840b648">getName</a>(), energyProbe);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;         }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;         MPI_Barrier(<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;icCommunicator()-&gt;communicator());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;         exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      status = probe-&gt;<a class="code" href="classPV_1_1ColumnEnergyProbe.html#a6463fb4cf93554af6b8107e19b49bd3a">addTerm</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">  284</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">BaseProbe::allocateDataStructures</a>(){</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">  288</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">BaseProbe::initMessage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;   assert(msgstring==NULL);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   <span class="keywordflow">if</span>( msg != NULL &amp;&amp; msg[0] != <span class="charliteral">&#39;\0&#39;</span> ) {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="keywordtype">size_t</span> msglen = strlen(msg);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      this-&gt;msgstring = (<span class="keywordtype">char</span> *) calloc(msglen+2, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)); <span class="comment">// Allocate room for colon plus null terminator</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">if</span>(this-&gt;msgstring) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;         memcpy(this-&gt;msgstring, msg, msglen);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;         this-&gt;msgstring[msglen] = <span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;         this-&gt;msgstring[msglen+1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;   }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;   <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      this-&gt;msgstring = (<span class="keywordtype">char</span> *) calloc(1, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">if</span>(this-&gt;msgstring) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;         this-&gt;msgstring[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;   }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;   <span class="keywordflow">if</span>( !this-&gt;msgstring ) {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot;: Unable to allocate memory for probe&#39;s message.\n&quot;</span>,</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            parent-&gt;parameters()-&gt;groupKeywordFromName(name), name);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      status = PV_FAILURE;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;   assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">  315</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">BaseProbe::needUpdate</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt){</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;   <span class="keywordflow">if</span>(triggerFlag){</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      assert(triggerLayer);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordtype">double</span> updateTime;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      <span class="comment">//Update if trigger layer updated on this timestep</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordflow">if</span>(fabs(time - triggerLayer-&gt;getLastUpdateTime()) &lt;= (dt/2)){</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;         updateTime = triggerLayer-&gt;getLastUpdateTime();</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="comment">//never update flag</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordflow">if</span>(updateTime == -1){</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="comment">//Check for equality</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordflow">if</span>(fabs(time - (updateTime - triggerOffset)) &lt; (dt/2)){</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      }</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="comment">//If it gets to this point, don&#39;t update</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;   }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;   <span class="comment">//If no trigger, update every timestep</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;   <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a0daca7bdb8e8560cbcc0ba4fab645f9c">  340</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue) {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc</a>(timevalue)) {</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      status = <a class="code" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues</a>(timevalue);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keywordflow">if</span> (status == PV_SUCCESS) {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;         lastUpdateTime = timevalue;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      }</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;   }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">  351</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue, <span class="keywordtype">double</span> * values) {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   <span class="keywordtype">int</span> status = <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   <span class="keywordflow">if</span> (status == PV_SUCCESS) {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      memcpy(values, probeValues, <span class="keyword">sizeof</span>(*probeValues)*(<span class="keywordtype">size_t</span>) <a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>());</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;   }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a4fc7f138d1ac0c6582a0a5731b4772d2">  359</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue, std::vector&lt;double&gt; * valuesVector) {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   valuesVector-&gt;resize(this-&gt;<a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>());</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue, &amp;valuesVector-&gt;front());</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
-<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">  364</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">BaseProbe::getValue</a>(<span class="keywordtype">double</span> timevalue, <span class="keywordtype">int</span> index) {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   <span class="keywordflow">if</span> (index&lt;0 || index&gt;=<a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>()) {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::signaling_NaN();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc</a>(timevalue)) { status = <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue); }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;         <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::signaling_NaN();</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      }</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;   <span class="keywordflow">return</span> probeValues[index];</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">  378</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">BaseProbe::outputStateWrapper</a>(<span class="keywordtype">double</span> timef, <span class="keywordtype">double</span> dt){</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;   <span class="keywordflow">if</span>(textOutputFlag &amp;&amp; <a class="code" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate</a>(timef, dt)){</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      status = <a class="code" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">outputState</a>(timef);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;   }</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;} <span class="comment">// namespace PV</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;         updateTime = triggerLayer-&gt;getNextUpdateTime();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="comment">//never update flag</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordflow">if</span>(updateTime == -1){</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="comment">//Check for equality</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">if</span>(fabs(time - (updateTime - triggerOffset)) &lt; (dt/2)){</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="comment">//If it gets to this point, don&#39;t update</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;   }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   <span class="comment">//If no trigger, update every timestep</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;   <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;   }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a0daca7bdb8e8560cbcc0ba4fab645f9c">  343</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue) {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc</a>(timevalue)) {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      status = <a class="code" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues</a>(timevalue);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordflow">if</span> (status == PV_SUCCESS) {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;         lastUpdateTime = timevalue;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;   }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">  354</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue, <span class="keywordtype">double</span> * values) {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;   <span class="keywordtype">int</span> status = <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   <span class="keywordflow">if</span> (status == PV_SUCCESS) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      memcpy(values, probeValues, <span class="keyword">sizeof</span>(*probeValues)*(<span class="keywordtype">size_t</span>) <a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>());</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;   }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a4fc7f138d1ac0c6582a0a5731b4772d2">  362</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">BaseProbe::getValues</a>(<span class="keywordtype">double</span> timevalue, std::vector&lt;double&gt; * valuesVector) {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   valuesVector-&gt;resize(this-&gt;<a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>());</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue, &amp;valuesVector-&gt;front());</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">  367</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">BaseProbe::getValue</a>(<span class="keywordtype">double</span> timevalue, <span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="keywordflow">if</span> (index&lt;0 || index&gt;=<a class="code" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a>()) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::signaling_NaN();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;   }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;   <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc</a>(timevalue)) { status = <a class="code" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a>(timevalue); }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;         <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::signaling_NaN();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   <span class="keywordflow">return</span> probeValues[index];</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">  381</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">BaseProbe::outputStateWrapper</a>(<span class="keywordtype">double</span> timef, <span class="keywordtype">double</span> dt){</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   <span class="keywordflow">if</span>(textOutputFlag &amp;&amp; <a class="code" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate</a>(timef, dt)){</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      status = <a class="code" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">outputState</a>(timef);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;} <span class="comment">// namespace PV</span></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a64f71d173174c9216fb727dc5bd1ac75"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a64f71d173174c9216fb727dc5bd1ac75">PV::BaseProbe::ioParam_coefficient</a></div><div class="ttdeci">virtual void ioParam_coefficient(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">coefficient: If energyProbe is set, the coefficient parameter specifies that ColumnEnergyProbe multip...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00130">BaseProbe.cpp:130</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_ae1833be5476f6d4a9cf97e74b7adc0fe"><div class="ttname"><a href="classPV_1_1BaseProbe.html#ae1833be5476f6d4a9cf97e74b7adc0fe">PV::BaseProbe::setNumValues</a></div><div class="ttdeci">int setNumValues(int n)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00229">BaseProbe.cpp:229</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_af85016fed624cb3101468fea721f29e0"><div class="ttname"><a href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">PV::BaseProbe::getValue</a></div><div class="ttdeci">double getValue(double timevalue, int index)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00364">BaseProbe.cpp:364</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_af85016fed624cb3101468fea721f29e0"><div class="ttname"><a href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">PV::BaseProbe::getValue</a></div><div class="ttdeci">double getValue(double timevalue, int index)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00367">BaseProbe.cpp:367</a></div></div>
 <div class="ttc" id="classPV_1_1ColumnEnergyProbe_html"><div class="ttname"><a href="classPV_1_1ColumnEnergyProbe.html">PV::ColumnEnergyProbe</a></div><div class="ttdef"><b>Definition:</b> <a href="ColumnEnergyProbe_8hpp_source.html#l00039">ColumnEnergyProbe.hpp:39</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_a4fb423c7234cbce2f09f140316b2b5b2"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">PV::BaseProbe::getValues</a></div><div class="ttdeci">int getValues(double timevalue, double *valuesVector)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00351">BaseProbe.cpp:351</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_a4fb423c7234cbce2f09f140316b2b5b2"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">PV::BaseProbe::getValues</a></div><div class="ttdeci">int getValues(double timevalue, double *valuesVector)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00354">BaseProbe.cpp:354</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerCol_html"><div class="ttname"><a href="classPV_1_1HyPerCol.html">PV::HyPerCol</a></div><div class="ttdef"><b>Definition:</b> <a href="HyPerCol_8hpp_source.html#l00050">HyPerCol.hpp:50</a></div></div>
 <div class="ttc" id="classPV_1_1PVParams_html_ab1216243eb516e4fc5fdb3255005d10f"><div class="ttname"><a href="classPV_1_1PVParams.html#ab1216243eb516e4fc5fdb3255005d10f">PV::PVParams::present</a></div><div class="ttdeci">int present(const char *groupName, const char *paramName)</div><div class="ttdef"><b>Definition:</b> <a href="PVParams_8cpp_source.html#l01404">PVParams.cpp:1404</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_afece8db3867a87e46d6c9967c384c48e"><div class="ttname"><a href="classPV_1_1BaseProbe.html#afece8db3867a87e46d6c9967c384c48e">PV::BaseProbe::initNumValues</a></div><div class="ttdeci">virtual int initNumValues()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00225">BaseProbe.cpp:225</a></div></div>
@@ -503,18 +506,18 @@ $(document).ready(function(){initNavTree('BaseProbe_8cpp_source.html','');});
 <div class="ttc" id="classPV_1_1BaseProbe_html_a015f673c863fc410e3b81bfb9b18af11"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a015f673c863fc410e3b81bfb9b18af11">PV::BaseProbe::ioParam_triggerOffset</a></div><div class="ttdeci">virtual void ioParam_triggerOffset(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">triggerOffset: If triggerFlag is true, triggerOffset specifies the time interval before the triggerLa...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00188">BaseProbe.cpp:188</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a15d1c75e64c40df1e30878d2526481a9"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a15d1c75e64c40df1e30878d2526481a9">PV::BaseProbe::initialize</a></div><div class="ttdeci">int initialize(const char *probeName, HyPerCol *hc)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00066">BaseProbe.cpp:66</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerCol_html_a436bb917c4024424c8bde1bd0ef71fe3"><div class="ttname"><a href="classPV_1_1HyPerCol.html#a436bb917c4024424c8bde1bd0ef71fe3">PV::HyPerCol::getVerifyWrites</a></div><div class="ttdeci">bool getVerifyWrites()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerCol_8hpp_source.html#l00091">HyPerCol.hpp:91</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_ad7e767adce6ecd1e2870b2280cfda394"><div class="ttname"><a href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">PV::BaseProbe::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00312">BaseProbe.cpp:312</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_ad7e767adce6ecd1e2870b2280cfda394"><div class="ttname"><a href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">PV::BaseProbe::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00315">BaseProbe.cpp:315</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a7dfcf3cd3bdb4e5033083025a1ae2d5f"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a7dfcf3cd3bdb4e5033083025a1ae2d5f">PV::BaseProbe::ioParam_textOutputFlag</a></div><div class="ttdeci">virtual void ioParam_textOutputFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">textOutputFlag: A boolean parameter that sets whether to generate an output file. Defaults to true...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00137">BaseProbe.cpp:137</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_a995875a09a43b39d5a4c6c898c7d2aac"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">PV::BaseProbe::outputStateWrapper</a></div><div class="ttdeci">virtual int outputStateWrapper(double timef, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00378">BaseProbe.cpp:378</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_a995875a09a43b39d5a4c6c898c7d2aac"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">PV::BaseProbe::outputStateWrapper</a></div><div class="ttdeci">virtual int outputStateWrapper(double timef, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00381">BaseProbe.cpp:381</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_ad45e1dc390d1ba4265e0d8d5ed64f1bf"><div class="ttname"><a href="classPV_1_1BaseProbe.html#ad45e1dc390d1ba4265e0d8d5ed64f1bf">PV::BaseProbe::ioParam_probeOutputFile</a></div><div class="ttdeci">virtual void ioParam_probeOutputFile(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">probeOutputFile: If textOutputFlag is true, probeOutputFile specifies the name of the file that the o...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00141">BaseProbe.cpp:141</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a4c68a398e8b62eb8319a21a385290f69"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">PV::BaseProbe::outputState</a></div><div class="ttdeci">virtual int outputState(double timef)=0</div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_aae05e7c06e44057d22b09f9de95c79f9"><div class="ttname"><a href="classPV_1_1BaseProbe.html#aae05e7c06e44057d22b09f9de95c79f9">PV::BaseProbe::ioParam_triggerLayerName</a></div><div class="ttdeci">virtual void ioParam_triggerLayerName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">triggerLayerName: If triggerFlag is true, triggerLayerName specifies the layer to check for triggerin...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00148">BaseProbe.cpp:148</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_acf67bca0b593c62f9cb2452d226da2d4"><div class="ttname"><a href="classPV_1_1BaseProbe.html#acf67bca0b593c62f9cb2452d226da2d4">PV::BaseProbe::ioParam_targetName</a></div><div class="ttdeci">virtual void ioParam_targetName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">targetName: the name of the object that the probe attaches to. In LayerProbe, targetName is used to d...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00115">BaseProbe.cpp:115</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a1c4d1030776ed07d3019125cb0a7fee3"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">PV::BaseProbe::getNumValues</a></div><div class="ttdeci">int getNumValues()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8hpp_source.html#l00068">BaseProbe.hpp:68</a></div></div>
 <div class="ttc" id="classPV_1_1BaseProbe_html_a2da6faa6c1654e753206e51a6840b648"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a2da6faa6c1654e753206e51a6840b648">PV::BaseProbe::getName</a></div><div class="ttdeci">const char * getName()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8hpp_source.html#l00091">BaseProbe.hpp:91</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_a8f15a2128e777d9a36ccb9705ca8a77e"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">PV::BaseProbe::allocateDataStructures</a></div><div class="ttdeci">virtual int allocateDataStructures()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00281">BaseProbe.cpp:281</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_a8f15a2128e777d9a36ccb9705ca8a77e"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a8f15a2128e777d9a36ccb9705ca8a77e">PV::BaseProbe::allocateDataStructures</a></div><div class="ttdeci">virtual int allocateDataStructures()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00284">BaseProbe.cpp:284</a></div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> <a href="Communicator_8cpp_source.html#l00016">Communicator.cpp:16</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_abb2c6abb9a5d04fdf844622df7095a41"><div class="ttname"><a href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">PV::BaseProbe::initMessage</a></div><div class="ttdeci">virtual int initMessage(const char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00285">BaseProbe.cpp:285</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_abb2c6abb9a5d04fdf844622df7095a41"><div class="ttname"><a href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">PV::BaseProbe::initMessage</a></div><div class="ttdeci">virtual int initMessage(const char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00288">BaseProbe.cpp:288</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

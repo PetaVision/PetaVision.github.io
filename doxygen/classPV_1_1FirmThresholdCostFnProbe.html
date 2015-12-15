@@ -121,9 +121,10 @@ Inheritance diagram for PV::FirmThresholdCostFnProbe:</div>
  <div class="center">
   <img src="classPV_1_1FirmThresholdCostFnProbe.png" usemap="#PV::FirmThresholdCostFnProbe_map" alt=""/>
   <map id="PV::FirmThresholdCostFnProbe_map" name="PV::FirmThresholdCostFnProbe_map">
-<area href="classPV_1_1AbstractNormProbe.html" alt="PV::AbstractNormProbe" shape="rect" coords="0,112,190,136"/>
-<area href="classPV_1_1LayerProbe.html" alt="PV::LayerProbe" shape="rect" coords="0,56,190,80"/>
-<area href="classPV_1_1BaseProbe.html" alt="PV::BaseProbe" shape="rect" coords="0,0,190,24"/>
+<area href="classPV_1_1AbstractNormProbe.html" alt="PV::AbstractNormProbe" shape="rect" coords="0,112,215,136"/>
+<area href="classPV_1_1LayerProbe.html" alt="PV::LayerProbe" shape="rect" coords="0,56,215,80"/>
+<area href="classPV_1_1BaseProbe.html" alt="PV::BaseProbe" shape="rect" coords="0,0,215,24"/>
+<area href="classPV_1_1FirmThresholdCostFnLCAProbe.html" alt="PV::FirmThresholdCostFnLCAProbe" shape="rect" coords="0,224,215,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -327,11 +328,11 @@ FirmThresholdCostFnProbe Parameters</h2></td></tr>
 </td></tr>
 <tr class="memitem:a77ccd4cb4e4269a80f9b6053985ce881"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77ccd4cb4e4269a80f9b6053985ce881"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1FirmThresholdCostFnProbe.html#a77ccd4cb4e4269a80f9b6053985ce881">ioParam_VThresh</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a77ccd4cb4e4269a80f9b6053985ce881"><td class="mdescLeft">&#160;</td><td class="mdescRight">VThresh: The threshold where the transfer function returns 0 if |V|&lt;VThresh. The default is zero. <br /></td></tr>
+<tr class="memdesc:a77ccd4cb4e4269a80f9b6053985ce881"><td class="mdescLeft">&#160;</td><td class="mdescRight">VThresh: The threshold where the transfer function returns 0 if |V|&lt;VThresh. If the target layer is an <a class="el" href="classPV_1_1ANNLayer.html">ANNLayer</a> or one of its subclasses, the default is the target layer's VThresh; otherwise, the default is zero. <br /></td></tr>
 <tr class="separator:a77ccd4cb4e4269a80f9b6053985ce881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a081bf3a75ec7e459e98692eb1b494261"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a081bf3a75ec7e459e98692eb1b494261"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1FirmThresholdCostFnProbe.html#a081bf3a75ec7e459e98692eb1b494261">ioParam_VWidth</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a081bf3a75ec7e459e98692eb1b494261"><td class="mdescLeft">&#160;</td><td class="mdescRight">VWidth: The width of the interval over which the transfer function changes from hard to soft threshold. The default is zero. <br /></td></tr>
+<tr class="memdesc:a081bf3a75ec7e459e98692eb1b494261"><td class="mdescLeft">&#160;</td><td class="mdescRight">VWidth: The width of the interval over which the transfer function changes from hard to soft threshold. If the target layer is an <a class="el" href="classPV_1_1ANNLayer.html">ANNLayer</a> or one of its subclasses, the default is the target layer's VWidth; otherwise, the default is zero. <br /></td></tr>
 <tr class="separator:a081bf3a75ec7e459e98692eb1b494261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -344,9 +345,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a58cc9ca767d664f16253ff7ff5149f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for computing the cost function corresponding to a transfer function intermediate between soft threshold and hard threshold: If |V|&lt;VThresh, activity is zero. If |V|&gt;VThresh+VWidth, activity is the same as V. Otherwise, activity is sgn(V)*(|V|-VThresh)*(VThresh/VWidth+1) Note that this defines a continuous, pointwise linear function of the membrane potential, with breaks where |V|=VThresh and |V|=VThresh+VWidth. Also, as VWidth-&gt;0, the transfer function approaches the hard threshold case, and as VWidth-&gt;infinity, the transfer function approaches the soft threshold case. </p>
+<div class="textblock"><p>A class for computing the cost function corresponding to a transfer function intermediate between soft threshold and hard threshold: If |V|&lt;VThresh, activity is zero. If |V|&gt;VThresh+VWidth, activity is the same as V. Otherwise, activity is sgn(V)*(|V|-VThresh)*(VThresh/VWidth+1) Note that this defines a continuous, pointwise linear function of the membrane potential, with breaks where |V|=VThresh and |V|=VThresh+VWidth. Also, as VWidth-&gt;0, the transfer function approaches the hard threshold case, and as VWidth-&gt;infinity, the transfer function approaches the soft threshold case.</p>
+<p>The cost function for a layer with activities y_i is given by the sum of C(y_i), where C(y_i) = (VThresh+VWidth)/2 if |y_i|&gt;=VThresh+VWidth, and C(y_i) = |y_i|*(1-|y_i|/(VThresh+VWidth)/2) if |y_i|&lt;VThresh+VWidth. </p>
 
-<p>Definition at line <a class="el" href="FirmThresholdCostFnProbe_8hpp_source.html#l00025">25</a> of file <a class="el" href="FirmThresholdCostFnProbe_8hpp_source.html">FirmThresholdCostFnProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FirmThresholdCostFnProbe_8hpp_source.html#l00029">29</a> of file <a class="el" href="FirmThresholdCostFnProbe_8hpp_source.html">FirmThresholdCostFnProbe.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8f15a2128e777d9a36ccb9705ca8a77e"></a>
 <div class="memitem">
@@ -372,7 +374,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented in <a class="el" href="classPV_1_1KernelProbe.html#ad59dd457ddbe84dd6fabb953bc68ae7b">PV::KernelProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00281">281</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00284">284</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -430,6 +432,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Calls <a class="el" href="classPV_1_1LayerProbe.html#a80232c18f0eb23ae2f82babd0447b39e">LayerProbe::communicateInitInfo</a> to set up the targetLayer and attach the probe; and then checks the masking layer if masking is used. </p>
 
 <p>Reimplemented from <a class="el" href="classPV_1_1AbstractNormProbe.html#a4ba92af07417ff4fe10afa7eb8dab599">PV::AbstractNormProbe</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classPV_1_1FirmThresholdCostFnLCAProbe.html#a16aff3462161dd2b83e210939221fbad">PV::FirmThresholdCostFnLCAProbe</a>.</p>
 
 <p>Definition at line <a class="el" href="FirmThresholdCostFnProbe_8cpp_source.html#l00056">56</a> of file <a class="el" href="FirmThresholdCostFnProbe_8cpp_source.html">FirmThresholdCostFnProbe.cpp</a>.</p>
 
@@ -806,7 +810,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> is meant for situations where the caller needs one value that would be returned by <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a>, not the whole buffer. <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> returns a signaling NaN if index is out of bounds. If index is valid, <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, and then returns probeValues[index]. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00364">364</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00367">367</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -883,7 +887,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p><a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues(double timevalue, double * values)</a> sets the buffer 'values' with the probe's calculated values. It assumes that the values buffer is large enough to hold <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> double-precision values. If 'values' is NULL, the values are still updated internally if needed, but those values are not returned. Internally, <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> is true. It then copies the probeValues buffer to the input argument buffer 'values'. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00351">351</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00354">354</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -920,7 +924,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>getValues(double timevalue, vector&lt;double&gt; * valuesVector) is a wrapper around <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues(double, double *)</a> that uses C++ vectors. It resizes valuesVector to size <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> and then fills the vector with the values returned by getValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00359">359</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00362">362</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -947,7 +951,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>If <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, <a class="el" href="classPV_1_1BaseProbe.html#a0daca7bdb8e8560cbcc0ba4fab645f9c">getValues(double)</a> updates the probeValues buffer (by calling calcValues) and sets lastUpdateTime to the timevalue input argument. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00340">340</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00343">343</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1040,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The method called by <a class="el" href="classPV_1_1BaseProbe.html#a15d1c75e64c40df1e30878d2526481a9">BaseProbe::initialize()</a> to set the message used by the probe's outputState method. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00285">285</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00288">288</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1097,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>coefficient: If energyProbe is set, the coefficient parameter specifies that <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> multiplies the result of this probe's <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> method by coefficient when computing the error. </p>
 <p>Note that coefficient does not affect the value returned by the <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> or <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> method. </p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1L0NormLCAProbe.html#a075d08338e00a6b8d8adde4546e60ca5">PV::L0NormLCAProbe</a>, and <a class="el" href="classPV_1_1L1NormLCAProbe.html#a0a4db0734ef58063f9a2c478a4983ace">PV::L1NormLCAProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1FirmThresholdCostFnLCAProbe.html#a5aafc9a9e5fa0626cae0edb9d0103973">PV::FirmThresholdCostFnLCAProbe</a>, <a class="el" href="classPV_1_1L0NormLCAProbe.html#a075d08338e00a6b8d8adde4546e60ca5">PV::L0NormLCAProbe</a>, and <a class="el" href="classPV_1_1L1NormLCAProbe.html#a0a4db0734ef58063f9a2c478a4983ace">PV::L1NormLCAProbe</a>.</p>
 
 <p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00130">130</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
@@ -1216,9 +1220,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If there is a triggering layer, needUpdate returns true when the triggering layer's nextUpdateTime, modified by the probe's triggerOffset parameter, occurs. If there is not a triggering layer, needUpdate returns false. This behavior can be overridden if a probe uses some criterion other than triggering to choose when output its state. </p>
+<p>If there is a triggering layer, needUpdate returns true when the triggering layer's nextUpdateTime, modified by the probe's triggerOffset parameter, occurs; otherwise false. If there is not a triggering layer, needUpdate always returns true. This behavior can be overridden if a probe uses some criterion other than triggering to choose when output its state. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00312">312</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00315">315</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1288,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The public interface for calling the outputState method. BaseConnection::outputStateWrapper calls <a class="el" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">outputState()</a> if <a class="el" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate()</a> returns true. This behavior is intended to be general, but the method can be overridden if needed. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00378">378</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00381">381</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>

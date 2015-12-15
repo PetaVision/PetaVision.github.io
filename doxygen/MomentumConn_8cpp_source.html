@@ -308,251 +308,248 @@ $(document).ready(function(){initNavTree('MomentumConn_8cpp_source.html','');});
 <div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classPV_1_1MomentumConn.html#a91b76fe60a8350762dc3fabd1d6c4dce">  217</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1MomentumConn.html#a91b76fe60a8350762dc3fabd1d6c4dce">MomentumConn::calc_dW</a>() {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;   assert(plasticityFlag);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   <span class="keywordtype">int</span> status;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx &gt;= timeBatchPeriod){</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      timeBatchIdx = 0;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      timeBatchIdx++;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   <span class="comment">//Clear at time 0, update at time timeBatchPeriod - 1</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;   <span class="keywordtype">bool</span> need_update_w = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   <span class="keywordtype">bool</span> need_clear_dw = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx == 0){</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      need_clear_dw = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   timeBatchIdx = (timeBatchIdx + 1) % timeBatchPeriod;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   <span class="comment">//Clear at time 0, update at time timeBatchPeriod - 1</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   <span class="keywordtype">bool</span> need_update_w = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   <span class="keywordtype">bool</span> need_clear_dw = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx == 0){</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      need_clear_dw = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   <span class="comment">//If updating next timestep, update weights here</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="keywordflow">if</span>((timeBatchIdx + 1) % timeBatchPeriod == 0){</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      need_update_w = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx == timeBatchPeriod - 1){</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      need_update_w = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;   }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="comment">//Clear every batch period</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">if</span>(need_clear_dw){</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a642ff5020055cee86148da855292293f">initialize_dW</a>(arborId);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;         assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;   }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="comment">//Sum up parts every timestep</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      status = <a class="code" href="classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a">update_dW</a>(arborId);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="comment">//Reduce only when we need to update</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordflow">if</span>(need_update_w){</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c">reduce_dW</a>(arborId);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;         assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;   }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="comment">//Normalize only when reduced</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keywordflow">if</span>(need_update_w){</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a34518ae81af452b840e5dcde0c94c6c5">normalize_dW</a>(arborId);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;         assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   }</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keywordtype">int</span> MomentumConn::updateWeights(<span class="keywordtype">int</span> arborId){</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx != timeBatchPeriod - 1){</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   <span class="comment">//Add momentum right before updateWeights</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kArbor = 0; kArbor &lt; this-&gt;numberOfAxonalArborLists(); kArbor++){</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      applyMomentum(arborId);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   <span class="comment">//Saved to prevweights</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   assert(prev_dwDataStart);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   std::memcpy(*prev_dwDataStart, *get_dwDataStart(),</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;         <span class="keyword">sizeof</span>(pvwdata_t) *</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;         numberOfAxonalArborLists() * </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;         nxp * nyp * nfp *</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;         getNumDataPatches());</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   <span class="comment">// add dw to w</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kArbor = 0; kArbor &lt; this-&gt;numberOfAxonalArborLists(); kArbor++){</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      pvwdata_t * w_data_start = get_wDataStart(kArbor);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">for</span>( <span class="keywordtype">long</span> <span class="keywordtype">int</span> k=0; k&lt;patchStartIndex(getNumDataPatches()); k++ ) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;         w_data_start[k] += get_dwDataStart(kArbor)[k];</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;   <span class="keywordflow">return</span> PV_BREAK;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">//int MomentumConn::updateState(double time, double dt){</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">//   int status = PV_SUCCESS;</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">//   if( !plasticityFlag ) {</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">//      return status;</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">//   update_timer-&gt;start();</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">//   //if (!combine_dW_with_W_flag) { clear_dW(); }</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">//   for(int arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">//      status = calc_dW(arborId);        // Calculate changes in weights</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">//      if (status==PV_BREAK) { break; }</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">//      assert(status == PV_SUCCESS);</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">//   if(batchIdx &gt;= batchPeriod - 1){</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">//      for (int arborID = 0; arborID &lt; numberOfAxonalArborLists(); arborID++) {</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">//         sumKernels(arborID); // combine partial changes in each column</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">//         normalize_dW(arborID);</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">//         assert(status == PV_SUCCESS);</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">//      //Apply momentum</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">//      for (int arborID = 0; arborID &lt; numberOfAxonalArborLists(); arborID++) {</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">//         status = applyMomentum(arborID);</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">//         if (status == PV_BREAK) {</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">//            break;</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">//         }</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">//         assert(status == PV_SUCCESS);</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">//      </span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">//      //Update prev_dwData buffer</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">//      assert(prev_dwDataStart);</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">//      //After reduce, copy over to prev_dwData</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">//      std::memcpy(*prev_dwDataStart, *get_dwDataStart(),</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">//            sizeof(pvwdata_t) *</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">//            numberOfAxonalArborLists() * </span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">//            nxp * nyp * nfp *</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">//            getNumDataPatches());</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">//      //Update weights with momentum</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">//      for(int arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++){</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">//         status = updateWeights(arborId);  // Apply changes in weights</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">//         if (status==PV_BREAK) { break; }</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">//         assert(status==PV_SUCCESS);</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">//      //Clear dw after weights are updated</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">//      clear_dW();</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">//      //Reset numKernelActivations</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">//      for(int arbor_ID = 0; arbor_ID &lt; numberOfAxonalArborLists(); arbor_ID++){</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">//         int numKernelIndices = getNumDataPatches();</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">//         int patchSize = nxp * nyp * nfp;</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">//#ifdef PV_USE_OPENMP_THREADS</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">//#pragma omp parallel for</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">//#endif</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">//         for(int ki = 0; ki &lt; numKernelIndices; ki++){</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">//            for(int pi = 0; pi &lt; patchSize; pi++){</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment">//               numKernelActivations[arbor_ID][ki][pi] = 0;</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment">//            }</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">//         }</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">//      //Reset batchIdx</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">//      batchIdx = 0;</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="comment">//Clear every batch period</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">if</span>(need_clear_dw){</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a642ff5020055cee86148da855292293f">initialize_dW</a>(arborId);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;         assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;   }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="comment">//Sum up parts every timestep</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      status = <a class="code" href="classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a">update_dW</a>(arborId);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="comment">//Reduce only when we need to update</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">if</span>(need_update_w){</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c">reduce_dW</a>(arborId);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;         assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <span class="comment">//Normalize only when reduced</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordflow">if</span>(need_update_w){</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;         status = <a class="code" href="classPV_1_1HyPerConn.html#a34518ae81af452b840e5dcde0c94c6c5">normalize_dW</a>(arborId);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;         <span class="keywordflow">if</span> (status==PV_BREAK) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;         assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keywordtype">int</span> MomentumConn::updateWeights(<span class="keywordtype">int</span> arborId){</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;   <span class="keywordflow">if</span>(timeBatchIdx != timeBatchPeriod - 1){</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   <span class="comment">//Add momentum right before updateWeights</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kArbor = 0; kArbor &lt; this-&gt;numberOfAxonalArborLists(); kArbor++){</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      applyMomentum(arborId);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   <span class="comment">//Saved to prevweights</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   assert(prev_dwDataStart);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   std::memcpy(*prev_dwDataStart, *get_dwDataStart(),</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;         <span class="keyword">sizeof</span>(pvwdata_t) *</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;         numberOfAxonalArborLists() * </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;         nxp * nyp * nfp *</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;         getNumDataPatches());</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;   <span class="comment">// add dw to w</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kArbor = 0; kArbor &lt; this-&gt;numberOfAxonalArborLists(); kArbor++){</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      pvwdata_t * w_data_start = get_wDataStart(kArbor);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordflow">for</span>( <span class="keywordtype">long</span> <span class="keywordtype">int</span> k=0; k&lt;patchStartIndex(getNumDataPatches()); k++ ) {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;         w_data_start[k] += get_dwDataStart(kArbor)[k];</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;   <span class="keywordflow">return</span> PV_BREAK;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">//int MomentumConn::updateState(double time, double dt){</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">//   int status = PV_SUCCESS;</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">//   if( !plasticityFlag ) {</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">//      return status;</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">//   update_timer-&gt;start();</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">//   //if (!combine_dW_with_W_flag) { clear_dW(); }</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">//   for(int arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++) {</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">//      status = calc_dW(arborId);        // Calculate changes in weights</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">//      if (status==PV_BREAK) { break; }</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">//      assert(status == PV_SUCCESS);</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">//   if(batchIdx &gt;= batchPeriod - 1){</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">//      for (int arborID = 0; arborID &lt; numberOfAxonalArborLists(); arborID++) {</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">//         sumKernels(arborID); // combine partial changes in each column</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">//         normalize_dW(arborID);</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">//         assert(status == PV_SUCCESS);</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">//      //Apply momentum</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">//      for (int arborID = 0; arborID &lt; numberOfAxonalArborLists(); arborID++) {</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">//         status = applyMomentum(arborID);</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">//         if (status == PV_BREAK) {</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">//            break;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">//         }</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">//         assert(status == PV_SUCCESS);</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">//      </span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">//      //Update prev_dwData buffer</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">//      assert(prev_dwDataStart);</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">//      //After reduce, copy over to prev_dwData</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">//      std::memcpy(*prev_dwDataStart, *get_dwDataStart(),</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">//            sizeof(pvwdata_t) *</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">//            numberOfAxonalArborLists() * </span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">//            nxp * nyp * nfp *</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">//            getNumDataPatches());</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">//      //Update weights with momentum</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">//      for(int arborId=0;arborId&lt;numberOfAxonalArborLists();arborId++){</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">//         status = updateWeights(arborId);  // Apply changes in weights</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">//         if (status==PV_BREAK) { break; }</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">//         assert(status==PV_SUCCESS);</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">//      //Clear dw after weights are updated</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">//      clear_dW();</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">//      //Reset numKernelActivations</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">//      for(int arbor_ID = 0; arbor_ID &lt; numberOfAxonalArborLists(); arbor_ID++){</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">//         int numKernelIndices = getNumDataPatches();</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">//         int patchSize = nxp * nyp * nfp;</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">//#ifdef PV_USE_OPENMP_THREADS</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">//#pragma omp parallel for</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">//#endif</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">//         for(int ki = 0; ki &lt; numKernelIndices; ki++){</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">//            for(int pi = 0; pi &lt; patchSize; pi++){</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">//               numKernelActivations[arbor_ID][ki][pi] = 0;</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">//            }</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">//         }</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment">//      //Reset batchIdx</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">//      batchIdx = 0;</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">//   else{</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">//      batchIdx ++;</span></div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">//   else{</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">//      batchIdx ++;</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">//   // normalizeWeights(); // normalizeWeights call moved to HyPerCol::advanceTime loop, to allow for normalization of a group of connections</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">//   update_timer-&gt;stop();</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">//   return status;</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keywordtype">int</span> MomentumConn::applyMomentum(<span class="keywordtype">int</span> arbor_ID){</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   <span class="keywordtype">int</span> nExt = preSynapticLayer()-&gt;getNumExtended();</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   <span class="keyword">const</span> <a class="code" href="structPVLayerLoc__.html">PVLayerLoc</a> * loc = preSynapticLayer()-&gt;getLayerLoc();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   <span class="keywordflow">if</span>(sharedWeights){</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <span class="keywordtype">int</span> numKernels = getNumDataPatches();</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="comment">//Shared weights done in parallel, parallel in numkernels</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENMP_THREADS</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">#pragma omp parallel for</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kernelIdx = 0; kernelIdx &lt; numKernels; kernelIdx++){</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;         pvwdata_t * dwdata_start  = get_dwDataHead(arbor_ID, kernelIdx);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;         pvwdata_t * prev_dw_start = get_prev_dwDataHead(arbor_ID, kernelIdx);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;         pvwdata_t * wdata_start   = get_wDataHead(arbor_ID, kernelIdx);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;simple&quot;</span>)){</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;               dwdata_start[k] += momentumTau * prev_dw_start[k] - momentumDecay*wdata_start[k];</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;         }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;viscosity&quot;</span>)){</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;               <span class="comment">//dwdata_start[k] = momentumTau * (prev_dw_start[k] + dwdata_start[k]) * (1 - exp(-1.0/ momentumTau)) - momentumDecay*wdata_start[k];</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;               dwdata_start[k] = (prev_dw_start[k] * exp(-1.0/ momentumTau)) + dwdata_start[k] - momentumDecay*wdata_start[k];</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            }</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;         }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;alex&quot;</span>)){</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;               <span class="comment">//weight_inc[i] := momW * weight_inc[i-1] - wc * epsW * weights[i-1] + epsW * weight_grads[i]</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;               <span class="comment">//   weights[i] := weights[i-1] + weight_inc[i]</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;               dwdata_start[k] = momentumTau * prev_dw_start[k] - momentumDecay * getDWMax()* wdata_start[k] + dwdata_start[k];</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            }</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;         }</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">//   // normalizeWeights(); // normalizeWeights call moved to HyPerCol::advanceTime loop, to allow for normalization of a group of connections</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">//   update_timer-&gt;stop();</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">//   return status;</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keywordtype">int</span> MomentumConn::applyMomentum(<span class="keywordtype">int</span> arbor_ID){</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   <span class="keywordtype">int</span> nExt = preSynapticLayer()-&gt;getNumExtended();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;   <span class="keyword">const</span> <a class="code" href="structPVLayerLoc__.html">PVLayerLoc</a> * loc = preSynapticLayer()-&gt;getLayerLoc();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;   <span class="keywordflow">if</span>(sharedWeights){</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      <span class="keywordtype">int</span> numKernels = getNumDataPatches();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      <span class="comment">//Shared weights done in parallel, parallel in numkernels</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENMP_THREADS</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#pragma omp parallel for</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> kernelIdx = 0; kernelIdx &lt; numKernels; kernelIdx++){</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;         pvwdata_t * dwdata_start  = get_dwDataHead(arbor_ID, kernelIdx);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;         pvwdata_t * prev_dw_start = get_prev_dwDataHead(arbor_ID, kernelIdx);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;         pvwdata_t * wdata_start   = get_wDataHead(arbor_ID, kernelIdx);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;         <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;simple&quot;</span>)){</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;               dwdata_start[k] += momentumTau * prev_dw_start[k] - momentumDecay*wdata_start[k];</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;         }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;viscosity&quot;</span>)){</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;               <span class="comment">//dwdata_start[k] = momentumTau * (prev_dw_start[k] + dwdata_start[k]) * (1 - exp(-1.0/ momentumTau)) - momentumDecay*wdata_start[k];</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;               dwdata_start[k] = (prev_dw_start[k] * exp(-1.0/ momentumTau)) + dwdata_start[k] - momentumDecay*wdata_start[k];</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;         }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(momentumMethod, <span class="stringliteral">&quot;alex&quot;</span>)){</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; nxp*nyp*nfp; k++){</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;               <span class="comment">//weight_inc[i] := momW * weight_inc[i-1] - wc * epsW * weights[i-1] + epsW * weight_grads[i]</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;               <span class="comment">//   weights[i] := weights[i-1] + weight_inc[i]</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;               dwdata_start[k] = momentumTau * prev_dw_start[k] - momentumDecay * getDWMax()* wdata_start[k] + dwdata_start[k];</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;         }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;   }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;   <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Warning: Momentum not implemented for non-shared weights, not implementing momentum\n&quot;</span>;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;   }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;   <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Warning: Momentum not implemented for non-shared weights, not implementing momentum\n&quot;</span>;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;   }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">//TODO checkpointing not working with batching, must write checkpoint exactly at period</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno"><a class="line" href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">  416</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">MomentumConn::checkpointWrite</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * cpDir) {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;   <a class="code" href="classPV_1_1HyPerConn.html#a0e91da827bf65c6482c2f0750b4e5b04">HyPerConn::checkpointWrite</a>(cpDir);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;   <span class="keywordflow">if</span> (!plasticityFlag) <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;   <span class="keywordtype">char</span> filename[PV_PATH_MAX];</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;   <span class="keywordtype">int</span> chars_needed = snprintf(filename, PV_PATH_MAX, <span class="stringliteral">&quot;%s/%s_prev_dW.pvp&quot;</span>, cpDir, name);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;   <span class="keywordflow">if</span>(chars_needed &gt;= PV_PATH_MAX) {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <span class="keywordflow">if</span> ( parent-&gt;icCommunicator()-&gt;commRank()==0 ) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;HyPerConn::checkpointFilename error: path \&quot;%s/%s_W.pvp\&quot; is too long.\n&quot;</span>, cpDir, name);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      }</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      abort();</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;   }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;   PVPatch *** patches_arg = sharedWeights ? NULL : get_wPatches();</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;   <span class="keywordtype">int</span> status = writeWeights(patches_arg, prev_dwDataStart, getNumDataPatches(), filename, parent-&gt;simulationTime(), writeCompressedCheckpoints, <span class="comment">/*last*/</span><span class="keyword">true</span>);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;   assert(status==PV_SUCCESS);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">  433</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">MomentumConn::checkpointRead</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * cpDir, <span class="keywordtype">double</span> * timeptr) {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;   <a class="code" href="classPV_1_1HyPerConn.html#ab6824a17e0ae283ce8042d63a5b65fe8">HyPerConn::checkpointRead</a>(cpDir, timeptr);</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;   <span class="keywordflow">if</span> (!plasticityFlag) <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;   clearWeights(prev_dwDataStart, getNumDataPatches(), nxp, nyp, nfp);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   <span class="keywordtype">char</span> * path = parent-&gt;pathInCheckpoint(cpDir, <a class="code" href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">getName</a>(), <span class="stringliteral">&quot;_prev_dW.pvp&quot;</span>);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;   PVPatch *** patches_arg = sharedWeights ? NULL : get_wPatches();</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;   <span class="keywordtype">double</span> filetime=0.0;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;   <span class="keywordtype">int</span> status = PV::readWeights(patches_arg, prev_dwDataStart, numberOfAxonalArborLists(), getNumDataPatches(), nxp, nyp, nfp, path, parent-&gt;icCommunicator(), &amp;filetime, pre-&gt;getLayerLoc());</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;   <span class="keywordflow">if</span> (parent-&gt;columnId()==0 &amp;&amp; timeptr &amp;&amp; *timeptr != filetime) {</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;Warning: \&quot;%s\&quot; checkpoint has timestamp %g instead of the expected value %g.\n&quot;</span>, path, filetime, *timeptr);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;   }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;   free(path);</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;} <span class="comment">// end namespace PV</span></div>
-<div class="ttc" id="classPV_1_1MomentumConn_html_a519d82b5950847240b92f6ad4c9845ad"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">PV::MomentumConn::checkpointRead</a></div><div class="ttdeci">virtual int checkpointRead(const char *cpDir, double *timef)</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00433">MomentumConn.cpp:433</a></div></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;}</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="comment">//TODO checkpointing not working with batching, must write checkpoint exactly at period</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">  413</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">MomentumConn::checkpointWrite</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * cpDir) {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;   <a class="code" href="classPV_1_1HyPerConn.html#a0e91da827bf65c6482c2f0750b4e5b04">HyPerConn::checkpointWrite</a>(cpDir);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;   <span class="keywordflow">if</span> (!plasticityFlag) <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;   <span class="keywordtype">char</span> filename[PV_PATH_MAX];</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;   <span class="keywordtype">int</span> chars_needed = snprintf(filename, PV_PATH_MAX, <span class="stringliteral">&quot;%s/%s_prev_dW.pvp&quot;</span>, cpDir, name);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;   <span class="keywordflow">if</span>(chars_needed &gt;= PV_PATH_MAX) {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      <span class="keywordflow">if</span> ( parent-&gt;icCommunicator()-&gt;commRank()==0 ) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;HyPerConn::checkpointFilename error: path \&quot;%s/%s_W.pvp\&quot; is too long.\n&quot;</span>, cpDir, name);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      abort();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;   }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;   PVPatch *** patches_arg = sharedWeights ? NULL : get_wPatches();</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;   <span class="keywordtype">int</span> status = writeWeights(patches_arg, prev_dwDataStart, getNumDataPatches(), filename, parent-&gt;simulationTime(), writeCompressedCheckpoints, <span class="comment">/*last*/</span><span class="keyword">true</span>);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;   assert(status==PV_SUCCESS);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">  430</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">MomentumConn::checkpointRead</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * cpDir, <span class="keywordtype">double</span> * timeptr) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;   <a class="code" href="classPV_1_1HyPerConn.html#ab6824a17e0ae283ce8042d63a5b65fe8">HyPerConn::checkpointRead</a>(cpDir, timeptr);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;   <span class="keywordflow">if</span> (!plasticityFlag) <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;   clearWeights(prev_dwDataStart, getNumDataPatches(), nxp, nyp, nfp);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;   <span class="keywordtype">char</span> * path = parent-&gt;pathInCheckpoint(cpDir, <a class="code" href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">getName</a>(), <span class="stringliteral">&quot;_prev_dW.pvp&quot;</span>);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;   PVPatch *** patches_arg = sharedWeights ? NULL : get_wPatches();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;   <span class="keywordtype">double</span> filetime=0.0;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   <span class="keywordtype">int</span> status = PV::readWeights(patches_arg, prev_dwDataStart, numberOfAxonalArborLists(), getNumDataPatches(), nxp, nyp, nfp, path, parent-&gt;icCommunicator(), &amp;filetime, pre-&gt;getLayerLoc());</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;   <span class="keywordflow">if</span> (parent-&gt;columnId()==0 &amp;&amp; timeptr &amp;&amp; *timeptr != filetime) {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;Warning: \&quot;%s\&quot; checkpoint has timestamp %g instead of the expected value %g.\n&quot;</span>, path, filetime, *timeptr);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;   }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;   free(path);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;} <span class="comment">// end namespace PV</span></div>
+<div class="ttc" id="classPV_1_1MomentumConn_html_a519d82b5950847240b92f6ad4c9845ad"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a519d82b5950847240b92f6ad4c9845ad">PV::MomentumConn::checkpointRead</a></div><div class="ttdeci">virtual int checkpointRead(const char *cpDir, double *timef)</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00430">MomentumConn.cpp:430</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a9d25459925dab07306be9603617c5026"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a9d25459925dab07306be9603617c5026">PV::HyPerConn::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00662">HyPerConn.cpp:662</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a829c6e9c1ea72edce9c41992c295703e"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">PV::BaseConnection::getName</a></div><div class="ttdeci">const char * getName()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8hpp_source.html#l00198">BaseConnection.hpp:198</a></div></div>
 <div class="ttc" id="classPV_1_1MomentumConn_html_a91b76fe60a8350762dc3fabd1d6c4dce"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a91b76fe60a8350762dc3fabd1d6c4dce">PV::MomentumConn::calc_dW</a></div><div class="ttdeci">virtual int calc_dW()</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00217">MomentumConn.cpp:217</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a36c7ee19852dfe6ab63f1f2bcd3abf3c"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c">PV::HyPerConn::reduce_dW</a></div><div class="ttdeci">virtual int reduce_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03102">HyPerConn.cpp:3102</a></div></div>
-<div class="ttc" id="classPV_1_1MomentumConn_html_a86e39d86a2d92dc732f020616514ef6a"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">PV::MomentumConn::checkpointWrite</a></div><div class="ttdeci">virtual int checkpointWrite(const char *cpDir)</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00416">MomentumConn.cpp:416</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a36c7ee19852dfe6ab63f1f2bcd3abf3c"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c">PV::HyPerConn::reduce_dW</a></div><div class="ttdeci">virtual int reduce_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03105">HyPerConn.cpp:3105</a></div></div>
+<div class="ttc" id="classPV_1_1MomentumConn_html_a86e39d86a2d92dc732f020616514ef6a"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a86e39d86a2d92dc732f020616514ef6a">PV::MomentumConn::checkpointWrite</a></div><div class="ttdeci">virtual int checkpointWrite(const char *cpDir)</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00413">MomentumConn.cpp:413</a></div></div>
 <div class="ttc" id="classPV_1_1MomentumConn_html_a5132e57dfd257d7a13e2d1b1b17adc0a"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a5132e57dfd257d7a13e2d1b1b17adc0a">PV::MomentumConn::ioParam_momentumMethod</a></div><div class="ttdeci">virtual void ioParam_momentumMethod(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">momentumMethod: The momentum method to use </div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00104">MomentumConn.cpp:104</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a642ff5020055cee86148da855292293f"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a642ff5020055cee86148da855292293f">PV::HyPerConn::initialize_dW</a></div><div class="ttdeci">virtual int initialize_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03076">HyPerConn.cpp:3076</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a642ff5020055cee86148da855292293f"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a642ff5020055cee86148da855292293f">PV::HyPerConn::initialize_dW</a></div><div class="ttdeci">virtual int initialize_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03079">HyPerConn.cpp:3079</a></div></div>
 <div class="ttc" id="classPV_1_1MomentumConn_html_a24fe2a1bf489a3ff46237cdc6eda01fe"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a24fe2a1bf489a3ff46237cdc6eda01fe">PV::MomentumConn::allocateDataStructures</a></div><div class="ttdeci">virtual int allocateDataStructures()</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00043">MomentumConn.cpp:43</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a70d80fdc9041d539a9ff1e171f91640f"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a70d80fdc9041d539a9ff1e171f91640f">PV::HyPerConn::allocateDataStructures</a></div><div class="ttdeci">virtual int allocateDataStructures()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01633">HyPerConn.cpp:1633</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a70d80fdc9041d539a9ff1e171f91640f"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a70d80fdc9041d539a9ff1e171f91640f">PV::HyPerConn::allocateDataStructures</a></div><div class="ttdeci">virtual int allocateDataStructures()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01636">HyPerConn.cpp:1636</a></div></div>
 <div class="ttc" id="classPV_1_1MomentumConn_html_a715d56e355d487da5e904f8156cee289"><div class="ttname"><a href="classPV_1_1MomentumConn.html#a715d56e355d487da5e904f8156cee289">PV::MomentumConn::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="MomentumConn_8cpp_source.html#l00071">MomentumConn.cpp:71</a></div></div>
 <div class="ttc" id="structPVLayerLoc___html"><div class="ttname"><a href="structPVLayerLoc__.html">PVLayerLoc_</a></div><div class="ttdef"><b>Definition:</b> <a href="PVLayerLoc_8h_source.html#l00024">PVLayerLoc.h:24</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_ab6824a17e0ae283ce8042d63a5b65fe8"><div class="ttname"><a href="classPV_1_1HyPerConn.html#ab6824a17e0ae283ce8042d63a5b65fe8">PV::HyPerConn::checkpointRead</a></div><div class="ttdeci">virtual int checkpointRead(const char *cpDir, double *timef)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02724">HyPerConn.cpp:2724</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a34518ae81af452b840e5dcde0c94c6c5"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a34518ae81af452b840e5dcde0c94c6c5">PV::HyPerConn::normalize_dW</a></div><div class="ttdeci">virtual int normalize_dW(int arbor_ID)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03372">HyPerConn.cpp:3372</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a0e91da827bf65c6482c2f0750b4e5b04"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a0e91da827bf65c6482c2f0750b4e5b04">PV::HyPerConn::checkpointWrite</a></div><div class="ttdeci">virtual int checkpointWrite(const char *cpDir)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02749">HyPerConn.cpp:2749</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_ab6824a17e0ae283ce8042d63a5b65fe8"><div class="ttname"><a href="classPV_1_1HyPerConn.html#ab6824a17e0ae283ce8042d63a5b65fe8">PV::HyPerConn::checkpointRead</a></div><div class="ttdeci">virtual int checkpointRead(const char *cpDir, double *timef)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02727">HyPerConn.cpp:2727</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a34518ae81af452b840e5dcde0c94c6c5"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a34518ae81af452b840e5dcde0c94c6c5">PV::HyPerConn::normalize_dW</a></div><div class="ttdeci">virtual int normalize_dW(int arbor_ID)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03375">HyPerConn.cpp:3375</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a0e91da827bf65c6482c2f0750b4e5b04"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a0e91da827bf65c6482c2f0750b4e5b04">PV::HyPerConn::checkpointWrite</a></div><div class="ttdeci">virtual int checkpointWrite(const char *cpDir)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02752">HyPerConn.cpp:2752</a></div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> <a href="Communicator_8cpp_source.html#l00016">Communicator.cpp:16</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a06ab2357a76d14313823cb1f0bc45a2a"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a">PV::HyPerConn::update_dW</a></div><div class="ttdeci">virtual int update_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03184">HyPerConn.cpp:3184</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a06ab2357a76d14313823cb1f0bc45a2a"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a06ab2357a76d14313823cb1f0bc45a2a">PV::HyPerConn::update_dW</a></div><div class="ttdeci">virtual int update_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03187">HyPerConn.cpp:3187</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

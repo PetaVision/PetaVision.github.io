@@ -45,7 +45,7 @@ var searchData=
   ['pvp_5fset_5fpatches',['pvp_set_patches',['../namespacePV.html#a02ab5b41df2c42f77803e7b2bf01beca',1,'PV']]],
   ['pvparams',['PVParams',['../classPV_1_1PVParams.html',1,'PV']]],
   ['pvparams',['PVParams',['../classPV_1_1PVParams.html#a5eaf2f7735201cdcb9cf6ff963497cfd',1,'PV::PVParams']]],
-  ['pvpatch_5f',['PVPatch_',['../structPVPatch__.html',1,'']]],
   ['pvpatch_5f',['PVPatch_',['../structPVCuda_1_1PVPatch__.html',1,'PVCuda']]],
+  ['pvpatch_5f',['PVPatch_',['../structPVPatch__.html',1,'']]],
   ['pvpatchstrides_5f',['PVPatchStrides_',['../structPVPatchStrides__.html',1,'']]]
 ];

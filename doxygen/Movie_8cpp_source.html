@@ -647,335 +647,336 @@ $(document).ready(function(){initNavTree('Movie_8cpp_source.html','');});
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;   <span class="keywordflow">return</span> displayPeriod;</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;  <span class="comment">// ensure that timeScale == 1 if new frame being loaded on NEXT time step</span></div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;  </div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;<span class="keywordtype">double</span> Movie::calcTimeScale(<span class="keywordtype">int</span> batchIdx){</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classPV_1_1HyPerLayer.html#a33a6e33be986fdc9ea02471e48e7a158">needUpdate</a>(parent-&gt;simulationTime() + parent-&gt;getDeltaTime(), parent-&gt;getDeltaTime())){</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      <span class="keywordflow">return</span> parent-&gt;getTimeScaleMin(); </div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    }</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;      <span class="keywordflow">return</span> HyPerLayer::calcTimeScale(batchIdx);</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    }</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  }</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div>
-<div class="line"><a name="l00559"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">  559</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">Movie::updateState</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt)</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;{</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;   <a class="code" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">updateImage</a>(time, dt);</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;}</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;  <span class="comment">// ensure that timeScale == 1 if new frame being loaded on current time step</span></div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;  <span class="comment">// (note: this used to add getDeltaTime to simulationTime, but calcTimeScale is now called after simulationTime is incremented. -pfs 2015-11-05)</span></div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;  </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;<span class="keywordtype">double</span> Movie::calcTimeScale(<span class="keywordtype">int</span> batchIdx){</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classPV_1_1HyPerLayer.html#a33a6e33be986fdc9ea02471e48e7a158">needUpdate</a>(parent-&gt;simulationTime(), parent-&gt;getDeltaTime())){</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordflow">return</span> parent-&gt;getTimeScaleMin(); </div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    }</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      <span class="keywordflow">return</span> HyPerLayer::calcTimeScale(batchIdx);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  }</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">  560</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">Movie::updateState</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt)</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;{</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;   <a class="code" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">updateImage</a>(time, dt);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;}</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="comment">//Image readImage reads the same thing to every batch</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">//This call is here since this is the entry point called from allocate</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">//Movie overwrites this function to define how it wants to load into batches</span></div>
-<div class="line"><a name="l00569"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">  569</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">Movie::retrieveData</a>(<span class="keywordtype">double</span> timef, <span class="keywordtype">double</span> dt)</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;{</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;   <span class="keywordtype">bool</span> init = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;      <span class="keywordflow">if</span>(parent-&gt;icCommunicator()-&gt;commRank() == 0){</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;         <span class="keywordflow">if</span>(framePath[b]!= NULL) free(framePath[b]);</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;         <span class="keywordflow">if</span>(!initFlag){</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            framePath[b] = strdup(<a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">getNextFileName</a>(startFrameIndex[b]+1, b));</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            init = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;         }</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;         <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            framePath[b] = strdup(<a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">getNextFileName</a>(skipFrameIndex[b], b));</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;         }</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;         std::cout &lt;&lt; <span class="stringliteral">&quot;Reading frame &quot;</span> &lt;&lt; framePath[b] &lt;&lt; <span class="stringliteral">&quot; into batch &quot;</span> &lt;&lt; b &lt;&lt; <span class="stringliteral">&quot; at time &quot;</span> &lt;&lt; timef &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;         status = readImage(framePath[b], b, offsets[0], offsets[1], offsetAnchor);</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      }</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;         status = readImage(NULL, b, offsets[0], offsets[1], offsetAnchor);</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;      }</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      <span class="keywordflow">if</span>( status != PV_SUCCESS ) {</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie %s: Error reading file \&quot;%s\&quot;\n&quot;</span>, name, framePath[b]);</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;         abort();</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      }</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;   }</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;   <span class="keywordflow">if</span>(init){</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      initFlag = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;   }</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;}</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;</div>
-<div class="line"><a name="l00613"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">  613</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">Movie::updateImage</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt)</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;{</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;   <span class="keywordflow">if</span>( jitterFlag ) {</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;      jitter();</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;   } <span class="comment">// jitterFlag</span></div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;   <a class="code" href="classPV_1_1InterColComm.html">InterColComm</a> * icComm = getParent()-&gt;icCommunicator();</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      <span class="comment">//TODO: Fix movie layer to take with batches. This is commented out for compile</span></div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;      <span class="comment">//if(!flipOnTimescaleError &amp;&amp; (parent-&gt;getTimeScale() &gt; 0 &amp;&amp; parent-&gt;getTimeScale() &lt; parent-&gt;getTimeScaleMin())){</span></div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;      <span class="comment">//   if (parent-&gt;icCommunicator()-&gt;commRank()==0) {</span></div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;      <span class="comment">//      std::cout &lt;&lt; &quot;timeScale of &quot; &lt;&lt; parent-&gt;getTimeScale() &lt;&lt; &quot; is less than timeScaleMin of &quot; &lt;&lt; parent-&gt;getTimeScaleMin() &lt;&lt; &quot;, Movie is keeping the same frame\n&quot;;</span></div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      <span class="comment">//   }</span></div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;      <span class="comment">//}</span></div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;      <span class="comment">//else{</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;         <span class="comment">//Only do this if it&#39;s not the first update timestep</span></div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;         <span class="comment">//The timestep number is (time - startTime)/(width of timestep), with allowance for roundoff.</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;         <span class="comment">//But if we&#39;re using adaptive timesteps, the dt passed as a function argument is not the correct (width of timestep).  </span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;      <span class="keywordflow">if</span>(fabs(time - (parent-&gt;getStartTime() + parent-&gt;getDeltaTime())) &gt; (parent-&gt;getDeltaTime()/2)){</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;         <span class="keywordtype">int</span> status = <a class="code" href="classPV_1_1BaseInput.html#a9de070e226b4a755130ba50fd2fb606f">getFrame</a>(time, dt);</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;         assert(status == PV_SUCCESS);</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;      }</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;      </div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">//Image readImage reads the same thing to every batch</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">//This call is here since this is the entry point called from allocate</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="comment">//Movie overwrites this function to define how it wants to load into batches</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">  570</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">Movie::retrieveData</a>(<span class="keywordtype">double</span> timef, <span class="keywordtype">double</span> dt)</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;{</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;   <span class="keywordtype">bool</span> init = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keywordflow">if</span>(parent-&gt;icCommunicator()-&gt;commRank() == 0){</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;         <span class="keywordflow">if</span>(framePath[b]!= NULL) free(framePath[b]);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;         <span class="keywordflow">if</span>(!initFlag){</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            framePath[b] = strdup(<a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">getNextFileName</a>(startFrameIndex[b]+1, b));</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            init = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;         }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;         <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            framePath[b] = strdup(<a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">getNextFileName</a>(skipFrameIndex[b], b));</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;         }</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;         std::cout &lt;&lt; <span class="stringliteral">&quot;Reading frame &quot;</span> &lt;&lt; framePath[b] &lt;&lt; <span class="stringliteral">&quot; into batch &quot;</span> &lt;&lt; b &lt;&lt; <span class="stringliteral">&quot; at time &quot;</span> &lt;&lt; timef &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;         status = readImage(framePath[b], b, offsets[0], offsets[1], offsetAnchor);</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      }</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;      <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;         status = readImage(NULL, b, offsets[0], offsets[1], offsetAnchor);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      }</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      <span class="keywordflow">if</span>( status != PV_SUCCESS ) {</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie %s: Error reading file \&quot;%s\&quot;\n&quot;</span>, name, framePath[b]);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;         abort();</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;      }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;   }</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;   <span class="keywordflow">if</span>(init){</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;      initFlag = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;   }</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;}</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
+<div class="line"><a name="l00614"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">  614</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">Movie::updateImage</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;{</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;   <span class="keywordflow">if</span>( jitterFlag ) {</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;      jitter();</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;   } <span class="comment">// jitterFlag</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;   <a class="code" href="classPV_1_1InterColComm.html">InterColComm</a> * icComm = getParent()-&gt;icCommunicator();</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;      <span class="comment">//TODO: Fix movie layer to take with batches. This is commented out for compile</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;      <span class="comment">//if(!flipOnTimescaleError &amp;&amp; (parent-&gt;getTimeScale() &gt; 0 &amp;&amp; parent-&gt;getTimeScale() &lt; parent-&gt;getTimeScaleMin())){</span></div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;      <span class="comment">//   if (parent-&gt;icCommunicator()-&gt;commRank()==0) {</span></div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      <span class="comment">//      std::cout &lt;&lt; &quot;timeScale of &quot; &lt;&lt; parent-&gt;getTimeScale() &lt;&lt; &quot; is less than timeScaleMin of &quot; &lt;&lt; parent-&gt;getTimeScaleMin() &lt;&lt; &quot;, Movie is keeping the same frame\n&quot;;</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;      <span class="comment">//   }</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;      <span class="comment">//}</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      <span class="comment">//else{</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;         <span class="comment">//Only do this if it&#39;s not the first update timestep</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;         <span class="comment">//The timestep number is (time - startTime)/(width of timestep), with allowance for roundoff.</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;         <span class="comment">//But if we&#39;re using adaptive timesteps, the dt passed as a function argument is not the correct (width of timestep).  </span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;      <span class="keywordflow">if</span>(fabs(time - (parent-&gt;getStartTime() + parent-&gt;getDeltaTime())) &gt; (parent-&gt;getDeltaTime()/2)){</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;         <span class="keywordtype">int</span> status = <a class="code" href="classPV_1_1BaseInput.html#a9de070e226b4a755130ba50fd2fb606f">getFrame</a>(time, dt);</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;         assert(status == PV_SUCCESS);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;      }</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;      </div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;      </div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;      <span class="comment">//nextDisplayTime removed, now using nextUpdateTime in HyPerLayer</span></div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      <span class="comment">//while (time &gt;= nextDisplayTime) {</span></div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;      <span class="comment">//   nextDisplayTime += displayPeriod;</span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;      <span class="comment">//}</span></div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      <span class="comment">//Set frame number (member variable in Image)</span></div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      </div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;      <span class="comment">//Write to timestamp file here when updated</span></div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;      <span class="keywordflow">if</span>( icComm-&gt;commRank()==0 ) {</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;          <span class="comment">//Only write if the parameter is set</span></div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;          <span class="keywordflow">if</span>(timestampFile){</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;             std::ostringstream outStrStream;</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;             outStrStream.precision(15);</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;             <span class="keywordtype">int</span> kb0 = getLayerLoc()-&gt;kb0;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;             <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                outStrStream &lt;&lt; time &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; b+kb0 &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; frameNumbers[b] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; framePath[b] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;             }</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;             <span class="keywordtype">size_t</span> len = outStrStream.str().length();</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;             <span class="keywordtype">int</span> status = <a class="code" href="namespacePV.html#adb616cc87488824fc1d4bf93fea0814b">PV_fwrite</a>(outStrStream.str().c_str(), <span class="keyword">sizeof</span>(char), len, timestampFile)==len ? PV_SUCCESS : PV_FAILURE;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;             <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: Movie::updateState failed to write to timestamp file.\n&quot;</span>, <a class="code" href="classPV_1_1HyPerLayer.html#af36deaaed17b033498dd60679dbebb25">getKeyword</a>(), name);</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;             }</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;             <span class="comment">//Flush buffer</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;             fflush(timestampFile-&gt;fp);</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;          }</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;      }</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;   <span class="comment">//} // randomMovie</span></div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;   <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;}</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
-<div class="line"><a name="l00676"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">  676</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">Movie::outputState</a>(<span class="keywordtype">double</span> timed, <span class="keywordtype">bool</span> last)</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;{</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;   <span class="keywordflow">if</span> (writeImages) {</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;      <span class="keywordtype">char</span> basicFilename[PV_PATH_MAX + 1];</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;         snprintf(basicFilename, PV_PATH_MAX, <span class="stringliteral">&quot;%s/%s_%d_%.2f.%s&quot;</span>, movieOutputPath, name, b, timed, writeImagesExtension);</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;         <a class="code" href="classPV_1_1BaseInput.html#a5287d7e1488696f3d8ecbaf2d9465597">writeImage</a>(basicFilename, b);</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;      }</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;   }</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;   status = HyPerLayer::outputState(timed, last);</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;}</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="comment">//int Movie::copyReducedImagePortion()</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment">//   const PVLayerLoc * loc = getLayerLoc();</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="comment">//   const int nx = loc-&gt;nx;</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="comment">//   const int ny = loc-&gt;ny;</span></div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">//   const int nx0 = imageLoc.nx;</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="comment">//   const int ny0 = imageLoc.ny;</span></div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="comment">//   assert(nx0 &lt;= nx);</span></div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="comment">//   assert(ny0 &lt;= ny);</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;<span class="comment">//   const int i0 = nx/2 - nx0/2;</span></div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="comment">//   const int j0 = ny/2 - ny0/2;</span></div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="comment">//   int ii = 0;</span></div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="comment">//   for (int j = j0; j &lt; j0+ny0; j++) {</span></div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="comment">//      for (int i = i0; i &lt; i0+nx0; i++) {</span></div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="comment">//         imageData[ii++] = data[i+nx*j];</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="comment">//   return 0;</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="comment">// * This creates a random image patch (frame) that is used to perform a reverse correlation analysis</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment">// * as the input signal propagates up the visual system&#39;s hierarchy.</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment">// * NOTE: Check Image::toGrayScale() method which was the inspiration for this routine</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="comment">// */</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment">//int Movie::randomFrame()</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">//   assert(randomMovie); // randomMovieProb was set only if randomMovie is true</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">//   for (int kex = 0; kex &lt; clayer-&gt;numExtended; kex++) {</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">//      double p = randState-&gt;uniformRandom();</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">//      data[kex] = (p &lt; randomMovieProb) ? 1: 0;</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">//   return 0;</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="comment">// * A function only called if readPvpFile is set</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="comment">// * Will update frameNumber</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment">// */</span></div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="comment"></span><span class="comment">//int Movie::updateFrameNum(int n_skip){</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="comment">//   //assert(readPvpFile);</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;<span class="comment">//   InterColComm * icComm = getParent()-&gt;icCommunicator();</span></div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="comment">//   int numskip = n_skip &lt; 1 ? 1 : n_skip;</span></div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="comment">//   for(int i_skip = 0; i_skip &lt; numskip; i_skip++){</span></div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="comment">//      int status = updateFrameNum();</span></div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">//      if(status == PV_BREAK){</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment">//         break;</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="comment">//   return PV_SUCCESS;</span></div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="comment">//int Movie::updateFrameNum() {</span></div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="comment">//   frameNumber += 1;</span></div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="comment">//   //numFrames only set if pvp file</span></div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="comment">//   if(frameNumber &gt;= numFrames){</span></div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment">//      if(parent-&gt;columnId()==0){</span></div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment">//         fprintf(stderr, &quot;Movie %s: EOF reached, rewinding file \&quot;%s\&quot;\n&quot;, name, fileOfFileNames);</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">//      if(resetToStartOnLoop){</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">//         frameNumber = startFrameIndex-1;</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">//         return PV_BREAK;</span></div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">//      else{</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">//         frameNumber = 0;</span></div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">//   }</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">//   return PV_SUCCESS;</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment">// advance by n_skip lines through file of filenames, always advancing at least one line</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">  770</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">Movie::getNextFileName</a>(<span class="keywordtype">int</span> n_skip, <span class="keywordtype">int</span> batchIdx) {</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;   <a class="code" href="classPV_1_1InterColComm.html">InterColComm</a> * icComm = getParent()-&gt;icCommunicator();</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;   assert(icComm-&gt;commRank() == 0);</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">char</span>* outFilename = NULL;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;   <span class="keywordtype">int</span> numskip = n_skip &lt; 1 ? 1 : n_skip;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_skip = 0; i_skip &lt; numskip; i_skip++){</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;      outFilename = advanceFileName(batchIdx);</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;   }</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;   <span class="keywordflow">if</span> (echoFramePathnameFlag){</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;      printf(<span class="stringliteral">&quot;%f, %d: %s\n&quot;</span>, parent-&gt;simulationTime(), batchIdx, outFilename);</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;   }</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   <span class="keywordflow">return</span> outFilename;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;}</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="comment">//This function will reset the file position of the open file</span></div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="keywordtype">int</span> Movie::getNumFrames(){</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;   <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;   <span class="keywordflow">if</span>(parent-&gt;columnId()==0){</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;      <span class="keywordtype">int</span> c;</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;      PV_fseek(filenamestream, 0L, SEEK_SET);</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;      <span class="keywordflow">while</span>((c = fgetc(filenamestream-&gt;fp)) != EOF) {</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;         count++;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;         ungetc(c, filenamestream-&gt;fp);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;         <span class="comment">//Here, we&#39;re using batch 0, but we&#39;re resetting the batch pos of it at the end</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;         advanceFileName(0);</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;      }</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;      PV_fseek(filenamestream, 0L, SEEK_SET);</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;      batchPos[0] = 0L;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;      frameNumbers[0] = -1;</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;   }</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;   MPI_Bcast(&amp;count, 1, MPI_INT, 0, parent-&gt;icCommunicator()-&gt;communicator());</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;   <span class="keywordflow">return</span> count;</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;}</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment">//This function takes care of rewinding for frame files</span></div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * Movie::advanceFileName(<span class="keywordtype">int</span> batchIdx) {</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;   <span class="comment">// IMPORTANT!! This function should only be called by getNextFileName(int), and only by the root process</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;   assert(parent-&gt;columnId()==0);</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;   <span class="comment">//Restore position of batch Idx</span></div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;   PV_fseek(filenamestream, batchPos[batchIdx], SEEK_SET);</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;   <span class="keywordtype">int</span> c;</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;   <span class="keywordtype">size_t</span> maxlen = PV_PATH_MAX;</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;   <span class="keywordtype">bool</span> reset = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;   <span class="comment">// Ignore blank lines</span></div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;   <span class="keywordtype">bool</span> hasrewound = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;   <span class="keywordtype">bool</span> lineisblank = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;   <span class="keywordflow">while</span>(lineisblank) {</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      <span class="comment">// if at end of file (EOF), rewind</span></div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;      <span class="keywordflow">if</span> ((c = fgetc(filenamestream-&gt;fp)) == EOF) {</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;         PV_fseek(filenamestream, 0L, SEEK_SET);</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;         frameNumbers[0] = -1;</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie %s: EOF reached, rewinding file \&quot;%s\&quot;\n&quot;</span>, name, inputPath);</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;         <span class="keywordflow">if</span> (hasrewound) {</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Movie %s: filenamestream \&quot;%s\&quot; does not have any non-blank lines.\n&quot;</span>, name, filenamestream-&gt;name);</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;         }</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;         hasrewound = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;         reset = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;      }</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;      <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;         ungetc(c, filenamestream-&gt;fp);</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;      }</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;      <span class="comment">//Always do at least once</span></div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;      <span class="keywordtype">int</span> loopCount = 0;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;      <span class="keywordflow">do</span>{</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;         <span class="keywordtype">char</span> * path = fgets(inputfile, maxlen, filenamestream-&gt;fp);</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;         <span class="keywordflow">if</span> (path != NULL) {</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            filenamestream-&gt;filepos += strlen(path);</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            path[PV_PATH_MAX-1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordtype">size_t</span> len = strlen(path);</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="keywordflow">if</span> (len &gt; 0) {</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;               <span class="keywordflow">if</span> (path[len-1] == <span class="charliteral">&#39;\n&#39;</span>) {</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                  path[len-1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                  len--;</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;               }</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            }</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt;len; n++) {</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;               <span class="keywordflow">if</span> (!isblank(path[n])) {</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                  frameNumbers[batchIdx]++;</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                  lineisblank = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                  <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;               }</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            }</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            loopCount++;</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;         }</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;      }<span class="keywordflow">while</span>(resetToStartOnLoop &amp;&amp; reset &amp;&amp; loopCount &lt; startFrameIndex[batchIdx]);</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;      assert(strlen(inputfile)&gt;(<span class="keywordtype">size_t</span>) 0);</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;      <span class="comment">// assert(inputfile &amp;&amp; strlen(inputfile)&gt;(size_t) 0);</span></div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;      <span class="comment">// current version of clang generates a warning since inputfile is a member variable declared as an array and therefore always non-null.</span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="comment">// Keeping the line in case inputfile is changed to be malloc&#39;d instead of declared as an array.</span></div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;      <span class="keywordtype">char</span> * expandedpath = expandLeadingTilde(inputfile);</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;      <span class="keywordflow">if</span> (strlen(expandedpath)&gt;=PV_PATH_MAX) {</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie \&quot;%s\&quot;: input line \&quot;%s\&quot; from imageListPath is too long.\n&quot;</span>, name, expandedpath);</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;         exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;      }</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;      strncpy(inputfile, expandedpath, PV_PATH_MAX);</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      free(expandedpath);</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;   }</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;   <span class="comment">//Save batch position</span></div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;   batchPos[batchIdx] = getPV_StreamFilepos(filenamestream);</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;   <span class="keywordflow">return</span> inputfile;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;}</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;<span class="comment">//const char * Movie::getCurrentImage(){</span></div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">//   return inputfile;</span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;}</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      <span class="comment">//nextDisplayTime removed, now using nextUpdateTime in HyPerLayer</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;      <span class="comment">//while (time &gt;= nextDisplayTime) {</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;      <span class="comment">//   nextDisplayTime += displayPeriod;</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      <span class="comment">//}</span></div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      <span class="comment">//Set frame number (member variable in Image)</span></div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;      </div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;      <span class="comment">//Write to timestamp file here when updated</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;      <span class="keywordflow">if</span>( icComm-&gt;commRank()==0 ) {</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;          <span class="comment">//Only write if the parameter is set</span></div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;          <span class="keywordflow">if</span>(timestampFile){</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;             std::ostringstream outStrStream;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;             outStrStream.precision(15);</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;             <span class="keywordtype">int</span> kb0 = getLayerLoc()-&gt;kb0;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;             <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                outStrStream &lt;&lt; time &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; b+kb0 &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; frameNumbers[b] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; framePath[b] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;             }</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;             <span class="keywordtype">size_t</span> len = outStrStream.str().length();</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;             <span class="keywordtype">int</span> status = <a class="code" href="namespacePV.html#adb616cc87488824fc1d4bf93fea0814b">PV_fwrite</a>(outStrStream.str().c_str(), <span class="keyword">sizeof</span>(char), len, timestampFile)==len ? PV_SUCCESS : PV_FAILURE;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;             <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: Movie::updateState failed to write to timestamp file.\n&quot;</span>, <a class="code" href="classPV_1_1HyPerLayer.html#af36deaaed17b033498dd60679dbebb25">getKeyword</a>(), name);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;             }</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;             <span class="comment">//Flush buffer</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;             fflush(timestampFile-&gt;fp);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;          }</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;      }</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;   <span class="comment">//} // randomMovie</span></div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;   <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;}</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;</div>
+<div class="line"><a name="l00677"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">  677</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">Movie::outputState</a>(<span class="keywordtype">double</span> timed, <span class="keywordtype">bool</span> last)</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;{</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;   <span class="keywordflow">if</span> (writeImages) {</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;      <span class="keywordtype">char</span> basicFilename[PV_PATH_MAX + 1];</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; parent-&gt;getNBatch(); b++){</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;         snprintf(basicFilename, PV_PATH_MAX, <span class="stringliteral">&quot;%s/%s_%d_%.2f.%s&quot;</span>, movieOutputPath, name, b, timed, writeImagesExtension);</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;         <a class="code" href="classPV_1_1BaseInput.html#a5287d7e1488696f3d8ecbaf2d9465597">writeImage</a>(basicFilename, b);</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;      }</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;   }</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;   status = HyPerLayer::outputState(timed, last);</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;}</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment">//int Movie::copyReducedImagePortion()</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="comment">//   const PVLayerLoc * loc = getLayerLoc();</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="comment">//   const int nx = loc-&gt;nx;</span></div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="comment">//   const int ny = loc-&gt;ny;</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="comment">//   const int nx0 = imageLoc.nx;</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="comment">//   const int ny0 = imageLoc.ny;</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="comment">//   assert(nx0 &lt;= nx);</span></div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="comment">//   assert(ny0 &lt;= ny);</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="comment">//   const int i0 = nx/2 - nx0/2;</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="comment">//   const int j0 = ny/2 - ny0/2;</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="comment">//   int ii = 0;</span></div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="comment">//   for (int j = j0; j &lt; j0+ny0; j++) {</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="comment">//      for (int i = i0; i &lt; i0+nx0; i++) {</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="comment">//         imageData[ii++] = data[i+nx*j];</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="comment">//   return 0;</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment">// * This creates a random image patch (frame) that is used to perform a reverse correlation analysis</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment">// * as the input signal propagates up the visual system&#39;s hierarchy.</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="comment">// * NOTE: Check Image::toGrayScale() method which was the inspiration for this routine</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment">// */</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">//int Movie::randomFrame()</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">//   assert(randomMovie); // randomMovieProb was set only if randomMovie is true</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">//   for (int kex = 0; kex &lt; clayer-&gt;numExtended; kex++) {</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">//      double p = randState-&gt;uniformRandom();</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">//      data[kex] = (p &lt; randomMovieProb) ? 1: 0;</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">//   return 0;</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="comment">// * A function only called if readPvpFile is set</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment">// * Will update frameNumber</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="comment">// */</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="comment"></span><span class="comment">//int Movie::updateFrameNum(int n_skip){</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;<span class="comment">//   //assert(readPvpFile);</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="comment">//   InterColComm * icComm = getParent()-&gt;icCommunicator();</span></div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="comment">//   int numskip = n_skip &lt; 1 ? 1 : n_skip;</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="comment">//   for(int i_skip = 0; i_skip &lt; numskip; i_skip++){</span></div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">//      int status = updateFrameNum();</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment">//      if(status == PV_BREAK){</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment">//         break;</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment">//   return PV_SUCCESS;</span></div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="comment">//int Movie::updateFrameNum() {</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="comment">//   frameNumber += 1;</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="comment">//   //numFrames only set if pvp file</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment">//   if(frameNumber &gt;= numFrames){</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment">//      if(parent-&gt;columnId()==0){</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment">//         fprintf(stderr, &quot;Movie %s: EOF reached, rewinding file \&quot;%s\&quot;\n&quot;, name, fileOfFileNames);</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">//      if(resetToStartOnLoop){</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">//         frameNumber = startFrameIndex-1;</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">//         return PV_BREAK;</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">//      else{</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">//         frameNumber = 0;</span></div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">//   return PV_SUCCESS;</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">// advance by n_skip lines through file of filenames, always advancing at least one line</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno"><a class="line" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">  771</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">Movie::getNextFileName</a>(<span class="keywordtype">int</span> n_skip, <span class="keywordtype">int</span> batchIdx) {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;   <a class="code" href="classPV_1_1InterColComm.html">InterColComm</a> * icComm = getParent()-&gt;icCommunicator();</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;   assert(icComm-&gt;commRank() == 0);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">char</span>* outFilename = NULL;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;   <span class="keywordtype">int</span> numskip = n_skip &lt; 1 ? 1 : n_skip;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_skip = 0; i_skip &lt; numskip; i_skip++){</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      outFilename = advanceFileName(batchIdx);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;   }</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;   <span class="keywordflow">if</span> (echoFramePathnameFlag){</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;      printf(<span class="stringliteral">&quot;%f, %d: %s\n&quot;</span>, parent-&gt;simulationTime(), batchIdx, outFilename);</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   }</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;   <span class="keywordflow">return</span> outFilename;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;}</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="comment">//This function will reset the file position of the open file</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="keywordtype">int</span> Movie::getNumFrames(){</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;   <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;   <span class="keywordflow">if</span>(parent-&gt;columnId()==0){</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;      <span class="keywordtype">int</span> c;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;      PV_fseek(filenamestream, 0L, SEEK_SET);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      <span class="keywordflow">while</span>((c = fgetc(filenamestream-&gt;fp)) != EOF) {</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;         count++;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;         ungetc(c, filenamestream-&gt;fp);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;         <span class="comment">//Here, we&#39;re using batch 0, but we&#39;re resetting the batch pos of it at the end</span></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;         advanceFileName(0);</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;      }</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;      PV_fseek(filenamestream, 0L, SEEK_SET);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;      batchPos[0] = 0L;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;      frameNumbers[0] = -1;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;   }</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;   MPI_Bcast(&amp;count, 1, MPI_INT, 0, parent-&gt;icCommunicator()-&gt;communicator());</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;   <span class="keywordflow">return</span> count;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;}</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment">//This function takes care of rewinding for frame files</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * Movie::advanceFileName(<span class="keywordtype">int</span> batchIdx) {</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;   <span class="comment">// IMPORTANT!! This function should only be called by getNextFileName(int), and only by the root process</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;   assert(parent-&gt;columnId()==0);</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;   <span class="comment">//Restore position of batch Idx</span></div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;   PV_fseek(filenamestream, batchPos[batchIdx], SEEK_SET);</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;   <span class="keywordtype">int</span> c;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;   <span class="keywordtype">size_t</span> maxlen = PV_PATH_MAX;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;   <span class="keywordtype">bool</span> reset = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;   <span class="comment">// Ignore blank lines</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;   <span class="keywordtype">bool</span> hasrewound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;   <span class="keywordtype">bool</span> lineisblank = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;   <span class="keywordflow">while</span>(lineisblank) {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;      <span class="comment">// if at end of file (EOF), rewind</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;      <span class="keywordflow">if</span> ((c = fgetc(filenamestream-&gt;fp)) == EOF) {</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;         PV_fseek(filenamestream, 0L, SEEK_SET);</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;         frameNumbers[0] = -1;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie %s: EOF reached, rewinding file \&quot;%s\&quot;\n&quot;</span>, name, inputPath);</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;         <span class="keywordflow">if</span> (hasrewound) {</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Movie %s: filenamestream \&quot;%s\&quot; does not have any non-blank lines.\n&quot;</span>, name, filenamestream-&gt;name);</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;         }</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;         hasrewound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;         reset = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;      }</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;         ungetc(c, filenamestream-&gt;fp);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;      }</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;      <span class="comment">//Always do at least once</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;      <span class="keywordtype">int</span> loopCount = 0;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;      <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;         <span class="keywordtype">char</span> * path = fgets(inputfile, maxlen, filenamestream-&gt;fp);</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;         <span class="keywordflow">if</span> (path != NULL) {</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            filenamestream-&gt;filepos += strlen(path);</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            path[PV_PATH_MAX-1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="keywordtype">size_t</span> len = strlen(path);</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keywordflow">if</span> (len &gt; 0) {</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;               <span class="keywordflow">if</span> (path[len-1] == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                  path[len-1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                  len--;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;               }</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            }</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt;len; n++) {</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;               <span class="keywordflow">if</span> (!isblank(path[n])) {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                  frameNumbers[batchIdx]++;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                  lineisblank = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;               }</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            }</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            loopCount++;</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;         }</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;      }<span class="keywordflow">while</span>(resetToStartOnLoop &amp;&amp; reset &amp;&amp; loopCount &lt; startFrameIndex[batchIdx]);</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;      assert(strlen(inputfile)&gt;(<span class="keywordtype">size_t</span>) 0);</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;      <span class="comment">// assert(inputfile &amp;&amp; strlen(inputfile)&gt;(size_t) 0);</span></div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="comment">// current version of clang generates a warning since inputfile is a member variable declared as an array and therefore always non-null.</span></div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;      <span class="comment">// Keeping the line in case inputfile is changed to be malloc&#39;d instead of declared as an array.</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;      <span class="keywordtype">char</span> * expandedpath = expandLeadingTilde(inputfile);</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;      <span class="keywordflow">if</span> (strlen(expandedpath)&gt;=PV_PATH_MAX) {</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;Movie \&quot;%s\&quot;: input line \&quot;%s\&quot; from imageListPath is too long.\n&quot;</span>, name, expandedpath);</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;         exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;      }</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      strncpy(inputfile, expandedpath, PV_PATH_MAX);</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;      free(expandedpath);</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;   }</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;   <span class="comment">//Save batch position</span></div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;   batchPos[batchIdx] = getPV_StreamFilepos(filenamestream);</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;   <span class="keywordflow">return</span> inputfile;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;}</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">//const char * Movie::getCurrentImage(){</span></div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">//   return inputfile;</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;}</div>
 <div class="ttc" id="classPV_1_1Movie_html_a9f2c811e5903bbe55137907a9e3052a9"><div class="ttname"><a href="classPV_1_1Movie.html#a9f2c811e5903bbe55137907a9e3052a9">PV::Movie::ioParam_echoFramePathnameFlag</a></div><div class="ttdeci">virtual void ioParam_echoFramePathnameFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">echoFramePathnameFlag: if true, print the filename to the screen when a new image file is loaded...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00309">Movie.cpp:309</a></div></div>
-<div class="ttc" id="classPV_1_1Movie_html_a13b6296402925e1447d40a732416e5f0"><div class="ttname"><a href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">PV::Movie::updateState</a></div><div class="ttdeci">virtual int updateState(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00559">Movie.cpp:559</a></div></div>
+<div class="ttc" id="classPV_1_1Movie_html_a13b6296402925e1447d40a732416e5f0"><div class="ttname"><a href="classPV_1_1Movie.html#a13b6296402925e1447d40a732416e5f0">PV::Movie::updateState</a></div><div class="ttdeci">virtual int updateState(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00560">Movie.cpp:560</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_afb154d4daab54203e1208828e2fab089"><div class="ttname"><a href="classPV_1_1Movie.html#afb154d4daab54203e1208828e2fab089">PV::Movie::ioParam_batchMethod</a></div><div class="ttdeci">virtual void ioParam_batchMethod(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">batchMethod: Specifies how to split the file for batches. byImage: Each batch skips nbatch...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00316">Movie.cpp:316</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerLayer_html_af36deaaed17b033498dd60679dbebb25"><div class="ttname"><a href="classPV_1_1HyPerLayer.html#af36deaaed17b033498dd60679dbebb25">PV::HyPerLayer::getKeyword</a></div><div class="ttdeci">char const * getKeyword()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerLayer_8cpp_source.html#l00295">HyPerLayer.cpp:295</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_ad5ec4ae16432ae42750256a5ec472e6a"><div class="ttname"><a href="classPV_1_1Movie.html#ad5ec4ae16432ae42750256a5ec472e6a">PV::Movie::checkpointRead</a></div><div class="ttdeci">virtual int checkpointRead(const char *cpDir, double *timef)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00140">Movie.cpp:140</a></div></div>
-<div class="ttc" id="classPV_1_1Movie_html_a0a265671ba1f88eb85c9f35df320a043"><div class="ttname"><a href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">PV::Movie::updateImage</a></div><div class="ttdeci">virtual bool updateImage(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00613">Movie.cpp:613</a></div></div>
+<div class="ttc" id="classPV_1_1Movie_html_a0a265671ba1f88eb85c9f35df320a043"><div class="ttname"><a href="classPV_1_1Movie.html#a0a265671ba1f88eb85c9f35df320a043">PV::Movie::updateImage</a></div><div class="ttdeci">virtual bool updateImage(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00614">Movie.cpp:614</a></div></div>
 <div class="ttc" id="classPV_1_1InterColComm_html"><div class="ttname"><a href="classPV_1_1InterColComm.html">PV::InterColComm</a></div><div class="ttdef"><b>Definition:</b> <a href="InterColComm_8hpp_source.html#l00091">InterColComm.hpp:91</a></div></div>
-<div class="ttc" id="classPV_1_1Movie_html_a12a59e47aa11ce3fd1d8371aeb32ffb9"><div class="ttname"><a href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">PV::Movie::getNextFileName</a></div><div class="ttdeci">const char * getNextFileName(int n_skip, int batchIdx)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00770">Movie.cpp:770</a></div></div>
+<div class="ttc" id="classPV_1_1Movie_html_a12a59e47aa11ce3fd1d8371aeb32ffb9"><div class="ttname"><a href="classPV_1_1Movie.html#a12a59e47aa11ce3fd1d8371aeb32ffb9">PV::Movie::getNextFileName</a></div><div class="ttdeci">const char * getNextFileName(int n_skip, int batchIdx)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00771">Movie.cpp:771</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_ada08079aab340c4d4338962a9d77192f"><div class="ttname"><a href="classPV_1_1Movie.html#ada08079aab340c4d4338962a9d77192f">PV::Movie::ioParam_flipOnTimescaleError</a></div><div class="ttdeci">virtual void ioParam_flipOnTimescaleError(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">flipOnTimescaleError: determines whether to change images at the end of the display period if the HyP...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00283">Movie.cpp:283</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_abbf7eeb308dd947092df41fb0277cb5f"><div class="ttname"><a href="classPV_1_1Movie.html#abbf7eeb308dd947092df41fb0277cb5f">PV::Movie::ioParam_skip_frame_index</a></div><div class="ttdeci">virtual void ioParam_skip_frame_index(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">skip_frame_index: If skip_frame_index=1, go to the next frame at the end of the display period...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00336">Movie.cpp:336</a></div></div>
 <div class="ttc" id="classPV_1_1Image_html_a8d1cc57a56a99c5e742803a669ee137b"><div class="ttname"><a href="classPV_1_1Image.html#a8d1cc57a56a99c5e742803a669ee137b">PV::Image::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="Image_8cpp_source.html#l00094">Image.cpp:94</a></div></div>
-<div class="ttc" id="classPV_1_1Movie_html_a4dd7fd5e516257b38ff600d081f394bd"><div class="ttname"><a href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">PV::Movie::retrieveData</a></div><div class="ttdeci">virtual int retrieveData(double timef, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00569">Movie.cpp:569</a></div></div>
-<div class="ttc" id="classPV_1_1Movie_html_a4999705acea89ca9bcb729253fe095a0"><div class="ttname"><a href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">PV::Movie::outputState</a></div><div class="ttdeci">virtual int outputState(double time, bool last=false)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00676">Movie.cpp:676</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerLayer_html_a33a6e33be986fdc9ea02471e48e7a158"><div class="ttname"><a href="classPV_1_1HyPerLayer.html#a33a6e33be986fdc9ea02471e48e7a158">PV::HyPerLayer::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerLayer_8cpp_source.html#l01610">HyPerLayer.cpp:1610</a></div></div>
+<div class="ttc" id="classPV_1_1Movie_html_a4dd7fd5e516257b38ff600d081f394bd"><div class="ttname"><a href="classPV_1_1Movie.html#a4dd7fd5e516257b38ff600d081f394bd">PV::Movie::retrieveData</a></div><div class="ttdeci">virtual int retrieveData(double timef, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00570">Movie.cpp:570</a></div></div>
+<div class="ttc" id="classPV_1_1Movie_html_a4999705acea89ca9bcb729253fe095a0"><div class="ttname"><a href="classPV_1_1Movie.html#a4999705acea89ca9bcb729253fe095a0">PV::Movie::outputState</a></div><div class="ttdeci">virtual int outputState(double time, bool last=false)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00677">Movie.cpp:677</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerLayer_html_a33a6e33be986fdc9ea02471e48e7a158"><div class="ttname"><a href="classPV_1_1HyPerLayer.html#a33a6e33be986fdc9ea02471e48e7a158">PV::HyPerLayer::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerLayer_8cpp_source.html#l01598">HyPerLayer.cpp:1598</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_a0e11210c5169806856ebd9b25597befa"><div class="ttname"><a href="classPV_1_1Movie.html#a0e11210c5169806856ebd9b25597befa">PV::Movie::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00245">Movie.cpp:245</a></div></div>
 <div class="ttc" id="classPV_1_1BaseInput_html_a5287d7e1488696f3d8ecbaf2d9465597"><div class="ttname"><a href="classPV_1_1BaseInput.html#a5287d7e1488696f3d8ecbaf2d9465597">PV::BaseInput::writeImage</a></div><div class="ttdeci">int writeImage(const char *filename, int batchIdx)</div><div class="ttdef"><b>Definition:</b> <a href="BaseInput_8cpp_source.html#l00847">BaseInput.cpp:847</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_ac3e3d39db3b527d2ea5dcb8b3c0e97d5"><div class="ttname"><a href="classPV_1_1Movie.html#ac3e3d39db3b527d2ea5dcb8b3c0e97d5">PV::Movie::getDeltaUpdateTime</a></div><div class="ttdeci">virtual double getDeltaUpdateTime()</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00537">Movie.cpp:537</a></div></div>
@@ -985,7 +986,7 @@ $(document).ready(function(){initNavTree('Movie_8cpp_source.html','');});
 <div class="ttc" id="classPV_1_1Movie_html_a99c40879fd368921aa76cc12698323b7"><div class="ttname"><a href="classPV_1_1Movie.html#a99c40879fd368921aa76cc12698323b7">PV::Movie::ioParam_displayPeriod</a></div><div class="ttdeci">virtual void ioParam_displayPeriod(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">displayPeriod: the amount of time each image is displayed before switching to the next image...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00287">Movie.cpp:287</a></div></div>
 <div class="ttc" id="structPVLayerLoc___html"><div class="ttname"><a href="structPVLayerLoc__.html">PVLayerLoc_</a></div><div class="ttdef"><b>Definition:</b> <a href="PVLayerLoc_8h_source.html#l00024">PVLayerLoc.h:24</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_a3c93227b2ed6fa4583679916d681432a"><div class="ttname"><a href="classPV_1_1Movie.html#a3c93227b2ed6fa4583679916d681432a">PV::Movie::ioParam_movieOutputPath</a></div><div class="ttdeci">virtual void ioParam_movieOutputPath(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">movieOutputPath: </div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00344">Movie.cpp:344</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerLayer_html_a70b5cd86852df8df6a7aa2ee13248ca0"><div class="ttname"><a href="classPV_1_1HyPerLayer.html#a70b5cd86852df8df6a7aa2ee13248ca0">PV::HyPerLayer::setNextUpdateTime</a></div><div class="ttdeci">virtual void setNextUpdateTime(double in)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerLayer_8hpp_source.html#l00390">HyPerLayer.hpp:390</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerLayer_html_a70b5cd86852df8df6a7aa2ee13248ca0"><div class="ttname"><a href="classPV_1_1HyPerLayer.html#a70b5cd86852df8df6a7aa2ee13248ca0">PV::HyPerLayer::setNextUpdateTime</a></div><div class="ttdeci">virtual void setNextUpdateTime(double in)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerLayer_8hpp_source.html#l00385">HyPerLayer.hpp:385</a></div></div>
 <div class="ttc" id="classPV_1_1BaseInput_html_a9de070e226b4a755130ba50fd2fb606f"><div class="ttname"><a href="classPV_1_1BaseInput.html#a9de070e226b4a755130ba50fd2fb606f">PV::BaseInput::getFrame</a></div><div class="ttdeci">virtual int getFrame(double timef, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="BaseInput_8cpp_source.html#l00353">BaseInput.cpp:353</a></div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> <a href="Communicator_8cpp_source.html#l00016">Communicator.cpp:16</a></div></div>
 <div class="ttc" id="classPV_1_1Movie_html_a7def03ad1189739a8f6c02f18d94ac00"><div class="ttname"><a href="classPV_1_1Movie.html#a7def03ad1189739a8f6c02f18d94ac00">PV::Movie::ioParam_resetToStartOnLoop</a></div><div class="ttdeci">virtual void ioParam_resetToStartOnLoop(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">resetToStartOnLoop: If false, then when the end of file for the imageListPath file is reached...</div><div class="ttdef"><b>Definition:</b> <a href="Movie_8cpp_source.html#l00355">Movie.cpp:355</a></div></div>

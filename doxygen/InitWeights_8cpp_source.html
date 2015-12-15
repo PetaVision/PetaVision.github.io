@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('InitWeights_8cpp_source.html','');});
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;         exit(EXIT_FAILURE);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordflow">if</span> (weightParams-&gt;getFilename() != NULL) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordflow">if</span> (weightParams-&gt;getFilename() != NULL &amp;&amp; weightParams-&gt;getFilename()[0]) {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      readWeights(patches, dataStart, numPatches, weightParams-&gt;getFilename(), timef);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      initRNGs(patches==NULL);</div>

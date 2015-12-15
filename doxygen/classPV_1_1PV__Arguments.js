@@ -24,6 +24,7 @@ var classPV_1_1PV__Arguments =
     [ "getRandomSeed", "classPV_1_1PV__Arguments.html#a59a96fb742334ffb7157f7c24e4a1e1f", null ],
     [ "getRequireReturnFlag", "classPV_1_1PV__Arguments.html#a5d6773a2b5c9d2e3de33b2a1af5f8c24", null ],
     [ "getRestartFlag", "classPV_1_1PV__Arguments.html#a613e0b73d880c42ebf704d6b807203f2", null ],
+    [ "getUseDefaultNumThreads", "classPV_1_1PV__Arguments.html#a7bd824a2dfeb7db89b5507a258815974", null ],
     [ "getWorkingDir", "classPV_1_1PV__Arguments.html#acb49f683358974be3a5286b7a83c7dc4", null ],
     [ "initialize", "classPV_1_1PV__Arguments.html#ac15575dc0a433f670366c520c7bd7576", null ],
     [ "initialize_base", "classPV_1_1PV__Arguments.html#a68573757179dffe0a406fb556da4a393", null ],
@@ -45,6 +46,7 @@ var classPV_1_1PV__Arguments =
     [ "setRestartFlag", "classPV_1_1PV__Arguments.html#a81bbab2c632ff1b7312481f9369a84f9", null ],
     [ "setStateFromCmdLineArgs", "classPV_1_1PV__Arguments.html#a74c859e79ef399f8df4c6488a26b89c7", null ],
     [ "setString", "classPV_1_1PV__Arguments.html#ae2a8733d63ee1115820a1c6bffe476d5", null ],
+    [ "setUseDefaultNumThreads", "classPV_1_1PV__Arguments.html#a16688f8a13baa1a64a9da59bfb97b21a", null ],
     [ "setWorkingDir", "classPV_1_1PV__Arguments.html#a25b19f8ae0aab33e9588e0ebdf201d39", null ],
     [ "args", "classPV_1_1PV__Arguments.html#afeffc413c4fc8e48300ed926a04ae278", null ],
     [ "batchWidth", "classPV_1_1PV__Arguments.html#a69d31bfe3c9cf11756ff9b292d913e02", null ],
@@ -60,5 +62,6 @@ var classPV_1_1PV__Arguments =
     [ "randomSeed", "classPV_1_1PV__Arguments.html#a97ca96a21e9c8972a517a4836e6b04d6", null ],
     [ "requireReturnFlag", "classPV_1_1PV__Arguments.html#a805d6f911814b92b6256ff383b0f8db0", null ],
     [ "restartFlag", "classPV_1_1PV__Arguments.html#a845281ddab24d1ac9ccb1298a4546f17", null ],
+    [ "useDefaultNumThreads", "classPV_1_1PV__Arguments.html#a4e688a7103d8eb4e50e0abd75b986e35", null ],
     [ "workingDir", "classPV_1_1PV__Arguments.html#af9dffae88a6af5d55b652476ba51dfd3", null ]
 ];

@@ -195,6 +195,12 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getChannelTi
 <tr class="memitem:a41e7687931f226d18a183403376a0b5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41e7687931f226d18a183403376a0b5f"></a>
 <a class="el" href="structPVLayer__.html">PVLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getCLayer</b> ()</td></tr>
 <tr class="separator:a41e7687931f226d18a183403376a0b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3974fdc114cfc38ea177f5888aecb58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3974fdc114cfc38ea177f5888aecb58"></a>
+PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>getCudnnDatastore</b> ()</td></tr>
+<tr class="separator:ac3974fdc114cfc38ea177f5888aecb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746303996e7dad71900956177c7ddfeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a746303996e7dad71900956177c7ddfeb"></a>
+PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>getCudnnGSyn</b> ()</td></tr>
+<tr class="separator:a746303996e7dad71900956177c7ddfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a599fd1ee1d3ebcff627999f85ed3273a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a599fd1ee1d3ebcff627999f85ed3273a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getDataStructuresAllocatedFlag</b> ()</td></tr>
 <tr class="separator:a599fd1ee1d3ebcff627999f85ed3273a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -675,6 +681,12 @@ pvdata_t&#160;</td><td class="memItemRight" valign="bottom"><b>AShift</b></td></
 <tr class="memitem:ac144a22bae21875cfc2e701d974be911"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac144a22bae21875cfc2e701d974be911"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>clearGSynInterval</b></td></tr>
 <tr class="separator:ac144a22bae21875cfc2e701d974be911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452b01e1a78ed2564488739fc8aa9410"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a452b01e1a78ed2564488739fc8aa9410"></a>
+PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_Datastore</b></td></tr>
+<tr class="separator:a452b01e1a78ed2564488739fc8aa9410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d340838cffed230b7227fe0a49b2582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d340838cffed230b7227fe0a49b2582"></a>
+PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>cudnn_GSyn</b></td></tr>
+<tr class="separator:a1d340838cffed230b7227fe0a49b2582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5febdbc03f5ba5c0fb868207c15dadc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5febdbc03f5ba5c0fb868207c15dadc"></a>
 PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>d_ActiveIndices</b></td></tr>
 <tr class="separator:ac5febdbc03f5ba5c0fb868207c15dadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -987,10 +999,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a38dbdd16a68095acea310a7f7003fa13">ioParam_nf</a> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="memdesc:a38dbdd16a68095acea310a7f7003fa13"><td class="mdescLeft">&#160;</td><td class="mdescRight">nf: Defines how many features this layer has <br /></td></tr>
 <tr class="separator:a38dbdd16a68095acea310a7f7003fa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bcb27ad4713743839ad739134cd83e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bcb27ad4713743839ad739134cd83e2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a9bcb27ad4713743839ad739134cd83e2">ioParam_marginWidth</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a9bcb27ad4713743839ad739134cd83e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">marginWidth: Deprecated <br /></td></tr>
-<tr class="separator:a9bcb27ad4713743839ad739134cd83e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e4c8eaa17655ef4c03147beed369b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65e4c8eaa17655ef4c03147beed369b3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a65e4c8eaa17655ef4c03147beed369b3">ioParam_phase</a> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="memdesc:a65e4c8eaa17655ef4c03147beed369b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">phase: Defines the ordering in which each layer is updated <br /></td></tr>
@@ -1076,7 +1084,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>Allocate GPU buffers. This must be called after PVLayer data have been allocated. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01021">1021</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01009">1009</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1121,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>Called by updateStateWrapper when updating the state in the usual way (as opposed to being triggered when triggerBehavior is resetStateOnTrigger). It calls either updateState or updateStateGPU. It also starts and stops the update timer. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01691">1691</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01679">1679</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1252,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>A function to return the interval between triggering times. A negative value means that the layer never triggers (either there is no triggerLayer or the triggerLayer never updates). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01659">1659</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01647">1647</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1280,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1Patterns.html#a36533b601f1f9a2b30d7081c47980b0e">PV::Patterns</a>, <a class="el" href="classPV_1_1ImageFromMemoryBuffer.html#aaf75ec7c6a618059e72513a79d63f3d6">PV::ImageFromMemoryBuffer</a>, <a class="el" href="classPV_1_1ImagePvp.html#a373e2c821b78056d795afa440b348289">PV::ImagePvp</a>, <a class="el" href="classPV_1_1Image.html#a4f2635fa75cdb74ce2894aafbedeeaeb">PV::Image</a>, <a class="el" href="classPV_1_1Movie.html#ac3e3d39db3b527d2ea5dcb8b3c0e97d5">PV::Movie</a>, <a class="el" href="classPV_1_1MoviePvp.html#a10f6523b899c97c8a84012b7827ce14d">PV::MoviePvp</a>, <a class="el" href="classPV_1_1HyPerLCALayer.html#a58179b083d4bfbccb431ea8588d54fd5">PV::HyPerLCALayer</a>, and <a class="el" href="classPV_1_1ISTALayer.html#a6c56d354ac48d9463f3ca5d1701c68dc">PV::ISTALayer</a>.</p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01639">1639</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01627">1627</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1333,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the activity data for the layer. This data is in the extended space (with margins). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01553">1553</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01541">1541</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1471,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <p>initializeFromCheckpointFlag: If set to true, initialize using checkpoint direcgtory set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>. </p>
 <p>Checkpoint read directory must be set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> to initialize from checkpoint. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00842">842</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00830">830</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1509,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1BaseInput.html#ab6f5010117a782b03073017d46cb908a">PV::BaseInput</a>, <a class="el" href="classPV_1_1Retina.html#aeabb7fb9d92388c9a8dc60fbad7224ec">PV::Retina</a>, <a class="el" href="classPV_1_1CloneVLayer.html#a63bd4db3bf63492e928d4b974f9159c3">PV::CloneVLayer</a>, and <a class="el" href="classPV_1_1LabelLayer.html#a013778e0ec20085bed1d2739607cfb8b">PV::LabelLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00849">849</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00837">837</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1530,7 +1538,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <p>nxScale: Defines the relationship between the x column size and the layer size. </p>
 <p>Must be 2^n or 1/2^n </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00800">800</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00799">799</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1567,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <p>nyScale: Defines the relationship between the y column size and the layer size. </p>
 <p>Must be 2^n or 1/2^n </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00804">804</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00803">803</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1599,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <li>"resetStateOnTrigger": On timesteps where the trigger occurs, the membrane potential is copied from the layer specified in triggerResetLayerName and setActivity is called. On nontriggering timesteps, updateState is called. For backward compatibility, this parameter defaults to updateOnlyOnTrigger. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00920">920</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00908">908</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1630,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1ConstantLayer.html#a597a9b1309e623341a82b9b6ea1faa80">PV::ConstantLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00882">882</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00870">870</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1651,7 +1659,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <p>triggerOffset: If triggerLayer is set, triggers &lt;triggerOffset&gt; timesteps before target trigger </p>
 <p>Defaults to 0 </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00910">910</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00898">898</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1688,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <p>writeStep: Specifies how often to output a pvp file for this layer </p>
 <p>Defaults to every timestep. -1 specifies not to write at all. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00960">960</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00948">948</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1757,7 +1765,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 <li>assumes both input PVLayerCubes are of identical size and shape, typically the same struct </li>
 </ul>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01564">1564</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01552">1552</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1794,7 +1802,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns true if the trigger behavior is resetStateOnTrigger and the layer was triggered. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01668">1668</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01656">1656</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1840,7 +1848,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1ImageFromMemoryBuffer.html#aa032326b14a6607947639d0d0af6b600">PV::ImageFromMemoryBuffer</a>, <a class="el" href="classPV_1_1FilenameParsingGroundTruthLayer.html#afd70f1de9f09c7a5ebaba8a64d671b4b">PV::FilenameParsingGroundTruthLayer</a>, and <a class="el" href="classPV_1_1ConstantLayer.html#aceef226ae64f223671d89400d76636ad">PV::ConstantLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01610">1610</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01598">1598</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1866,7 +1874,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>Called instead of updateState when triggerBehavior is "resetStateOnTrigger" and a triggering event occurs. Copies the membrane potential V from triggerResetLayer and then calls setActivity to update A. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01749">1749</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01737">1737</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1893,7 +1901,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>A function to set nextUpdateTime to a specific time </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8hpp_source.html#l00390">390</a> of file <a class="el" href="HyPerLayer_8hpp_source.html">HyPerLayer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8hpp_source.html#l00385">385</a> of file <a class="el" href="HyPerLayer_8hpp_source.html">HyPerLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1919,7 +1927,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>A function to update the time that the next trigger is expected to occur. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01648">1648</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01636">1636</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1945,7 +1953,7 @@ PtwiseLinearTransferLayer Parameters</h2></td></tr>
 </div><div class="memdoc">
 <p>A function to update nextUpdateTime of the layer based on trigger </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01628">1628</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01616">1616</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,8 +1,14 @@
 var structPVCuda_1_1recv__post__params =
 [
+    [ "cudnn_gSyn", "structPVCuda_1_1recv__post__params.html#a2a072057c04e9f3103c21a4dc21e99c7", null ],
+    [ "cudnn_preData", "structPVCuda_1_1recv__post__params.html#a82ec32ea508981154a69a3c99206cadc", null ],
+    [ "cudnn_weights", "structPVCuda_1_1recv__post__params.html#a38acc6d71484e148f7da63ba702042e4", null ],
+    [ "cudnn_workspace", "structPVCuda_1_1recv__post__params.html#aaa26f3e44f1fb7f2ce3bebad39b74b83", null ],
     [ "dt_factor", "structPVCuda_1_1recv__post__params.html#aa8ef2cdb4a74e1eb0f2c4fc12379297f", null ],
     [ "localBufSizeX", "structPVCuda_1_1recv__post__params.html#a482055f4cdd173bc0be9f6bfcaef8add", null ],
     [ "localBufSizeY", "structPVCuda_1_1recv__post__params.html#adf376057924a46de6cb6806c1c51d4c0", null ],
+    [ "manyScaleX", "structPVCuda_1_1recv__post__params.html#a3b4b1d0e09ece73cfc4bdee01cb62f9f", null ],
+    [ "manyScaleY", "structPVCuda_1_1recv__post__params.html#a8977652beed6e205d956701adc96a76f", null ],
     [ "nbatch", "structPVCuda_1_1recv__post__params.html#a0aac21855d9c0dd5ff10099866a457c3", null ],
     [ "nbdn", "structPVCuda_1_1recv__post__params.html#a364253f375414879b0293f4a463c2961", null ],
     [ "nblt", "structPVCuda_1_1recv__post__params.html#aba86ae7ed6ac60109010684104c1472d", null ],
@@ -34,7 +40,13 @@ var structPVCuda_1_1recv__post__params =
     [ "startSourceExtBuf", "structPVCuda_1_1recv__post__params.html#aba7bdffa02857b85ce93d463d79ae924", null ],
     [ "sy", "structPVCuda_1_1recv__post__params.html#a49271e0259305900e36fbf93e8c0fce4", null ],
     [ "syp", "structPVCuda_1_1recv__post__params.html#a92843da970f0edf7caaaf666f9557da4", null ],
+    [ "v_convAlgo", "structPVCuda_1_1recv__post__params.html#ac3bf0ec3e0959c435b5c306fc8160a9c", null ],
+    [ "v_convDescriptor", "structPVCuda_1_1recv__post__params.html#ae36f86ec50e5f8ee48e04ad27ddc6e41", null ],
+    [ "v_filterDescriptor", "structPVCuda_1_1recv__post__params.html#a65dcc7b82a463722431ab0c5fa64539e", null ],
+    [ "v_inputDescriptor", "structPVCuda_1_1recv__post__params.html#a48cd78fa8eff92088a70f41b24973b5a", null ],
+    [ "v_outputDescriptor", "structPVCuda_1_1recv__post__params.html#ad12b6325b8b6fa6eec3ca0f0467f6169", null ],
     [ "warpSize", "structPVCuda_1_1recv__post__params.html#a8022e514bce38a35431ed67873d62707", null ],
     [ "weights", "structPVCuda_1_1recv__post__params.html#a194e471cc2ec0f2df4e7c1d2f7296428", null ],
-    [ "weightsBufNum", "structPVCuda_1_1recv__post__params.html#a3e9187b2fae0a71c41dc691acac7a8b3", null ]
+    [ "weightsBufNum", "structPVCuda_1_1recv__post__params.html#a3e9187b2fae0a71c41dc691acac7a8b3", null ],
+    [ "workspaceSize", "structPVCuda_1_1recv__post__params.html#abc1bfb926d00e39129eecdcfaacbbcde", null ]
 ];

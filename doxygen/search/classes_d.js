@@ -27,7 +27,7 @@ var searchData=
   ['pvlayercube_5f',['PVLayerCube_',['../structPVLayerCube__.html',1,'']]],
   ['pvlayerloc_5f',['PVLayerLoc_',['../structPVLayerLoc__.html',1,'']]],
   ['pvparams',['PVParams',['../classPV_1_1PVParams.html',1,'PV']]],
-  ['pvpatch_5f',['PVPatch_',['../structPVCuda_1_1PVPatch__.html',1,'PVCuda']]],
   ['pvpatch_5f',['PVPatch_',['../structPVPatch__.html',1,'']]],
+  ['pvpatch_5f',['PVPatch_',['../structPVCuda_1_1PVPatch__.html',1,'PVCuda']]],
   ['pvpatchstrides_5f',['PVPatchStrides_',['../structPVPatchStrides__.html',1,'']]]
 ];

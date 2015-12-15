@@ -185,160 +185,164 @@ $(document).ready(function(){initNavTree('CopyConn_8cpp_source.html','');});
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="comment">// During the communication phase, plasticityFlag will be copied from originalConn</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a87fda355778ac24b712db63b0e27d20b">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a87fda355778ac24b712db63b0e27d20b">CopyConn::ioParam_triggerFlag</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a24205504b61df2cfcfbc1d6cba3e5220">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a24205504b61df2cfcfbc1d6cba3e5220">CopyConn::ioParam_triggerLayerName</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="keywordflow">if</span> (ioFlag==PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      triggerFlag = <span class="keyword">false</span>; <span class="comment">// make sure that CopyConn always checks if its originalConn has updated</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;triggerFlag&quot;</span>, triggerFlag);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">CopyConn::ioParam_weightUpdatePeriod</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      weightUpdatePeriod = parent-&gt;getDeltaTime();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;weightUpdatePeriod&quot;</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">  100</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">CopyConn::ioParam_initialWeightUpdateTime</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      initialWeightUpdateTime = parent-&gt;getStartTime();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;initialWeightUpdateTime&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      weightUpdateTime = initialWeightUpdateTime;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">  108</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">CopyConn::ioParam_dWMax</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t use dWMax</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;dWMax&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">CopyConn::ioParam_useMask</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   <span class="keywordflow">if</span> (ioFlag==PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      useMask = <span class="keyword">false</span>; <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t need to have a mask</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;useMask&quot;</span>, useMask);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">CopyConn::ioParam_maskLayerName</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordflow">if</span> (ioFlag==PARAMS_IO_READ) {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      maskLayerName = NULL; <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t need to have a mask</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      parent-&gt;parameters()-&gt;<a class="code" href="classPV_1_1PVParams.html#ad3932ef1bfe04a0e274b8eb1a42c44e5">handleUnnecessaryStringParameter</a>(name, <span class="stringliteral">&quot;maskLayerName&quot;</span>, maskLayerName);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">  129</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">CopyConn::ioParam_originalConnName</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;   parent-&gt;ioParamStringRequired(ioFlag, name, <span class="stringliteral">&quot;originalConnName&quot;</span>, &amp;originalConnName);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">  133</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">CopyConn::communicateInitInfo</a>() {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   <a class="code" href="classPV_1_1BaseConnection.html">BaseConnection</a> * originalConnBase = parent-&gt;getConnFromName(this-&gt;originalConnName);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keywordflow">if</span> (originalConnBase==NULL) {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: originalConnName \&quot;%s\&quot; does not refer to any connection in the column.\n&quot;</span>, this-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47">getKeyword</a>(), name, this-&gt;originalConnName);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      MPI_Barrier(parent-&gt;icCommunicator()-&gt;communicator());</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   this-&gt;originalConn = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classPV_1_1HyPerConn.html">HyPerConn</a> *<span class="keyword">&gt;</span>(originalConnBase);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   <span class="keywordflow">if</span> (originalConn == NULL) {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;CopyConn \&quot;%s\&quot; error: originalConnName \&quot;%s\&quot; is not an existing connection.\n&quot;</span>, name, originalConnName);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;         status = PV_FAILURE;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;   }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;   <span class="keywordflow">if</span> (status != PV_SUCCESS) <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;   <span class="keywordflow">if</span> (!originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#ad617960920014f253c2244a915ce5543">getInitInfoCommunicatedFlag</a>()) {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">char</span> * connectiontype = this-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47">getKeyword</a>();</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;         printf(<span class="stringliteral">&quot;%s \&quot;%s\&quot; must wait until original connection \&quot;%s\&quot; has finished its communicateInitInfo stage.\n&quot;</span>, connectiontype, name, originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">getName</a>());</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="keywordflow">return</span> PV_POSTPONE;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;   sharedWeights = originalConn-&gt;usingSharedWeights();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;sharedWeights&quot;</span>, sharedWeights);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">// make sure that TransposePoolingConn always checks if its originalConn has updated</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      triggerFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      triggerLayerName = NULL;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;triggerFlag&quot;</span>, triggerFlag);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      parent-&gt;parameters()-&gt;<a class="code" href="classPV_1_1PVParams.html#ad3932ef1bfe04a0e274b8eb1a42c44e5">handleUnnecessaryStringParameter</a>(name, <span class="stringliteral">&quot;triggerLayerName&quot;</span>, NULL);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">CopyConn::ioParam_weightUpdatePeriod</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      weightUpdatePeriod = parent-&gt;getDeltaTime();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;weightUpdatePeriod&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">CopyConn::ioParam_initialWeightUpdateTime</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      initialWeightUpdateTime = parent-&gt;getStartTime();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;initialWeightUpdateTime&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      weightUpdateTime = initialWeightUpdateTime;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">  111</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">CopyConn::ioParam_dWMax</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keywordflow">if</span> (ioFlag == PARAMS_IO_READ) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t use dWMax</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;dWMax&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">  118</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">CopyConn::ioParam_useMask</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   <span class="keywordflow">if</span> (ioFlag==PARAMS_IO_READ) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      useMask = <span class="keyword">false</span>; <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t need to have a mask</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;useMask&quot;</span>, useMask);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">CopyConn::ioParam_maskLayerName</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   <span class="keywordflow">if</span> (ioFlag==PARAMS_IO_READ) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      maskLayerName = NULL; <span class="comment">// since CopyConn doesn&#39;t do its own learning, it doesn&#39;t need to have a mask</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      parent-&gt;parameters()-&gt;<a class="code" href="classPV_1_1PVParams.html#ad3932ef1bfe04a0e274b8eb1a42c44e5">handleUnnecessaryStringParameter</a>(name, <span class="stringliteral">&quot;maskLayerName&quot;</span>, maskLayerName);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">  132</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">CopyConn::ioParam_originalConnName</a>(<span class="keyword">enum</span> ParamsIOFlag ioFlag) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   parent-&gt;ioParamStringRequired(ioFlag, name, <span class="stringliteral">&quot;originalConnName&quot;</span>, &amp;originalConnName);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">  136</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">CopyConn::communicateInitInfo</a>() {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   <a class="code" href="classPV_1_1BaseConnection.html">BaseConnection</a> * originalConnBase = parent-&gt;getConnFromName(this-&gt;originalConnName);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   <span class="keywordflow">if</span> (originalConnBase==NULL) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;%s \&quot;%s\&quot; error: originalConnName \&quot;%s\&quot; does not refer to any connection in the column.\n&quot;</span>, this-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47">getKeyword</a>(), name, this-&gt;originalConnName);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      MPI_Barrier(parent-&gt;icCommunicator()-&gt;communicator());</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   this-&gt;originalConn = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classPV_1_1HyPerConn.html">HyPerConn</a> *<span class="keyword">&gt;</span>(originalConnBase);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   <span class="keywordflow">if</span> (originalConn == NULL) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;         fprintf(stderr, <span class="stringliteral">&quot;CopyConn \&quot;%s\&quot; error: originalConnName \&quot;%s\&quot; is not an existing connection.\n&quot;</span>, name, originalConnName);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;         status = PV_FAILURE;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;   }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   <span class="keywordflow">if</span> (status != PV_SUCCESS) <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   <span class="keywordflow">if</span> (!originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#ad617960920014f253c2244a915ce5543">getInitInfoCommunicatedFlag</a>()) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">if</span> (parent-&gt;columnId()==0) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">char</span> * connectiontype = this-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47">getKeyword</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;         printf(<span class="stringliteral">&quot;%s \&quot;%s\&quot; must wait until original connection \&quot;%s\&quot; has finished its communicateInitInfo stage.\n&quot;</span>, connectiontype, name, originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">getName</a>());</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">return</span> PV_POSTPONE;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   }</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   numAxonalArborLists = originalConn-&gt;numberOfAxonalArborLists();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;numAxonalArbors&quot;</span>, numAxonalArborLists);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   sharedWeights = originalConn-&gt;usingSharedWeights();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;sharedWeights&quot;</span>, sharedWeights);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   plasticityFlag = originalConn-&gt;getPlasticityFlag();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;plasticityFlag&quot;</span>, plasticityFlag);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   numAxonalArborLists = originalConn-&gt;numberOfAxonalArborLists();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;numAxonalArbors&quot;</span>, numAxonalArborLists);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;   status = <a class="code" href="classPV_1_1HyPerConn.html#a18a5cc03609f6d283f62410c7243e019">HyPerConn::communicateInitInfo</a>();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;   plasticityFlag = originalConn-&gt;getPlasticityFlag();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;plasticityFlag&quot;</span>, plasticityFlag);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;   status = <a class="code" href="classPV_1_1HyPerConn.html#a18a5cc03609f6d283f62410c7243e019">HyPerConn::communicateInitInfo</a>();</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keywordtype">int</span> CopyConn::setPatchSize() {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;   nxp = originalConn-&gt;xPatchSize();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;   nyp = originalConn-&gt;yPatchSize();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;   nfp = originalConn-&gt;fPatchSize();</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nxp&quot;</span>, nxp);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nyp&quot;</span>, nyp);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nfp&quot;</span>, nfp);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">  184</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">CopyConn::setInitialValues</a>() {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   <span class="keywordflow">if</span> (originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a764a2087e925f175e24bd144f4c9c062">getInitialValuesSetFlag</a>()) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      status = <a class="code" href="classPV_1_1HyPerConn.html#a7131cc61ed6ee2101feb720f271a01b8">HyPerConn::setInitialValues</a>(); <span class="comment">// calls initializeWeights</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      status = PV_POSTPONE;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keywordtype">int</span> CopyConn::setPatchSize() {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;   nxp = originalConn-&gt;xPatchSize();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   nyp = originalConn-&gt;yPatchSize();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   nfp = originalConn-&gt;fPatchSize();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nxp&quot;</span>, nxp);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nyp&quot;</span>, nyp);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;   parent-&gt;parameters()-&gt;handleUnnecessaryParameter(name, <span class="stringliteral">&quot;nfp&quot;</span>, nfp);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">  187</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">CopyConn::setInitialValues</a>() {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   <span class="keywordflow">if</span> (originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a764a2087e925f175e24bd144f4c9c062">getInitialValuesSetFlag</a>()) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      status = <a class="code" href="classPV_1_1HyPerConn.html#a7131cc61ed6ee2101feb720f271a01b8">HyPerConn::setInitialValues</a>(); <span class="comment">// calls initializeWeights</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;   }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;PVPatch*** CopyConn::initializeWeights(PVPatch*** patches, pvwdata_t** dataStart) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   assert(originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a764a2087e925f175e24bd144f4c9c062">getInitialValuesSetFlag</a>()); <span class="comment">// setInitialValues shouldn&#39;t call this function unless original conn has set its own initial values</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   assert(dataStart == get_wDataStart());</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;   assert(patches==NULL || patches==get_wPatches());</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> arbor=0; arbor&lt;numAxonalArborLists; arbor++) {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      copy(arbor);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;   }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;   <span class="keywordflow">return</span> patches;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">  205</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">CopyConn::needUpdate</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;   <span class="keywordflow">return</span> plasticityFlag &amp;&amp; originalConn-&gt;getLastUpdateTime() &gt; lastUpdateTime;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">int</span> CopyConn::updateWeights(<span class="keywordtype">int</span> axonID) {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   assert(originalConn-&gt;getLastUpdateTime() &gt; lastUpdateTime);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;   <span class="keywordtype">int</span> status;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   <span class="keywordtype">float</span> original_update_time = originalConn-&gt;getLastUpdateTime();</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;   <span class="keywordflow">if</span>(original_update_time &gt; lastUpdateTime ) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      status = copy(axonID);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      lastUpdateTime = parent-&gt;simulationTime();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;   }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      status = PV_SUCCESS;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}  <span class="comment">// end of CopyConn::updateWeights(int);</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keywordtype">int</span> CopyConn::copy(<span class="keywordtype">int</span> arborId) {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   <span class="keywordtype">size_t</span> arborsize = (size_t) (xPatchSize() * yPatchSize() * fPatchSize() * getNumDataPatches()) * <span class="keyword">sizeof</span>(pvwdata_t);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   memcpy(get_wDataStart(arborId), originalConn-&gt;get_wDataStart(arborId), arborsize);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;CopyConn::~CopyConn() {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   free(originalConnName);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;} <span class="comment">/* namespace PV */</span></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a72bc05b683eca3a27694bd45db0ef674"><div class="ttname"><a href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">PV::CopyConn::ioParam_originalConnName</a></div><div class="ttdeci">virtual void ioParam_originalConnName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">originalConnName (required): The name of the connection the weights will be copied from ...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00129">CopyConn.cpp:129</a></div></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      status = PV_POSTPONE;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;PVPatch*** CopyConn::initializeWeights(PVPatch*** patches, pvwdata_t** dataStart) {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   assert(originalConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#a764a2087e925f175e24bd144f4c9c062">getInitialValuesSetFlag</a>()); <span class="comment">// setInitialValues shouldn&#39;t call this function unless original conn has set its own initial values</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;   assert(dataStart == get_wDataStart());</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;   assert(patches==NULL || patches==get_wPatches());</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> arbor=0; arbor&lt;numAxonalArborLists; arbor++) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      copy(arbor);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;   }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;   <span class="keywordflow">return</span> patches;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">  208</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">CopyConn::needUpdate</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">double</span> dt) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   <span class="keywordflow">return</span> plasticityFlag &amp;&amp; originalConn-&gt;getLastUpdateTime() &gt; lastUpdateTime;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keywordtype">int</span> CopyConn::updateWeights(<span class="keywordtype">int</span> axonID) {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;   assert(originalConn-&gt;getLastUpdateTime() &gt; lastUpdateTime);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;   <span class="keywordtype">int</span> status;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;   <span class="keywordtype">float</span> original_update_time = originalConn-&gt;getLastUpdateTime();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;   <span class="keywordflow">if</span>(original_update_time &gt; lastUpdateTime ) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      status = copy(axonID);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      lastUpdateTime = parent-&gt;simulationTime();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      status = PV_SUCCESS;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}  <span class="comment">// end of CopyConn::updateWeights(int);</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordtype">int</span> CopyConn::copy(<span class="keywordtype">int</span> arborId) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;   <span class="keywordtype">size_t</span> arborsize = (size_t) (xPatchSize() * yPatchSize() * fPatchSize() * getNumDataPatches()) * <span class="keyword">sizeof</span>(pvwdata_t);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   memcpy(get_wDataStart(arborId), originalConn-&gt;get_wDataStart(arborId), arborsize);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;CopyConn::~CopyConn() {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   free(originalConnName);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;} <span class="comment">/* namespace PV */</span></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a72bc05b683eca3a27694bd45db0ef674"><div class="ttname"><a href="classPV_1_1CopyConn.html#a72bc05b683eca3a27694bd45db0ef674">PV::CopyConn::ioParam_originalConnName</a></div><div class="ttdeci">virtual void ioParam_originalConnName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">originalConnName (required): The name of the connection the weights will be copied from ...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00132">CopyConn.cpp:132</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a24d90a54bc6080c81aeed0411b682959"><div class="ttname"><a href="classPV_1_1CopyConn.html#a24d90a54bc6080c81aeed0411b682959">PV::CopyConn::ioParam_nyp</a></div><div class="ttdeci">virtual void ioParam_nyp(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits nyp from the original connection, instead of reading it from parameters. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00062">CopyConn.cpp:62</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a9fd9608c6148aafc1fdf611dd2a87567"><div class="ttname"><a href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">PV::CopyConn::ioParam_useMask</a></div><div class="ttdeci">virtual void ioParam_useMask(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">useMask is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00115">CopyConn.cpp:115</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a9fd9608c6148aafc1fdf611dd2a87567"><div class="ttname"><a href="classPV_1_1CopyConn.html#a9fd9608c6148aafc1fdf611dd2a87567">PV::CopyConn::ioParam_useMask</a></div><div class="ttdeci">virtual void ioParam_useMask(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">useMask is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00118">CopyConn.cpp:118</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_ad7d03994e7981d2527ef054214497bf9"><div class="ttname"><a href="classPV_1_1CopyConn.html#ad7d03994e7981d2527ef054214497bf9">PV::CopyConn::ioParam_nfp</a></div><div class="ttdeci">virtual void ioParam_nfp(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits nfp from the original connection, instead of reading it from parameters. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00066">CopyConn.cpp:66</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a24205504b61df2cfcfbc1d6cba3e5220"><div class="ttname"><a href="classPV_1_1CopyConn.html#a24205504b61df2cfcfbc1d6cba3e5220">PV::CopyConn::ioParam_triggerLayerName</a></div><div class="ttdeci">virtual void ioParam_triggerLayerName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn does not use trigger layers. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00086">CopyConn.cpp:86</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_abb72e9f288bad9b3ab28cc11103ecd49"><div class="ttname"><a href="classPV_1_1CopyConn.html#abb72e9f288bad9b3ab28cc11103ecd49">PV::CopyConn::ioParam_weightInitType</a></div><div class="ttdeci">virtual void ioParam_weightInitType(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">weightInitType is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00051">CopyConn.cpp:51</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a9d25459925dab07306be9603617c5026"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a9d25459925dab07306be9603617c5026">PV::HyPerConn::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00662">HyPerConn.cpp:662</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a8bf41eafafde2ae6e599002ee10ae8bf"><div class="ttname"><a href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">PV::CopyConn::ioParam_dWMax</a></div><div class="ttdeci">virtual void ioParam_dWMax(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">dWMax is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00108">CopyConn.cpp:108</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a8bf41eafafde2ae6e599002ee10ae8bf"><div class="ttname"><a href="classPV_1_1CopyConn.html#a8bf41eafafde2ae6e599002ee10ae8bf">PV::CopyConn::ioParam_dWMax</a></div><div class="ttdeci">virtual void ioParam_dWMax(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">dWMax is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00111">CopyConn.cpp:111</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a829c6e9c1ea72edce9c41992c295703e"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a829c6e9c1ea72edce9c41992c295703e">PV::BaseConnection::getName</a></div><div class="ttdeci">const char * getName()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8hpp_source.html#l00198">BaseConnection.hpp:198</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a449cdfd2567651fae24480b9328c3036"><div class="ttname"><a href="classPV_1_1CopyConn.html#a449cdfd2567651fae24480b9328c3036">PV::CopyConn::ioParam_keepKernelsSynchronized</a></div><div class="ttdeci">virtual void ioParam_keepKernelsSynchronized(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">keepKernelsSynchronized is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00041">CopyConn.cpp:41</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a9b5a2e93a3d439cf056305b8419fa10a"><div class="ttname"><a href="classPV_1_1CopyConn.html#a9b5a2e93a3d439cf056305b8419fa10a">PV::CopyConn::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00031">CopyConn.cpp:31</a></div></div>
@@ -346,22 +350,21 @@ $(document).ready(function(){initNavTree('CopyConn_8cpp_source.html','');});
 <div class="ttc" id="classPV_1_1CopyConn_html_a08831f5e427157b2472ef127c928b9f1"><div class="ttname"><a href="classPV_1_1CopyConn.html#a08831f5e427157b2472ef127c928b9f1">PV::CopyConn::ioParam_numAxonalArbors</a></div><div class="ttdeci">virtual void ioParam_numAxonalArbors(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits numAxonalArbors from the original connection, instead of reading it from parameters...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00078">CopyConn.cpp:78</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a6f38249cbecef293515d7bfd6cb0270f"><div class="ttname"><a href="classPV_1_1CopyConn.html#a6f38249cbecef293515d7bfd6cb0270f">PV::CopyConn::ioParam_nxp</a></div><div class="ttdeci">virtual void ioParam_nxp(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits nxp from the original connection, instead of reading it from parameters. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00058">CopyConn.cpp:58</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html"><div class="ttname"><a href="classPV_1_1BaseConnection.html">PV::BaseConnection</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8hpp_source.html#l00025">BaseConnection.hpp:25</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_aeb61c3c324706051df91b9e59fba31d1"><div class="ttname"><a href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">PV::CopyConn::ioParam_maskLayerName</a></div><div class="ttdeci">virtual void ioParam_maskLayerName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">maskLayerName is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00122">CopyConn.cpp:122</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a18a5cc03609f6d283f62410c7243e019"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a18a5cc03609f6d283f62410c7243e019">PV::HyPerConn::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01275">HyPerConn.cpp:1275</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a7cde9de193f5b6c2839e3af747103483"><div class="ttname"><a href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">PV::CopyConn::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00133">CopyConn.cpp:133</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_aeb61c3c324706051df91b9e59fba31d1"><div class="ttname"><a href="classPV_1_1CopyConn.html#aeb61c3c324706051df91b9e59fba31d1">PV::CopyConn::ioParam_maskLayerName</a></div><div class="ttdeci">virtual void ioParam_maskLayerName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">maskLayerName is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00125">CopyConn.cpp:125</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a18a5cc03609f6d283f62410c7243e019"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a18a5cc03609f6d283f62410c7243e019">PV::HyPerConn::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01278">HyPerConn.cpp:1278</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a7cde9de193f5b6c2839e3af747103483"><div class="ttname"><a href="classPV_1_1CopyConn.html#a7cde9de193f5b6c2839e3af747103483">PV::CopyConn::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00136">CopyConn.cpp:136</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a263df806b0534938c4421bfff42d1b47"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a263df806b0534938c4421bfff42d1b47">PV::BaseConnection::getKeyword</a></div><div class="ttdeci">char const * getKeyword()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8cpp_source.html#l00147">BaseConnection.cpp:147</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a42dc009b8395749f0b2326f9096e2172"><div class="ttname"><a href="classPV_1_1CopyConn.html#a42dc009b8395749f0b2326f9096e2172">PV::CopyConn::ioParam_initializeFromCheckpointFlag</a></div><div class="ttdeci">virtual void ioParam_initializeFromCheckpointFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">initializeFromCheckpointFlag is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00070">CopyConn.cpp:70</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a87fda355778ac24b712db63b0e27d20b"><div class="ttname"><a href="classPV_1_1CopyConn.html#a87fda355778ac24b712db63b0e27d20b">PV::CopyConn::ioParam_triggerFlag</a></div><div class="ttdeci">virtual void ioParam_triggerFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits triggerFlag from the original connection, instead of reading it from parameters...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00086">CopyConn.cpp:86</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html"><div class="ttname"><a href="classPV_1_1HyPerConn.html">PV::HyPerConn</a></div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8hpp_source.html#l00055">HyPerConn.hpp:55</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_ad617960920014f253c2244a915ce5543"><div class="ttname"><a href="classPV_1_1BaseConnection.html#ad617960920014f253c2244a915ce5543">PV::BaseConnection::getInitInfoCommunicatedFlag</a></div><div class="ttdeci">bool getInitInfoCommunicatedFlag()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8hpp_source.html#l00069">BaseConnection.hpp:69</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_ad1d8245d415fe17f3e192350aae603a8"><div class="ttname"><a href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">PV::CopyConn::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00205">CopyConn.cpp:205</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_ad1d8245d415fe17f3e192350aae603a8"><div class="ttname"><a href="classPV_1_1CopyConn.html#ad1d8245d415fe17f3e192350aae603a8">PV::CopyConn::needUpdate</a></div><div class="ttdeci">virtual bool needUpdate(double time, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00208">CopyConn.cpp:208</a></div></div>
 <div class="ttc" id="classPV_1_1PVParams_html_ad3932ef1bfe04a0e274b8eb1a42c44e5"><div class="ttname"><a href="classPV_1_1PVParams.html#ad3932ef1bfe04a0e274b8eb1a42c44e5">PV::PVParams::handleUnnecessaryStringParameter</a></div><div class="ttdeci">void handleUnnecessaryStringParameter(const char *group_name, const char *param_name)</div><div class="ttdef"><b>Definition:</b> <a href="PVParams_8cpp_source.html#l01779">PVParams.cpp:1779</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_ad79a9e629f83ee96dee9fe0bd6bc48de"><div class="ttname"><a href="classPV_1_1CopyConn.html#ad79a9e629f83ee96dee9fe0bd6bc48de">PV::CopyConn::ioParam_plasticityFlag</a></div><div class="ttdeci">virtual void ioParam_plasticityFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits plasticityFlag from the original connection, instead of reading it from parameters...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00082">CopyConn.cpp:82</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_ae148f588d577f555e1e20d6b4fe5fcf0"><div class="ttname"><a href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">PV::CopyConn::ioParam_initialWeightUpdateTime</a></div><div class="ttdeci">virtual void ioParam_initialWeightUpdateTime(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">initialWeightUpdateTime is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00100">CopyConn.cpp:100</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a7131cc61ed6ee2101feb720f271a01b8"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a7131cc61ed6ee2101feb720f271a01b8">PV::HyPerConn::setInitialValues</a></div><div class="ttdeci">virtual int setInitialValues()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02902">HyPerConn.cpp:2902</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_ae148f588d577f555e1e20d6b4fe5fcf0"><div class="ttname"><a href="classPV_1_1CopyConn.html#ae148f588d577f555e1e20d6b4fe5fcf0">PV::CopyConn::ioParam_initialWeightUpdateTime</a></div><div class="ttdeci">virtual void ioParam_initialWeightUpdateTime(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">initialWeightUpdateTime is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00103">CopyConn.cpp:103</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a7131cc61ed6ee2101feb720f271a01b8"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a7131cc61ed6ee2101feb720f271a01b8">PV::HyPerConn::setInitialValues</a></div><div class="ttdeci">virtual int setInitialValues()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02905">HyPerConn.cpp:2905</a></div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> <a href="Communicator_8cpp_source.html#l00016">Communicator.cpp:16</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a1a28b9879c7322789371f39cfda19697"><div class="ttname"><a href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">PV::CopyConn::setInitialValues</a></div><div class="ttdeci">virtual int setInitialValues()</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00184">CopyConn.cpp:184</a></div></div>
-<div class="ttc" id="classPV_1_1CopyConn_html_a3913e2918c033095ace28096ff3efe03"><div class="ttname"><a href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">PV::CopyConn::ioParam_weightUpdatePeriod</a></div><div class="ttdeci">virtual void ioParam_weightUpdatePeriod(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">weightUpdatePeriod is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00093">CopyConn.cpp:93</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a1a28b9879c7322789371f39cfda19697"><div class="ttname"><a href="classPV_1_1CopyConn.html#a1a28b9879c7322789371f39cfda19697">PV::CopyConn::setInitialValues</a></div><div class="ttdeci">virtual int setInitialValues()</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00187">CopyConn.cpp:187</a></div></div>
+<div class="ttc" id="classPV_1_1CopyConn_html_a3913e2918c033095ace28096ff3efe03"><div class="ttname"><a href="classPV_1_1CopyConn.html#a3913e2918c033095ace28096ff3efe03">PV::CopyConn::ioParam_weightUpdatePeriod</a></div><div class="ttdeci">virtual void ioParam_weightUpdatePeriod(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">weightUpdatePeriod is not used by CopyConn. </div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00096">CopyConn.cpp:96</a></div></div>
 <div class="ttc" id="classPV_1_1CopyConn_html_a7846b166439962f9656e101b1362f6c6"><div class="ttname"><a href="classPV_1_1CopyConn.html#a7846b166439962f9656e101b1362f6c6">PV::CopyConn::ioParam_sharedWeights</a></div><div class="ttdeci">virtual void ioParam_sharedWeights(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">CopyConn inherits sharedWeights from the original connection, instead of reading it from parameters...</div><div class="ttdef"><b>Definition:</b> <a href="CopyConn_8cpp_source.html#l00037">CopyConn.cpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

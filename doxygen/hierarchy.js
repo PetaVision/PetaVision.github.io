@@ -85,7 +85,9 @@ var hierarchy =
       ] ],
       [ "PV::LayerProbe", "classPV_1_1LayerProbe.html", [
         [ "PV::AbstractNormProbe", "classPV_1_1AbstractNormProbe.html", [
-          [ "PV::FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", null ],
+          [ "PV::FirmThresholdCostFnProbe", "classPV_1_1FirmThresholdCostFnProbe.html", [
+            [ "PV::FirmThresholdCostFnLCAProbe", "classPV_1_1FirmThresholdCostFnLCAProbe.html", null ]
+          ] ],
           [ "PV::L0NormProbe", "classPV_1_1L0NormProbe.html", [
             [ "PV::L0NormLCAProbe", "classPV_1_1L0NormLCAProbe.html", null ]
           ] ],
@@ -183,8 +185,8 @@ var hierarchy =
     [ "PVLayerCube_", "structPVLayerCube__.html", null ],
     [ "PVLayerLoc_", "structPVLayerLoc__.html", null ],
     [ "PV::PVParams", "classPV_1_1PVParams.html", null ],
-    [ "PVPatch_", "structPVPatch__.html", null ],
     [ "PVCuda::PVPatch_", "structPVCuda_1_1PVPatch__.html", null ],
+    [ "PVPatch_", "structPVPatch__.html", null ],
     [ "PVPatchStrides_", "structPVPatchStrides__.html", null ],
     [ "PV::Random", "classPV_1_1Random.html", [
       [ "PV::GaussianRandom", "classPV_1_1GaussianRandom.html", null ]
