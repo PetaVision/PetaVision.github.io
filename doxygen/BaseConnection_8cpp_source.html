@@ -682,13 +682,11 @@ $(document).ready(function(){initNavTree('BaseConnection_8cpp_source.html','');}
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;   free(this-&gt;postLayerName);</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;   free(fDelayArray);</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;   free(delays);</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_probe = 0; i_probe &lt; this-&gt;numProbes; i_probe++){</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      <span class="keyword">delete</span> probes[i_probe];</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;   }</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;   free(this-&gt;probes);</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;}</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;}  <span class="comment">// end namespace PV</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;   free(this-&gt;probes); <span class="comment">// All probes are deleted by the HyPerCol, so probes[i] doesn&#39;t need to be deleted, only the array itself.</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;}</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;}  <span class="comment">// end namespace PV</span></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a50d0597598512a94bde243a303997dce"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a50d0597598512a94bde243a303997dce">PV::BaseConnection::setParent</a></div><div class="ttdeci">int setParent(HyPerCol *hc)</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8cpp_source.html#l00061">BaseConnection.cpp:61</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a663d09deb4f978c513ac5e4b6b8dbc89"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a663d09deb4f978c513ac5e4b6b8dbc89">PV::BaseConnection::outputProbeParams</a></div><div class="ttdeci">virtual int outputProbeParams()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8cpp_source.html#l00434">BaseConnection.cpp:434</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_a1121921926614fb4af7303fdb91542e6"><div class="ttname"><a href="classPV_1_1BaseConnection.html#a1121921926614fb4af7303fdb91542e6">PV::BaseConnection::ioParam_receiveGpu</a></div><div class="ttdeci">virtual void ioParam_receiveGpu(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">receiveGpu: If PetaVision was compiled with GPU acceleration and this flag is set to true...</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8cpp_source.html#l00381">BaseConnection.cpp:381</a></div></div>

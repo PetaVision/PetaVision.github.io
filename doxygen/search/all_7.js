@@ -41,7 +41,6 @@ var searchData=
   ['getnumvalues',['getNumValues',['../classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3',1,'PV::BaseProbe']]],
   ['getnumvertices',['getNumVertices',['../classPV_1_1PtwiseLinearTransferLayer.html#acab0907ed96d4429d65f6f2dac1c118b',1,'PV::PtwiseLinearTransferLayer']]],
   ['getoutputpath',['getOutputPath',['../classPV_1_1PV__Arguments.html#a7ed9aab58cf2fc3e2f06634242212575',1,'PV::PV_Arguments']]],
-  ['getowner',['getOwner',['../classPV_1_1BaseProbe.html#a3eac284f844afbe06bc7c1fa8f01adfa',1,'PV::BaseProbe']]],
   ['getparamsfile',['getParamsFile',['../classPV_1_1PV__Arguments.html#ac02875923122e1665335c62816d465f6',1,'PV::PV_Arguments']]],
   ['getparent',['getParent',['../classPV_1_1BaseConnection.html#aba4b40893e9e1285c43cd407d4958bc0',1,'PV::BaseConnection::getParent()'],['../classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4',1,'PV::BaseProbe::getParent()']]],
   ['getpreandpostlayernames',['getPreAndPostLayerNames',['../classPV_1_1BaseConnection.html#a5971614aa9ddc817be36c8e18e473aaf',1,'PV::BaseConnection']]],

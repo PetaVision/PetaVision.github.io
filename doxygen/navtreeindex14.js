@@ -1,13 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classPV_1_1CloneKernelConn.html#ae836b72606165a12f71f7e972e7166ff":[1,0,0,16,210],
-"classPV_1_1CloneKernelConn.html#ae871c26c338b0bfca5f9c73e4b2c5f08":[1,0,0,16,76],
-"classPV_1_1CloneKernelConn.html#ae87dd99a3fbf96401155ff68ceb36710":[1,0,0,16,359],
-"classPV_1_1CloneKernelConn.html#ae882c206e04446da83f7e4e296b8d294":[1,0,0,16,144],
-"classPV_1_1CloneKernelConn.html#aea4301595224020585f24074fbf09299":[1,0,0,16,211],
-"classPV_1_1CloneKernelConn.html#aea9a783eda36f70f2d59b06a62f9e716":[1,0,0,16,174],
-"classPV_1_1CloneKernelConn.html#aeb117c443819196ade22dfeb21429c3e":[1,0,0,16,231],
-"classPV_1_1CloneKernelConn.html#aeb6beb94c07be8e85d9b1535ebe09c8a":[1,0,0,16,387],
 "classPV_1_1CloneKernelConn.html#aec5c7e8040d583f50f1e903618a3cf68":[1,0,0,16,115],
 "classPV_1_1CloneKernelConn.html#aed6279dfc8243e1d584c3b10db42e449":[1,0,0,16,218],
 "classPV_1_1CloneKernelConn.html#aef44dcae05db6d11aae64894d0e8dda0":[1,0,0,16,340],
@@ -249,5 +241,13 @@ var NAVTREEINDEX14 =
 "classPV_1_1CloneVLayer.html#ac8734a103527d47d770e2e1f2c40c472":[1,0,0,17,209],
 "classPV_1_1CloneVLayer.html#ac96420df4bb6efc70316d7a10f676cf8":[1,0,0,17,183],
 "classPV_1_1CloneVLayer.html#acaa0e7899b7fe428d0c6420af2c0b644":[1,0,0,17,198],
-"classPV_1_1CloneVLayer.html#acb16df39ae6d0843a293d0a98c9e560d":[1,0,0,17,210]
+"classPV_1_1CloneVLayer.html#acb16df39ae6d0843a293d0a98c9e560d":[1,0,0,17,210],
+"classPV_1_1CloneVLayer.html#acb38d3cfeef848c27044af476f38fda2":[1,0,0,17,89],
+"classPV_1_1CloneVLayer.html#acbd1762f29c0885c41f47034f3102f5a":[1,0,0,17,236],
+"classPV_1_1CloneVLayer.html#acbfd161120fabb6e41009bcbf45b665c":[1,0,0,17,8],
+"classPV_1_1CloneVLayer.html#acdf8612bbe33ee79783a64f6577d9141":[1,0,0,17,258],
+"classPV_1_1CloneVLayer.html#aceb0aadced61a557d69e6e382fd10dcf":[1,0,0,17,160],
+"classPV_1_1CloneVLayer.html#ad1f5de4cb4fc1ec8b8b65d03d279687b":[1,0,0,17,213],
+"classPV_1_1CloneVLayer.html#ad31fbe25c55ee3257375de57a3bf9099":[1,0,0,17,242],
+"classPV_1_1CloneVLayer.html#ad3a513caa9c7651356a8c4ff5d2ae9b7":[1,0,0,17,186]
 };

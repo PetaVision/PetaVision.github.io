@@ -146,37 +146,36 @@ $(document).ready(function(){initNavTree('BaseConnectionProbe_8cpp_source.html',
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keywordtype">int</span> status = setTargetConn(targetName);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordflow">if</span> (status == PV_SUCCESS){</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      targetConn-&gt;<a class="code" href="classPV_1_1BaseConnection.html#ab45f5d3470934a92139919ca17ff4409">insertProbe</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      owner = targetConn;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordflow">return</span> status;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">int</span> BaseConnectionProbe::setTargetConn(<span class="keyword">const</span> <span class="keywordtype">char</span> * connName) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   targetConn = <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;getConnFromName(connName);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordflow">if</span> (targetConn==NULL) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;BaseConnectionProbe \&quot;%s\&quot; error in rank %d process: targetConnection \&quot;%s\&quot; is not a connection in the HyPerCol.\n&quot;</span>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            name, <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;columnId(), connName);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      status = PV_FAILURE;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   MPI_Barrier(<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;icCommunicator()-&gt;communicator());</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> BaseConnectionProbe::setTargetConn(<span class="keyword">const</span> <span class="keywordtype">char</span> * connName) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   targetConn = <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;getConnFromName(connName);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordflow">if</span> (targetConn==NULL) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;BaseConnectionProbe \&quot;%s\&quot; error in rank %d process: targetConnection \&quot;%s\&quot; is not a connection in the HyPerCol.\n&quot;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            name, <a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;columnId(), connName);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      status = PV_FAILURE;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   MPI_Barrier(<a class="code" href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">getParent</a>()-&gt;icCommunicator()-&gt;communicator());</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordflow">if</span> (status != PV_SUCCESS) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}  <span class="comment">// end of namespace PV</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}  <span class="comment">// end of namespace PV</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="ttc" id="classPV_1_1BaseConnectionProbe_html_afae77ab8b4b0d88c36edd3b87d160cc3"><div class="ttname"><a href="classPV_1_1BaseConnectionProbe.html#afae77ab8b4b0d88c36edd3b87d160cc3">PV::BaseConnectionProbe::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnectionProbe_8cpp_source.html#l00042">BaseConnectionProbe.cpp:42</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_a05561c458bd5950bdb678804178baca7"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a05561c458bd5950bdb678804178baca7">PV::BaseProbe::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()=0</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00250">BaseProbe.cpp:250</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_a05561c458bd5950bdb678804178baca7"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a05561c458bd5950bdb678804178baca7">PV::BaseProbe::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()=0</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00248">BaseProbe.cpp:248</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnectionProbe_html_a729a26626ed7952a5ca6519288347271"><div class="ttname"><a href="classPV_1_1BaseConnectionProbe.html#a729a26626ed7952a5ca6519288347271">PV::BaseConnectionProbe::ioParam_targetName</a></div><div class="ttdeci">virtual void ioParam_targetName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">targetName: the name of the object that the probe attaches to. In LayerProbe, targetName is used to d...</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnectionProbe_8cpp_source.html#l00035">BaseConnectionProbe.cpp:35</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_afad4d1dc8000229f262c9c45460593d4"><div class="ttname"><a href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">PV::BaseProbe::getParent</a></div><div class="ttdeci">HyPerCol * getParent()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8hpp_source.html#l00246">BaseProbe.hpp:246</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_a15d1c75e64c40df1e30878d2526481a9"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a15d1c75e64c40df1e30878d2526481a9">PV::BaseProbe::initialize</a></div><div class="ttdeci">int initialize(const char *probeName, HyPerCol *hc)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00066">BaseProbe.cpp:66</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_afad4d1dc8000229f262c9c45460593d4"><div class="ttname"><a href="classPV_1_1BaseProbe.html#afad4d1dc8000229f262c9c45460593d4">PV::BaseProbe::getParent</a></div><div class="ttdeci">HyPerCol * getParent()</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8hpp_source.html#l00238">BaseProbe.hpp:238</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_a15d1c75e64c40df1e30878d2526481a9"><div class="ttname"><a href="classPV_1_1BaseProbe.html#a15d1c75e64c40df1e30878d2526481a9">PV::BaseProbe::initialize</a></div><div class="ttdeci">int initialize(const char *probeName, HyPerCol *hc)</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00065">BaseProbe.cpp:65</a></div></div>
 <div class="ttc" id="classPV_1_1BaseConnection_html_ab45f5d3470934a92139919ca17ff4409"><div class="ttname"><a href="classPV_1_1BaseConnection.html#ab45f5d3470934a92139919ca17ff4409">PV::BaseConnection::insertProbe</a></div><div class="ttdeci">virtual int insertProbe(BaseConnectionProbe *p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8cpp_source.html#l00406">BaseConnection.cpp:406</a></div></div>
-<div class="ttc" id="classPV_1_1BaseProbe_html_acf67bca0b593c62f9cb2452d226da2d4"><div class="ttname"><a href="classPV_1_1BaseProbe.html#acf67bca0b593c62f9cb2452d226da2d4">PV::BaseProbe::ioParam_targetName</a></div><div class="ttdeci">virtual void ioParam_targetName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">targetName: the name of the object that the probe attaches to. In LayerProbe, targetName is used to d...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00115">BaseProbe.cpp:115</a></div></div>
+<div class="ttc" id="classPV_1_1BaseProbe_html_acf67bca0b593c62f9cb2452d226da2d4"><div class="ttname"><a href="classPV_1_1BaseProbe.html#acf67bca0b593c62f9cb2452d226da2d4">PV::BaseProbe::ioParam_targetName</a></div><div class="ttdeci">virtual void ioParam_targetName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">targetName: the name of the object that the probe attaches to. In LayerProbe, targetName is used to d...</div><div class="ttdef"><b>Definition:</b> <a href="BaseProbe_8cpp_source.html#l00113">BaseProbe.cpp:113</a></div></div>
 <div class="ttc" id="namespacePV_html"><div class="ttname"><a href="namespacePV.html">PV</a></div><div class="ttdef"><b>Definition:</b> <a href="Communicator_8cpp_source.html#l00016">Communicator.cpp:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

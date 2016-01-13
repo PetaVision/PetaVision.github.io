@@ -21,6 +21,7 @@ var searchData=
   ['ioparam_5fbiaschangetime',['ioParam_biasChangeTime',['../classPV_1_1BaseInput.html#a5c822c06a9203ca0e37c516705eceba3',1,'PV::BaseInput']]],
   ['ioparam_5fbiasconstraintmethod',['ioParam_biasConstraintMethod',['../classPV_1_1BaseInput.html#a03d7edb0a5c1d8e744ce8b46c3978bf0',1,'PV::BaseInput']]],
   ['ioparam_5fchannelcode',['ioParam_channelCode',['../classPV_1_1BaseConnection.html#a470df62079c60e62e95fd22004a9adb3',1,'PV::BaseConnection::ioParam_channelCode()'],['../classPV_1_1GapConn.html#afd79207b0ea5d9c34a823a863d7384ec',1,'PV::GapConn::ioParam_channelCode()'],['../classPV_1_1HyPerConn.html#a40deeb8556de00595f6479bf2a5bb18d',1,'PV::HyPerConn::ioParam_channelCode()']]],
+  ['ioparam_5fcheckpointindexwidth',['ioParam_checkpointIndexWidth',['../classPV_1_1HyPerCol.html#a3d283a0ec42ef6e4b2c09aa0260afbd6',1,'PV::HyPerCol']]],
   ['ioparam_5fcheckpointread',['ioParam_checkpointRead',['../classPV_1_1HyPerCol.html#aea4f49a74265cb54bff8773c9783b128',1,'PV::HyPerCol']]],
   ['ioparam_5fcheckpointwrite',['ioParam_checkpointWrite',['../classPV_1_1HyPerCol.html#af98172d9da2f25ec0ff6d26641bd5532',1,'PV::HyPerCol']]],
   ['ioparam_5fcheckpointwriteclockinterval',['ioParam_checkpointWriteClockInterval',['../classPV_1_1HyPerCol.html#a13a8ddf0dffd23e7ce016989ae617c76',1,'PV::HyPerCol']]],
