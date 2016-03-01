@@ -15,11 +15,11 @@ This is what your CMakeLists.txt will be for most system tests. For more example
 
 Some other changes:
 
-. The compiler is automatically detected
-. If CUDA and cuDNN are installed, Cuda is enabled
-. If a compiler with OpenMP support is detected, OpenMP support enabled by default
-. If MPI is detected, MPI support is enabled by default
-. If you’re using clang, you can turn on address sanitization.
+* The compiler is automatically detected
+* If CUDA and cuDNN are installed, Cuda is enabled
+* If a compiler with OpenMP support is detected, OpenMP support enabled by default
+* If MPI is detected, MPI support is enabled by default
+* If you’re using clang, you can turn on address sanitization.
 
 Any of these settings can be overridden. The goal is to get new folks up and running a bit faster.
 
