@@ -9,7 +9,7 @@ var classPV_1_1GaussianRandom =
     [ "gaussianDist", "classPV_1_1GaussianRandom.html#a4d0021bd9f2c1c86235822e665d3e1cb", null ],
     [ "gaussianDist", "classPV_1_1GaussianRandom.html#a1140af6d4ea0edfe9476fe51b1552546", null ],
     [ "getParentHyPerCol", "classPV_1_1GaussianRandom.html#a590326ae59d6454dfd91c5ea60cc86d3", null ],
-    [ "getRNG", "classPV_1_1GaussianRandom.html#a4454a900ba547ad3eb6b5490f1d6bfa2", null ],
+    [ "getRNG", "classPV_1_1GaussianRandom.html#ab7ee4d6003deb7306b3e5be86b5bbd37", null ],
     [ "getRNGArraySize", "classPV_1_1GaussianRandom.html#ad3c5a87a896703e7d59cc28a0a357bea", null ],
     [ "initialize_base", "classPV_1_1GaussianRandom.html#a583c0eb605dea86c0bf9a4497acab128", null ],
     [ "initializeFromCount", "classPV_1_1GaussianRandom.html#a7026784afec42cbbb5bffc1468bdc114", null ],
@@ -25,6 +25,6 @@ var classPV_1_1GaussianRandom =
     [ "uniformRandom", "classPV_1_1GaussianRandom.html#a8c4f68834cef532ea33897552fed8537", null ],
     [ "heldValues", "classPV_1_1GaussianRandom.html#a41fb041053cbeda15245d0336df623ed", null ],
     [ "parentHyPerCol", "classPV_1_1GaussianRandom.html#a7486a4764ac09afd6f6aab30455308db", null ],
-    [ "rngArray", "classPV_1_1GaussianRandom.html#a597e038cce8ca9e81c747f3027f3c175", null ],
+    [ "rngArray", "classPV_1_1GaussianRandom.html#a0944c854c25ac2a8a50cb4565f999419", null ],
     [ "rngArraySize", "classPV_1_1GaussianRandom.html#a4addb097441c97b670a1219c348edc4a", null ]
 ];
