@@ -69,7 +69,6 @@ var classPV_1_1InitCocircWeightsParams =
     [ "getxDistHeadPreUnits", "classPV_1_1InitCocircWeightsParams.html#af19b20fb80e496cb73f783a5e66edb7e", null ],
     [ "getyDistHeadPreUnits", "classPV_1_1InitCocircWeightsParams.html#a1ac1354b7792cec6409383e09747c3f1", null ],
     [ "initialize", "classPV_1_1InitCocircWeightsParams.html#a6647713a7ff1541c1c9e6e85af249af0", null ],
-    [ "initialize", "classPV_1_1InitCocircWeightsParams.html#a29631f73b4375035f94b4785400821d7", null ],
     [ "initialize_base", "classPV_1_1InitCocircWeightsParams.html#a7a45e5a19a4995baa3f7174c50ca7610", null ],
     [ "initializeDistChordCocircKurvePreAndKurvePost", "classPV_1_1InitCocircWeightsParams.html#adce83b6b7ef0a378e8de3d85175ab27f", null ],
     [ "ioParam_aspect", "classPV_1_1InitCocircWeightsParams.html#a6b9e6d8949b12ae460cc7959ba013510", null ],

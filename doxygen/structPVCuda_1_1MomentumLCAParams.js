@@ -1,0 +1,25 @@
+var structPVCuda_1_1MomentumLCAParams =
+[
+    [ "activity", "structPVCuda_1_1MomentumLCAParams.html#ab961c78d9306d822fdb7eeecd6325261", null ],
+    [ "dn", "structPVCuda_1_1MomentumLCAParams.html#a8e02a9960b26426d41c5fa697cc6f819", null ],
+    [ "dtAdapt", "structPVCuda_1_1MomentumLCAParams.html#a6f21a4e0ebc8d2018455c26df80c9ae1", null ],
+    [ "GSynHead", "structPVCuda_1_1MomentumLCAParams.html#a30593df12d24bc7304532a73a1e825dd", null ],
+    [ "LCAMomentumRate", "structPVCuda_1_1MomentumLCAParams.html#a59003ed6db8a518d294513919dd1150a", null ],
+    [ "lt", "structPVCuda_1_1MomentumLCAParams.html#ad1341794485e8865bcd529c701cb0339", null ],
+    [ "nbatch", "structPVCuda_1_1MomentumLCAParams.html#adc87f98169946665f80f266555a6613b", null ],
+    [ "nf", "structPVCuda_1_1MomentumLCAParams.html#ae09f89dc9b69aeba8a0290137409fc4e", null ],
+    [ "numChannels", "structPVCuda_1_1MomentumLCAParams.html#ac0d66cba9b8532ff06f3c9107328fb90", null ],
+    [ "numNeurons", "structPVCuda_1_1MomentumLCAParams.html#a2f18c0eb95833e17ffb98ed013aaa30c", null ],
+    [ "numVertices", "structPVCuda_1_1MomentumLCAParams.html#a12b16a1e95bb5f862f3ef5a72a3fcd1f", null ],
+    [ "nx", "structPVCuda_1_1MomentumLCAParams.html#a792cdc69ac094a426bc967563f031ed2", null ],
+    [ "ny", "structPVCuda_1_1MomentumLCAParams.html#a4399146c79cf8ae26382919204b7c4f6", null ],
+    [ "prevDrive", "structPVCuda_1_1MomentumLCAParams.html#a4c2fb48f681d3432566b34d1eea4d1ca", null ],
+    [ "rt", "structPVCuda_1_1MomentumLCAParams.html#a066e4098db3a4d5b4c9bf10775a43144", null ],
+    [ "selfInteract", "structPVCuda_1_1MomentumLCAParams.html#acd1315eb66954da174299508e7ecc798", null ],
+    [ "slopes", "structPVCuda_1_1MomentumLCAParams.html#aa95425100d9294cd35259c287e5ca45c", null ],
+    [ "tau", "structPVCuda_1_1MomentumLCAParams.html#acb3e44aafccfe509f365774a8e104cf2", null ],
+    [ "up", "structPVCuda_1_1MomentumLCAParams.html#ac18e857c16c0ede659830d78e4eea29d", null ],
+    [ "V", "structPVCuda_1_1MomentumLCAParams.html#a89a17990c6e7eb82bcb8e38930e5fc7b", null ],
+    [ "verticesA", "structPVCuda_1_1MomentumLCAParams.html#a24490ab8085401da4a67bc73c4e2c897", null ],
+    [ "verticesV", "structPVCuda_1_1MomentumLCAParams.html#a7c51fad90863a9471e17282dc6fe2632", null ]
+];

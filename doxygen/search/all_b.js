@@ -8,11 +8,14 @@ var searchData=
   ['l2normprobe',['L2NormProbe',['../classPV_1_1L2NormProbe.html',1,'PV']]],
   ['labelerrorlayer',['LabelErrorLayer',['../classPV_1_1LabelErrorLayer.html',1,'PV']]],
   ['labellayer',['LabelLayer',['../classPV_1_1LabelLayer.html',1,'PV']]],
-  ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html',1,'PV']]],
   ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html#ac4b44fb86861abb64b2ed7ced33d25c6',1,'PV::LayerProbe']]],
+  ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html',1,'PV']]],
   ['lcaliflayer',['LCALIFLayer',['../classPV_1_1LCALIFLayer.html',1,'PV']]],
   ['leakyintegrator',['LeakyIntegrator',['../classPV_1_1LeakyIntegrator.html',1,'PV']]],
   ['lif',['LIF',['../classPV_1_1LIF.html',1,'PV']]],
   ['lif_5fparams_5f',['LIF_params_',['../structLIF__params__.html',1,'']]],
-  ['lifgap',['LIFGap',['../classPV_1_1LIFGap.html',1,'PV']]]
+  ['lifgap',['LIFGap',['../classPV_1_1LIFGap.html',1,'PV']]],
+  ['logfilestream',['LogFileStream',['../classPV_1_1LogFileStream.html',1,'PV']]],
+  ['logstreamtraits',['LogStreamTraits',['../structPV_1_1LogStreamTraits.html',1,'PV']]],
+  ['logtype',['LogType',['../structPV_1_1LogType.html',1,'PV']]]
 ];

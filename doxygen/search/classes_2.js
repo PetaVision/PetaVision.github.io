@@ -6,6 +6,7 @@ var searchData=
   ['basehyperconnprobe',['BaseHyPerConnProbe',['../classPV_1_1BaseHyPerConnProbe.html',1,'PV']]],
   ['baseinput',['BaseInput',['../classPV_1_1BaseInput.html',1,'PV']]],
   ['baselayer',['BaseLayer',['../classPV_1_1BaseLayer.html',1,'PV']]],
+  ['baseobject',['BaseObject',['../classPV_1_1BaseObject.html',1,'PV']]],
   ['baseprobe',['BaseProbe',['../classPV_1_1BaseProbe.html',1,'PV']]],
   ['binninglayer',['BinningLayer',['../classPV_1_1BinningLayer.html',1,'PV']]],
   ['box_5fmuller_5fdata',['box_muller_data',['../structbox__muller__data.html',1,'']]],

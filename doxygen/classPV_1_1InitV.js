@@ -18,7 +18,6 @@ var classPV_1_1InitV =
     [ "ioParamGroup_UniformRandomV", "classPV_1_1InitV.html#ac419f7aad37b622a8cb4773e74fb3b58", null ],
     [ "ioParamGroup_ZeroV", "classPV_1_1InitV.html#afa16f591ef0041cd510f5fcf27d5f4a4", null ],
     [ "ioParamsFillGroup", "classPV_1_1InitV.html#a52639fb4259855bdfdef87ec0a0f5521", null ],
-    [ "printerr", "classPV_1_1InitV.html#a9adcde7b44bc6ff5f98f81f046de4652", null ],
     [ "constantValue", "classPV_1_1InitV.html#ac2e872055419dc9584c24ae6de4296cf", null ],
     [ "filename", "classPV_1_1InitV.html#a2ba95473e1b31adc6d2f9cfc8bca94a7", null ],
     [ "groupName", "classPV_1_1InitV.html#a2b0e2dd484b959b389eaf6986d2a9cfb", null ],
@@ -28,6 +27,6 @@ var classPV_1_1InitV =
     [ "meanV", "classPV_1_1InitV.html#a6b22916a22d8ce56fc77ca1803c6f222", null ],
     [ "minV", "classPV_1_1InitV.html#aaaee1b7098d6b952ca6a923f132e214d", null ],
     [ "parent", "classPV_1_1InitV.html#ad8c14507fc004f54dd8cb04fdaf53b04", null ],
-    [ "sigmaV", "classPV_1_1InitV.html#a16b03d1b862fcf99aef1984a91b9c90f", null ],
-    [ "useStderr", "classPV_1_1InitV.html#a9c54bdfefbea9ede2e168524036d372c", null ]
+    [ "printErrors", "classPV_1_1InitV.html#a8da1df4be6cd907582dd0413a0dad8cf", null ],
+    [ "sigmaV", "classPV_1_1InitV.html#a16b03d1b862fcf99aef1984a91b9c90f", null ]
 ];
