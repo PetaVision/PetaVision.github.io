@@ -798,307 +798,324 @@ $(document).ready(function(){initNavTree('HyPerConn_8hpp_source.html','');});
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPV_1_1HyPerConn.html#a34518ae81af452b840e5dcde0c94c6c5">normalize_dW</a>(<span class="keywordtype">int</span> arbor_ID);</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspective(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspective(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborId){</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;      <span class="keywordflow">return</span> deliverPostsynapticPerspective(activity, arborId, NULL, NULL);</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;   }</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspective(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID, <span class="keywordtype">int</span>* numActive, <span class="keywordtype">int</span>** activeList);</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;<span class="preprocessor">#if defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspectiveGPU(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspectiveGPU(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;<span class="preprocessor">#endif // defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;   <span class="keywordtype">float</span> getConvertToRateDeltaTimeFactor();</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;<span class="comment">//GPU variables</span></div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;<span class="preprocessor">#if defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="preprocessor"></span><span class="keyword">public</span>:</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;   <span class="keywordtype">bool</span> getAllocDeviceWeights(){</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;      <span class="keywordflow">return</span> allocDeviceWeights;</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;   }</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;   <span class="keywordtype">bool</span> getAllocPostDeviceWeights(){</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;      <span class="keywordflow">return</span> allocPostDeviceWeights;</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;   }</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAllocDeviceWeights(){</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;      allocDeviceWeights= <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;   }</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAllocPostDeviceWeights(){</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;      allocPostDeviceWeights = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;   }</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> CLBuffer * getDeviceWData(){</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> PVCuda::CudaBuffer * getDeviceWData(){</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_WData;</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;   }</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="preprocessor"></span>   CLBuffer * getDevicePatches(){</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * getDevicePatches(){</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_Patches;</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;   }</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="preprocessor"></span>   CLBuffer * getDeviceGSynPatchStart(){</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * getDeviceGSynPatchStart(){</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_GSynPatchStart;</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;   }</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> setDeviceWData(CLBuffer* inBuf){</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> setDeviceWData(PVCuda::CudaBuffer* inBuf){</div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;<span class="preprocessor"></span>      d_WData = inBuf;</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;   }</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="preprocessor">#if defined(PV_USE_CUDA) &amp;&amp; defined(PV_USE_CUDNN)</span></div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> PVCuda::CudaBuffer * getCudnnWData(){</div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;      <span class="keywordflow">return</span> cudnn_WData;</div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;   }</div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;   <span class="keywordtype">void</span> setCudnnWData(PVCuda::CudaBuffer* inBuf){</div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;      cudnn_WData = inBuf;</div>
-<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;   }</div>
-<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> clFinishW(){ </div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;      <span class="keywordflow">if</span>(allocDeviceWeights&amp;&amp; d_WData){</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;         d_WData-&gt;finish();</div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;      }</div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;   }</div>
-<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;   <span class="keywordtype">bool</span> getPreDataLocal(){<span class="keywordflow">return</span> preDataLocal;}</div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;</div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;<span class="preprocessor"></span>   CLKernel * getKrRecvPost(){<span class="keywordflow">return</span> krRecvPost;}</div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;   CLKernel * getKrRecvPre(){<span class="keywordflow">return</span> krRecvPre;}</div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;<span class="preprocessor"></span>   <a class="code" href="classPVCuda_1_1CudaRecvPost.html">PVCuda::CudaRecvPost</a> * getKrRecvPost(){<span class="keywordflow">return</span> krRecvPost;}</div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPre.html">PVCuda::CudaRecvPre</a> * getKrRecvPre(){<span class="keywordflow">return</span> krRecvPre;}</div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumXLocal(){<span class="keywordflow">return</span> numXLocal;}</div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumYLocal(){<span class="keywordflow">return</span> numYLocal;}</div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumFLocal(){<span class="keywordflow">return</span> numFLocal;}</div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;   </div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocatePostDeviceWeights();</div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateDeviceWeights();</div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateDeviceBuffers();</div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateReceivePostKernel();</div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateReceivePreKernel();</div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateDeviceWeights();</div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;</div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;   <span class="keywordtype">bool</span> allocDeviceWeights;</div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;   <span class="keywordtype">bool</span> allocPostDeviceWeights;</div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;   <span class="comment">//bool updatedDeviceWeights;</span></div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;   </div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;</div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="preprocessor"></span>   CLBuffer * d_WData;</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;   CLBuffer * d_Patches;</div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;   CLBuffer * d_GSynPatchStart;</div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;   CLBuffer * d_PostToPreActivity;</div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;   CLBuffer * d_Patch2DataLookupTable;</div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;   CLKernel * krRecvPost;        <span class="comment">// CL kernel for update state call</span></div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;   CLKernel * krRecvPre;        <span class="comment">// CL kernel for update state call</span></div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * d_WData;</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="preprocessor">#ifdef PV_USE_CUDNN</span></div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * cudnn_WData;</div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="preprocessor">#endif // PV_USE_CUDNN</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * d_Patches;</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;   PVCuda::CudaBuffer * d_GSynPatchStart;</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;   PVCuda::CudaBuffer * d_PostToPreActivity;</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;   PVCuda::CudaBuffer * d_Patch2DataLookupTable;</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPost.html">PVCuda::CudaRecvPost</a>* krRecvPost;        <span class="comment">// Cuda kernel for update state call</span></div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPre.html">PVCuda::CudaRecvPre</a>* krRecvPre;        <span class="comment">// Cuda kernel for update state call</span></div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;<span class="preprocessor">#endif // PV_USE_CUDA</span></div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">int</span> gpuGroupIdx;</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;   <span class="keywordtype">bool</span> preDataLocal;</div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;   <span class="keywordtype">int</span> numXLocal;</div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;   <span class="keywordtype">int</span> numYLocal;</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;   <span class="keywordtype">int</span> numFLocal;</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="comment">//   bool gpuAccelerateFlag; // Whether to accelerate the connection on a GPU</span></div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="comment">//   bool ignoreGPUflag;     // Don&#39;t use GPU (overrides gpuAccelerateFlag)</span></div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="comment">//   virtual void initIgnoreGPUFlag(); // sets the ignoreGPUFlag parameter.  virtual so that a class can make it always false or always true</span></div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="comment">//   int initializeGPU(); //this method sets up GPU stuff...</span></div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="comment">//   virtual int initializeThreadKernels(const char * kernelName);</span></div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="comment">//   virtual int initializeThreadBuffers(const char * kernelName);</span></div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="comment">//   CLKernel * krRecvSyn;        // CL kernel for layer recvSynapticInput call</span></div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="comment">//   cl_event   evRecvSyn;</span></div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="comment">//   cl_event * evRecvSynWaitList;</span></div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="comment">//   int numWait;  //number of receive synaptic runs to wait for (=numarbors)</span></div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="comment">//   //cl_event   evCopyDataStore;</span></div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="comment">//   size_t nxl;</span></div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="comment">//   size_t nyl;</span></div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;<span class="comment">//   // OpenCL buffers</span></div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="comment">//   CLBuffer *  clGSyn;</span></div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="comment">//   CLBuffer *  clPatch2DataLookUpTable;</span></div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="comment">//   CLBuffer *  clActivity;</span></div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">//   CLBuffer ** clWeights;</span></div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="comment">//   // ids of OpenCL arguments that change</span></div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="comment">//   //</span></div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="comment">//   int clArgIdOffset;</span></div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="comment">//   int clArgIdWeights;</span></div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="comment">//   int clArgIdDataStore;</span></div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;<span class="preprocessor">#endif // PV_USE_OPENCL</span></div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;   <span class="keywordtype">int</span> clearWeights(pvwdata_t* arborDataStart, <span class="keywordtype">int</span> numPatches, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny,</div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;         <span class="keywordtype">int</span> nf);</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;   <span class="keywordtype">int</span> deleteWeights();</div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;   <span class="keywordtype">void</span> unsetAccumulateType();</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">// static member functions</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;   <span class="keyword">static</span> PVPatch** createPatches(<span class="keywordtype">int</span> nPatches, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny) {</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;      PVPatch** patchpointers = (PVPatch**) (calloc(nPatches, <span class="keyword">sizeof</span>(PVPatch*)));</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;      PVPatch* patcharray = (PVPatch*) (calloc(nPatches, <span class="keyword">sizeof</span>(PVPatch)));</div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;</div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;      PVPatch * curpatch = patcharray;</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nPatches; i++) {</div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;         pvpatch_init(curpatch, nx, ny);</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;         patchpointers[i] = curpatch;</div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;         curpatch++;</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;      }</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;</div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;      <span class="keywordflow">return</span> patchpointers;</div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;   }</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspectiveConvolve(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspectiveStochastic(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspective(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborId){</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;      <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;      <span class="keywordflow">switch</span>(pvpatchAccumulateType) {</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;      <span class="keywordflow">case</span> CONVOLVE: status = deliverPresynapticPerspectiveConvolve(activity, arborId); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;      <span class="keywordflow">case</span> STOCHASTIC: status = deliverPresynapticPerspectiveStochastic(activity, arborId); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;      <span class="keywordflow">default</span>: pvAssert(0); status = PV_FAILURE; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;      }</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;      <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;   }</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspective(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID) {</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;      <span class="keywordtype">int</span> status = PV_SUCCESS;</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;      <span class="keywordflow">switch</span>(pvpatchAccumulateType) {</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;      <span class="keywordflow">case</span> CONVOLVE: status = deliverPostsynapticPerspectiveConvolve(activity, arborID, NULL, NULL); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;      <span class="keywordflow">case</span> STOCHASTIC: status = deliverPostsynapticPerspectiveStochastic(activity, arborID, NULL, NULL); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;      <span class="keywordflow">default</span>: pvAssert(0); status = PV_FAILURE; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;      }</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;      <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;   }</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspectiveConvolve(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID, <span class="keywordtype">int</span>* numActive, <span class="keywordtype">int</span>** activeList);</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspectiveStochastic(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID, <span class="keywordtype">int</span>* numActive, <span class="keywordtype">int</span>** activeList);</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;<span class="preprocessor">#if defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPresynapticPerspectiveGPU(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> deliverPostsynapticPerspectiveGPU(<a class="code" href="structPVLayerCube__.html">PVLayerCube</a> <span class="keyword">const</span> * activity, <span class="keywordtype">int</span> arborID);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="preprocessor">#endif // defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;   <span class="keywordtype">float</span> getConvertToRateDeltaTimeFactor();</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">//GPU variables</span></div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="preprocessor">#if defined(PV_USE_OPENCL) || defined(PV_USE_CUDA)</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="preprocessor"></span><span class="keyword">public</span>:</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;   <span class="keywordtype">bool</span> getAllocDeviceWeights(){</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;      <span class="keywordflow">return</span> allocDeviceWeights;</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;   }</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;   <span class="keywordtype">bool</span> getAllocPostDeviceWeights(){</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;      <span class="keywordflow">return</span> allocPostDeviceWeights;</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;   }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAllocDeviceWeights(){</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;      allocDeviceWeights= <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;   }</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAllocPostDeviceWeights(){</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;      allocPostDeviceWeights = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;   }</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> CLBuffer * getDeviceWData(){</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> PVCuda::CudaBuffer * getDeviceWData(){</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_WData;</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;   }</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;<span class="preprocessor"></span>   CLBuffer * getDevicePatches(){</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * getDevicePatches(){</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_Patches;</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;   }</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;<span class="preprocessor"></span>   CLBuffer * getDeviceGSynPatchStart(){</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * getDeviceGSynPatchStart(){</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> d_GSynPatchStart;</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;   }</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> setDeviceWData(CLBuffer* inBuf){</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> setDeviceWData(PVCuda::CudaBuffer* inBuf){</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;<span class="preprocessor"></span>      d_WData = inBuf;</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;   }</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;<span class="preprocessor">#if defined(PV_USE_CUDA) &amp;&amp; defined(PV_USE_CUDNN)</span></div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;<span class="preprocessor"></span>   <span class="keyword">virtual</span> PVCuda::CudaBuffer * getCudnnWData(){</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;      <span class="keywordflow">return</span> cudnn_WData;</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;   }</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;   <span class="keywordtype">void</span> setCudnnWData(PVCuda::CudaBuffer* inBuf){</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;      cudnn_WData = inBuf;</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;   }</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> clFinishW(){ </div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;      <span class="keywordflow">if</span>(allocDeviceWeights&amp;&amp; d_WData){</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;         d_WData-&gt;finish();</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;      }</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;   }</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;   <span class="keywordtype">bool</span> getPreDataLocal(){<span class="keywordflow">return</span> preDataLocal;}</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="preprocessor"></span>   CLKernel * getKrRecvPost(){<span class="keywordflow">return</span> krRecvPost;}</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;   CLKernel * getKrRecvPre(){<span class="keywordflow">return</span> krRecvPre;}</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;<span class="preprocessor"></span>   <a class="code" href="classPVCuda_1_1CudaRecvPost.html">PVCuda::CudaRecvPost</a> * getKrRecvPost(){<span class="keywordflow">return</span> krRecvPost;}</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPre.html">PVCuda::CudaRecvPre</a> * getKrRecvPre(){<span class="keywordflow">return</span> krRecvPre;}</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumXLocal(){<span class="keywordflow">return</span> numXLocal;}</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumYLocal(){<span class="keywordflow">return</span> numYLocal;}</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> getNumFLocal(){<span class="keywordflow">return</span> numFLocal;}</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;   </div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocatePostDeviceWeights();</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateDeviceWeights();</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateDeviceBuffers();</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateReceivePostKernel();</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> allocateReceivePreKernel();</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateDeviceWeights();</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;   <span class="keywordtype">bool</span> allocDeviceWeights;</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;   <span class="keywordtype">bool</span> allocPostDeviceWeights;</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;   <span class="comment">//bool updatedDeviceWeights;</span></div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;   </div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;<span class="preprocessor">#ifdef PV_USE_OPENCL</span></div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="preprocessor"></span>   CLBuffer * d_WData;</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;   CLBuffer * d_Patches;</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;   CLBuffer * d_GSynPatchStart;</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;   CLBuffer * d_PostToPreActivity;</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;   CLBuffer * d_Patch2DataLookupTable;</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;   CLKernel * krRecvPost;        <span class="comment">// CL kernel for update state call</span></div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;   CLKernel * krRecvPre;        <span class="comment">// CL kernel for update state call</span></div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef PV_USE_CUDA</span></div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * d_WData;</div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="preprocessor">#ifdef PV_USE_CUDNN</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * cudnn_WData;</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="preprocessor">#endif // PV_USE_CUDNN</span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="preprocessor"></span>   PVCuda::CudaBuffer * d_Patches;</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;   PVCuda::CudaBuffer * d_GSynPatchStart;</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;   PVCuda::CudaBuffer * d_PostToPreActivity;</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;   PVCuda::CudaBuffer * d_Patch2DataLookupTable;</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPost.html">PVCuda::CudaRecvPost</a>* krRecvPost;        <span class="comment">// Cuda kernel for update state call</span></div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;   <a class="code" href="classPVCuda_1_1CudaRecvPre.html">PVCuda::CudaRecvPre</a>* krRecvPre;        <span class="comment">// Cuda kernel for update state call</span></div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="preprocessor">#endif // PV_USE_CUDA</span></div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">int</span> gpuGroupIdx;</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;   <span class="keywordtype">bool</span> preDataLocal;</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;   <span class="keywordtype">int</span> numXLocal;</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;   <span class="keywordtype">int</span> numYLocal;</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;   <span class="keywordtype">int</span> numFLocal;</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="comment">//   bool gpuAccelerateFlag; // Whether to accelerate the connection on a GPU</span></div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="comment">//   bool ignoreGPUflag;     // Don&#39;t use GPU (overrides gpuAccelerateFlag)</span></div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="comment">//   virtual void initIgnoreGPUFlag(); // sets the ignoreGPUFlag parameter.  virtual so that a class can make it always false or always true</span></div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">//   int initializeGPU(); //this method sets up GPU stuff...</span></div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;<span class="comment">//   virtual int initializeThreadKernels(const char * kernelName);</span></div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="comment">//   virtual int initializeThreadBuffers(const char * kernelName);</span></div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="comment">//   CLKernel * krRecvSyn;        // CL kernel for layer recvSynapticInput call</span></div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="comment">//   cl_event   evRecvSyn;</span></div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="comment">//   cl_event * evRecvSynWaitList;</span></div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="comment">//   int numWait;  //number of receive synaptic runs to wait for (=numarbors)</span></div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;<span class="comment">//   //cl_event   evCopyDataStore;</span></div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;<span class="comment">//   size_t nxl;</span></div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;<span class="comment">//   size_t nyl;</span></div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="comment">//   // OpenCL buffers</span></div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="comment">//   CLBuffer *  clGSyn;</span></div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="comment">//   CLBuffer *  clPatch2DataLookUpTable;</span></div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">//   CLBuffer *  clActivity;</span></div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="comment">//   CLBuffer ** clWeights;</span></div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="comment">//   // ids of OpenCL arguments that change</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="comment">//   //</span></div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="comment">//   int clArgIdOffset;</span></div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;<span class="comment">//   int clArgIdWeights;</span></div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;<span class="comment">//   int clArgIdDataStore;</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;<span class="preprocessor">#endif // PV_USE_OPENCL</span></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;   <span class="keywordtype">int</span> clearWeights(pvwdata_t* arborDataStart, <span class="keywordtype">int</span> numPatches, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny,</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;         <span class="keywordtype">int</span> nf);</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;   <span class="keywordtype">int</span> deleteWeights();</div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;   <span class="keywordtype">void</span> unsetAccumulateType();</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">int</span> deletePatches(PVPatch ** patchpointers)</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;   {</div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;      <span class="keywordflow">if</span> (patchpointers != NULL &amp;&amp; *patchpointers != NULL){</div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;         free(*patchpointers);</div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;         *patchpointers = NULL;</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;      }</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;      free(patchpointers);</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      patchpointers = NULL;</div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;<span class="comment">//      for (int i = 0; i &lt; numBundles; i++) {</span></div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;<span class="comment">//         pvpatch_inplace_delete(patches[i]);</span></div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;<span class="comment">//      }</span></div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;      <span class="comment">//free(patches);</span></div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;</div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;   }</div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;</div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span></div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;   <span class="keywordtype">void</span> pvpatch_init(PVPatch * p, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny)</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;<span class="comment">// static member functions</span></div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;   <span class="keyword">static</span> PVPatch** createPatches(<span class="keywordtype">int</span> nPatches, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny) {</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;      PVPatch** patchpointers = (PVPatch**) (calloc(nPatches, <span class="keyword">sizeof</span>(PVPatch*)));</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;      PVPatch* patcharray = (PVPatch*) (calloc(nPatches, <span class="keyword">sizeof</span>(PVPatch)));</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      PVPatch * curpatch = patcharray;</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nPatches; i++) {</div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;         pvpatch_init(curpatch, nx, ny);</div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;         patchpointers[i] = curpatch;</div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;         curpatch++;</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;      }</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;</div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;      <span class="keywordflow">return</span> patchpointers;</div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;   }</div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;</div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">int</span> deletePatches(PVPatch ** patchpointers)</div>
 <div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;   {</div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;      p-&gt;nx = nx;</div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;      p-&gt;ny = ny;</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;      p-&gt;offset = 0;</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;   }</div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span></div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;   <span class="keywordtype">void</span> pvpatch_adjust(PVPatch * p, <span class="keywordtype">int</span> sx, <span class="keywordtype">int</span> sy, <span class="keywordtype">int</span> nxNew, <span class="keywordtype">int</span> nyNew, <span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy)</div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;   {</div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;      p-&gt;nx = nxNew;</div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;      p-&gt;ny = nyNew;</div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;      p-&gt;offset += dx * sx + dy * sy;</div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;   }</div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> computeMargin(<span class="keywordtype">int</span> prescale, <span class="keywordtype">int</span> postscale, <span class="keywordtype">int</span> patchsize) {</div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;   <span class="comment">// 2^prescale is the distance between adjacent neurons in pre-layer, thus a smaller prescale means a layer with more neurons</span></div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;      <span class="keywordtype">int</span> margin = 0;</div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;      <span class="keywordflow">if</span> (prescale==postscale) {</div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;         assert(patchsize%2==1);</div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;         margin = (patchsize-1)/2;</div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;      }</div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prescale&lt;postscale) { <span class="comment">// Density of pre is greater than density of pre: many-to-one</span></div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;         <span class="comment">// any patchsize is permissible</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;         <span class="keywordtype">int</span> densityratio = (int) powf(2.0f,(<span class="keywordtype">float</span>)(postscale-prescale));</div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;         assert(densityratio % 2 == 0);</div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;         margin = (patchsize-1) * densityratio/2;</div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;      }</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;      {</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;         assert(prescale&gt;postscale); <span class="comment">// one-to-many</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;         <span class="keywordtype">int</span> densityratio = (int) powf(2.0f,(<span class="keywordtype">float</span>)(prescale-postscale));</div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;         <span class="keywordtype">int</span> numcells = patchsize/densityratio;</div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;         assert(numcells*densityratio==patchsize); <span class="comment">// For one-to-many, patchsize must be a multiple of &quot;many&quot;.</span></div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;         margin = numcells/2; <span class="comment">// integer division is correct, no matter whether numcells is even or odd</span></div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;      }</div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;      <span class="keywordflow">return</span> margin;</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;   }</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;</div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> adjustedPatchDimension(<span class="keywordtype">int</span> zPre, <span class="keywordtype">int</span> preNeuronsPerPostNeuron, <span class="keywordtype">int</span> postNeuronsPerPreNeuron, <span class="keywordtype">int</span> nPost, <span class="keywordtype">int</span> patchDim, <span class="keywordtype">int</span> * postStartPtr, <span class="keywordtype">int</span> * patchStartPtr, <span class="keywordtype">int</span> * adjustedDim) {</div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;      <span class="keywordtype">float</span> preInPostCoords; <span class="comment">// The location, in postsynaptic restricted coordinates, of the presynaptic cell of this patch</span></div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;      <span class="keywordflow">if</span> (postNeuronsPerPreNeuron &gt; 1) {</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;         preInPostCoords = zPre * postNeuronsPerPreNeuron + 0.5f*(postNeuronsPerPreNeuron-1);</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;      }</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (preNeuronsPerPostNeuron &gt; 1) {</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;         preInPostCoords = ((float) (2*zPre-(preNeuronsPerPostNeuron-1)))/((float) 2*preNeuronsPerPostNeuron);</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;      }</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;      <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;         preInPostCoords = (float) zPre;</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;      }</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;      <span class="keywordtype">float</span> postStartf = preInPostCoords - 0.5f*patchDim; <span class="comment">// The location, in postsynaptic restricted coordinates of the start of an interval of length nxp and center xPreInPostCoords</span></div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;      <span class="keywordtype">float</span> postStopf = preInPostCoords + 0.5f*patchDim; <span class="comment">// The location of the end of the interval starting at xPostStartf.</span></div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;      <span class="comment">// Everything between xPostStartf and xPostStopf, inclusive, is in the patch.</span></div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;      <span class="keywordtype">int</span> postStart = (int) ceil(postStartf);</div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;      <span class="keywordtype">int</span> postStop = (int) floor(postStopf) + 1;</div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;      assert(postStop-postStart==patchDim);</div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;      <span class="keywordtype">int</span> patchStart = 0;</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      <span class="keywordtype">int</span> patchStop = patchDim;</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;      <span class="keywordflow">if</span> (postStop&lt;0) {</div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;         postStop=0;</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;         postStart=0;</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;         patchStart=0;</div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;         patchStop=0;</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;      <span class="keywordflow">if</span> (patchpointers != NULL &amp;&amp; *patchpointers != NULL){</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;         free(*patchpointers);</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;         *patchpointers = NULL;</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;      }</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;      free(patchpointers);</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;      patchpointers = NULL;</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;<span class="comment">//      for (int i = 0; i &lt; numBundles; i++) {</span></div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;<span class="comment">//         pvpatch_inplace_delete(patches[i]);</span></div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;<span class="comment">//      }</span></div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;      <span class="comment">//free(patches);</span></div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;   }</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;   <span class="keywordtype">void</span> pvpatch_init(PVPatch * p, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny)</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;   {</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;      p-&gt;nx = nx;</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;      p-&gt;ny = ny;</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;      p-&gt;offset = 0;</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;   }</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;   <span class="keywordtype">void</span> pvpatch_adjust(PVPatch * p, <span class="keywordtype">int</span> sx, <span class="keywordtype">int</span> sy, <span class="keywordtype">int</span> nxNew, <span class="keywordtype">int</span> nyNew, <span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy)</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;   {</div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;      p-&gt;nx = nxNew;</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;      p-&gt;ny = nyNew;</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;      p-&gt;offset += dx * sx + dy * sy;</div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;   }</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> computeMargin(<span class="keywordtype">int</span> prescale, <span class="keywordtype">int</span> postscale, <span class="keywordtype">int</span> patchsize) {</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;   <span class="comment">// 2^prescale is the distance between adjacent neurons in pre-layer, thus a smaller prescale means a layer with more neurons</span></div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;      <span class="keywordtype">int</span> margin = 0;</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;      <span class="keywordflow">if</span> (prescale==postscale) {</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;         assert(patchsize%2==1);</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;         margin = (patchsize-1)/2;</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;      }</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prescale&lt;postscale) { <span class="comment">// Density of pre is greater than density of pre: many-to-one</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;         <span class="comment">// any patchsize is permissible</span></div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;         <span class="keywordtype">int</span> densityratio = (int) powf(2.0f,(<span class="keywordtype">float</span>)(postscale-prescale));</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;         assert(densityratio % 2 == 0);</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;         margin = (patchsize-1) * densityratio/2;</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;      }</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;      {</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;         assert(prescale&gt;postscale); <span class="comment">// one-to-many</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;         <span class="keywordtype">int</span> densityratio = (int) powf(2.0f,(<span class="keywordtype">float</span>)(prescale-postscale));</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;         <span class="keywordtype">int</span> numcells = patchsize/densityratio;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;         assert(numcells*densityratio==patchsize); <span class="comment">// For one-to-many, patchsize must be a multiple of &quot;many&quot;.</span></div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;         margin = numcells/2; <span class="comment">// integer division is correct, no matter whether numcells is even or odd</span></div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;      }</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;      <span class="keywordflow">return</span> margin;</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;   }</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> adjustedPatchDimension(<span class="keywordtype">int</span> zPre, <span class="keywordtype">int</span> preNeuronsPerPostNeuron, <span class="keywordtype">int</span> postNeuronsPerPreNeuron, <span class="keywordtype">int</span> nPost, <span class="keywordtype">int</span> patchDim, <span class="keywordtype">int</span> * postStartPtr, <span class="keywordtype">int</span> * patchStartPtr, <span class="keywordtype">int</span> * adjustedDim) {</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      <span class="keywordtype">float</span> preInPostCoords; <span class="comment">// The location, in postsynaptic restricted coordinates, of the presynaptic cell of this patch</span></div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;      <span class="keywordflow">if</span> (postNeuronsPerPreNeuron &gt; 1) {</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;         preInPostCoords = zPre * postNeuronsPerPreNeuron + 0.5f*(postNeuronsPerPreNeuron-1);</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;      }</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (preNeuronsPerPostNeuron &gt; 1) {</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;         preInPostCoords = ((float) (2*zPre-(preNeuronsPerPostNeuron-1)))/((float) 2*preNeuronsPerPostNeuron);</div>
 <div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;      }</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;      <span class="keywordflow">if</span> (postStart&lt;0) {</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;         patchStart += -postStart;</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;         postStart = 0;</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;      }</div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;      <span class="keywordflow">if</span> (postStart&gt;nPost) {</div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;         postStart=nPost;</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;         postStop=nPost;</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;         patchStart=0;</div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;         patchStop=0;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      }</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;      <span class="keywordflow">if</span> (postStop&gt;nPost) {</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;         patchStop-=(postStop-nPost);</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;         postStop = nPost;</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;      }</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;      assert(postStop-postStart==patchStop-patchStart);</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;      <span class="comment">// calculate width of the edge-adjusted patch and perform sanity checks.</span></div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;      <span class="keywordtype">int</span> width = patchStop - patchStart;</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;      assert(width&gt;=0 &amp;&amp; width&lt;=patchDim &amp;&amp; patchStart&gt;=0 &amp;&amp; patchStart+width&lt;=patchDim);</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;      *postStartPtr = postStart;</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;      *patchStartPtr = patchStart;</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;      *adjustedDim = width;</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;      <span class="keywordflow">return</span> PV_SUCCESS;</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;   }</div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;</div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;}; <span class="comment">// class HyPerConn</span></div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;BaseObject * createHyPerConn(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;InitWeights * getWeightInitializer(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;NormalizeBase * getWeightNormalizer(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;} <span class="comment">// namespace PV</span></div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HYPERCONN_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;         preInPostCoords = (float) zPre;</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;      }</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;      <span class="keywordtype">float</span> postStartf = preInPostCoords - 0.5f*patchDim; <span class="comment">// The location, in postsynaptic restricted coordinates of the start of an interval of length nxp and center xPreInPostCoords</span></div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;      <span class="keywordtype">float</span> postStopf = preInPostCoords + 0.5f*patchDim; <span class="comment">// The location of the end of the interval starting at xPostStartf.</span></div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;      <span class="comment">// Everything between xPostStartf and xPostStopf, inclusive, is in the patch.</span></div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;      <span class="keywordtype">int</span> postStart = (int) ceil(postStartf);</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;      <span class="keywordtype">int</span> postStop = (int) floor(postStopf) + 1;</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;      assert(postStop-postStart==patchDim);</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      <span class="keywordtype">int</span> patchStart = 0;</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;      <span class="keywordtype">int</span> patchStop = patchDim;</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;      <span class="keywordflow">if</span> (postStop&lt;0) {</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;         postStop=0;</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;         postStart=0;</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;         patchStart=0;</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;         patchStop=0;</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;      }</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;      <span class="keywordflow">if</span> (postStart&lt;0) {</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;         patchStart += -postStart;</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;         postStart = 0;</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;      }</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;      <span class="keywordflow">if</span> (postStart&gt;nPost) {</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;         postStart=nPost;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;         postStop=nPost;</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;         patchStart=0;</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;         patchStop=0;</div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;      }</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;      <span class="keywordflow">if</span> (postStop&gt;nPost) {</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;         patchStop-=(postStop-nPost);</div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;         postStop = nPost;</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;      }</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;      assert(postStop-postStart==patchStop-patchStart);</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;      <span class="comment">// calculate width of the edge-adjusted patch and perform sanity checks.</span></div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;      <span class="keywordtype">int</span> width = patchStop - patchStart;</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;      assert(width&gt;=0 &amp;&amp; width&lt;=patchDim &amp;&amp; patchStart&gt;=0 &amp;&amp; patchStart+width&lt;=patchDim);</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;      *postStartPtr = postStart;</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;      *patchStartPtr = patchStart;</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;      *adjustedDim = width;</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;      <span class="keywordflow">return</span> PV_SUCCESS;</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;   }</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;}; <span class="comment">// class HyPerConn</span></div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;BaseObject * createHyPerConn(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;InitWeights * getWeightInitializer(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;NormalizeBase * getWeightNormalizer(<span class="keywordtype">char</span> <span class="keyword">const</span> * name, HyPerCol * hc);</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;} <span class="comment">// namespace PV</span></div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HYPERCONN_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classPV_1_1privateTransposeConn_html"><div class="ttname"><a href="classPV_1_1privateTransposeConn.html">PV::privateTransposeConn</a></div><div class="ttdef"><b>Definition:</b> <a href="privateTransposeConn_8hpp_source.html#l00015">privateTransposeConn.hpp:15</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a1f3cca4d6175ffddc8098860650f2c98"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a1f3cca4d6175ffddc8098860650f2c98">PV::HyPerConn::ioParam_triggerFlag</a></div><div class="ttdeci">virtual void ioParam_triggerFlag(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">triggerFlag: If plasticity flag is set, allows weight updates to be triggered off layers ...</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00736">HyPerConn.cpp:736</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a0a78481a6044538a9778757978cc41bd"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a0a78481a6044538a9778757978cc41bd">PV::HyPerConn::ioParam_numYLocal</a></div><div class="ttdeci">virtual void ioParam_numYLocal(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">numYLocal: Specifies number of local threads to run in xydirection </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00635">HyPerConn.cpp:635</a></div></div>
@@ -1109,14 +1126,14 @@ $(document).ready(function(){initNavTree('HyPerConn_8hpp_source.html','');});
 <div class="ttc" id="classPV_1_1HyPerConn_html_a43ea2656a3e88a6c85c386bdc98aeed6"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a43ea2656a3e88a6c85c386bdc98aeed6">PV::HyPerConn::ioParam_writeCompressedWeights</a></div><div class="ttdeci">virtual void ioParam_writeCompressedWeights(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">writeCompressedWeights: If writeStep &gt;= 0, weights written out are bytes as opposed to floats...</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00902">HyPerConn.cpp:902</a></div></div>
 <div class="ttc" id="classPV_1_1InitWeights_html"><div class="ttname"><a href="classPV_1_1InitWeights.html">PV::InitWeights</a></div><div class="ttdef"><b>Definition:</b> <a href="InitWeights_8hpp_source.html#l00025">InitWeights.hpp:25</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a40deeb8556de00595f6479bf2a5bb18d"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a40deeb8556de00595f6479bf2a5bb18d">PV::HyPerConn::ioParam_channelCode</a></div><div class="ttdeci">virtual void ioParam_channelCode(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">channelCode: Specifies which channel in the post layer this connection is attached to ...</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00687">HyPerConn.cpp:687</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a17e6460ea8fabffddd45b9f6bd7e2e94"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a17e6460ea8fabffddd45b9f6bd7e2e94">PV::HyPerConn::findPercentileThreshold</a></div><div class="ttdeci">SparseWeightInfo findPercentileThreshold(float percentile, pvwdata_t **wDataStart, size_t numAxonalArborLists, size_t numPatches, size_t patchSize) const </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l04258">HyPerConn.cpp:4258</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a17e6460ea8fabffddd45b9f6bd7e2e94"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a17e6460ea8fabffddd45b9f6bd7e2e94">PV::HyPerConn::findPercentileThreshold</a></div><div class="ttdeci">SparseWeightInfo findPercentileThreshold(float percentile, pvwdata_t **wDataStart, size_t numAxonalArborLists, size_t numPatches, size_t patchSize) const </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l04515">HyPerConn.cpp:4515</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_abbbb258914633a72e732741203649c45"><div class="ttname"><a href="classPV_1_1HyPerConn.html#abbbb258914633a72e732741203649c45">PV::HyPerConn::writeTimers</a></div><div class="ttdeci">virtual int writeTimers(std::ostream &amp;stream)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02216">HyPerConn.cpp:2216</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_ab883cfba03b5cf3c1d2eda83347ff85a"><div class="ttname"><a href="classPV_1_1HyPerConn.html#ab883cfba03b5cf3c1d2eda83347ff85a">PV::HyPerConn::ioParam_initialWriteTime</a></div><div class="ttdeci">virtual void ioParam_initialWriteTime(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">initialWriteTime: If writeStep is &gt;= 0, sets the initial write time of the connection. </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00876">HyPerConn.cpp:876</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a3ddf6eccc1fc0db72e0790736e11ff1e"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a3ddf6eccc1fc0db72e0790736e11ff1e">PV::HyPerConn::minWeight</a></div><div class="ttdeci">virtual float minWeight(int arborId=0)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02230">HyPerConn.cpp:2230</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a13fd8dfe6fa9caae1cdc687f1fe7bb47"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a13fd8dfe6fa9caae1cdc687f1fe7bb47">PV::HyPerConn::ioParam_triggerLayerName</a></div><div class="ttdeci">virtual void ioParam_triggerLayerName(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">triggerLayerName: If trigger flag is set, specifies the layer to trigger off of </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00721">HyPerConn.cpp:721</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerCol_html"><div class="ttname"><a href="classPV_1_1HyPerCol.html">PV::HyPerCol</a></div><div class="ttdef"><b>Definition:</b> <a href="HyPerCol_8hpp_source.html#l00046">HyPerCol.hpp:46</a></div></div>
 <div class="ttc" id="classPV_1_1OutStream_html"><div class="ttname"><a href="classPV_1_1OutStream.html">PV::OutStream</a></div><div class="ttdef"><b>Definition:</b> <a href="FileStream_8hpp_source.html#l00016">FileStream.hpp:16</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a026f6b068710cc1620e60c6dfdfd3c41"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a026f6b068710cc1620e60c6dfdfd3c41">PV::HyPerConn::adjustAxonalArbors</a></div><div class="ttdeci">virtual int adjustAxonalArbors(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03628">HyPerConn.cpp:3628</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a026f6b068710cc1620e60c6dfdfd3c41"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a026f6b068710cc1620e60c6dfdfd3c41">PV::HyPerConn::adjustAxonalArbors</a></div><div class="ttdeci">virtual int adjustAxonalArbors(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03885">HyPerConn.cpp:3885</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a9d25459925dab07306be9603617c5026"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a9d25459925dab07306be9603617c5026">PV::HyPerConn::ioParamsFillGroup</a></div><div class="ttdeci">virtual int ioParamsFillGroup(enum ParamsIOFlag ioFlag)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00548">HyPerConn.cpp:548</a></div></div>
 <div class="ttc" id="classPVCuda_1_1CudaRecvPost_html"><div class="ttname"><a href="classPVCuda_1_1CudaRecvPost.html">PVCuda::CudaRecvPost</a></div><div class="ttdef"><b>Definition:</b> <a href="CudaRecvPost_8hpp_source.html#l00092">CudaRecvPost.hpp:92</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a36c7ee19852dfe6ab63f1f2bcd3abf3c"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a36c7ee19852dfe6ab63f1f2bcd3abf3c">PV::HyPerConn::reduce_dW</a></div><div class="ttdeci">virtual int reduce_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02505">HyPerConn.cpp:2505</a></div></div>
@@ -1133,14 +1150,14 @@ $(document).ready(function(){initNavTree('HyPerConn_8hpp_source.html','');});
 <div class="ttc" id="classPV_1_1BaseConnection_html"><div class="ttname"><a href="classPV_1_1BaseConnection.html">PV::BaseConnection</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseConnection_8hpp_source.html#l00026">BaseConnection.hpp:26</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a7f9450a8fe2156d3afad5c5def72fc6e"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a7f9450a8fe2156d3afad5c5def72fc6e">PV::HyPerConn::ioParam_numFLocal</a></div><div class="ttdeci">virtual void ioParam_numFLocal(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">numYLocal: Specifies number of local threads to run in xydirection </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00649">HyPerConn.cpp:649</a></div></div>
 <div class="ttc" id="classPV_1_1NormalizeBase_html"><div class="ttname"><a href="classPV_1_1NormalizeBase.html">PV::NormalizeBase</a></div><div class="ttdef"><b>Definition:</b> <a href="NormalizeBase_8hpp_source.html#l00017">NormalizeBase.hpp:17</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_a55f0ecd356e28f638f2d646f30c933bb"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a55f0ecd356e28f638f2d646f30c933bb">PV::HyPerConn::preSynapticPatchHead</a></div><div class="ttdeci">int preSynapticPatchHead(int kxPost, int kyPost, int kfPost, int *kxPre, int *kyPre)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03887">HyPerConn.cpp:3887</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_a55f0ecd356e28f638f2d646f30c933bb"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a55f0ecd356e28f638f2d646f30c933bb">PV::HyPerConn::preSynapticPatchHead</a></div><div class="ttdeci">int preSynapticPatchHead(int kxPost, int kyPost, int kfPost, int *kxPre, int *kyPre)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l04144">HyPerConn.cpp:4144</a></div></div>
 <div class="ttc" id="structPV_1_1SparseWeightInfo_html"><div class="ttname"><a href="structPV_1_1SparseWeightInfo.html">PV::SparseWeightInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8hpp_source.html#l00041">HyPerConn.hpp:41</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a18a5cc03609f6d283f62410c7243e019"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a18a5cc03609f6d283f62410c7243e019">PV::HyPerConn::communicateInitInfo</a></div><div class="ttdeci">virtual int communicateInitInfo()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01151">HyPerConn.cpp:1151</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a2ba70589af533f080ee0e208f082ed07"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a2ba70589af533f080ee0e208f082ed07">PV::HyPerConn::ioParam_numXLocal</a></div><div class="ttdeci">virtual void ioParam_numXLocal(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">numXLocal: Specifies number of local threads to run in x direction </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00620">HyPerConn.cpp:620</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a6e248fc2d82a06bbec93c397bdb51e3a"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a6e248fc2d82a06bbec93c397bdb51e3a">PV::HyPerConn::getWMin</a></div><div class="ttdeci">float getWMin()</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8hpp_source.html#l00157">HyPerConn.hpp:157</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a1822836200e3e6eb36131cee47244376"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a1822836200e3e6eb36131cee47244376">PV::HyPerConn::ioParam_useMask</a></div><div class="ttdeci">virtual void ioParam_useMask(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">useMask: Specifies if this connection is using a post mask for learning </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01087">HyPerConn.cpp:1087</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_ad1b7d44d20ba90109a548e8d79381bd8"><div class="ttname"><a href="classPV_1_1HyPerConn.html#ad1b7d44d20ba90109a548e8d79381bd8">PV::HyPerConn::ioParam_shrinkPatches</a></div><div class="ttdeci">virtual void ioParam_shrinkPatches(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">shrinkPatches: Optimization for shrinking a patch to it&#39;s non-zero values </div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l01003">HyPerConn.cpp:1003</a></div></div>
-<div class="ttc" id="classPV_1_1HyPerConn_html_aa967ab7bca24afae03b3cabe9a141fc3"><div class="ttname"><a href="classPV_1_1HyPerConn.html#aa967ab7bca24afae03b3cabe9a141fc3">PV::HyPerConn::postSynapticPatchHead</a></div><div class="ttdeci">int postSynapticPatchHead(int kPre, int *kxPostOut, int *kyPostOut, int *kfPostOut, int *dxOut, int *dyOut, int *nxpOut, int *nypOut)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l03923">HyPerConn.cpp:3923</a></div></div>
+<div class="ttc" id="classPV_1_1HyPerConn_html_aa967ab7bca24afae03b3cabe9a141fc3"><div class="ttname"><a href="classPV_1_1HyPerConn.html#aa967ab7bca24afae03b3cabe9a141fc3">PV::HyPerConn::postSynapticPatchHead</a></div><div class="ttdeci">int postSynapticPatchHead(int kPre, int *kxPostOut, int *kyPostOut, int *kfPostOut, int *dxOut, int *dyOut, int *nxpOut, int *nypOut)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l04180">HyPerConn.cpp:4180</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a642ff5020055cee86148da855292293f"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a642ff5020055cee86148da855292293f">PV::HyPerConn::initialize_dW</a></div><div class="ttdeci">virtual int initialize_dW(int arborId)</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l02479">HyPerConn.cpp:2479</a></div></div>
 <div class="ttc" id="structPVPatchStrides___html"><div class="ttname"><a href="structPVPatchStrides__.html">PVPatchStrides_</a></div><div class="ttdef"><b>Definition:</b> <a href="pv__types_8h_source.html#l00066">pv_types.h:66</a></div></div>
 <div class="ttc" id="classPV_1_1HyPerConn_html_a4047adecf3bacf506a094661c11e88d2"><div class="ttname"><a href="classPV_1_1HyPerConn.html#a4047adecf3bacf506a094661c11e88d2">PV::HyPerConn::ioParam_initialWeightUpdateTime</a></div><div class="ttdeci">virtual void ioParam_initialWeightUpdateTime(enum ParamsIOFlag ioFlag)</div><div class="ttdoc">initialWeightUpdateTime: If plasticity flag is set, specifies the inital weight update time; ignored ...</div><div class="ttdef"><b>Definition:</b> <a href="HyPerConn_8cpp_source.html#l00790">HyPerConn.cpp:790</a></div></div>

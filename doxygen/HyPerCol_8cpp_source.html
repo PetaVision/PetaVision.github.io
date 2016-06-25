@@ -3037,25 +3037,25 @@ $(document).ready(function(){initNavTree('HyPerCol_8cpp_source.html','');});
 <div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;      fprintf(timestampfile-&gt;fp,<span class="stringliteral">&quot;time = %g\n&quot;</span>, simTime);</div>
 <div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160;      fprintf(timestampfile-&gt;fp,<span class="stringliteral">&quot;timestep = %ld\n&quot;</span>, currentStep);</div>
 <div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;      PV_fclose(timestampfile);</div>
-<div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;      sync();</div>
-<div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160;   }</div>
+<div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;   }</div>
+<div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160;</div>
 <div class="line"><a name="l02949"></a><span class="lineno"> 2949</span>&#160;</div>
-<div class="line"><a name="l02950"></a><span class="lineno"> 2950</span>&#160;</div>
-<div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160;   <span class="keywordflow">if</span> (deleteOlderCheckpoints) {</div>
-<div class="line"><a name="l02952"></a><span class="lineno"> 2952</span>&#160;      pvAssert(checkpointWriteFlag); <span class="comment">// checkpointWrite is called by exitRunLoop when checkpointWriteFlag is false; in this case deleteOlderCheckpoints should be false as well.</span></div>
-<div class="line"><a name="l02953"></a><span class="lineno"> 2953</span>&#160;      <span class="keywordtype">char</span> <span class="keyword">const</span> * oldestCheckpointDir = oldCheckpointDirectories[oldCheckpointDirectoriesIndex].c_str();</div>
-<div class="line"><a name="l02954"></a><span class="lineno"> 2954</span>&#160;      <span class="keywordflow">if</span> (oldestCheckpointDir &amp;&amp; oldestCheckpointDir[0]) {</div>
-<div class="line"><a name="l02955"></a><span class="lineno"> 2955</span>&#160;         <span class="keywordflow">if</span> (icComm-&gt;commRank()==0) {</div>
-<div class="line"><a name="l02956"></a><span class="lineno"> 2956</span>&#160;            <span class="keyword">struct </span>stat lcp_stat;</div>
-<div class="line"><a name="l02957"></a><span class="lineno"> 2957</span>&#160;            <span class="keywordtype">int</span> statstatus = stat(oldestCheckpointDir, &amp;lcp_stat);</div>
-<div class="line"><a name="l02958"></a><span class="lineno"> 2958</span>&#160;            <span class="keywordflow">if</span> ( statstatus!=0 || !(lcp_stat.st_mode &amp; S_IFDIR) ) {</div>
-<div class="line"><a name="l02959"></a><span class="lineno"> 2959</span>&#160;               <span class="keywordflow">if</span> (statstatus==0) {</div>
-<div class="line"><a name="l02960"></a><span class="lineno"> 2960</span>&#160;                  pvErrorNoExit().printf(<span class="stringliteral">&quot;Failed to delete older checkpoint: failed to stat \&quot;%s\&quot;: %s.\n&quot;</span>, oldestCheckpointDir, strerror(errno));</div>
-<div class="line"><a name="l02961"></a><span class="lineno"> 2961</span>&#160;               }</div>
-<div class="line"><a name="l02962"></a><span class="lineno"> 2962</span>&#160;               <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l02963"></a><span class="lineno"> 2963</span>&#160;                  pvErrorNoExit().printf(<span class="stringliteral">&quot;Deleting older checkpoint: \&quot;%s\&quot; exists but is not a directory.\n&quot;</span>, oldestCheckpointDir);</div>
-<div class="line"><a name="l02964"></a><span class="lineno"> 2964</span>&#160;               }</div>
-<div class="line"><a name="l02965"></a><span class="lineno"> 2965</span>&#160;            }</div>
+<div class="line"><a name="l02950"></a><span class="lineno"> 2950</span>&#160;   <span class="keywordflow">if</span> (deleteOlderCheckpoints) {</div>
+<div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160;      pvAssert(checkpointWriteFlag); <span class="comment">// checkpointWrite is called by exitRunLoop when checkpointWriteFlag is false; in this case deleteOlderCheckpoints should be false as well.</span></div>
+<div class="line"><a name="l02952"></a><span class="lineno"> 2952</span>&#160;      <span class="keywordtype">char</span> <span class="keyword">const</span> * oldestCheckpointDir = oldCheckpointDirectories[oldCheckpointDirectoriesIndex].c_str();</div>
+<div class="line"><a name="l02953"></a><span class="lineno"> 2953</span>&#160;      <span class="keywordflow">if</span> (oldestCheckpointDir &amp;&amp; oldestCheckpointDir[0]) {</div>
+<div class="line"><a name="l02954"></a><span class="lineno"> 2954</span>&#160;         <span class="keywordflow">if</span> (icComm-&gt;commRank()==0) {</div>
+<div class="line"><a name="l02955"></a><span class="lineno"> 2955</span>&#160;            <span class="keyword">struct </span>stat lcp_stat;</div>
+<div class="line"><a name="l02956"></a><span class="lineno"> 2956</span>&#160;            <span class="keywordtype">int</span> statstatus = stat(oldestCheckpointDir, &amp;lcp_stat);</div>
+<div class="line"><a name="l02957"></a><span class="lineno"> 2957</span>&#160;            <span class="keywordflow">if</span> ( statstatus!=0 || !(lcp_stat.st_mode &amp; S_IFDIR) ) {</div>
+<div class="line"><a name="l02958"></a><span class="lineno"> 2958</span>&#160;               <span class="keywordflow">if</span> (statstatus==0) {</div>
+<div class="line"><a name="l02959"></a><span class="lineno"> 2959</span>&#160;                  pvErrorNoExit().printf(<span class="stringliteral">&quot;Failed to delete older checkpoint: failed to stat \&quot;%s\&quot;: %s.\n&quot;</span>, oldestCheckpointDir, strerror(errno));</div>
+<div class="line"><a name="l02960"></a><span class="lineno"> 2960</span>&#160;               }</div>
+<div class="line"><a name="l02961"></a><span class="lineno"> 2961</span>&#160;               <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l02962"></a><span class="lineno"> 2962</span>&#160;                  pvErrorNoExit().printf(<span class="stringliteral">&quot;Deleting older checkpoint: \&quot;%s\&quot; exists but is not a directory.\n&quot;</span>, oldestCheckpointDir);</div>
+<div class="line"><a name="l02963"></a><span class="lineno"> 2963</span>&#160;               }</div>
+<div class="line"><a name="l02964"></a><span class="lineno"> 2964</span>&#160;            }</div>
+<div class="line"><a name="l02965"></a><span class="lineno"> 2965</span>&#160;            sync();</div>
 <div class="line"><a name="l02966"></a><span class="lineno"> 2966</span>&#160;            std::string rmrf_string(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l02967"></a><span class="lineno"> 2967</span>&#160;            rmrf_string = rmrf_string + <span class="stringliteral">&quot;rm -r &#39;&quot;</span> + oldestCheckpointDir + <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><a name="l02968"></a><span class="lineno"> 2968</span>&#160;            <span class="keywordtype">int</span> rmrf_result = system(rmrf_string.c_str());</div>

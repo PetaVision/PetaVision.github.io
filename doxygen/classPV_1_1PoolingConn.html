@@ -816,18 +816,27 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>createWeights<
 <tr class="memitem:ac44daa66825c338c783037470f001a6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac44daa66825c338c783037470f001a6d"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPostsynapticPerspective</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
 <tr class="separator:ac44daa66825c338c783037470f001a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a4e74d9642b2367383811f96bd390fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a4e74d9642b2367383811f96bd390fa"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPostsynapticPerspective</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID, int *numActive, int **activeList)</td></tr>
-<tr class="separator:a0a4e74d9642b2367383811f96bd390fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8cb66774d4267233446979ab8c468f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a8cb66774d4267233446979ab8c468f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPostsynapticPerspectiveConvolve</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID, int *numActive, int **activeList)</td></tr>
+<tr class="separator:a9a8cb66774d4267233446979ab8c468f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8526431390b3d459479c69cd2cd683"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f8526431390b3d459479c69cd2cd683"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPostsynapticPerspectiveGPU</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
 <tr class="separator:a9f8526431390b3d459479c69cd2cd683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de7688b8d255f6734b54326bd5531b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7de7688b8d255f6734b54326bd5531b3"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPostsynapticPerspectiveStochastic</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID, int *numActive, int **activeList)</td></tr>
+<tr class="separator:a7de7688b8d255f6734b54326bd5531b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e1fc1589edc7b71ff359785a9be6af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e1fc1589edc7b71ff359785a9be6af"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPresynapticPerspective</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
 <tr class="separator:a02e1fc1589edc7b71ff359785a9be6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b109812e98d3f1c3656617ac1ec79a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42b109812e98d3f1c3656617ac1ec79a"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPresynapticPerspectiveConvolve</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
+<tr class="separator:a42b109812e98d3f1c3656617ac1ec79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64b5a41568175ef2ebc24b51ddcff89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa64b5a41568175ef2ebc24b51ddcff89"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPresynapticPerspectiveGPU</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
 <tr class="separator:aa64b5a41568175ef2ebc24b51ddcff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e08bf80fc85257a66e3f4afcb2f954"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41e08bf80fc85257a66e3f4afcb2f954"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deliverPresynapticPerspectiveStochastic</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> const *activity, int arborID)</td></tr>
+<tr class="separator:a41e08bf80fc85257a66e3f4afcb2f954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc30e13e5ffc01db1d73c11c3941af10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc30e13e5ffc01db1d73c11c3941af10"></a>
 long **&#160;</td><td class="memItemRight" valign="bottom"><b>get_activations</b> ()</td></tr>
 <tr class="separator:afc30e13e5ffc01db1d73c11c3941af10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1354,7 +1363,7 @@ int **&#160;</td><td class="memItemRight" valign="bottom"><b>thread_gateIdxBuffe
 <li>activity and STDP M variable are extended into margins</li>
 </ul>
 
-<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03628">3628</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03885">3885</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
 
 </div>
 </div>
@@ -1581,7 +1590,7 @@ int **&#160;</td><td class="memItemRight" valign="bottom"><b>thread_gateIdxBuffe
 </div><div class="memdoc">
 <p>Create a separate patch of weights for every neuron </p>
 
-<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03460">3460</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03717">3717</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
 
 </div>
 </div>
@@ -3239,7 +3248,7 @@ int **&#160;</td><td class="memItemRight" valign="bottom"><b>thread_gateIdxBuffe
 <p>Returns the head (kxPostOut, kyPostOut) of the post-synaptic patch plus other patch information.  the pre-synaptic k index (extended units)  address of the kx index in post layer (non-extended units) on output  address of the ky index in post layer (non-extended units) on output  address of the kf index in post layer (non-extended units) on output  address of the change in x dimension size of patch (to fit border) on output  address of the change in y dimension size of patch (to fit border) on output  address of x dimension patch size (includes border reduction) on output  address of y dimension patch size (includes border reduction) on output</p>
 <p>NOTE: kxPostOut and kyPostOut are always within the post-synaptic non-extended layer because the patch size is reduced at borders </p>
 
-<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03923">3923</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l04180">4180</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
 
 </div>
 </div>
@@ -3295,7 +3304,7 @@ int **&#160;</td><td class="memItemRight" valign="bottom"><b>thread_gateIdxBuffe
 <p>Returns the head (kxPre, kyPre) of a pre-synaptic patch given post-synaptic layer indices.  the post-synaptic kx index (non-extended units)  the post-synaptic ky index (non-extended units)  the post-synaptic kf index  address of the kx index in the pre-synaptic layer (non-extended units) on output  address of the ky index in the pre-synaptic layer (non-extended units) on output</p>
 <p>NOTE: kxPre and kyPre may be in the border region </p>
 
-<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l03887">3887</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerConn_8cpp_source.html#l04144">4144</a> of file <a class="el" href="HyPerConn_8cpp_source.html">HyPerConn.cpp</a>.</p>
 
 </div>
 </div>
