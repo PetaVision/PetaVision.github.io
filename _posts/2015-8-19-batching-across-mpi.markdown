@@ -12,7 +12,7 @@ I've just implemented being able to split batches into different MPI processes. 
 In the simplest case, to run a parameter file with 20 batches, split into 4 different MPI processes (5 batches per process), simply run
 
 {% highlight bash %}
-mpirun -np 5 Release/myExecutable -p input/myParams.params -batchwidth 5
+mpirun -np 4 Release/myExecutable -p input/myParams.params -batchwidth 5
 {% endhighlight %}
 
 By default, this will put your output path wherever this command was ran as *output_batchwidth_00*, where the suffix numbers specify the MPI batch rank. This is because each MPI batch rank will write to it's own output path. How do you specify different output paths per each MPI batch rank? To do so, simply use the new batch sweep method (modeled after parameter sweeps) as such:
