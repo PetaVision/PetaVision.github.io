@@ -1,8 +1,6 @@
 var structPVCuda_1_1recv__post__params =
 [
     [ "dt_factor", "structPVCuda_1_1recv__post__params.html#aa8ef2cdb4a74e1eb0f2c4fc12379297f", null ],
-    [ "localBufSizeX", "structPVCuda_1_1recv__post__params.html#a482055f4cdd173bc0be9f6bfcaef8add", null ],
-    [ "localBufSizeY", "structPVCuda_1_1recv__post__params.html#adf376057924a46de6cb6806c1c51d4c0", null ],
     [ "nbatch", "structPVCuda_1_1recv__post__params.html#a0aac21855d9c0dd5ff10099866a457c3", null ],
     [ "nbdn", "structPVCuda_1_1recv__post__params.html#a364253f375414879b0293f4a463c2961", null ],
     [ "nblt", "structPVCuda_1_1recv__post__params.html#aba86ae7ed6ac60109010684104c1472d", null ],
@@ -20,7 +18,6 @@ var structPVCuda_1_1recv__post__params =
     [ "postGsyn", "structPVCuda_1_1recv__post__params.html#a37eeff999726555f2b6ad4b2d4cff0b3", null ],
     [ "preBufNum", "structPVCuda_1_1recv__post__params.html#a7ee10515aa2771016d60602f55cb15d8", null ],
     [ "preData", "structPVCuda_1_1recv__post__params.html#aebcb759fd67cb08090cbfc4ce570c924", null ],
-    [ "preDataLocal", "structPVCuda_1_1recv__post__params.html#ad7a24f7e45bae750bfa0d9d5057ce2b2", null ],
     [ "preNbdn", "structPVCuda_1_1recv__post__params.html#ad36bbd4422b125a4970a0232fd98dcc5", null ],
     [ "preNblt", "structPVCuda_1_1recv__post__params.html#a6bcbaad4e1f9cfe5564d2e13ced9a74d", null ],
     [ "preNbrt", "structPVCuda_1_1recv__post__params.html#a6a121215788420ef84174be25fddd455", null ],

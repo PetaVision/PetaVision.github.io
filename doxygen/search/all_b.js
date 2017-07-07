@@ -1,21 +1,15 @@
 var searchData=
 [
-  ['l0normlcaprobe',['L0NormLCAProbe',['../classPV_1_1L0NormLCAProbe.html',1,'PV']]],
-  ['l0normprobe',['L0NormProbe',['../classPV_1_1L0NormProbe.html',1,'PV']]],
-  ['l1normlcaprobe',['L1NormLCAProbe',['../classPV_1_1L1NormLCAProbe.html',1,'PV']]],
-  ['l1normprobe',['L1NormProbe',['../classPV_1_1L1NormProbe.html',1,'PV']]],
-  ['l2connprobe',['L2ConnProbe',['../classPV_1_1L2ConnProbe.html',1,'PV']]],
-  ['l2normprobe',['L2NormProbe',['../classPV_1_1L2NormProbe.html',1,'PV']]],
-  ['labelerrorlayer',['LabelErrorLayer',['../classPV_1_1LabelErrorLayer.html',1,'PV']]],
-  ['labellayer',['LabelLayer',['../classPV_1_1LabelLayer.html',1,'PV']]],
-  ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html#ac4b44fb86861abb64b2ed7ced33d25c6',1,'PV::LayerProbe']]],
-  ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html',1,'PV']]],
-  ['lcaliflayer',['LCALIFLayer',['../classPV_1_1LCALIFLayer.html',1,'PV']]],
-  ['leakyintegrator',['LeakyIntegrator',['../classPV_1_1LeakyIntegrator.html',1,'PV']]],
-  ['lif',['LIF',['../classPV_1_1LIF.html',1,'PV']]],
-  ['lif_5fparams_5f',['LIF_params_',['../structLIF__params__.html',1,'']]],
-  ['lifgap',['LIFGap',['../classPV_1_1LIFGap.html',1,'PV']]],
-  ['logfilestream',['LogFileStream',['../classPV_1_1LogFileStream.html',1,'PV']]],
-  ['logstreamtraits',['LogStreamTraits',['../structPV_1_1LogStreamTraits.html',1,'PV']]],
-  ['logtype',['LogType',['../structPV_1_1LogType.html',1,'PV']]]
+  ['makeoutputpathfilename',['makeOutputPathFilename',['../classPV_1_1Checkpointer.html#a56fe8223d2b6643ebbf2c3ccfd3d5306',1,'PV::Checkpointer']]],
+  ['maskhassinglefeature',['maskHasSingleFeature',['../classPV_1_1AbstractNormProbe.html#a6e6878f9202725f963883070315eed21',1,'PV::AbstractNormProbe']]],
+  ['masklayer',['MaskLayer',['../classPV_1_1MaskLayer.html',1,'PV']]],
+  ['maxdelaysteps',['maxDelaySteps',['../classPV_1_1BaseConnection.html#a6f71729c4d22a9ceedeedfbfb7b7a18f',1,'PV::BaseConnection']]],
+  ['maxweight',['maxWeight',['../classPV_1_1HyPerConn.html#acc2b4bf71aab2681497c6be242d695ba',1,'PV::HyPerConn::maxWeight()'],['../classPV_1_1PoolingConn.html#a5ad974723a1ec52c61b50e81ee61cc5d',1,'PV::PoolingConn::maxWeight()']]],
+  ['minweight',['minWeight',['../classPV_1_1HyPerConn.html#a3ddf6eccc1fc0db72e0790736e11ff1e',1,'PV::HyPerConn::minWeight()'],['../classPV_1_1PoolingConn.html#ae7d45032a6f281fb1e63ce74673c597f',1,'PV::PoolingConn::minWeight()']]],
+  ['momentumconn',['MomentumConn',['../classPV_1_1MomentumConn.html',1,'PV']]],
+  ['momentumlcalayer',['MomentumLCALayer',['../classPV_1_1MomentumLCALayer.html',1,'PV']]],
+  ['momentumlcaparams',['MomentumLCAParams',['../structPVCuda_1_1MomentumLCAParams.html',1,'PVCuda']]],
+  ['mpiblock',['MPIBlock',['../classPV_1_1MPIBlock.html',1,'PV']]],
+  ['mpiblock',['MPIBlock',['../classPV_1_1MPIBlock.html#a2d9a0f2f796f4dc3e6f4209a01717f33',1,'PV::MPIBlock']]],
+  ['mpiexchangesize',['mpiexchangesize',['../classPV_1_1privateTransposeConn.html#a3870fbe3daf2f9b2540fffc1a69bf74f',1,'PV::privateTransposeConn']]]
 ];

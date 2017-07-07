@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['taus_5fstate_5ft',['taus_state_t',['../structtaus__state__t.html',1,'']]],
-  ['taus_5fuint4_5f',['taus_uint4_',['../structtaus__uint4__.html',1,'']]],
-  ['timer',['Timer',['../classPV_1_1Timer.html',1,'PV']]],
-  ['transposeconn',['TransposeConn',['../classPV_1_1TransposeConn.html',1,'PV']]],
-  ['transposepoolingconn',['TransposePoolingConn',['../classPV_1_1TransposePoolingConn.html',1,'PV']]]
+  ['uniformrandomv',['UniformRandomV',['../classPV_1_1UniformRandomV.html',1,'PV']]],
+  ['update_5fdw',['update_dW',['../classPV_1_1HyPerConn.html#aed793ccc424fc5ad2ab838d0dba06542',1,'PV::HyPerConn::update_dW()'],['../classPV_1_1ImprintConn.html#a65d9f066b7a5f6ba18b0f1f6c71a4f70',1,'PV::ImprintConn::update_dW()']]],
+  ['updatearbors',['updateArbors',['../classPV_1_1HyPerConn.html#a39af524094d9bdedf10acc014b7dd604',1,'PV::HyPerConn']]],
+  ['updatelocal_5fdw',['updateLocal_dW',['../classPV_1_1HyPerConn.html#a3dac9d0d8bd2b6d8256b4b95bf5c7e92',1,'PV::HyPerConn']]],
+  ['updatestate',['updateState',['../classPV_1_1BaseConnection.html#a4d78988ac21c175c9cbd17b1ad9cf553',1,'PV::BaseConnection::updateState()'],['../classPV_1_1CloneConn.html#ab971fcc58db2848ea45bd208c007a1fd',1,'PV::CloneConn::updateState()'],['../classPV_1_1CopyConn.html#af8f45a966a3de56c879522e7985096e9',1,'PV::CopyConn::updateState()'],['../classPV_1_1HyPerConn.html#aafd06ba12b71ac1bc652980bad195298',1,'PV::HyPerConn::updateState()'],['../classPV_1_1privateTransposeConn.html#a0615563708abb9f093399effaa6a0788',1,'PV::privateTransposeConn::updateState()'],['../classPV_1_1TransposeConn.html#ae2aea466de90ad8fdf15358ca3e703a6',1,'PV::TransposeConn::updateState()'],['../classPV_1_1TransposePoolingConn.html#a2bc5b4baccfd08dfda01596e965c6287',1,'PV::TransposePoolingConn::updateState()'],['../classPV_1_1ImageFromMemoryBuffer.html#ac473e26608f25ceab4baa514e667b3d0',1,'PV::ImageFromMemoryBuffer::updateState()'],['../classPV_1_1Retina.html#af7dbfa74f1ebf1a72280f267c0a9b09b',1,'PV::Retina::updateState()']]],
+  ['updateweights',['updateWeights',['../classPV_1_1CopyConn.html#a3ca9ff2e432ef21e996d72d8afe66c91',1,'PV::CopyConn::updateWeights()'],['../classPV_1_1HyPerConn.html#a644765759cb52ced09b02a521ecadffc',1,'PV::HyPerConn::updateWeights()'],['../classPV_1_1IdentConn.html#add6ab0a9f1f6b2134e24f7deb0822076',1,'PV::IdentConn::updateWeights()'],['../classPV_1_1ImprintConn.html#afa5de6e4ae4aada66aefdfa2ad53825d',1,'PV::ImprintConn::updateWeights()'],['../classPV_1_1MomentumConn.html#a6895c66136064457255ff9866119a7f5',1,'PV::MomentumConn::updateWeights()']]]
 ];
