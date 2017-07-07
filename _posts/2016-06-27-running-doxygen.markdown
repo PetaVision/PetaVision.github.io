@@ -4,7 +4,9 @@ title:  "Updating doxygen-generated documentation"
 author: Pete Schultz
 categories: doxygen
 ---
-_Updated version of [this blog post](http://petavision.github.io/doxygen/2015/08/19/running-doxygen.html)_.
+_This post has been [superseded](http://petavision.github.io/doxygen/2016/06/27/running-doxygen.html)_.
+
+_This is an updated version of [this blog post](http://petavision.github.io/doxygen/2015/08/19/running-doxygen.html)_.
 
 Her is the procedure for updating the
 [doxygen-generated webpages](http://petavision.github.io/doxygen/).  You will
