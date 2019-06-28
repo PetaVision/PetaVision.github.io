@@ -106,7 +106,8 @@ $(document).ready(function(){initNavTree('classPV_1_1CommunicateInitInfoMessage.
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pub-attribs">Data Fields</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">PV::CommunicateInitInfoMessage Class Reference</div>  </div>
 </div><!--header-->
@@ -117,14 +118,18 @@ Inheritance diagram for PV::CommunicateInitInfoMessage:</div>
  <div class="center">
   <img src="classPV_1_1CommunicateInitInfoMessage.png" usemap="#PV::CommunicateInitInfoMessage_map" alt=""/>
   <map id="PV::CommunicateInitInfoMessage_map" name="PV::CommunicateInitInfoMessage_map">
+<area href="classPV_1_1BaseMessage.html" alt="PV::BaseMessage" shape="rect" coords="0,0,198,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac96696f585b3328edfe853be44076fbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac96696f585b3328edfe853be44076fbb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommunicateInitInfoMessage</b> (std::map&lt; std::string, Observer * &gt; const &amp;hierarchy)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CommunicateInitInfoMessage</b> (std::map&lt; std::string, <a class="el" href="classPV_1_1Observer.html">Observer</a> * &gt; const &amp;hierarchy)</td></tr>
 <tr class="separator:ac96696f585b3328edfe853be44076fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861225dbf751edb2b62453cbb1bb6a2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a861225dbf751edb2b62453cbb1bb6a2b"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageType</b> () const </td></tr>
+<tr class="separator:a861225dbf751edb2b62453cbb1bb6a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac38447c73e47c088f7751b881d9363df"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac38447c73e47c088f7751b881d9363df"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac38447c73e47c088f7751b881d9363df"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lookup</b> (std::string const &amp;name) const </td></tr>
@@ -133,8 +138,17 @@ template&lt;typename T &gt; </td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a20d59efd073ea64549baecc080021608"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20d59efd073ea64549baecc080021608"></a>
-std::map&lt; std::string, Observer * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mHierarchy</b></td></tr>
+std::map&lt; std::string, <a class="el" href="classPV_1_1Observer.html">Observer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mHierarchy</b></td></tr>
 <tr class="separator:a20d59efd073ea64549baecc080021608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7ed3c3fad47dcef4e66785a05370394e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ed3c3fad47dcef4e66785a05370394e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMessageType</b> (std::string const &amp;messageType)</td></tr>
+<tr class="separator:a7ed3c3fad47dcef4e66785a05370394e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9385623963e78c09ed771da173e82a8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9385623963e78c09ed771da173e82a8e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMessageType</b> (char const *messageType)</td></tr>
+<tr class="separator:a9385623963e78c09ed771da173e82a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

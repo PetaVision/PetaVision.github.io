@@ -125,12 +125,22 @@ Inheritance diagram for PV::Observer:</div>
 <area href="classPV_1_1CheckpointableFileStream.html" alt="PV::CheckpointableFileStream" shape="rect" coords="836,112,1035,136"/>
 <area href="classPV_1_1KneeTimeScaleController.html" alt="PV::KneeTimeScaleController" shape="rect" coords="209,168,408,192"/>
 <area href="classPV_1_1LogTimeScaleController.html" alt="PV::LogTimeScaleController" shape="rect" coords="209,224,408,248"/>
-<area href="classPV_1_1BaseConnection.html" alt="PV::BaseConnection" shape="rect" coords="627,168,826,192"/>
-<area href="classPV_1_1BaseInitV.html" alt="PV::BaseInitV" shape="rect" coords="627,224,826,248"/>
-<area href="classPV_1_1BaseLayer.html" alt="PV::BaseLayer" shape="rect" coords="627,280,826,304"/>
-<area href="classPV_1_1BaseProbe.html" alt="PV::BaseProbe" shape="rect" coords="627,336,826,360"/>
-<area href="classPV_1_1InitWeights.html" alt="PV::InitWeights" shape="rect" coords="627,392,826,416"/>
-<area href="classPV_1_1NormalizeBase.html" alt="PV::NormalizeBase" shape="rect" coords="627,448,826,472"/>
+<area href="classPV_1_1ArborList.html" alt="PV::ArborList" shape="rect" coords="627,168,826,192"/>
+<area href="classPV_1_1BaseConnection.html" alt="PV::BaseConnection" shape="rect" coords="627,224,826,248"/>
+<area href="classPV_1_1BaseDelivery.html" alt="PV::BaseDelivery" shape="rect" coords="627,280,826,304"/>
+<area href="classPV_1_1BaseInitV.html" alt="PV::BaseInitV" shape="rect" coords="627,336,826,360"/>
+<area href="classPV_1_1BaseLayer.html" alt="PV::BaseLayer" shape="rect" coords="627,392,826,416"/>
+<area href="classPV_1_1BaseProbe.html" alt="PV::BaseProbe" shape="rect" coords="627,448,826,472"/>
+<area href="classPV_1_1BaseWeightUpdater.html" alt="PV::BaseWeightUpdater" shape="rect" coords="627,504,826,528"/>
+<area href="classPV_1_1ConnectionData.html" alt="PV::ConnectionData" shape="rect" coords="627,560,826,584"/>
+<area href="classPV_1_1InitWeights.html" alt="PV::InitWeights" shape="rect" coords="627,616,826,640"/>
+<area href="classPV_1_1NormalizeBase.html" alt="PV::NormalizeBase" shape="rect" coords="627,672,826,696"/>
+<area href="classPV_1_1ObjectMapComponent.html" alt="PV::ObjectMapComponent" shape="rect" coords="627,728,826,752"/>
+<area href="classPV_1_1OriginalConnNameParam.html" alt="PV::OriginalConnNameParam" shape="rect" coords="627,784,826,808"/>
+<area href="classPV_1_1PatchSize.html" alt="PV::PatchSize" shape="rect" coords="627,840,826,864"/>
+<area href="classPV_1_1SharedWeights.html" alt="PV::SharedWeights" shape="rect" coords="627,896,826,920"/>
+<area href="classPV_1_1StrengthParam.html" alt="PV::StrengthParam" shape="rect" coords="627,952,826,976"/>
+<area href="classPV_1_1WeightsPairInterface.html" alt="PV::WeightsPairInterface" shape="rect" coords="627,1008,826,1032"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -142,9 +152,9 @@ std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ge
 <tr class="memitem:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64041ac229aaaec1c17a16f54a8ec47"></a>
 char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription_c</b> () const </td></tr>
 <tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2ff2545f47deaa6633c2e876a19fa8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b2ff2545f47deaa6633c2e876a19fa8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message)</td></tr>
-<tr class="separator:a5b2ff2545f47deaa6633c2e876a19fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffa761c560e0ae97e33f4db34f7117f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ffa761c560e0ae97e33f4db34f7117f"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a7ffa761c560e0ae97e33f4db34f7117f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -154,7 +164,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Observer_8hpp_source.html#l00017">17</a> of file <a class="el" href="Observer_8hpp_source.html">Observer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Observer_8hpp_source.html#l00018">18</a> of file <a class="el" href="Observer_8hpp_source.html">Observer.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>OpenPV/src/observerpattern/<a class="el" href="Observer_8hpp_source.html">Observer.hpp</a></li>
 </ul>

@@ -120,9 +120,11 @@ Inheritance diagram for PV::NormalizeL2:</div>
  <div class="center">
   <img src="classPV_1_1NormalizeL2.png" usemap="#PV::NormalizeL2_map" alt=""/>
   <map id="PV::NormalizeL2_map" name="PV::NormalizeL2_map">
-<area href="classPV_1_1NormalizeMultiply.html" alt="PV::NormalizeMultiply" shape="rect" coords="0,168,163,192"/>
-<area href="classPV_1_1NormalizeBase.html" alt="PV::NormalizeBase" shape="rect" coords="0,112,163,136"/>
-<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="0,56,163,80"/>
+<area href="classPV_1_1NormalizeMultiply.html" alt="PV::NormalizeMultiply" shape="rect" coords="0,224,186,248"/>
+<area href="classPV_1_1NormalizeBase.html" alt="PV::NormalizeBase" shape="rect" coords="0,168,186,192"/>
+<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="0,112,186,136"/>
+<area href="classPV_1_1CheckpointerDataInterface.html" alt="PV::CheckpointerDataInterface" shape="rect" coords="0,56,186,80"/>
+<area href="classPV_1_1Observer.html" alt="PV::Observer" shape="rect" coords="0,0,186,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -164,14 +166,23 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>NormalizeL2</b> (const char *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:af8810e9128e7fabc8c72767b656b1072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54781ae5aacda488dd36f507a1cb0fba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54781ae5aacda488dd36f507a1cb0fba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addWeightsToList</b> (Weights *weights)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addWeightsToList</b> (<a class="el" href="classPV_1_1Weights.html">Weights</a> *weights)</td></tr>
 <tr class="separator:a54781ae5aacda488dd36f507a1cb0fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43a76c43e2f797a7ade4555df733196e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a43a76c43e2f797a7ade4555df733196e">getDataStructuresAllocatedFlag</a> () const </td></tr>
 <tr class="separator:a43a76c43e2f797a7ade4555df733196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c415c40c6df0c91f31e72d67ecac861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c415c40c6df0c91f31e72d67ecac861"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const </td></tr>
+<tr class="separator:a7c415c40c6df0c91f31e72d67ecac861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64041ac229aaaec1c17a16f54a8ec47"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription_c</b> () const </td></tr>
+<tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a62297a7528437e9d5495a6c8b33050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3a62297a7528437e9d5495a6c8b33050">getInitialValuesSetFlag</a> () const </td></tr>
 <tr class="separator:a3a62297a7528437e9d5495a6c8b33050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839b37b0b29a957ddcacc670fdacf879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a839b37b0b29a957ddcacc670fdacf879">getInitInfoCommunicatedFlag</a> () const </td></tr>
 <tr class="separator:a839b37b0b29a957ddcacc670fdacf879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf3dbb4319223e8ca4c3431556bded7"></a>
+<a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getMPIBlock</b> ()</td></tr>
+<tr class="separator:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef3821a0875ff6179713c80fee2f90f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ef3821a0875ff6179713c80fee2f90f"></a>
 char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:a9ef3821a0875ff6179713c80fee2f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,8 +226,11 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>normalizeWeigh
 <tr class="separator:a0b6c38c4f1c4a56c20ac88ae188f897d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams</a> ()</td></tr>
 <tr class="separator:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06bf738187a1369a35c92c76d549af32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06bf738187a1369a35c92c76d549af32"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
+<tr class="separator:a06bf738187a1369a35c92c76d549af32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6efb82785e34d04f1083694c1c74f2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6efb82785e34d04f1083694c1c74f2a"></a>
-virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; BaseMessage const  &gt; message) override</td></tr>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
 <tr class="separator:ad6efb82785e34d04f1083694c1c74f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b24e49874218ac1b84418df1d9410ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams</a> ()</td></tr>
 <tr class="separator:a2b24e49874218ac1b84418df1d9410ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,8 +262,14 @@ virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>i
 <tr class="memitem:ab2b80dfefa375fe01dd3977ac6dbe6a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2b80dfefa375fe01dd3977ac6dbe6a4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_minL2NormTolerated</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:ab2b80dfefa375fe01dd3977ac6dbe6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe07f94484ec2ba3fb8fb4fbf76620c8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
+<tr class="separator:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ff254c96defbc173148731f91b847d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ff254c96defbc173148731f91b847d"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
+<tr class="separator:a42ff254c96defbc173148731f91b847d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4aa9a5740370b7c32996d47954839ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4aa9a5740370b7c32996d47954839ed"></a>
-virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (Checkpointer *checkpointer) override</td></tr>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
 <tr class="separator:ab4aa9a5740370b7c32996d47954839ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad863a4042b40d7726f805995510c30c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad863a4042b40d7726f805995510c30c6"></a>
 Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const  &gt; message)</td></tr>
@@ -268,6 +288,18 @@ Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCo
 <tr class="memitem:aa47c7879b70636ca2867ec74de77c558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47c7879b70636ca2867ec74de77c558"></a>
 Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const  &gt; message)</td></tr>
 <tr class="separator:aa47c7879b70636ca2867ec74de77c558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca6866aa72bd0f478db3b12dd5c7f8"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e89fde10ab75075ba40c1ca2952225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e89fde10ab75075ba40c1ca2952225"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ab5e89fde10ab75075ba40c1ca2952225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05426f3598c2730ef9c7aeadcef499dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05426f3598c2730ef9c7aeadcef499dc"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a05426f3598c2730ef9c7aeadcef499dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ae2aae131398925a4c06607f48c1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a5ae2aae131398925a4c06607f48c1e"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a3a5ae2aae131398925a4c06607f48c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f277fe44fd4b9348fc6daf6beffe27"></a>
 Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondSetCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
 <tr class="separator:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,6 +357,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>normalizePatch
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa0aabb8f2168a59d22dc254b1fab7b4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
+<tr class="separator:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43b6c41b34252f6f44277aec02df7c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b6c41b34252f6f44277aec02df7c7d"></a>
 PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>mCudaDevice</b> = nullptr</td></tr>
 <tr class="separator:a43b6c41b34252f6f44277aec02df7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,7 +415,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>mStrength</b> = 1.0f
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUsingGPUFlag</b> = false</td></tr>
 <tr class="separator:a7344a415af5a81abc822533dc08bf766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a346c1ec812e106268c2049c56c5b3169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a346c1ec812e106268c2049c56c5b3169"></a>
-std::vector&lt; Weights * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mWeightsList</b></td></tr>
+std::vector&lt; <a class="el" href="classPV_1_1Weights.html">Weights</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mWeightsList</b></td></tr>
 <tr class="separator:a346c1ec812e106268c2049c56c5b3169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3884fcf692a0037b51509e7736b83180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3884fcf692a0037b51509e7736b83180"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr</td></tr>

@@ -11,8 +11,11 @@ var searchData=
   ['hassouthernneighbor',['hasSouthernNeighbor',['../classPV_1_1Communicator.html#a655bd9184209e397a2b919f48d76c67d',1,'PV::Communicator']]],
   ['hassouthwesternneighbor',['hasSouthwesternNeighbor',['../classPV_1_1Communicator.html#a9960541484e77790fe88ef5faad9dff7',1,'PV::Communicator']]],
   ['haswesternneighbor',['hasWesternNeighbor',['../classPV_1_1Communicator.html#a29c407968bd6ed22af1776cde94d1618',1,'PV::Communicator']]],
+  ['hebbianupdater',['HebbianUpdater',['../classPV_1_1HebbianUpdater.html',1,'PV']]],
   ['hypercol',['HyPerCol',['../classPV_1_1HyPerCol.html',1,'PV']]],
   ['hyperconn',['HyPerConn',['../classPV_1_1HyPerConn.html',1,'PV']]],
+  ['hyperdelivery',['HyPerDelivery',['../classPV_1_1HyPerDelivery.html',1,'PV']]],
+  ['hyperdeliveryfacade',['HyPerDeliveryFacade',['../classPV_1_1HyPerDeliveryFacade.html',1,'PV']]],
   ['hyperlayer',['HyPerLayer',['../classPV_1_1HyPerLayer.html',1,'PV']]],
   ['hyperlcalayer',['HyPerLCALayer',['../classPV_1_1HyPerLCALayer.html',1,'PV']]],
   ['hyperlcaparams',['HyPerLCAParams',['../structPVCuda_1_1HyPerLCAParams.html',1,'PVCuda']]]

@@ -163,12 +163,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeBatch</b> (
 <tr class="memitem:a2347717740b5463a76bd89d7d8e6eaab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2347717740b5463a76bd89d7d8e6eaab"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>nextIndex</b> (int localBatchIndex)</td></tr>
 <tr class="separator:a2347717740b5463a76bd89d7d8e6eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32fdf46b136d502cf0c29a2bf6f3d85e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32fdf46b136d502cf0c29a2bf6f3d85e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:a32fdf46b136d502cf0c29a2bf6f3d85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fd503a986f21f045fc621f5a2512910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fd503a986f21f045fc621f5a2512910"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
-<tr class="separator:a8fd503a986f21f045fc621f5a2512910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11173724d971b938fe6192f990d087b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11173724d971b938fe6192f990d087b0"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
+<tr class="separator:a11173724d971b938fe6192f990d087b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1061ba060f221fa7f46a44defa294966"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1061ba060f221fa7f46a44defa294966"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:a1061ba060f221fa7f46a44defa294966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8c0e138ea762773b2f0e7959c3fde7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8c0e138ea762773b2f0e7959c3fde7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setIndices</b> (const std::vector&lt; int &gt; &amp;indices)</td></tr>
 <tr class="separator:ab8c0e138ea762773b2f0e7959c3fde7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,27 +189,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>specifyBatching</b> (
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0a9523f74e52675f68906b02237d456e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BatchIndexer.html#a0a9523f74e52675f68906b02237d456e">checkIndices</a> ()</td></tr>
 <tr class="separator:a0a9523f74e52675f68906b02237d456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb7d097ddb409efd7ad05579366512c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fb7d097ddb409efd7ad05579366512c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
-<tr class="separator:a0fb7d097ddb409efd7ad05579366512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15db2e73ba65161abc815c1b7184bc63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15db2e73ba65161abc815c1b7184bc63"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> () override</td></tr>
-<tr class="separator:a15db2e73ba65161abc815c1b7184bc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ab3785b1b12a233e2c69616c5eb882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60ab3785b1b12a233e2c69616c5eb882"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:a60ab3785b1b12a233e2c69616c5eb882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade83d65746a70640711074e6f7f8a758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade83d65746a70640711074e6f7f8a758"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (<a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const *message)</td></tr>
-<tr class="separator:ade83d65746a70640711074e6f7f8a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fffadbdec8131a917eab501677a103a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fffadbdec8131a917eab501677a103a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (<a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const *message)</td></tr>
-<tr class="separator:a5fffadbdec8131a917eab501677a103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3da2fb96c4743f826132f8b14769247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da2fb96c4743f826132f8b14769247"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (<a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:af3da2fb96c4743f826132f8b14769247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77e7d318845863fcda565dc015317b41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77e7d318845863fcda565dc015317b41"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (<a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:a77e7d318845863fcda565dc015317b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe07f94484ec2ba3fb8fb4fbf76620c8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
+<tr class="separator:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3af8fea10110e661af7a74fbfbd866a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3af8fea10110e661af7a74fbfbd866a"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> () override</td></tr>
+<tr class="separator:ae3af8fea10110e661af7a74fbfbd866a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682c4d5ef677164520fccdb371b0e256"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a682c4d5ef677164520fccdb371b0e256"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
+<tr class="separator:a682c4d5ef677164520fccdb371b0e256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca6866aa72bd0f478db3b12dd5c7f8"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e89fde10ab75075ba40c1ca2952225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e89fde10ab75075ba40c1ca2952225"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ab5e89fde10ab75075ba40c1ca2952225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05426f3598c2730ef9c7aeadcef499dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05426f3598c2730ef9c7aeadcef499dc"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a05426f3598c2730ef9c7aeadcef499dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ae2aae131398925a4c06607f48c1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a5ae2aae131398925a4c06607f48c1e"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a3a5ae2aae131398925a4c06607f48c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -285,7 +285,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mWrapToStartIndex</b>
 </div><div class="memdoc">
 <p>Exits with error if any of index is negative or &gt;= fileCount. Called when reading or initializing from checkpoint. </p>
 
-<p>Definition at line <a class="el" href="BatchIndexer_8cpp_source.html#l00145">145</a> of file <a class="el" href="BatchIndexer_8cpp_source.html">BatchIndexer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BatchIndexer_8cpp_source.html#l00148">148</a> of file <a class="el" href="BatchIndexer_8cpp_source.html">BatchIndexer.cpp</a>.</p>
 
 </div>
 </div>

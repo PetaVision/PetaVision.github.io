@@ -172,7 +172,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a506ac4c8b40cc5acaa32389a176b7c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">energyProbe: If nonblank, specifies the name of a <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> that this probe contributes an energy term to. <br /></td></tr>
 <tr class="separator:a506ac4c8b40cc5acaa32389a176b7c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64f71d173174c9216fb727dc5bd1ac75"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a64f71d173174c9216fb727dc5bd1ac75">ioParam_coefficient</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a64f71d173174c9216fb727dc5bd1ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficient: If energyProbe is set, the coefficient parameter specifies that <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> multiplies the result of this probe's <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> method by coefficient when computing the error.  <a href="#a64f71d173174c9216fb727dc5bd1ac75">More...</a><br /></td></tr>
+<tr class="memdesc:a64f71d173174c9216fb727dc5bd1ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficient: If energyProbe is set, the coefficient parameter specifies that <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> multiplies the result of this probe's <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> method by coefficient when computing the error.  <a href="#a64f71d173174c9216fb727dc5bd1ac75">More...</a><br /></td></tr>
 <tr class="separator:a64f71d173174c9216fb727dc5bd1ac75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -200,8 +200,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f90c8d6fe42dc466d9dc666f583ce3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d17b69eee901984b928e7896416126e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a6d17b69eee901984b928e7896416126e">getCoefficient</a> ()</td></tr>
 <tr class="separator:a6d17b69eee901984b928e7896416126e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf468d55824cf21920893c6b7e11b90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a9bf468d55824cf21920893c6b7e11b90">getDataStructuresAllocatedFlag</a> ()</td></tr>
-<tr class="separator:a9bf468d55824cf21920893c6b7e11b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a76c43e2f797a7ade4555df733196e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a43a76c43e2f797a7ade4555df733196e">getDataStructuresAllocatedFlag</a> () const </td></tr>
+<tr class="separator:a43a76c43e2f797a7ade4555df733196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c415c40c6df0c91f31e72d67ecac861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c415c40c6df0c91f31e72d67ecac861"></a>
 std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const </td></tr>
 <tr class="separator:a7c415c40c6df0c91f31e72d67ecac861"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,13 +210,10 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptio
 <tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a914c549f88b5d2949d62343a3eddefb3"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a914c549f88b5d2949d62343a3eddefb3">getEnergyProbe</a> ()</td></tr>
 <tr class="separator:a914c549f88b5d2949d62343a3eddefb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17073bd03d7bbee439f49000b2573e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#ac17073bd03d7bbee439f49000b2573e0">getInitialValuesSetFlag</a> ()</td></tr>
-<tr class="separator:ac17073bd03d7bbee439f49000b2573e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbcf6cd9cb65680fd32734eb8880661"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#adcbcf6cd9cb65680fd32734eb8880661">getInitInfoCommunicatedFlag</a> ()</td></tr>
-<tr class="separator:adcbcf6cd9cb65680fd32734eb8880661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0406ed3733882c3f65e5ca55fb32cf"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyword</b> () const </td></tr>
-<tr class="separator:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a62297a7528437e9d5495a6c8b33050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3a62297a7528437e9d5495a6c8b33050">getInitialValuesSetFlag</a> () const </td></tr>
+<tr class="separator:a3a62297a7528437e9d5495a6c8b33050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839b37b0b29a957ddcacc670fdacf879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a839b37b0b29a957ddcacc670fdacf879">getInitInfoCommunicatedFlag</a> () const </td></tr>
+<tr class="separator:a839b37b0b29a957ddcacc670fdacf879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5d42840f4e125324dd8faee1c48aebd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#ad5d42840f4e125324dd8faee1c48aebd">getLastUpdateTime</a> ()</td></tr>
 <tr class="separator:ad5d42840f4e125324dd8faee1c48aebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d1be24ee50046634395e23979c706e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#ac1d1be24ee50046634395e23979c706e">getMaskLayer</a> ()</td></tr>
@@ -231,6 +228,9 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> (
 <tr class="separator:a9ef3821a0875ff6179713c80fee2f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c4d1030776ed07d3019125cb0a7fee3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues</a> ()</td></tr>
 <tr class="separator:a1c4d1030776ed07d3019125cb0a7fee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7c1411dbf4d057ccdaf0fd269ad00df"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectType</b> () const </td></tr>
+<tr class="separator:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3529fc2edf4e017a25739a700551382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3529fc2edf4e017a25739a700551382"></a>
 <a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetLayer</b> ()</td></tr>
 <tr class="separator:aa3529fc2edf4e017a25739a700551382"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,41 +238,46 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> (
 <tr class="separator:ab0627677547cafe51f64513035e6077b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af85016fed624cb3101468fea721f29e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue</a> (double timevalue, int index)</td></tr>
 <tr class="separator:af85016fed624cb3101468fea721f29e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fb423c7234cbce2f09f140316b2b5b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues</a> (double timevalue, double *valuesVector)</td></tr>
-<tr class="separator:a4fb423c7234cbce2f09f140316b2b5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc7f138d1ac0c6582a0a5731b4772d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a4fc7f138d1ac0c6582a0a5731b4772d2">getValues</a> (double timevalue, std::vector&lt; double &gt; *valuesVector)</td></tr>
-<tr class="separator:a4fc7f138d1ac0c6582a0a5731b4772d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6d8d2662d0eb0bfc2c1dd555ac3ade"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a6d8d2662d0eb0bfc2c1dd555ac3ade"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParams</b> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="separator:a7a6d8d2662d0eb0bfc2c1dd555ac3ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab2ba52c8774b2c803980570f3b9b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues</a> (double timevalue, double *valuesVector)</td></tr>
+<tr class="separator:a0ab2ba52c8774b2c803980570f3b9b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafdfe34766971fd3b53adc7f05ac3e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#abafdfe34766971fd3b53adc7f05ac3e9">getValues</a> (double timevalue, std::vector&lt; double &gt; *valuesVector)</td></tr>
+<tr class="separator:abafdfe34766971fd3b53adc7f05ac3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a83e3ba4add9e893209d7fe9b47e9372e">ioParams</a> (enum ParamsIOFlag ioFlag, bool printHeader, bool printFooter)</td></tr>
+<tr class="separator:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5c65491ce48cd9db15e606535db948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3c5c65491ce48cd9db15e606535db948">isUsingGPU</a> () const </td></tr>
 <tr class="separator:a3c5c65491ce48cd9db15e606535db948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a995875a09a43b39d5a4c6c898c7d2aac"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a995875a09a43b39d5a4c6c898c7d2aac">outputStateWrapper</a> (double timef, double dt)</td></tr>
-<tr class="separator:a995875a09a43b39d5a4c6c898c7d2aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a421e5c48cc7d2878c5950ae023823902"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a421e5c48cc7d2878c5950ae023823902">registerData</a> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:a421e5c48cc7d2878c5950ae023823902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11afdb87581f766056a4adbae5516d05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11afdb87581f766056a4adbae5516d05"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
-<tr class="separator:a11afdb87581f766056a4adbae5516d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a98b410a1e69fa3d772b8d4b155a27d2b">lookupKeyword</a> () const </td></tr>
+<tr class="separator:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8a3674a2abeafb8c16fb17e28f826a"><td class="memItemLeft" align="right" valign="top">virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#aad8a3674a2abeafb8c16fb17e28f826a">outputStateWrapper</a> (double timef, double dt)</td></tr>
+<tr class="separator:aad8a3674a2abeafb8c16fb17e28f826a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams</a> ()</td></tr>
+<tr class="separator:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f09a0017caaaa9510165e5a9bfb9d8"><td class="memItemLeft" align="right" valign="top">virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#ac2f09a0017caaaa9510165e5a9bfb9d8">registerData</a> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
+<tr class="separator:ac2f09a0017caaaa9510165e5a9bfb9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb5d20d64d50442571479d9f10cbaec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abeb5d20d64d50442571479d9f10cbaec"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:abeb5d20d64d50442571479d9f10cbaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b24e49874218ac1b84418df1d9410ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams</a> ()</td></tr>
+<tr class="separator:a2b24e49874218ac1b84418df1d9410ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb28c4a7ea3be317bae040d52a40923"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebb28c4a7ea3be317bae040d52a40923"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>writeTimer</b> (<a class="el" href="classPV_1_1PrintStream.html">PrintStream</a> &amp;stream)</td></tr>
 <tr class="separator:aebb28c4a7ea3be317bae040d52a40923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6754964b75b2b41d90b757a54c28ef77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6754964b75b2b41d90b757a54c28ef77"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> ()</td></tr>
-<tr class="separator:a6754964b75b2b41d90b757a54c28ef77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f03d9d3b2186360fc8b697f778844d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a45f03d9d3b2186360fc8b697f778844d">calcValues</a> (double timeValue) override</td></tr>
-<tr class="separator:a45f03d9d3b2186360fc8b697f778844d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b350cdafae777da79118917c9c4b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b350cdafae777da79118917c9c4b72"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
-<tr class="separator:ab5b350cdafae777da79118917c9c4b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab38cbdcc93ad1eb5981c1286c6480422"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#ab38cbdcc93ad1eb5981c1286c6480422">communicateInitInfo</a> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message) override</td></tr>
-<tr class="separator:ab38cbdcc93ad1eb5981c1286c6480422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afefe3f5e1ecaf0222cf3cf728068160e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afefe3f5e1ecaf0222cf3cf728068160e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> ()</td></tr>
-<tr class="separator:afefe3f5e1ecaf0222cf3cf728068160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90eb6c46ade977e82014957a87345d98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90eb6c46ade977e82014957a87345d98"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> ()</td></tr>
+<tr class="separator:a90eb6c46ade977e82014957a87345d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a4ac78c8f3acce842bf3cdc507da4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a99a4ac78c8f3acce842bf3cdc507da4c">calcValues</a> (double timeValue) override</td></tr>
+<tr class="separator:a99a4ac78c8f3acce842bf3cdc507da4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845b81d2f93eb136a83e12953286a008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a845b81d2f93eb136a83e12953286a008"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
+<tr class="separator:a845b81d2f93eb136a83e12953286a008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be53d36f4f8a3e5c1fc95af4fd556bf"><td class="memItemLeft" align="right" valign="top">virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a1be53d36f4f8a3e5c1fc95af4fd556bf">communicateInitInfo</a> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:a1be53d36f4f8a3e5c1fc95af4fd556bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab76e803b59d1badd4be6610951434c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab76e803b59d1badd4be6610951434c4"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> ()</td></tr>
+<tr class="separator:aab76e803b59d1badd4be6610951434c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac96d9dd9e441f16a94e3f40533f1567c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#ac96d9dd9e441f16a94e3f40533f1567c">getMessage</a> ()</td></tr>
 <tr class="separator:ac96d9dd9e441f16a94e3f40533f1567c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f246b475a0a8c6934023e36f647aec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f246b475a0a8c6934023e36f647aec3"></a>
@@ -284,24 +289,23 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getNormDescri
 <tr class="separator:acbba1221bc1947a7997601976160a777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a2654991177b6d28552807ed7dab5ce"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1L0NormProbe.html#a7a2654991177b6d28552807ed7dab5ce">getValueInternal</a> (double timevalue, int index) override</td></tr>
 <tr class="separator:a7a2654991177b6d28552807ed7dab5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0daca7bdb8e8560cbcc0ba4fab645f9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a0daca7bdb8e8560cbcc0ba4fab645f9c">getValues</a> (double timevalue)</td></tr>
-<tr class="separator:a0daca7bdb8e8560cbcc0ba4fab645f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0926c9779ed13f0eac3bf09d09687b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a2a0926c9779ed13f0eac3bf09d09687b">getValues</a> (double timevalue)</td></tr>
+<tr class="separator:a2a0926c9779ed13f0eac3bf09d09687b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f01d3ba9752cf82216936027a11e97"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a49f01d3ba9752cf82216936027a11e97">getValuesBuffer</a> ()</td></tr>
 <tr class="separator:a49f01d3ba9752cf82216936027a11e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3632f9ef0928f6e8ea11c74586364d2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3632f9ef0928f6e8ea11c74586364d2a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const char *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:a3632f9ef0928f6e8ea11c74586364d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae838344cc3714ebd174e027935d8ef42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae838344cc3714ebd174e027935d8ef42"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initializeState</b> ()</td></tr>
-<tr class="separator:ae838344cc3714ebd174e027935d8ef42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f88113a34386d299f46b1a9df5545ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f88113a34386d299f46b1a9df5545ba"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>initializeState</b> ()</td></tr>
+<tr class="separator:a5f88113a34386d299f46b1a9df5545ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb2c6abb9a5d04fdf844622df7095a41"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#abb2c6abb9a5d04fdf844622df7095a41">initMessage</a> (const char *msg)</td></tr>
 <tr class="separator:abb2c6abb9a5d04fdf844622df7095a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afece8db3867a87e46d6c9967c384c48e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#afece8db3867a87e46d6c9967c384c48e">initNumValues</a> ()</td></tr>
-<tr class="separator:afece8db3867a87e46d6c9967c384c48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9688fe3ec8e6b0ef01059f3bcf516a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#aac9688fe3ec8e6b0ef01059f3bcf516a">initNumValues</a> ()</td></tr>
+<tr class="separator:aac9688fe3ec8e6b0ef01059f3bcf516a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad80ee0e1b1d28eaeb4fe0c21c105eab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#aad80ee0e1b1d28eaeb4fe0c21c105eab">initOutputStreams</a> (const char *filename, <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
 <tr class="separator:aad80ee0e1b1d28eaeb4fe0c21c105eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b0e4892d9d3a75ceef34a853c76a8b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b0e4892d9d3a75ceef34a853c76a8b4"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParamsFillGroup</b> (enum ParamsIOFlag ioFlag) override</td></tr>
+<tr class="memitem:a0b0e4892d9d3a75ceef34a853c76a8b4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1L0NormProbe.html#a0b0e4892d9d3a75ceef34a853c76a8b4">ioParamsFillGroup</a> (enum ParamsIOFlag ioFlag) override</td></tr>
 <tr class="separator:a0b0e4892d9d3a75ceef34a853c76a8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b9d7e60f5914dee3b1d1162000df7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a15b9d7e60f5914dee3b1d1162000df7d">isWritingToFile</a> () const </td></tr>
 <tr class="separator:a15b9d7e60f5914dee3b1d1162000df7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,51 +317,57 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParamsFillGr
 <tr class="separator:ad7e767adce6ecd1e2870b2280cfda394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924bcc2930249fa252a8f1f3b384a329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPV_1_1PrintStream.html">PrintStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a924bcc2930249fa252a8f1f3b384a329">output</a> (int b)</td></tr>
 <tr class="separator:a924bcc2930249fa252a8f1f3b384a329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3f9c81eea13c562b531d15ce19488d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a2e3f9c81eea13c562b531d15ce19488d">outputState</a> (double timevalue) override</td></tr>
-<tr class="separator:a2e3f9c81eea13c562b531d15ce19488d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb7d097ddb409efd7ad05579366512c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fb7d097ddb409efd7ad05579366512c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
-<tr class="separator:a0fb7d097ddb409efd7ad05579366512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1f91b7b4124dcc805c7d7cab3b1c5d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
-<tr class="separator:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca295a8f39968378f834a028db6004ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca295a8f39968378f834a028db6004ea"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:aca295a8f39968378f834a028db6004ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73cc343e700ce0b683ec8c6c12cd810"><td class="memItemLeft" align="right" valign="top">virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#ab73cc343e700ce0b683ec8c6c12cd810">outputState</a> (double timevalue) override</td></tr>
+<tr class="separator:ab73cc343e700ce0b683ec8c6c12cd810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe07f94484ec2ba3fb8fb4fbf76620c8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
+<tr class="separator:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ff254c96defbc173148731f91b847d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ff254c96defbc173148731f91b847d"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
+<tr class="separator:a42ff254c96defbc173148731f91b847d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4aa9a5740370b7c32996d47954839ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4aa9a5740370b7c32996d47954839ed"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
+<tr class="separator:ab4aa9a5740370b7c32996d47954839ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5970a7683da815aec6addb3918a5de"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1LayerProbe.html#a1a5970a7683da815aec6addb3918a5de">referenceUpdateTime</a> () const override</td></tr>
 <tr class="separator:a1a5970a7683da815aec6addb3918a5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79cb5cbaa97207dc87e5d131c9a9d874"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (<a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const *message)</td></tr>
-<tr class="separator:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff396229b0bf91d9ac27c43565845f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adff396229b0bf91d9ac27c43565845f2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (<a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const *message)</td></tr>
-<tr class="separator:adff396229b0bf91d9ac27c43565845f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1ae693fa8e04c2ea08ae840168f97f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message)</td></tr>
-<tr class="separator:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78df1b727320675ddd2cfcf902348add"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78df1b727320675ddd2cfcf902348add"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPUMessage</b> (<a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const *message)</td></tr>
-<tr class="separator:a78df1b727320675ddd2cfcf902348add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43bb4f5ce064f8ff0de1794194e7a25"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (<a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const *message)</td></tr>
-<tr class="separator:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade83d65746a70640711074e6f7f8a758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade83d65746a70640711074e6f7f8a758"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (<a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const *message)</td></tr>
-<tr class="separator:ade83d65746a70640711074e6f7f8a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fffadbdec8131a917eab501677a103a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fffadbdec8131a917eab501677a103a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (<a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const *message)</td></tr>
-<tr class="separator:a5fffadbdec8131a917eab501677a103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3da2fb96c4743f826132f8b14769247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da2fb96c4743f826132f8b14769247"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (<a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:af3da2fb96c4743f826132f8b14769247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b833a0cf0c1922458388a811006af54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b833a0cf0c1922458388a811006af54"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (<a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:a0b833a0cf0c1922458388a811006af54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad863a4042b40d7726f805995510c30c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad863a4042b40d7726f805995510c30c6"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ad863a4042b40d7726f805995510c30c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e078116ddda23b766338ed3addb412a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e078116ddda23b766338ed3addb412a"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a9e078116ddda23b766338ed3addb412a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067cdeb7c51f047107f28c3de9655956"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a067cdeb7c51f047107f28c3de9655956"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a067cdeb7c51f047107f28c3de9655956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710011d28c2683a2e318ae616bbb3a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a710011d28c2683a2e318ae616bbb3a10"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPU</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a710011d28c2683a2e318ae616bbb3a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47c7879b70636ca2867ec74de77c558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47c7879b70636ca2867ec74de77c558"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:aa47c7879b70636ca2867ec74de77c558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca6866aa72bd0f478db3b12dd5c7f8"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e89fde10ab75075ba40c1ca2952225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e89fde10ab75075ba40c1ca2952225"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ab5e89fde10ab75075ba40c1ca2952225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05426f3598c2730ef9c7aeadcef499dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05426f3598c2730ef9c7aeadcef499dc"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a05426f3598c2730ef9c7aeadcef499dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ae2aae131398925a4c06607f48c1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a5ae2aae131398925a4c06607f48c1e"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a3a5ae2aae131398925a4c06607f48c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f277fe44fd4b9348fc6daf6beffe27"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondSetCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fb98688aae294fc831a98eff7c4963"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06fb98688aae294fc831a98eff7c4963"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>setCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a06fb98688aae294fc831a98eff7c4963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag</a> ()</td></tr>
 <tr class="separator:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f70db9d095af3ccd8b2779875725d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29f70db9d095af3ccd8b2779875725d8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
-<tr class="separator:a29f70db9d095af3ccd8b2779875725d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e0247aaf1fc57d8fe1e05b0a6df8da7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
+<tr class="separator:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e51ec8095c3fbb202d08607d2aed485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag</a> ()</td></tr>
 <tr class="separator:a3e51ec8095c3fbb202d08607d2aed485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1072dbfba0a7210053a914d54cc4aa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag</a> ()</td></tr>
@@ -369,8 +379,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (char cons
 <tr class="separator:af89b11930d024bfd9b5a8575726f701d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f47608eb5b9c941e2a92c6692b13e66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1AbstractNormProbe.html#a4f47608eb5b9c941e2a92c6692b13e66">setNormDescriptionToString</a> (char const *s)</td></tr>
 <tr class="separator:a4f47608eb5b9c941e2a92c6692b13e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1833be5476f6d4a9cf97e74b7adc0fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#ae1833be5476f6d4a9cf97e74b7adc0fe">setNumValues</a> (int n)</td></tr>
-<tr class="separator:ae1833be5476f6d4a9cf97e74b7adc0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5813de455881d5212f30dd8754a73c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseProbe.html#a5813de455881d5212f30dd8754a73c26">setNumValues</a> (int n)</td></tr>
+<tr class="separator:a5813de455881d5212f30dd8754a73c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2c928c3859d8682271b323131813fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d2c928c3859d8682271b323131813fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setObjectType</b> () override</td></tr>
+<tr class="separator:a5d2c928c3859d8682271b323131813fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1d4fbdc63cd8f1aae605937c2a275e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -386,9 +399,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b
 <tr class="memitem:a044ac2aed0af7af8705a4f8399e6fd7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a044ac2aed0af7af8705a4f8399e6fd7d"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>energyProbe</b></td></tr>
 <tr class="separator:a044ac2aed0af7af8705a4f8399e6fd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b6c41b34252f6f44277aec02df7c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b6c41b34252f6f44277aec02df7c7d"></a>
+PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>mCudaDevice</b> = nullptr</td></tr>
+<tr class="separator:a43b6c41b34252f6f44277aec02df7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a1715f42d6d9804d722dd0f976a105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6a1715f42d6d9804d722dd0f976a105"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInitialValuesSetFlag</b> = false</td></tr>
 <tr class="separator:aa6a1715f42d6d9804d722dd0f976a105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004296bae14fa4a57382973a796e75f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a004296bae14fa4a57382973a796e75f1"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mObjectType</b></td></tr>
+<tr class="separator:a004296bae14fa4a57382973a796e75f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a84549fb9d47ea719a3b7c935eb546e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a84549fb9d47ea719a3b7c935eb546e"></a>
 std::vector&lt; <a class="el" href="classPV_1_1PrintStream.html">PrintStream</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mOutputStreams</b></td></tr>
 <tr class="separator:a1a84549fb9d47ea719a3b7c935eb546e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -434,7 +453,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Definition at line <a class="el" href="L0NormProbe_8hpp_source.html#l00020">20</a> of file <a class="el" href="L0NormProbe_8hpp_source.html">L0NormProbe.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a45f03d9d3b2186360fc8b697f778844d"></a>
+<a class="anchor" id="a99a4ac78c8f3acce842bf3cdc507da4c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -442,7 +461,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::AbstractNormProbe::calcValues </td>
+          <td class="memname">void PV::AbstractNormProbe::calcValues </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timeValue</em></td><td>)</td>
@@ -457,15 +476,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Computes the norms. Each MPI process calls getValueInternal to compute its own contribution to the norms, and then calcValues calls MPI_Allreduce. </p>
 
-<p>Implements <a class="el" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">PV::BaseProbe</a>.</p>
+<p>Implements <a class="el" href="classPV_1_1BaseProbe.html#a923823592d420f29ee73e7b974f27772">PV::BaseProbe</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1L2NormProbe.html#aa27429716791f251d4f958f69bcb27b9">PV::L2NormProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1L2NormProbe.html#abe7df1a8f20d6bd9a21cd4ad968823be">PV::L2NormProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00131">131</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00136">136</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab38cbdcc93ad1eb5981c1286c6480422"></a>
+<a class="anchor" id="a1be53d36f4f8a3e5c1fc95af4fd556bf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -473,9 +492,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::AbstractNormProbe::communicateInitInfo </td>
+          <td class="memname">Response::Status PV::AbstractNormProbe::communicateInitInfo </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
@@ -486,13 +505,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Calls <a class="el" href="classPV_1_1LayerProbe.html#a13b2e0fa5f8dc3c0cd82d7416b5f2dc1">LayerProbe::communicateInitInfo</a> to set up the targetLayer and attach the probe; and then checks the masking layer if masking is used. </p>
+<p>Calls <a class="el" href="classPV_1_1LayerProbe.html#a6d03cb615e190512601f1f3176d52789">LayerProbe::communicateInitInfo</a> to set up the targetLayer and attach the probe; and then checks the masking layer if masking is used. </p>
 
-<p>Reimplemented from <a class="el" href="classPV_1_1LayerProbe.html#a13b2e0fa5f8dc3c0cd82d7416b5f2dc1">PV::LayerProbe</a>.</p>
+<p>Reimplemented from <a class="el" href="classPV_1_1LayerProbe.html#a6d03cb615e190512601f1f3176d52789">PV::LayerProbe</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1FirmThresholdCostFnProbe.html#ab69573b8caf65b7ae933f46a1efde2a5">PV::FirmThresholdCostFnProbe</a>, <a class="el" href="classPV_1_1FirmThresholdCostFnLCAProbe.html#af5dad6acec39ef98e7c1922803356960">PV::FirmThresholdCostFnLCAProbe</a>, <a class="el" href="classPV_1_1L0NormLCAProbe.html#a24b2ef89e9e2836dfb17e205faaf0fde">PV::L0NormLCAProbe</a>, and <a class="el" href="classPV_1_1L1NormLCAProbe.html#a33d44147d06ca470945141971134d985">PV::L1NormLCAProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1FirmThresholdCostFnProbe.html#ac05f1ab25fcaba928547bde5d65c3179">PV::FirmThresholdCostFnProbe</a>, <a class="el" href="classPV_1_1FirmThresholdCostFnLCAProbe.html#af7861bef73765f776179c8efcaf19f6f">PV::FirmThresholdCostFnLCAProbe</a>, <a class="el" href="classPV_1_1L0NormLCAProbe.html#a129fd6bf3b0c0fd47d7643272bca4b0c">PV::L0NormLCAProbe</a>, and <a class="el" href="classPV_1_1L1NormLCAProbe.html#a5768af7042804a97de24599558e40ff8">PV::L1NormLCAProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00057">57</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00059">59</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -518,11 +537,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns the coefficient if the energy probe is set. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00096">96</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00095">95</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9bf468d55824cf21920893c6b7e11b90"></a>
+<a class="anchor" id="a43a76c43e2f797a7ade4555df733196e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -533,7 +552,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
           <td class="memname">bool PV::BaseObject::getDataStructuresAllocatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -544,7 +563,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Get-method for mDataStructuresAllocatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00065">65</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00102">102</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,11 +589,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns the name of the energy probe the probe is attached to (null if not attached to an energy probe) </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00091">91</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00090">90</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac17073bd03d7bbee439f49000b2573e0"></a>
+<a class="anchor" id="a3a62297a7528437e9d5495a6c8b33050"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -585,7 +604,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
           <td class="memname">bool PV::BaseObject::getInitialValuesSetFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -596,11 +615,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Get-method for mInitialValuesSetFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00071">71</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00108">108</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adcbcf6cd9cb65680fd32734eb8880661"></a>
+<a class="anchor" id="a839b37b0b29a957ddcacc670fdacf879"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -611,7 +630,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
           <td class="memname">bool PV::BaseObject::getInitInfoCommunicatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -622,7 +641,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Get-method for mInitInfoCommunicatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00058">58</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00095">95</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -646,9 +665,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the time that calcValues was last called. <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a> updates the last update time in <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> and <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a>, based on the result of needRecalc. </p>
+<p>Returns the time that calcValues was last called. <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a> updates the last update time in <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> and <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a>, based on the result of needRecalc. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00103">103</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00102">102</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,7 +745,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns a pointer to the message parameter. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00278">278</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00280">280</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -750,9 +769,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of value indices the probe can compute (typically the value of the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s nBatch parameter). <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">BaseProbe::getNumValues()</a> returns the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s getNBatch(), which can be overridden. Probes derived from <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a> can set numValues to zero or a negative number to indicate that <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> and <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> are not fully implemented for that probe. </p>
+<p>Returns the number of value indices the probe can compute (typically the value of the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s nBatch parameter). <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">BaseProbe::getNumValues()</a> returns the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s getNBatch(), which can be overridden. Probes derived from <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a> can set numValues to zero or a negative number to indicate that <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> and <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> are not fully implemented for that probe. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00062">62</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00061">61</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -778,7 +797,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns the probeOutputFilename parameter </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00312">312</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00314">314</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +823,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns the name of the targetName parameter for this probe. <a class="el" href="classPV_1_1LayerProbe.html">LayerProbe</a> uses targetName to specify the layer to attach to; <a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a> uses it to specify the connection to attach to. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00084">84</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00083">83</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +849,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns the value of the textOutputFlag parameter </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00322">322</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00324">324</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,9 +884,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> is meant for situations where the caller needs one value that would be returned by <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a>, not the whole buffer. <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> returns a signaling NaN if index is out of bounds. If index is valid, <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, and then returns probeValues[index]. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
+<p><a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> is meant for situations where the caller needs one value that would be returned by <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a>, not the whole buffer. <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> returns a signaling NaN if index is out of bounds. If index is valid, <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#a923823592d420f29ee73e7b974f27772">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, and then returns probeValues[index]. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00359">359</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00346">346</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -902,16 +921,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>getValueInternal(double, index) is a pure virtual function called by <a class="el" href="classPV_1_1AbstractNormProbe.html#a45f03d9d3b2186360fc8b697f778844d">calcValues()</a>. The index refers to the layer's batch element index.</p>
+<p>getValueInternal(double, index) is a pure virtual function called by <a class="el" href="classPV_1_1AbstractNormProbe.html#a99a4ac78c8f3acce842bf3cdc507da4c">calcValues()</a>. The index refers to the layer's batch element index.</p>
 <p>Typically, getValueInternal should compute the contribution to the norm from its own MPI process. Then calcValues calls MPI_Allreduce. </p>
 
 <p>Implements <a class="el" href="classPV_1_1AbstractNormProbe.html#ad8b5ef3d65e17599c5429ddeeb1f1d2d">PV::AbstractNormProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="L0NormProbe_8cpp_source.html#l00036">36</a> of file <a class="el" href="L0NormProbe_8cpp_source.html">L0NormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="L0NormProbe_8cpp_source.html#l00037">37</a> of file <a class="el" href="L0NormProbe_8cpp_source.html">L0NormProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4fb423c7234cbce2f09f140316b2b5b2"></a>
+<a class="anchor" id="a0ab2ba52c8774b2c803980570f3b9b85"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -919,7 +938,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::getValues </td>
+          <td class="memname">void PV::BaseProbe::getValues </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timevalue</em>, </td>
@@ -942,13 +961,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues(double timevalue, double * values)</a> sets the buffer 'values' with the probe's calculated values. It assumes that the values buffer is large enough to hold <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> double-precision values. If 'values' is NULL, the values are still updated internally if needed, but those values are not returned. Internally, <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#ae967a3ffa7796ce57447578b387a2555">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> is true. It then copies the probeValues buffer to the input argument buffer 'values'. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
+<p><a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues(double timevalue, double * values)</a> sets the buffer 'values' with the probe's calculated values. It assumes that the values buffer is large enough to hold <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> double-precision values. If 'values' is NULL, the values are still updated internally if needed, but those values are not returned. Internally, <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> calls <a class="el" href="classPV_1_1BaseProbe.html#a923823592d420f29ee73e7b974f27772">calcValues()</a> if <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> is true. It then copies the probeValues buffer to the input argument buffer 'values'. Derived classes should not override or hide this method. Instead, they should override calcValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00346">346</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00336">336</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4fc7f138d1ac0c6582a0a5731b4772d2"></a>
+<a class="anchor" id="abafdfe34766971fd3b53adc7f05ac3e9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -956,7 +975,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::getValues </td>
+          <td class="memname">void PV::BaseProbe::getValues </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timevalue</em>, </td>
@@ -979,13 +998,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>getValues(double timevalue, vector&lt;double&gt; * valuesVector) is a wrapper around <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues(double, double *)</a> that uses C++ vectors. It resizes valuesVector to size <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> and then fills the vector with the values returned by getValues. </p>
+<p>getValues(double timevalue, vector&lt;double&gt; * valuesVector) is a wrapper around <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues(double, double *)</a> that uses C++ vectors. It resizes valuesVector to size <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a> and then fills the vector with the values returned by getValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00354">354</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00341">341</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0daca7bdb8e8560cbcc0ba4fab645f9c"></a>
+<a class="anchor" id="a2a0926c9779ed13f0eac3bf09d09687b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -993,7 +1012,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::getValues </td>
+          <td class="memname">void PV::BaseProbe::getValues </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timevalue</em></td><td>)</td>
@@ -1006,9 +1025,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, <a class="el" href="classPV_1_1BaseProbe.html#a0daca7bdb8e8560cbcc0ba4fab645f9c">getValues(double)</a> updates the probeValues buffer (by calling calcValues) and sets lastUpdateTime to the timevalue input argument. </p>
+<p>If <a class="el" href="classPV_1_1BaseProbe.html#a722c99f60f7f7e9011e8c4e099102ff1">needRecalc()</a> returns true, <a class="el" href="classPV_1_1BaseProbe.html#a2a0926c9779ed13f0eac3bf09d09687b">getValues(double)</a> updates the probeValues buffer (by calling calcValues) and sets lastUpdateTime to the timevalue input argument. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00335">335</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00329">329</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1053,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns a pointer to the buffer containing the probeValues. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00317">317</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00319">319</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -1061,11 +1080,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>The method called by <a class="el" href="classPV_1_1BaseProbe.html#a5503fc12738648dc288c56e2018e2440">BaseProbe::initialize()</a> to set the message used by the probe's outputState method. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00289">289</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00282">282</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afece8db3867a87e46d6c9967c384c48e"></a>
+<a class="anchor" id="aac9688fe3ec8e6b0ef01059f3bcf516a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1073,7 +1092,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::initNumValues </td>
+          <td class="memname">void PV::BaseProbe::initNumValues </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1085,11 +1104,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>initNumValues is called by initialize. <a class="el" href="classPV_1_1BaseProbe.html#afece8db3867a87e46d6c9967c384c48e">BaseProbe::initNumValues</a> sets numValues to the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s getNBatch(). Derived classes can override initNumValues to initialize numValues to a different value. </p>
+<p>initNumValues is called by initialize. <a class="el" href="classPV_1_1BaseProbe.html#aac9688fe3ec8e6b0ef01059f3bcf516a">BaseProbe::initNumValues</a> sets numValues to the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s getNBatch(). Derived classes can override initNumValues to initialize numValues to a different value. </p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1PointProbe.html#a243068d171c764b4a73109932b90cf19">PV::PointProbe</a>, <a class="el" href="classPV_1_1StatsProbe.html#a8b9d926cc242b0cbfb5af7fc717c503c">PV::StatsProbe</a>, <a class="el" href="classPV_1_1KernelProbe.html#a40f8e948149d396ec1ee32d37038cac6">PV::KernelProbe</a>, and <a class="el" href="classPV_1_1PointLIFProbe.html#a6389ec435140e524e0752619afabdd7d">PV::PointLIFProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1PointProbe.html#af9eca50258478604cb2b959838227681">PV::PointProbe</a>, <a class="el" href="classPV_1_1StatsProbe.html#a6736c4b68fbdf436dcd385d02ff6ae17">PV::StatsProbe</a>, <a class="el" href="classPV_1_1KernelProbe.html#a0f9845885af695bbefc157cba6084ebf">PV::KernelProbe</a>, and <a class="el" href="classPV_1_1PointLIFProbe.html#ae82a65b3f875b8cf5593a0a91d3c677d">PV::PointLIFProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00227">227</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00219">219</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1126,9 +1145,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Called by registerData. If the <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> row index and column index are zero, this method sets a vector of PrintStreams whose size is the local batch width. If probeOutputFile is being used, the elements of the vector are FileStreams with filenames based on probeOutputFile: the global batch index will be inserted in the probeOutputFile before the extension (or at the end if there is no extension). If the <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> row and column indices are not both zero, the vector of PrintStreams will be empty - these processes should communicate with the row=0,column=0 as needed. </p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1ColProbe.html#a4ab644544cfef2eacc0c432502e5b920">PV::ColProbe</a>, <a class="el" href="classPV_1_1PointProbe.html#a2cdca7d48788cf3ff602b7e4c571fff9">PV::PointProbe</a>, and <a class="el" href="classPV_1_1BaseConnectionProbe.html#afdfc1679bc5f3618950f03cc0f199d0d">PV::BaseConnectionProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1ColProbe.html#a4ab644544cfef2eacc0c432502e5b920">PV::ColProbe</a>, <a class="el" href="classPV_1_1BaseConnectionProbe.html#afdfc1679bc5f3618950f03cc0f199d0d">PV::BaseConnectionProbe</a>, and <a class="el" href="classPV_1_1PointProbe.html#a2cdca7d48788cf3ff602b7e4c571fff9">PV::PointProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00182">182</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00174">174</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1154,12 +1173,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </table>
 </div><div class="memdoc">
 
-<p>coefficient: If energyProbe is set, the coefficient parameter specifies that <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> multiplies the result of this probe's <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> method by coefficient when computing the error. </p>
-<p>Note that coefficient does not affect the value returned by the <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> or <a class="el" href="classPV_1_1BaseProbe.html#a4fb423c7234cbce2f09f140316b2b5b2">getValues()</a> method. </p>
+<p>coefficient: If energyProbe is set, the coefficient parameter specifies that <a class="el" href="classPV_1_1ColumnEnergyProbe.html">ColumnEnergyProbe</a> multiplies the result of this probe's <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> method by coefficient when computing the error. </p>
+<p>Note that coefficient does not affect the value returned by the <a class="el" href="classPV_1_1BaseProbe.html#af85016fed624cb3101468fea721f29e0">getValue()</a> or <a class="el" href="classPV_1_1BaseProbe.html#a0ab2ba52c8774b2c803980570f3b9b85">getValues()</a> method. </p>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1FirmThresholdCostFnLCAProbe.html#a74e84bcb412284b9059f637ebad8511a">PV::FirmThresholdCostFnLCAProbe</a>, <a class="el" href="classPV_1_1L0NormLCAProbe.html#a3ea62464a582f5da82ca956410ea8305">PV::L0NormLCAProbe</a>, and <a class="el" href="classPV_1_1L1NormLCAProbe.html#aa219c7da8e4c4751cf310fff12857cc8">PV::L1NormLCAProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00114">114</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00106">106</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1207,82 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 <p>maskLayerName: Specifies a masking layer to use when calculating the norm. When blank (the default), masking is not used. </p>
 <p>The motivation for maskLayerName is to use a layer of ones and zeros to mask out do-not-care regions when computing the norm. Note that for reasons of computation speed, it is up to derived classes to take masking into account when implementing <a class="el" href="classPV_1_1AbstractNormProbe.html#ad8b5ef3d65e17599c5429ddeeb1f1d2d">getValueInternal()</a>. The maskLayerName must refer to a layer in the <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> with the same nxScale and nyScale as the probe's targetLayer, and have either the same number of features or a single feature. </p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00052">52</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00053">53</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83e3ba4add9e893209d7fe9b47e9372e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::ioParams </td>
+          <td>(</td>
+          <td class="paramtype">enum ParamsIOFlag&#160;</td>
+          <td class="paramname"><em>ioFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printHeader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFooter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for reading or writing the params from group in the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s parameters. The group from params is selected using the name of the connection.</p>
+<p>If ioFlag is set to write, the printHeader and printFooter flags control whether a header and footer for the parameter group is produces. These flags are set to true for layers, connections, and probes; and set to false for weight initializers and normalizers. If ioFlag is set to read, the printHeader and printFooter flags are ignored.</p>
+<p>Note that ioParams is not virtual. To add parameters in a derived class, override ioParamFillGroup. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00074">74</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b0e4892d9d3a75ceef34a853c76a8b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PV::L0NormProbe::ioParamsFillGroup </td>
+          <td>(</td>
+          <td class="paramtype">enum ParamsIOFlag&#160;</td>
+          <td class="paramname"><em>ioFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The virtual method for reading parameters from the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s parameters, and writing to the output params file.</p>
+<p>Derived classes with additional parameters typically override ioParamsFillGroup to call the base class's ioParamsFillGroup method and then call ioParam_[parametername] for each of their parameters. The ioParam_[parametername] methods should call the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s ioParamValue() and related methods, to ensure that all parameters that get read also get written to the outputParams-generated file. </p>
+
+<p>Reimplemented from <a class="el" href="classPV_1_1AbstractNormProbe.html#a4eacc36c65505a680f4337aa44204799">PV::AbstractNormProbe</a>.</p>
+
+<p>Definition at line <a class="el" href="L0NormProbe_8cpp_source.html#l00027">27</a> of file <a class="el" href="L0NormProbe_8cpp_source.html">L0NormProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1214,7 +1308,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns true if the object requires the GPU; false otherwise. <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> will not initialize the GPU unless one of the objects in its hierarchy returns true </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00079">79</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1334,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns true if a probeOutputFile is being used. Otherwise, returns false (indicating output is going to getOutputStream(). </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00328">328</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00330">330</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98b410a1e69fa3d772b8d4b155a27d2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const * PV::BaseObject::lookupKeyword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Look up the keyword of the params group with the same name as the object. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00042">42</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
 
 </div>
 </div>
@@ -1264,9 +1384,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if masking is used and the layer has multiple features but the masking layer has a single feature. In this case it is expected that the single masking feature will be applied to all layer features. Not reliable until <a class="el" href="classPV_1_1AbstractNormProbe.html#ab38cbdcc93ad1eb5981c1286c6480422">communicateInitInfo()</a> has been called. </p>
+<p>Returns true if masking is used and the layer has multiple features but the masking layer has a single feature. In this case it is expected that the single masking feature will be applied to all layer features. Not reliable until <a class="el" href="classPV_1_1AbstractNormProbe.html#a1be53d36f4f8a3e5c1fc95af4fd556bf">communicateInitInfo()</a> has been called. </p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8hpp_source.html#l00122">122</a> of file <a class="el" href="AbstractNormProbe_8hpp_source.html">AbstractNormProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8hpp_source.html#l00123">123</a> of file <a class="el" href="AbstractNormProbe_8hpp_source.html">AbstractNormProbe.hpp</a>.</p>
 
 </div>
 </div>
@@ -1297,7 +1417,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Reimplemented in <a class="el" href="classPV_1_1StatsProbe.html#a74cf3a6499b0dbacdecefd21aafd9065">PV::StatsProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="LayerProbe_8cpp_source.html#l00073">73</a> of file <a class="el" href="LayerProbe_8cpp_source.html">LayerProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LayerProbe_8cpp_source.html#l00077">77</a> of file <a class="el" href="LayerProbe_8cpp_source.html">LayerProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1456,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Reimplemented in <a class="el" href="classPV_1_1AdaptiveTimeScaleProbe.html#afb37d83990425eeaacdd05d0f565074d">PV::AdaptiveTimeScaleProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00320">320</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00313">313</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1363,11 +1483,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Returns a reference to the <a class="el" href="classPV_1_1PrintStream.html">PrintStream</a> for the given batch element </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00289">289</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8hpp_source.html#l00291">291</a> of file <a class="el" href="BaseProbe_8hpp_source.html">BaseProbe.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2e3f9c81eea13c562b531d15ce19488d"></a>
+<a class="anchor" id="ab73cc343e700ce0b683ec8c6c12cd810"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1375,7 +1495,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::AbstractNormProbe::outputState </td>
+          <td class="memname">Response::Status PV::AbstractNormProbe::outputState </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timevalue</em></td><td>)</td>
@@ -1390,13 +1510,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Implements the outputState method required by classes derived from <a class="el" href="classPV_1_1BaseProbe.html">BaseProbe</a>. Prints to the outputFile the probe message, timestamp, number of neurons, and norm value for each batch element. </p>
 
-<p>Implements <a class="el" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">PV::BaseProbe</a>.</p>
+<p>Implements <a class="el" href="classPV_1_1BaseProbe.html#ab5db57dcb185d195a3bbf89c87f94b00">PV::BaseProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00146">146</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00150">150</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a995875a09a43b39d5a4c6c898c7d2aac"></a>
+<a class="anchor" id="aad8a3674a2abeafb8c16fb17e28f826a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1404,7 +1524,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::outputStateWrapper </td>
+          <td class="memname">Response::Status PV::BaseProbe::outputStateWrapper </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>timef</em>, </td>
@@ -1427,9 +1547,35 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The public interface for calling the outputState method. BaseConnection::outputStateWrapper calls <a class="el" href="classPV_1_1BaseProbe.html#a4c68a398e8b62eb8319a21a385290f69">outputState()</a> if <a class="el" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate()</a> returns true. This behavior is intended to be general, but the method can be overridden if needed. </p>
+<p>The public interface for calling the outputState method. BaseConnection::outputStateWrapper calls <a class="el" href="classPV_1_1BaseProbe.html#ab5db57dcb185d195a3bbf89c87f94b00">outputState()</a> if <a class="el" href="classPV_1_1BaseProbe.html#ad7e767adce6ecd1e2870b2280cfda394">needUpdate()</a> returns true. This behavior is intended to be general, but the method can be overridden if needed. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00375">375</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00358">358</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa231f0cd917d5d96d4c94e7d676621f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::readParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A method that reads the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00062">62</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1457,11 +1603,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Implements <a class="el" href="classPV_1_1BaseProbe.html#ad2a2926e057d9a0ccd6f22eace1170fd">PV::BaseProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="LayerProbe_8cpp_source.html#l00077">77</a> of file <a class="el" href="LayerProbe_8cpp_source.html">LayerProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LayerProbe_8cpp_source.html#l00081">81</a> of file <a class="el" href="LayerProbe_8cpp_source.html">LayerProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a421e5c48cc7d2878c5950ae023823902"></a>
+<a class="anchor" id="ac2f09a0017caaaa9510165e5a9bfb9d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1469,7 +1615,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::registerData </td>
+          <td class="memname">Response::Status PV::BaseProbe::registerData </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *&#160;</td>
           <td class="paramname"><em>checkpointer</em></td><td>)</td>
@@ -1486,9 +1632,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Reimplemented from <a class="el" href="classPV_1_1CheckpointerDataInterface.html">PV::CheckpointerDataInterface</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1AdaptiveTimeScaleProbe.html#a445a938655226197cd64aced57378fc6">PV::AdaptiveTimeScaleProbe</a>, and <a class="el" href="classPV_1_1StatsProbe.html#a1a059e2a247ed5b3aa1b01c17dfcec3e">PV::StatsProbe</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1AdaptiveTimeScaleProbe.html#ac5736958f95cac167973e8eceb7ef1ea">PV::AdaptiveTimeScaleProbe</a>, <a class="el" href="classPV_1_1BaseConnectionProbe.html#aeb7c12a9c5b4c3753bf863fcc1c979de">PV::BaseConnectionProbe</a>, and <a class="el" href="classPV_1_1StatsProbe.html#abeda6a2d6029a6fcbb63d0f75f532944">PV::StatsProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00327">327</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00320">320</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1514,7 +1660,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>This method sets mDataStructuresAllocatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00111">111</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00175">175</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1540,7 +1686,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>This method sets the flag returned by getInitialValuesSetFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00180">180</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1566,7 +1712,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>This method sets mInitInfoCommunicatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00106">106</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00170">170</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +1740,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 
 <p>Reimplemented from <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">PV::AbstractNormProbe</a>.</p>
 
-<p>Definition at line <a class="el" href="L0NormProbe_8cpp_source.html#l00130">130</a> of file <a class="el" href="L0NormProbe_8cpp_source.html">L0NormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="L0NormProbe_8cpp_source.html#l00131">131</a> of file <a class="el" href="L0NormProbe_8cpp_source.html">L0NormProbe.cpp</a>.</p>
 
 </div>
 </div>
@@ -1621,11 +1767,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>A generic method for <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">setNormDescription()</a> implementations to call. It frees normDescription if it has already been set, and then copies the string in the input argument to the normDescription member variable. It returns PV_SUCCESS or PV_FAILURE; on failure it sets errno. </p>
 
-<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00126">126</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AbstractNormProbe_8cpp_source.html#l00131">131</a> of file <a class="el" href="AbstractNormProbe_8cpp_source.html">AbstractNormProbe.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae1833be5476f6d4a9cf97e74b7adc0fe"></a>
+<a class="anchor" id="a5813de455881d5212f30dd8754a73c26"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1633,7 +1779,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseProbe::setNumValues </td>
+          <td class="memname">void PV::BaseProbe::setNumValues </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -1648,7 +1794,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_base</b> ()
 </div><div class="memdoc">
 <p>Sets the numValues member variable (returned by <a class="el" href="classPV_1_1BaseProbe.html#a1c4d1030776ed07d3019125cb0a7fee3">getNumValues()</a>) and reallocates the probeValues member variable to hold numValues double-precision values. If the reallocation fails, the probeValues buffer is left unchanged, errno is set (by a realloc() call), and PV_FAILURE is returned. Otherwise, PV_SUCCESS is returned. </p>
 
-<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00229">229</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseProbe_8cpp_source.html#l00221">221</a> of file <a class="el" href="BaseProbe_8cpp_source.html">BaseProbe.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b24e49874218ac1b84418df1d9410ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::writeParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A method that writes the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00069">69</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>

@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_func_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_func_q.html#index_q"><span>q</span></a></li>
       <li><a href="functions_func_r.html#index_r"><span>r</span></a></li>
       <li class="current"><a href="functions_func_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_func_u.html#index_u"><span>u</span></a></li>
@@ -140,6 +141,18 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>scatterInput()
 : <a class="el" href="classPV_1_1InputLayer.html#a0939032acfe75d5bab94c439b8233a70">PV::InputLayer</a>
 </li>
+<li>scheduledCheckpoint()
+: <a class="el" href="classPV_1_1Checkpointer.html#acd2194b8c9c1678daba9c7c31123dcf3">PV::Checkpointer</a>
+</li>
+<li>scheduledSimTime()
+: <a class="el" href="classPV_1_1Checkpointer.html#a4e948a71ac803d467593076c5fdb5849">PV::Checkpointer</a>
+</li>
+<li>scheduledStep()
+: <a class="el" href="classPV_1_1Checkpointer.html#a005a4169862ce88e2123a7eeca70ead0">PV::Checkpointer</a>
+</li>
+<li>scheduledWallclock()
+: <a class="el" href="classPV_1_1Checkpointer.html#a0f187817a5482dca8bcab0fbc5ac897a">PV::Checkpointer</a>
+</li>
 <li>sendOffset()
 : <a class="el" href="classPV_1_1BorderExchange.html#af73bd5de57a4e7fccfa73e5b21d660ed">PV::BorderExchange</a>
 </li>
@@ -164,20 +177,46 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>setLogFile()
 : <a class="el" href="classPV_1_1PV__Init.html#a03cda833293d97fa9ee25289c16f676f">PV::PV_Init</a>
 </li>
+<li>setMargins()
+: <a class="el" href="classPV_1_1PatchGeometry.html#a8b2d28410ee08f0e17f7a898774d9d42">PV::PatchGeometry</a>
+, <a class="el" href="classPV_1_1Weights.html#a83ef0507df781e0bd322245f5eb7a5c8">PV::Weights</a>
+</li>
 <li>setMPIConfiguration()
 : <a class="el" href="classPV_1_1PV__Init.html#a76ddaa4bbec84fb6b3467ff9cf5cd46c">PV::PV_Init</a>
+</li>
+<li>setNormDescription()
+: <a class="el" href="classPV_1_1AbstractNormProbe.html#a05b269d95dabe7e6b2ee164527b2496e">PV::AbstractNormProbe</a>
+, <a class="el" href="classPV_1_1FirmThresholdCostFnProbe.html#a09ef327ba32326e41f31e1ee698457ef">PV::FirmThresholdCostFnProbe</a>
+, <a class="el" href="classPV_1_1L0NormProbe.html#af89b11930d024bfd9b5a8575726f701d">PV::L0NormProbe</a>
+, <a class="el" href="classPV_1_1L1NormProbe.html#ac052f32190dd3c1d43f4c5357abac049">PV::L1NormProbe</a>
+, <a class="el" href="classPV_1_1L2NormProbe.html#acf5d857320fedd3e2dc764fab698eae3">PV::L2NormProbe</a>
+</li>
+<li>setNormDescriptionToString()
+: <a class="el" href="classPV_1_1AbstractNormProbe.html#a4f47608eb5b9c941e2a92c6692b13e66">PV::AbstractNormProbe</a>
 </li>
 <li>setNumThreads()
 : <a class="el" href="classPV_1_1HyPerCol.html#aad537a81f305b3084361911680895b4a">PV::HyPerCol</a>
 </li>
+<li>setNumValues()
+: <a class="el" href="classPV_1_1BaseProbe.html#a5813de455881d5212f30dd8754a73c26">PV::BaseProbe</a>
+</li>
 <li>setParams()
 : <a class="el" href="classPV_1_1PV__Init.html#a43d37a3ce45397c27c20eb7525b01ec1">PV::PV_Init</a>
+</li>
+<li>setPatchGeometry()
+: <a class="el" href="classPV_1_1PatchGeometry.html#a631065b55ffc5cf1ed8809b73a4e62a2">PV::PatchGeometry</a>
 </li>
 <li>setSlopes()
 : <a class="el" href="classPV_1_1ANNLayer.html#a8b60e41672dc37d00b26d94dc06c2cdd">PV::ANNLayer</a>
 </li>
 <li>setStringArgument()
 : <a class="el" href="classPV_1_1Arguments.html#a2f3315cc2af6f5e4624e5c7ed55bba4c">PV::Arguments</a>
+</li>
+<li>setTimestamp()
+: <a class="el" href="classPV_1_1Weights.html#a5ee78ebc7cdf5bb1d4edf209b2dd996c">PV::Weights</a>
+</li>
+<li>setTransposeItemIndices()
+: <a class="el" href="classPV_1_1PatchGeometry.html#a927da3a33288c99c3e343bf3d01be736">PV::PatchGeometry</a>
 </li>
 <li>setUnsignedIntArgument()
 : <a class="el" href="classPV_1_1Arguments.html#ae7d66b273244711dc95d4d0fa8489f3c">PV::Arguments</a>
@@ -197,6 +236,14 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 </li>
 <li>stripLeadingTrailingWhitespace()
 : <a class="el" href="classPV_1_1ConfigParser.html#aa7cf3c14639318096dcae901d34a0769">PV::ConfigParser</a>
+</li>
+<li>synchronizeMarginsPost()
+: <a class="el" href="classPV_1_1CloneWeightsPair.html#a4496d20badfab34b52c3ebc63ef133de">PV::CloneWeightsPair</a>
+, <a class="el" href="classPV_1_1CopyWeightsPair.html#a679b19464349c29edc1a972144c94520">PV::CopyWeightsPair</a>
+</li>
+<li>synchronizeMarginsPre()
+: <a class="el" href="classPV_1_1CloneWeightsPair.html#aec7ae98d8a040903bc96b4c2b58d4d1e">PV::CloneWeightsPair</a>
+, <a class="el" href="classPV_1_1CopyWeightsPair.html#ac53e7e8ec9b915ff8e080ff959c322a0">PV::CopyWeightsPair</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -104,6 +104,10 @@ $(document).ready(function(){initNavTree('classPV_1_1HyPerCol.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">PV::HyPerCol Class Reference</div>  </div>
 </div><!--header-->
@@ -114,6 +118,8 @@ Inheritance diagram for PV::HyPerCol:</div>
  <div class="center">
   <img src="classPV_1_1HyPerCol.png" usemap="#PV::HyPerCol_map" alt=""/>
   <map id="PV::HyPerCol_map" name="PV::HyPerCol_map">
+<area href="classPV_1_1Subject.html" alt="PV::Subject" shape="rect" coords="0,0,90,24"/>
+<area href="classPV_1_1Observer.html" alt="PV::Observer" shape="rect" coords="100,0,190,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -122,7 +128,7 @@ HyPerCol Parameters</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp899d87c3dc8050e956875d7bfb22eaa3"></a>List of parameters needed from the <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> class </p>
 </td></tr>
 <tr class="memitem:a1e3aaaa586fffcc895466d7520f66396"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3aaaa586fffcc895466d7520f66396"></a>
-ObserverTable&#160;</td><td class="memItemRight" valign="bottom"><b>mObjectHierarchy</b></td></tr>
+<a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mObjectHierarchy</b></td></tr>
 <tr class="separator:a1e3aaaa586fffcc895466d7520f66396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fce863f0d81c0215074e24a4086dbde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fce863f0d81c0215074e24a4086dbde"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mErrorOnNotANumber</b></td></tr>
@@ -203,7 +209,7 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>mConnectionStatus</b
 <a class="el" href="classPV_1_1Communicator.html">Communicator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCommunicator</b></td></tr>
 <tr class="separator:ad95626d182a235cd087d419ad392e191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82c4e5303a90a3d1cead656fd145cd73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82c4e5303a90a3d1cead656fd145cd73"></a>
-Checkpointer *&#160;</td><td class="memItemRight" valign="bottom"><b>mCheckpointer</b> = nullptr</td></tr>
+<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCheckpointer</b> = nullptr</td></tr>
 <tr class="separator:a82c4e5303a90a3d1cead656fd145cd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8175af356de35b6248e167b6d2b9220c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8175af356de35b6248e167b6d2b9220c"></a>
 long int&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentStep</b></td></tr>
@@ -306,13 +312,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addObject</b> (<a cla
 int&#160;</td><td class="memItemRight" valign="bottom"><b>checkDirExists</b> (const char *dirname, struct stat *pathstat)</td></tr>
 <tr class="separator:a32de8a87b9c07fb66314fd2bb27b383c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e25192290891cb6ac9ca36b979c9593"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e25192290891cb6ac9ca36b979c9593"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyLoop</b> (std::vector&lt; std::shared_ptr&lt; BaseMessage const  &gt;&gt; messages)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyLoop</b> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&gt; messages)</td></tr>
 <tr class="separator:a5e25192290891cb6ac9ca36b979c9593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f09cdc566694d4915cefb29a9a5bcf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f09cdc566694d4915cefb29a9a5bcf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyLoop</b> (std::shared_ptr&lt; BaseMessage const  &gt; message)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyLoop</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message)</td></tr>
 <tr class="separator:a5f09cdc566694d4915cefb29a9a5bcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c976a2a8e4fe8f2332f2a34a9e464d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13c976a2a8e4fe8f2332f2a34a9e464d"></a>
-Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; PrepareCheckpointWriteMessage const  &gt; message)</td></tr>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const  &gt; message)</td></tr>
 <tr class="separator:a13c976a2a8e4fe8f2332f2a34a9e464d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bea4728d9a9ad19b27faf1cf37db4d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bea4728d9a9ad19b27faf1cf37db4d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeCUDA</b> (std::string const &amp;in_device)</td></tr>
@@ -335,11 +341,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>outputParamsHeadComme
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~HyPerCol</b> ()</td></tr>
 <tr class="separator:a3b1ba5f12d935745ee92266baf9f0984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed936f2f3607587c2e93bc38036b95a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ed936f2f3607587c2e93bc38036b95a"></a>
-virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; BaseMessage const  &gt; message) override</td></tr>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
 <tr class="separator:a3ed936f2f3607587c2e93bc38036b95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1984ce114564d2d1975af441f825e311"><td class="memItemLeft" align="right" valign="top">Observer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a1984ce114564d2d1975af441f825e311">getObjectFromName</a> (std::string const &amp;objectName) const </td></tr>
+<tr class="memitem:a1984ce114564d2d1975af441f825e311"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPV_1_1Observer.html">Observer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a1984ce114564d2d1975af441f825e311">getObjectFromName</a> (std::string const &amp;objectName) const </td></tr>
 <tr class="separator:a1984ce114564d2d1975af441f825e311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e188b59d50160e3b0dc3605b06c8168"><td class="memItemLeft" align="right" valign="top">Observer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a6e188b59d50160e3b0dc3605b06c8168">getNextObject</a> (Observer const *currentObject) const </td></tr>
+<tr class="memitem:a6e188b59d50160e3b0dc3605b06c8168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPV_1_1Observer.html">Observer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerCol.html#a6e188b59d50160e3b0dc3605b06c8168">getNextObject</a> (<a class="el" href="classPV_1_1Observer.html">Observer</a> const *currentObject) const </td></tr>
 <tr class="separator:a6e188b59d50160e3b0dc3605b06c8168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae827b3986b02303c24af50b009e7a5e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae827b3986b02303c24af50b009e7a5e8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advanceTimeLoop</b> (<a class="el" href="classPV_1_1Clock.html">Clock</a> &amp;runClock, int const runClockStartingStep)</td></tr>
@@ -470,16 +476,73 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getRandomSeed
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>seedRandomFromWallClock</b> ()</td></tr>
 <tr class="separator:aca4b4dd4de0b6135601a8e36505012e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc54ca9920b0615043c7652772690fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bc54ca9920b0615043c7652772690fb"></a>
-std::map&lt; std::string, Observer * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>copyObjectMap</b> ()</td></tr>
+std::map&lt; std::string, <a class="el" href="classPV_1_1Observer.html">Observer</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>copyObjectMap</b> ()</td></tr>
 <tr class="separator:a0bc54ca9920b0615043c7652772690fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c214e7a2f48c8ceeaee57894348950d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c214e7a2f48c8ceeaee57894348950d"></a>
 PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>getDevice</b> ()</td></tr>
 <tr class="separator:a5c214e7a2f48c8ceeaee57894348950d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a961cc06470f90469357caa3ac56f11a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Subject.html#a961cc06470f90469357caa3ac56f11a7">addObserver</a> (<a class="el" href="classPV_1_1Observer.html">Observer</a> *observer)</td></tr>
+<tr class="separator:a961cc06470f90469357caa3ac56f11a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c415c40c6df0c91f31e72d67ecac861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c415c40c6df0c91f31e72d67ecac861"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const </td></tr>
+<tr class="separator:a7c415c40c6df0c91f31e72d67ecac861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64041ac229aaaec1c17a16f54a8ec47"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription_c</b> () const </td></tr>
+<tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab422a3e4601308b3929c546e5d1f11be"><td class="memItemLeft" align="right" valign="top">Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify</a> (<a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;table, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&gt; messages, bool printFlag)</td></tr>
+<tr class="separator:ab422a3e4601308b3929c546e5d1f11be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c84626086e66c7a8ba08656baec9e07"><td class="memItemLeft" align="right" valign="top">Response::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Subject.html#a1c84626086e66c7a8ba08656baec9e07">notify</a> (<a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;table, std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message, bool printFlag)</td></tr>
+<tr class="separator:a1c84626086e66c7a8ba08656baec9e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0552b20e917974204a54eacc6a51d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Subject.html#ae0552b20e917974204a54eacc6a51d7f">notifyLoop</a> (<a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;table, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&gt; messages, bool printFlag, std::string const &amp;description)</td></tr>
+<tr class="separator:ae0552b20e917974204a54eacc6a51d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbd5933f24f4b5e533d9e78d64770fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Subject.html#aadbd5933f24f4b5e533d9e78d64770fc">notifyLoop</a> (<a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;table, std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message, bool printFlag, std::string const &amp;description)</td></tr>
+<tr class="separator:aadbd5933f24f4b5e533d9e78d64770fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa0aabb8f2168a59d22dc254b1fab7b4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
+<tr class="separator:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="HyPerCol_8hpp_source.html#l00041">41</a> of file <a class="el" href="HyPerCol_8hpp_source.html">HyPerCol.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a961cc06470f90469357caa3ac56f11a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PV::Subject::addObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1Observer.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>observer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The virtual method for adding an Observer-derived object. Derived classes must override this method to add the object to their hierarchy. </p>
+
+<p>Reimplemented in <a class="el" href="classPV_1_1Checkpointer.html#a9c967d69d92a87c190dd3ae23c47215f">PV::Checkpointer</a>, and <a class="el" href="classPV_1_1BaseConnection.html#aada133c0f5d375ebfb4d7b916a97001d">PV::BaseConnection</a>.</p>
+
+<p>Definition at line <a class="el" href="Subject_8hpp_source.html#l00037">37</a> of file <a class="el" href="Subject_8hpp_source.html">Subject.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaf828a83f80be0cf56d92c13b92d6d80"></a>
 <div class="memitem">
 <div class="memproto">
@@ -503,9 +566,9 @@ PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>getDe
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Observer * PV::HyPerCol::getNextObject </td>
+          <td class="memname"><a class="el" href="classPV_1_1Observer.html">Observer</a> * PV::HyPerCol::getNextObject </td>
           <td>(</td>
-          <td class="paramtype">Observer const *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1Observer.html">Observer</a> const *&#160;</td>
           <td class="paramname"><em>currentObject</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -522,7 +585,7 @@ PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>getDe
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Observer * PV::HyPerCol::getObjectFromName </td>
+          <td class="memname"><a class="el" href="classPV_1_1Observer.html">Observer</a> * PV::HyPerCol::getObjectFromName </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>objectName</em></td><td>)</td>
@@ -620,6 +683,197 @@ PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>getDe
 <p>Units of dt </p>
 
 <p>Definition at line <a class="el" href="HyPerCol_8cpp_source.html#l00287">287</a> of file <a class="el" href="HyPerCol_8cpp_source.html">HyPerCol.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab422a3e4601308b3929c546e5d1f11be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::Status PV::Subject::notify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&gt;&#160;</td>
+          <td class="paramname"><em>messages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method calls the respond() method of each object in the given table, using the given vector of messages. If the table consists of objects A, B, and C; and the messages vector consists of messages X and Y, the order is A-&gt;X, A-&gt;Y, B-&gt;X, B-&gt;Y, C-&gt;X, C-&gt;Y.</p>
+<p>The objects' respond() method returns one of the Response::Status types: SUCCESS, NO_ACTION, PARTIAL, or PV_POSTPONE.</p>
+<p>SUCCESS: the object completed the task requested by the messages. NO_ACTION: the object has nothing to do in response to the message, or had already done it. PARTIAL: the object has not yet completed but is making progress. It is expected that there are a small number of descrete tasks, so that an object will not return PARTIAL a large number of times in response to the same message. POSTPONE: the object needs to act but cannot do so until an event outside its control occurs.</p>
+<p>If all objects return NO_ACTION, then <a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify()</a> returns NO_ACTION. If all objects return either SUCCESS or NO_ACTION and there is at least one SUCCESS, then <a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify()</a> returns SUCCESS. If all objects return either POSTPONE or NO_ACTION and there is at least one POSTPONE, then <a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify()</a> returns POSTPONE. Otherwise, <a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify()</a> returns PARTIAL.</p>
+<p>Generally each message in the messages vector is sent to each object in the table. However, if an object returns POSTPONE in response to a message, the loop skips to the next object, and does not sent any remaining messages to the postponing object.</p>
+<p>The rationale behind these rules is so that if the objects in the table are themselves derived from the <a class="el" href="classPV_1_1Subject.html">Subject</a> class, the messages can be passed down the tree and the return values passed up it, and the return value at the top can be interpreted as being over all the components at the bottom, without the topmost object needing to know details of the composition of the objects below it.</p>
+<p>If printFlag is true, the method prints information regarding postponement to standard output. </p>
+
+<p>Definition at line <a class="el" href="Subject_8cpp_source.html#l00015">15</a> of file <a class="el" href="Subject_8cpp_source.html">Subject.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c84626086e66c7a8ba08656baec9e07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::Status PV::Subject::notify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A convenience overload of the basic notify method where there is only one message to send to the objects. This overloading handles enclosing the message in a vector of length one. </p>
+
+<p>Definition at line <a class="el" href="Subject_8hpp_source.html#l00091">91</a> of file <a class="el" href="Subject_8hpp_source.html">Subject.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0552b20e917974204a54eacc6a51d7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::Subject::notifyLoop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&gt;&#160;</td>
+          <td class="paramname"><em>messages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method calls the <a class="el" href="classPV_1_1Subject.html#ab422a3e4601308b3929c546e5d1f11be">notify()</a> method in a loop until the result is not PARTIAL. If it is either POSTPONE, it exits with a fatal error. The description argument is used in the error message to report which message vector failed. If the result is PV_SUCCESS, <a class="el" href="classPV_1_1Subject.html#ae0552b20e917974204a54eacc6a51d7f">notifyLoop()</a> returns to the calling function.</p>
+<p>notifyLoop should only be used if the objects that might cause a postponement are themselves in the table of objects; otherwise the routine will hang. </p>
+
+<p>Definition at line <a class="el" href="Subject_8cpp_source.html#l00057">57</a> of file <a class="el" href="Subject_8cpp_source.html">Subject.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aadbd5933f24f4b5e533d9e78d64770fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::Subject::notifyLoop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPV_1_1ObserverTable.html">ObserverTable</a> const &amp;&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A convenience overload of the basic notifyLoop method where there is only one message to send to the objects. This overloading handles enclosing the message in a vector of length one. </p>
+
+<p>Definition at line <a class="el" href="Subject_8hpp_source.html#l00114">114</a> of file <a class="el" href="Subject_8hpp_source.html">Subject.hpp</a>.</p>
 
 </div>
 </div>

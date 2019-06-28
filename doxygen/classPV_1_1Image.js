@@ -9,6 +9,7 @@ var classPV_1_1Image =
     [ "convertToColor", "classPV_1_1Image.html#a995b9cba394161e566d1dad0087a28b2", null ],
     [ "convertToGray", "classPV_1_1Image.html#a726ec27bc04d3ece5771a34ca04fc74c", null ],
     [ "crop", "classPV_1_1Image.html#ad3cd9c0975dfea06f1e5cd32e6cc4aed", null ],
+    [ "flip", "classPV_1_1Image.html#a955016751fa61d7fdb29277d58f9459d", null ],
     [ "getAnchorX", "classPV_1_1Image.html#aff74981984c58fb980a07173d18fa54c", null ],
     [ "getAnchorY", "classPV_1_1Image.html#afc2ca1772c503b38af6953cbd2bc146e", null ],
     [ "getFeatures", "classPV_1_1Image.html#a783bab7ad91dddb8bdbb5a1c924219e2", null ],

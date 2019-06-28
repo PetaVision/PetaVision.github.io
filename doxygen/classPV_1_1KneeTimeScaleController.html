@@ -126,9 +126,9 @@ Inheritance diagram for PV::KneeTimeScaleController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab54b36d30f515e687e994fcb5f62d094"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab54b36d30f515e687e994fcb5f62d094"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>KneeTimeScaleController</b> (char const *name, int batchWidth, double baseMax, double baseMin, double tauFactor, double growthFactor, bool writeTimeScales, bool writeTimeScaleFieldnames, <a class="el" href="classPV_1_1Communicator.html">Communicator</a> *comm, double kneeThresh, double kneeSlope)</td></tr>
-<tr class="separator:ab54b36d30f515e687e994fcb5f62d094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c30ccc5f1e121907f24e5c6034ddaf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c30ccc5f1e121907f24e5c6034ddaf3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>KneeTimeScaleController</b> (char const *name, int batchWidth, double baseMax, double baseMin, double tauFactor, double growthFactor, bool writeTimeScaleFieldnames, <a class="el" href="classPV_1_1Communicator.html">Communicator</a> *comm, double kneeThresh, double kneeSlope)</td></tr>
+<tr class="separator:a7c30ccc5f1e121907f24e5c6034ddaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab1f00be6595c25d8c8bdb58b67a2925"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1f00be6595c25d8c8bdb58b67a2925"></a>
 virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>calcTimesteps</b> (double timeValue, std::vector&lt; double &gt; const &amp;rawTimeScales) override</td></tr>
 <tr class="separator:aab1f00be6595c25d8c8bdb58b67a2925"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,39 +141,39 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptio
 <tr class="memitem:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf3dbb4319223e8ca4c3431556bded7"></a>
 <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getMPIBlock</b> ()</td></tr>
 <tr class="separator:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7deff90ff2f07119b7d401ed61547942"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7deff90ff2f07119b7d401ed61547942"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
-<tr class="separator:a7deff90ff2f07119b7d401ed61547942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cbcf45621460ea1a95a337411483941"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cbcf45621460ea1a95a337411483941"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:a3cbcf45621460ea1a95a337411483941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fd503a986f21f045fc621f5a2512910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fd503a986f21f045fc621f5a2512910"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
-<tr class="separator:a8fd503a986f21f045fc621f5a2512910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d66182caa07776cfc19d4a18b49e357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d66182caa07776cfc19d4a18b49e357"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
+<tr class="separator:a5d66182caa07776cfc19d4a18b49e357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39abbf9839a1d19fdf97ee272287a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa39abbf9839a1d19fdf97ee272287a17"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
+<tr class="separator:aa39abbf9839a1d19fdf97ee272287a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1061ba060f221fa7f46a44defa294966"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1061ba060f221fa7f46a44defa294966"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:a1061ba060f221fa7f46a44defa294966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a645fb542dfa44fea5ae085b2707f8d01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a645fb542dfa44fea5ae085b2707f8d01"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeTimestepInfo</b> (double timeValue, std::vector&lt; <a class="el" href="classPV_1_1PrintStream.html">PrintStream</a> * &gt; &amp;streams)</td></tr>
 <tr class="separator:a645fb542dfa44fea5ae085b2707f8d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0fb7d097ddb409efd7ad05579366512c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fb7d097ddb409efd7ad05579366512c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
-<tr class="separator:a0fb7d097ddb409efd7ad05579366512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1f91b7b4124dcc805c7d7cab3b1c5d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
-<tr class="separator:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade83d65746a70640711074e6f7f8a758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade83d65746a70640711074e6f7f8a758"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (<a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const *message)</td></tr>
-<tr class="separator:ade83d65746a70640711074e6f7f8a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fffadbdec8131a917eab501677a103a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fffadbdec8131a917eab501677a103a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (<a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const *message)</td></tr>
-<tr class="separator:a5fffadbdec8131a917eab501677a103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3da2fb96c4743f826132f8b14769247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da2fb96c4743f826132f8b14769247"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (<a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:af3da2fb96c4743f826132f8b14769247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77e7d318845863fcda565dc015317b41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77e7d318845863fcda565dc015317b41"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (<a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:a77e7d318845863fcda565dc015317b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe07f94484ec2ba3fb8fb4fbf76620c8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
+<tr class="separator:abe07f94484ec2ba3fb8fb4fbf76620c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ff254c96defbc173148731f91b847d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ff254c96defbc173148731f91b847d"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
+<tr class="separator:a42ff254c96defbc173148731f91b847d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca6866aa72bd0f478db3b12dd5c7f8"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:af9ca6866aa72bd0f478db3b12dd5c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e89fde10ab75075ba40c1ca2952225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e89fde10ab75075ba40c1ca2952225"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ab5e89fde10ab75075ba40c1ca2952225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05426f3598c2730ef9c7aeadcef499dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05426f3598c2730ef9c7aeadcef499dc"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a05426f3598c2730ef9c7aeadcef499dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ae2aae131398925a4c06607f48c1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a5ae2aae131398925a4c06607f48c1e"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const  &gt; message)</td></tr>
+<tr class="separator:a3a5ae2aae131398925a4c06607f48c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -222,9 +222,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mTauFactor</b></td>
 <tr class="memitem:aaccc5523a50c1064d2c9b96e8ff2de91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaccc5523a50c1064d2c9b96e8ff2de91"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mWriteTimeScaleFieldnames</b></td></tr>
 <tr class="separator:aaccc5523a50c1064d2c9b96e8ff2de91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae989f5e23bfc765376418ce6572ebfed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae989f5e23bfc765376418ce6572ebfed"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mWriteTimeScales</b></td></tr>
-<tr class="separator:ae989f5e23bfc765376418ce6572ebfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

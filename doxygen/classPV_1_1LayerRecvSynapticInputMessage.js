@@ -1,6 +1,9 @@
 var classPV_1_1LayerRecvSynapticInputMessage =
 [
     [ "LayerRecvSynapticInputMessage", "classPV_1_1LayerRecvSynapticInputMessage.html#a478d553d978f9e655a7fb5f8870aee58", null ],
+    [ "getMessageType", "classPV_1_1LayerRecvSynapticInputMessage.html#a861225dbf751edb2b62453cbb1bb6a2b", null ],
+    [ "setMessageType", "classPV_1_1LayerRecvSynapticInputMessage.html#a7ed3c3fad47dcef4e66785a05370394e", null ],
+    [ "setMessageType", "classPV_1_1LayerRecvSynapticInputMessage.html#a9385623963e78c09ed771da173e82a8e", null ],
     [ "mDeltaT", "classPV_1_1LayerRecvSynapticInputMessage.html#a3d1d50f738c86b9c9749a1b0ca85f1a8", null ],
     [ "mPhase", "classPV_1_1LayerRecvSynapticInputMessage.html#a3b6e414dd93d01945608445d766bb997", null ],
     [ "mRecvOnGpuFlag", "classPV_1_1LayerRecvSynapticInputMessage.html#ab49e2fd0978dad2f929e8b229f6ac3f7", null ],

@@ -19,6 +19,7 @@ var classPV_1_1Buffer =
     [ "at", "classPV_1_1Buffer.html#aaec5428c599fcd2ba5c233ed084df7d8", null ],
     [ "at", "classPV_1_1Buffer.html#a223c204bddbbfe688127e7ddcb30fd09", null ],
     [ "crop", "classPV_1_1Buffer.html#ad3cd9c0975dfea06f1e5cd32e6cc4aed", null ],
+    [ "flip", "classPV_1_1Buffer.html#a955016751fa61d7fdb29277d58f9459d", null ],
     [ "getAnchorX", "classPV_1_1Buffer.html#aff74981984c58fb980a07173d18fa54c", null ],
     [ "getAnchorY", "classPV_1_1Buffer.html#afc2ca1772c503b38af6953cbd2bc146e", null ],
     [ "getFeatures", "classPV_1_1Buffer.html#a783bab7ad91dddb8bdbb5a1c924219e2", null ],

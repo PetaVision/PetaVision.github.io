@@ -124,12 +124,12 @@ Inheritance diagram for PV::CheckpointEntryWeightPvp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3111a50b05af2fccedf4d1916dce5cf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3111a50b05af2fccedf4d1916dce5cf9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointEntryWeightPvp</b> (std::string const &amp;name, <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *mpiBlock, int numArbors, bool sharedWeights, PVPatch const *const *const *patchGeometry, float **weightData, int numPatchesX, int numPatchesY, int numPatchesF, int nxp, int nyp, int nfp, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *preLoc, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *postLoc, bool compressFlag)</td></tr>
-<tr class="separator:a3111a50b05af2fccedf4d1916dce5cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a674549b6a9f62abf0f0339bc68dce04d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a674549b6a9f62abf0f0339bc68dce04d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointEntryWeightPvp</b> (std::string const &amp;objName, std::string const &amp;dataName, <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *mpiBlock, int numArbors, bool sharedWeights, PVPatch const *const *const *patchGeometry, float **weightData, int numPatchesX, int numPatchesY, int numPatchesF, int nxp, int nyp, int nfp, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *preLoc, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *postLoc, bool compressFlag)</td></tr>
-<tr class="separator:a674549b6a9f62abf0f0339bc68dce04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c24dbd3080d8968a0d46a594c3e7ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9c24dbd3080d8968a0d46a594c3e7ea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointEntryWeightPvp</b> (std::string const &amp;name, <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *mpiBlock, <a class="el" href="classPV_1_1Weights.html">Weights</a> *weights, bool compressFlag)</td></tr>
+<tr class="separator:ae9c24dbd3080d8968a0d46a594c3e7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d612caff3c77269a59c9cee1437ddf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6d612caff3c77269a59c9cee1437ddf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointEntryWeightPvp</b> (std::string const &amp;objName, std::string const &amp;dataName, <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *mpiBlock, <a class="el" href="classPV_1_1Weights.html">Weights</a> *weights, bool compressFlag)</td></tr>
+<tr class="separator:aa6d612caff3c77269a59c9cee1437ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf4b4b23e30ec1756a67ccbb024d132"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bf4b4b23e30ec1756a67ccbb024d132"></a>
 std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:a0bf4b4b23e30ec1756a67ccbb024d132"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +145,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (st
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a350bd9fde61dcabc795b170b00636d31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a350bd9fde61dcabc795b170b00636d31"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calcMinMaxWeights</b> (float *minWeight, float *maxWeight) const </td></tr>
-<tr class="separator:a350bd9fde61dcabc795b170b00636d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c231a9dc0c22182f7e9f2d7e9e3168"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05c231a9dc0c22182f7e9f2d7e9e3168"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteFile</b> (std::string const &amp;checkpointDirectory, std::string const &amp;extension) const </td></tr>
 <tr class="separator:a05c231a9dc0c22182f7e9f2d7e9e3168"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,58 +154,22 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>generatePath</
 <tr class="memitem:ac746b22df9477f6d070fa8b19edf210e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac746b22df9477f6d070fa8b19edf210e"></a>
 <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getMPIBlock</b> () const </td></tr>
 <tr class="separator:ac746b22df9477f6d070fa8b19edf210e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91469ad564df33f37e7a4f8da40f943"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa91469ad564df33f37e7a4f8da40f943"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (int numArbors, bool sharedWeights, PVPatch const *const *const *patchGeometry, float **weightData, int numPatchesX, int numPatchesY, int numPatchesF, int nxp, int nyp, int nfp, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *preLoc, <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *postLoc, bool compressFlag)</td></tr>
-<tr class="separator:aa91469ad564df33f37e7a4f8da40f943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab852ce593d6a9975f101368e49cd1d09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab852ce593d6a9975f101368e49cd1d09"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="classPV_1_1Weights.html">Weights</a> *weights, bool compressFlag)</td></tr>
+<tr class="separator:ab852ce593d6a9975f101368e49cd1d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8802f8b10ef959eb0c6366a2ca2baa12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8802f8b10ef959eb0c6366a2ca2baa12"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mCompressFlag</b></td></tr>
 <tr class="separator:a8802f8b10ef959eb0c6366a2ca2baa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e0b078edf1771f5d669d28a2bc2cf2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e0b078edf1771f5d669d28a2bc2cf2b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumArbors</b></td></tr>
-<tr class="separator:a0e0b078edf1771f5d669d28a2bc2cf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d9db62ec7c1cd3f5d952193d36a648"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68d9db62ec7c1cd3f5d952193d36a648"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumPatchesF</b></td></tr>
-<tr class="separator:a68d9db62ec7c1cd3f5d952193d36a648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b0b12b64f1f5e5d7c74f3aa2e92f7ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b0b12b64f1f5e5d7c74f3aa2e92f7ca"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumPatchesX</b></td></tr>
-<tr class="separator:a1b0b12b64f1f5e5d7c74f3aa2e92f7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0be3d86701d29dc5ee05239dcf289d46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0be3d86701d29dc5ee05239dcf289d46"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumPatchesY</b></td></tr>
-<tr class="separator:a0be3d86701d29dc5ee05239dcf289d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2467341e56f9abf579c459503198080e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2467341e56f9abf579c459503198080e"></a>
-PVPatch const *const *const *&#160;</td><td class="memItemRight" valign="bottom"><b>mPatchGeometry</b></td></tr>
-<tr class="separator:a2467341e56f9abf579c459503198080e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7feda96b260c30e662af5de70e8e956b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7feda96b260c30e662af5de70e8e956b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mPatchSizeF</b></td></tr>
-<tr class="separator:a7feda96b260c30e662af5de70e8e956b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4170d750ac386d317442c8faf878c05a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4170d750ac386d317442c8faf878c05a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mPatchSizeX</b></td></tr>
-<tr class="separator:a4170d750ac386d317442c8faf878c05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eaeb8ee6419026cca78cfad064f908b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eaeb8ee6419026cca78cfad064f908b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mPatchSizeY</b></td></tr>
-<tr class="separator:a4eaeb8ee6419026cca78cfad064f908b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8757bbcc8d92d8ecb53f259718ab9cb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8757bbcc8d92d8ecb53f259718ab9cb8"></a>
-<a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>mPostLoc</b></td></tr>
-<tr class="separator:a8757bbcc8d92d8ecb53f259718ab9cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a170d1e983991d3e4ce702834b93efbc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a170d1e983991d3e4ce702834b93efbc1"></a>
-<a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>mPreLoc</b></td></tr>
-<tr class="separator:a170d1e983991d3e4ce702834b93efbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24ebbf96eadab54032bc1f842baa43c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24ebbf96eadab54032bc1f842baa43c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mSharedWeights</b></td></tr>
-<tr class="separator:a24ebbf96eadab54032bc1f842baa43c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c924f6728a523e87e44f0a58e6818e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4c924f6728a523e87e44f0a58e6818e"></a>
-float **&#160;</td><td class="memItemRight" valign="bottom"><b>mWeightData</b></td></tr>
-<tr class="separator:ad4c924f6728a523e87e44f0a58e6818e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d4d824745b4223663744d2534dc266b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d4d824745b4223663744d2534dc266b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mWeightDataSize</b></td></tr>
-<tr class="separator:a6d4d824745b4223663744d2534dc266b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d999ae8eab68ef10f80bb5b72869f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8d999ae8eab68ef10f80bb5b72869f7"></a>
+<a class="el" href="classPV_1_1Weights.html">Weights</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mWeights</b> = nullptr</td></tr>
+<tr class="separator:aa8d999ae8eab68ef10f80bb5b72869f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="CheckpointEntryWeightPvp_8hpp_source.html#l00017">17</a> of file <a class="el" href="CheckpointEntryWeightPvp_8hpp_source.html">CheckpointEntryWeightPvp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CheckpointEntryWeightPvp_8hpp_source.html#l00018">18</a> of file <a class="el" href="CheckpointEntryWeightPvp_8hpp_source.html">CheckpointEntryWeightPvp.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>OpenPV/src/checkpointing/<a class="el" href="CheckpointEntryWeightPvp_8hpp_source.html">CheckpointEntryWeightPvp.hpp</a></li>
 <li>OpenPV/src/checkpointing/<a class="el" href="CheckpointEntryWeightPvp_8cpp_source.html">CheckpointEntryWeightPvp.cpp</a></li>
