@@ -5,7 +5,7 @@ var classPVCuda_1_1CudaRecvPre =
     [ "checkSharedMemSize", "classPVCuda_1_1CudaRecvPre.html#ab35df4937e500163b3826451f1b2ad61", null ],
     [ "do_run", "classPVCuda_1_1CudaRecvPre.html#a3fe5f5a7dc58e12afb4af12ecc9efb77", null ],
     [ "set_dt_factor", "classPVCuda_1_1CudaRecvPre.html#aeb2b65d4dc0958158553b88dc3f0a863", null ],
-    [ "setArgs", "classPVCuda_1_1CudaRecvPre.html#a967d8ec845e90ae32f773289087902d0", null ],
+    [ "setArgs", "classPVCuda_1_1CudaRecvPre.html#a77fca85f0b052ea166d935fe8c06d3d5", null ],
     [ "numActive", "classPVCuda_1_1CudaRecvPre.html#a16b69e9b49f53be8a4d7c3e83fe644ea", null ],
     [ "params", "classPVCuda_1_1CudaRecvPre.html#acad7eb0fbf95f50c789f71d9ce7c96ab", null ]
 ];

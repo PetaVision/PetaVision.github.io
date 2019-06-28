@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['layerlistsverticesinparams',['layerListsVerticesInParams',['../classPV_1_1ANNLayer.html#a81365a3521d7ba02bc1bc6b199ec9a70',1,'PV::ANNLayer']]],
-  ['layerprobe',['LayerProbe',['../classPV_1_1LayerProbe.html#aaad7b71ac4a932b878c04843daf2191c',1,'PV::LayerProbe']]]
+  ['movetoframe',['moveToFrame',['../classPV_1_1WeightsFileIO.html#ab7c2b4005043ef3124c603716d62f636',1,'PV::WeightsFileIO']]]
 ];

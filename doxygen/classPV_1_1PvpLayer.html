@@ -122,12 +122,10 @@ Inheritance diagram for PV::PvpLayer:</div>
  <div class="center">
   <img src="classPV_1_1PvpLayer.png" usemap="#PV::PvpLayer_map" alt=""/>
   <map id="PV::PvpLayer_map" name="PV::PvpLayer_map">
-<area href="classPV_1_1InputLayer.html" alt="PV::InputLayer" shape="rect" coords="0,280,186,304"/>
-<area href="classPV_1_1HyPerLayer.html" alt="PV::HyPerLayer" shape="rect" coords="0,224,186,248"/>
-<area href="classPV_1_1BaseLayer.html" alt="PV::BaseLayer" shape="rect" coords="0,168,186,192"/>
-<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="0,112,186,136"/>
-<area href="classPV_1_1CheckpointerDataInterface.html" alt="PV::CheckpointerDataInterface" shape="rect" coords="0,56,186,80"/>
-<area href="classPV_1_1Observer.html" alt="PV::Observer" shape="rect" coords="0,0,186,24"/>
+<area href="classPV_1_1InputLayer.html" alt="PV::InputLayer" shape="rect" coords="0,224,163,248"/>
+<area href="classPV_1_1HyPerLayer.html" alt="PV::HyPerLayer" shape="rect" coords="0,168,163,192"/>
+<area href="classPV_1_1BaseLayer.html" alt="PV::BaseLayer" shape="rect" coords="0,112,163,136"/>
+<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="0,56,163,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -209,12 +207,12 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>addGpuTimer
 <tr class="separator:a269ebd7ead671d9ac4addf16d93dbdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0693ed1e7c21c88180e40a79613acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a5e0693ed1e7c21c88180e40a79613acb">addRecvConn</a> (<a class="el" href="classPV_1_1BaseConnection.html">BaseConnection</a> *conn)</td></tr>
 <tr class="separator:a5e0693ed1e7c21c88180e40a79613acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7021aa8fe265763cfaffde223043e182"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7021aa8fe265763cfaffde223043e182"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> () override</td></tr>
-<tr class="separator:a7021aa8fe265763cfaffde223043e182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af837853fa9af02b32f7a7758ff936222"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af837853fa9af02b32f7a7758ff936222"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>callUpdateState</b> (double simTime, double dt)</td></tr>
-<tr class="separator:af837853fa9af02b32f7a7758ff936222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad661a636d97269748699fccbcabd84e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad661a636d97269748699fccbcabd84e9"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> () override</td></tr>
+<tr class="separator:ad661a636d97269748699fccbcabd84e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797aab386e90b61437f543a52cf6feec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a797aab386e90b61437f543a52cf6feec"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>callUpdateState</b> (double simTime, double dt)</td></tr>
+<tr class="separator:a797aab386e90b61437f543a52cf6feec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a115dd760f6e0503b9807ec09424819f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a115dd760f6e0503b9807ec09424819f1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearProgressFlags</b> ()</td></tr>
 <tr class="separator:a115dd760f6e0503b9807ec09424819f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,19 +244,13 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getChannelTi
 <tr class="separator:a41e7687931f226d18a183403376a0b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d450cd16682e804ad00fed1df6f3214"><td class="memItemLeft" align="right" valign="top">virtual std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#a0d450cd16682e804ad00fed1df6f3214">getCurrentFilename</a> (int localBatchElement, int mpiBatchIndex) const </td></tr>
 <tr class="separator:a0d450cd16682e804ad00fed1df6f3214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf468d55824cf21920893c6b7e11b90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a9bf468d55824cf21920893c6b7e11b90">getDataStructuresAllocatedFlag</a> ()</td></tr>
-<tr class="separator:a9bf468d55824cf21920893c6b7e11b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a76c43e2f797a7ade4555df733196e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a43a76c43e2f797a7ade4555df733196e">getDataStructuresAllocatedFlag</a> () const </td></tr>
+<tr class="separator:a43a76c43e2f797a7ade4555df733196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbfd6876c28c674a20702f6787a35bec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbfd6876c28c674a20702f6787a35bec"></a>
 PVDataType&#160;</td><td class="memItemRight" valign="bottom"><b>getDataType</b> ()</td></tr>
 <tr class="separator:adbfd6876c28c674a20702f6787a35bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0088a3129cf584f2df0b50002bb88ac"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#ab0088a3129cf584f2df0b50002bb88ac">getDeltaTriggerTime</a> ()</td></tr>
 <tr class="separator:ab0088a3129cf584f2df0b50002bb88ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c415c40c6df0c91f31e72d67ecac861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c415c40c6df0c91f31e72d67ecac861"></a>
-std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const </td></tr>
-<tr class="separator:a7c415c40c6df0c91f31e72d67ecac861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64041ac229aaaec1c17a16f54a8ec47"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription_c</b> () const </td></tr>
-<tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897393070e95c542ad2573500751bb1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a897393070e95c542ad2573500751bb1d"></a>
 PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>getDeviceActiveIndices</b> ()</td></tr>
 <tr class="separator:a897393070e95c542ad2573500751bb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,22 +272,16 @@ PVCuda::CudaBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>getDe
 <tr class="memitem:afe15d55e6aa8b25f7f94d50a4fd15105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe15d55e6aa8b25f7f94d50a4fd15105"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getDisplayPeriod</b> ()</td></tr>
 <tr class="separator:afe15d55e6aa8b25f7f94d50a4fd15105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e883aa285af936219938edc1f96ed97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e883aa285af936219938edc1f96ed97"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getHasReceived</b> ()</td></tr>
-<tr class="separator:a0e883aa285af936219938edc1f96ed97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17189accfa85f6f2adcd2e466d5fd5ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17189accfa85f6f2adcd2e466d5fd5ce"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getHasUpdated</b> ()</td></tr>
-<tr class="separator:a17189accfa85f6f2adcd2e466d5fd5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17073bd03d7bbee439f49000b2573e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#ac17073bd03d7bbee439f49000b2573e0">getInitialValuesSetFlag</a> ()</td></tr>
-<tr class="separator:ac17073bd03d7bbee439f49000b2573e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbcf6cd9cb65680fd32734eb8880661"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#adcbcf6cd9cb65680fd32734eb8880661">getInitInfoCommunicatedFlag</a> ()</td></tr>
-<tr class="separator:adcbcf6cd9cb65680fd32734eb8880661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a62297a7528437e9d5495a6c8b33050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3a62297a7528437e9d5495a6c8b33050">getInitialValuesSetFlag</a> () const </td></tr>
+<tr class="separator:a3a62297a7528437e9d5495a6c8b33050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839b37b0b29a957ddcacc670fdacf879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a839b37b0b29a957ddcacc670fdacf879">getInitInfoCommunicatedFlag</a> () const </td></tr>
+<tr class="separator:a839b37b0b29a957ddcacc670fdacf879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28ab4e59e2bdd22a97f7c74df87fb1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab28ab4e59e2bdd22a97f7c74df87fb1b"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getInputPath</b> () const </td></tr>
 <tr class="separator:ab28ab4e59e2bdd22a97f7c74df87fb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0406ed3733882c3f65e5ca55fb32cf"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyword</b> () const </td></tr>
-<tr class="separator:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f373c1b6093a58ffe85a7033b3d1ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4f373c1b6093a58ffe85a7033b3d1ac"></a>
+float *&#160;</td><td class="memItemRight" valign="bottom"><b>getInputRegionsAllBatchElements</b> ()</td></tr>
+<tr class="separator:aa4f373c1b6093a58ffe85a7033b3d1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c1496852eaf5c826420eff018fc21a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00c1496852eaf5c826420eff018fc21a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getLastUpdateTime</b> ()</td></tr>
 <tr class="separator:a00c1496852eaf5c826420eff018fc21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,12 +290,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getLastUpdateTime</
 <tr class="memitem:a1feac2531f55859d17ff11401839df66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1feac2531f55859d17ff11401839df66"></a>
 <a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getLayerLoc</b> () const </td></tr>
 <tr class="separator:a1feac2531f55859d17ff11401839df66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af411f2a2782892ddd4c7bf8eb57f3f57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af411f2a2782892ddd4c7bf8eb57f3f57"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxRate</b> ()</td></tr>
-<tr class="separator:af411f2a2782892ddd4c7bf8eb57f3f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf3dbb4319223e8ca4c3431556bded7"></a>
-<a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getMPIBlock</b> ()</td></tr>
-<tr class="separator:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef3821a0875ff6179713c80fee2f90f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ef3821a0875ff6179713c80fee2f90f"></a>
 char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:a9ef3821a0875ff6179713c80fee2f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,18 +323,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumNeuronsAllBatche
 <tr class="memitem:a3dce9e9bf378e8c134960d86f87c31ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dce9e9bf378e8c134960d86f87c31ca"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumProbes</b> ()</td></tr>
 <tr class="separator:a3dce9e9bf378e8c134960d86f87c31ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7c1411dbf4d057ccdaf0fd269ad00df"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectType</b> () const </td></tr>
+<tr class="separator:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e74285c65540af4f996df5a8ae6dbbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e74285c65540af4f996df5a8ae6dbbc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getPhase</b> ()</td></tr>
 <tr class="separator:a9e74285c65540af4f996df5a8ae6dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8caf35a7a14741d08c5c478745a3dc4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8caf35a7a14741d08c5c478745a3dc4f"></a>
-<a class="el" href="classPV_1_1LayerProbe.html">LayerProbe</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProbe</b> (int n)</td></tr>
+LayerProbe *&#160;</td><td class="memItemRight" valign="bottom"><b>getProbe</b> (int n)</td></tr>
 <tr class="separator:a8caf35a7a14741d08c5c478745a3dc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add51ecb3649dc5b0433fb2d938c6e268"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add51ecb3649dc5b0433fb2d938c6e268"></a>
 <a class="el" href="classPV_1_1Publisher.html">Publisher</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPublisher</b> ()</td></tr>
 <tr class="separator:add51ecb3649dc5b0433fb2d938c6e268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94519f18c1626bd931acd1c91976f002"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94519f18c1626bd931acd1c91976f002"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getRecvGpu</b> ()</td></tr>
-<tr class="separator:a94519f18c1626bd931acd1c91976f002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0cddd5de286241ee1223ca7d4a81f29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0cddd5de286241ee1223ca7d4a81f29"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getSkipIndex</b> (int batchIndex)</td></tr>
 <tr class="separator:ae0cddd5de286241ee1223ca7d4a81f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,9 +356,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdatedDeviceDatas
 <tr class="memitem:a2ebefd923aa63600b89dd6da860ba2c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ebefd923aa63600b89dd6da860ba2c2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdatedDeviceGSynFlag</b> ()</td></tr>
 <tr class="separator:a2ebefd923aa63600b89dd6da860ba2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa313a604809da4fd2517ebf2b46898c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa313a604809da4fd2517ebf2b46898c6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdateGpu</b> ()</td></tr>
-<tr class="separator:aa313a604809da4fd2517ebf2b46898c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb58c5e4f68126609f79dc33c6be7b38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb58c5e4f68126609f79dc33c6be7b38"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><b>getV</b> ()</td></tr>
 <tr class="separator:afb58c5e4f68126609f79dc33c6be7b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,13 +372,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getYScale</b> ()</td><
 int&#160;</td><td class="memItemRight" valign="bottom"><b>increaseDelayLevels</b> (int neededDelay)</td></tr>
 <tr class="separator:ae9fd253a6e49b48cfd651c00a56c1ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3043e95f448ddc36808f6e17b30746"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa3043e95f448ddc36808f6e17b30746"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>insertProbe</b> (<a class="el" href="classPV_1_1LayerProbe.html">LayerProbe</a> *probe)</td></tr>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>insertProbe</b> (LayerProbe *probe)</td></tr>
 <tr class="separator:afa3043e95f448ddc36808f6e17b30746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc79d6b03883e6fa9c30bc7892c962ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc79d6b03883e6fa9c30bc7892c962ae"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParams</b> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="separator:abc79d6b03883e6fa9c30bc7892c962ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e384c9ee929aef35ba67c526ff78fd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a2e384c9ee929aef35ba67c526ff78fd2">isAllInputReady</a> ()</td></tr>
-<tr class="separator:a2e384c9ee929aef35ba67c526ff78fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a83e3ba4add9e893209d7fe9b47e9372e">ioParams</a> (enum ParamsIOFlag ioFlag, bool printHeader, bool printFooter)</td></tr>
+<tr class="separator:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc274528390800826b2e9fdbbf19313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a4bc274528390800826b2e9fdbbf19313">isExchangeFinished</a> (int delay=0)</td></tr>
 <tr class="separator:a4bc274528390800826b2e9fdbbf19313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae59f9c928873b369c1cdb3314fea5bfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae59f9c928873b369c1cdb3314fea5bfa"></a>
@@ -409,6 +383,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isExtended</b> ()</td
 <tr class="separator:ae59f9c928873b369c1cdb3314fea5bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5c65491ce48cd9db15e606535db948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3c5c65491ce48cd9db15e606535db948">isUsingGPU</a> () const </td></tr>
 <tr class="separator:a3c5c65491ce48cd9db15e606535db948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a98b410a1e69fa3d772b8d4b155a27d2b">lookupKeyword</a> () const </td></tr>
+<tr class="separator:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25e34feba23917639ca099d5650f8b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab25e34feba23917639ca099d5650f8b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>makeInputRegionsPointer</b> ()</td></tr>
+<tr class="separator:ab25e34feba23917639ca099d5650f8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8406a62f35e42af34b02b7ada709e935"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8406a62f35e42af34b02b7ada709e935"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mirrorInteriorToBorder</b> (<a class="el" href="structPVLayerCube__.html">PVLayerCube</a> *cube, <a class="el" href="structPVLayerCube__.html">PVLayerCube</a> *borderCube)</td></tr>
 <tr class="separator:a8406a62f35e42af34b02b7ada709e935"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -438,15 +417,17 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>mirrorToWest</
 <tr class="separator:abf42d2540cfe7e4547c88856e7057d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a8f1f11808763cf05727f5e15f595a8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a8a8f1f11808763cf05727f5e15f595a8">needUpdate</a> (double simTime, double dt)</td></tr>
 <tr class="separator:a8a8f1f11808763cf05727f5e15f595a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a813d24a00a6a22bdd589d871776e5542"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a813d24a00a6a22bdd589d871776e5542"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>outputProbeParams</b> ()</td></tr>
-<tr class="separator:a813d24a00a6a22bdd589d871776e5542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb396edfd9b59d35b70c828d257e973d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb396edfd9b59d35b70c828d257e973d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>outputState</b> (double timef)</td></tr>
-<tr class="separator:adb396edfd9b59d35b70c828d257e973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a3c15c346c846d8c9c261d87389780"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42a3c15c346c846d8c9c261d87389780"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>outputProbeParams</b> ()</td></tr>
+<tr class="separator:a42a3c15c346c846d8c9c261d87389780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31557581cf0f84b95380f95acb8ea6e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31557581cf0f84b95380f95acb8ea6e0"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>outputState</b> (double timef)</td></tr>
+<tr class="separator:a31557581cf0f84b95380f95acb8ea6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d35549e7da1968df565a049f7f934a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d35549e7da1968df565a049f7f934a"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>publish</b> (<a class="el" href="classPV_1_1Communicator.html">Communicator</a> *comm, double simTime)</td></tr>
 <tr class="separator:a29d35549e7da1968df565a049f7f934a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams</a> ()</td></tr>
+<tr class="separator:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f9e5d90dacc2e51533dda6dc0c116d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f9e5d90dacc2e51533dda6dc0c116d2"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>recvAllSynapticInput</b> ()</td></tr>
 <tr class="separator:a0f9e5d90dacc2e51533dda6dc0c116d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,30 +443,42 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>resetBuffer</b> (float
 <tr class="memitem:a05ad2c3f8169a1ddca33e5fe6859afd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05ad2c3f8169a1ddca33e5fe6859afd1"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>resetGSynBuffers</b> (double timef, double dt)</td></tr>
 <tr class="separator:a05ad2c3f8169a1ddca33e5fe6859afd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9450d9ebe2e60f4b484d4214d1a1ae20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9450d9ebe2e60f4b484d4214d1a1ae20"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
-<tr class="separator:a9450d9ebe2e60f4b484d4214d1a1ae20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d26050b7f9abe21b93fe31186ec0049"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d26050b7f9abe21b93fe31186ec0049"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerAdvanceDataStore</b> (<a class="el" href="classPV_1_1LayerAdvanceDataStoreMessage.html">LayerAdvanceDataStoreMessage</a> const *message)</td></tr>
-<tr class="separator:a6d26050b7f9abe21b93fe31186ec0049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c8dc25a214f4c21c9a70c0f79b1de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7c8dc25a214f4c21c9a70c0f79b1de4"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerCheckNotANumber</b> (<a class="el" href="classPV_1_1LayerCheckNotANumberMessage.html">LayerCheckNotANumberMessage</a> const *message)</td></tr>
-<tr class="separator:aa7c8dc25a214f4c21c9a70c0f79b1de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2fd8e7d73b719f36deb4f609288cbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a2fd8e7d73b719f36deb4f609288cbf"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerCopyFromGpu</b> (<a class="el" href="classPV_1_1LayerCopyFromGpuMessage.html">LayerCopyFromGpuMessage</a> const *message)</td></tr>
-<tr class="separator:a3a2fd8e7d73b719f36deb4f609288cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b296e46e96f018de43e9e7d9d7237b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9b296e46e96f018de43e9e7d9d7237b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerOutputState</b> (<a class="el" href="classPV_1_1LayerOutputStateMessage.html">LayerOutputStateMessage</a> const *message)</td></tr>
-<tr class="separator:ac9b296e46e96f018de43e9e7d9d7237b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad022c46fdeb591e3ad652addb840cbe2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad022c46fdeb591e3ad652addb840cbe2"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerPublish</b> (<a class="el" href="classPV_1_1LayerPublishMessage.html">LayerPublishMessage</a> const *message)</td></tr>
-<tr class="separator:ad022c46fdeb591e3ad652addb840cbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad26f1e57e121172cf3c4160120385169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad26f1e57e121172cf3c4160120385169"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerRecvSynapticInput</b> (<a class="el" href="classPV_1_1LayerRecvSynapticInputMessage.html">LayerRecvSynapticInputMessage</a> const *message)</td></tr>
-<tr class="separator:ad26f1e57e121172cf3c4160120385169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe203033b5c36aff549e32287953f3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbe203033b5c36aff549e32287953f3d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerUpdateState</b> (<a class="el" href="classPV_1_1LayerUpdateStateMessage.html">LayerUpdateStateMessage</a> const *message)</td></tr>
-<tr class="separator:acbe203033b5c36aff549e32287953f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2f241a4850c002c776d75115f2e9b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b2f241a4850c002c776d75115f2e9b8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; BaseMessage const  &gt; message) override</td></tr>
+<tr class="separator:a8b2f241a4850c002c776d75115f2e9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75bfa3a463dbdc96cafb140341a8521d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75bfa3a463dbdc96cafb140341a8521d"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerAdvanceDataStore</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerAdvanceDataStoreMessage.html">LayerAdvanceDataStoreMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a75bfa3a463dbdc96cafb140341a8521d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac542b0981be0c348faafba03ff576e32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac542b0981be0c348faafba03ff576e32"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerCheckNotANumber</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerCheckNotANumberMessage.html">LayerCheckNotANumberMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ac542b0981be0c348faafba03ff576e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b861ea46389a094dfacfd0dc183f53f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b861ea46389a094dfacfd0dc183f53f"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerClearProgressFlags</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerClearProgressFlagsMessage.html">LayerClearProgressFlagsMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a3b861ea46389a094dfacfd0dc183f53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f0cc156d45b49ab50fb5742a919bf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7f0cc156d45b49ab50fb5742a919bf3"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerCopyFromGpu</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerCopyFromGpuMessage.html">LayerCopyFromGpuMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ac7f0cc156d45b49ab50fb5742a919bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb6061c89eab4138ba6c1e0f53422f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bb6061c89eab4138ba6c1e0f53422f9"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerOutputState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerOutputStateMessage.html">LayerOutputStateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a2bb6061c89eab4138ba6c1e0f53422f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff4fbc6d292fe0eb497181c7f7106a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afff4fbc6d292fe0eb497181c7f7106a0"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerProbeWriteParams</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerProbeWriteParamsMessage.html">LayerProbeWriteParamsMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:afff4fbc6d292fe0eb497181c7f7106a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e670b5f248f919876a97f7a52ff318f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e670b5f248f919876a97f7a52ff318f"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerPublish</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerPublishMessage.html">LayerPublishMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a1e670b5f248f919876a97f7a52ff318f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d2ee0a89c58a2d788e0ef0e967d98b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3d2ee0a89c58a2d788e0ef0e967d98b"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerRecvSynapticInput</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerRecvSynapticInputMessage.html">LayerRecvSynapticInputMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ac3d2ee0a89c58a2d788e0ef0e967d98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3851b6a0a9e2254e742824cd03c7a776"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3851b6a0a9e2254e742824cd03c7a776"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerSetMaxPhase</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerSetMaxPhaseMessage.html">LayerSetMaxPhaseMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a3851b6a0a9e2254e742824cd03c7a776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be2cf7f90f308525a0f539f5b368fa5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3be2cf7f90f308525a0f539f5b368fa5"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerUpdateState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerUpdateStateMessage.html">LayerUpdateStateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a3be2cf7f90f308525a0f539f5b368fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fc4d00ca74b56411a9b18e5e531178"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9fc4d00ca74b56411a9b18e5e531178"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondLayerWriteParams</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1LayerWriteParamsMessage.html">LayerWriteParamsMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:aa9fc4d00ca74b56411a9b18e5e531178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576cd5321889528e1b49cd264ebdbfac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a576cd5321889528e1b49cd264ebdbfac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAllocDeviceActiveIndices</b> ()</td></tr>
 <tr class="separator:a576cd5321889528e1b49cd264ebdbfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -516,15 +509,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>syncGpu</b> (
 <tr class="memitem:a93055aaa846dd047c30be5341a8efdf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93055aaa846dd047c30be5341a8efdf4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>synchronizeMarginWidth</b> (<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *layer)</td></tr>
 <tr class="separator:a93055aaa846dd047c30be5341a8efdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d12f5e69ca0ea2bd1ada07499ae9e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d12f5e69ca0ea2bd1ada07499ae9e94"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>updateActiveIndices</b> ()</td></tr>
-<tr class="separator:a4d12f5e69ca0ea2bd1ada07499ae9e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a62318fb95ae0fbb23096a2d2e655d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a62318fb95ae0fbb23096a2d2e655d6"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>updateAllActiveIndices</b> ()</td></tr>
-<tr class="separator:a5a62318fb95ae0fbb23096a2d2e655d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5c014e752ef175d4392d8ed9b6a454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f5c014e752ef175d4392d8ed9b6a454"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>updateState</b> (double time, double dt) override</td></tr>
-<tr class="separator:a2f5c014e752ef175d4392d8ed9b6a454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2928ae200e166bf78e85e35ed8880170"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2928ae200e166bf78e85e35ed8880170"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateActiveIndices</b> ()</td></tr>
+<tr class="separator:a2928ae200e166bf78e85e35ed8880170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622c4b153755d308b7c505b88824e9c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a622c4b153755d308b7c505b88824e9c0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAllActiveIndices</b> ()</td></tr>
+<tr class="separator:a622c4b153755d308b7c505b88824e9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89dcb6750d7cf43a2b3a27ab3afe914d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89dcb6750d7cf43a2b3a27ab3afe914d"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>updateState</b> (double time, double dt) override</td></tr>
+<tr class="separator:a89dcb6750d7cf43a2b3a27ab3afe914d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90fd22a280d383e7d3d5d03df8856a85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90fd22a280d383e7d3d5d03df8856a85"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>useMirrorBCs</b> ()</td></tr>
 <tr class="separator:a90fd22a280d383e7d3d5d03df8856a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -537,6 +530,8 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>writeActivity<
 <tr class="memitem:a8a44ae0bb4afa0fafbeacad6e7212387"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a44ae0bb4afa0fafbeacad6e7212387"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>writeActivitySparse</b> (double timed)</td></tr>
 <tr class="separator:a8a44ae0bb4afa0fafbeacad6e7212387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b24e49874218ac1b84418df1d9410ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams</a> ()</td></tr>
+<tr class="separator:a2b24e49874218ac1b84418df1d9410ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -555,61 +550,58 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a41331e4cd877e4a6163ec374b504ab64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41331e4cd877e4a6163ec374b504ab64"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addPublisher</b> ()</td></tr>
 <tr class="separator:a41331e4cd877e4a6163ec374b504ab64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956143099ec975b521f011a2946a7b8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a956143099ec975b521f011a2946a7b8d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateActivity</b> ()</td></tr>
-<tr class="separator:a956143099ec975b521f011a2946a7b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae09ca13185e3992236913adc8d22720a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae09ca13185e3992236913adc8d22720a"></a>
+<tr class="memitem:a6b73b5b0fc5b8589d04685842ef4a549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b73b5b0fc5b8589d04685842ef4a549"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>allocateActivity</b> ()</td></tr>
+<tr class="separator:a6b73b5b0fc5b8589d04685842ef4a549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364445541b241cc372f845139550988a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a364445541b241cc372f845139550988a"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae09ca13185e3992236913adc8d22720a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocateBuffer</b> (T **buf, int bufsize, const char *bufname)</td></tr>
-<tr class="separator:ae09ca13185e3992236913adc8d22720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af89c5f9d28cc28519da46f827ed8bea8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af89c5f9d28cc28519da46f827ed8bea8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateBuffers</b> ()</td></tr>
-<tr class="separator:af89c5f9d28cc28519da46f827ed8bea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364445541b241cc372f845139550988a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocateBuffer</b> (T **buf, int bufsize, const char *bufname)</td></tr>
+<tr class="separator:a364445541b241cc372f845139550988a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2672d825038b23a270f9f1445c9c53ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2672d825038b23a270f9f1445c9c53ae"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>allocateBuffers</b> ()</td></tr>
+<tr class="separator:a2672d825038b23a270f9f1445c9c53ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbfd161120fabb6e41009bcbf45b665c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbfd161120fabb6e41009bcbf45b665c"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateClayerBuffers</b> ()</td></tr>
 <tr class="separator:acbfd161120fabb6e41009bcbf45b665c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af73d8ddb852c1133c85c488d11510575"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af73d8ddb852c1133c85c488d11510575"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateCube</b> ()</td></tr>
-<tr class="separator:af73d8ddb852c1133c85c488d11510575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6bf682a8b67348ca0cf200a9ba3a44b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#af6bf682a8b67348ca0cf200a9ba3a44b">allocateDeviceBuffers</a> ()</td></tr>
 <tr class="separator:af6bf682a8b67348ca0cf200a9ba3a44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce7870845d7a8270a0d5ad8c68cae1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a3ce7870845d7a8270a0d5ad8c68cae1e">allocateExtendedBuffer</a> (float **buf, const char *bufname)</td></tr>
-<tr class="separator:a3ce7870845d7a8270a0d5ad8c68cae1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7309c4e50077d179a9676145f57a56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f7309c4e50077d179a9676145f57a56"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateGSyn</b> ()</td></tr>
-<tr class="separator:a5f7309c4e50077d179a9676145f57a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53363a4df2f6446cdf39fdad2f2205c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53363a4df2f6446cdf39fdad2f2205c9"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocatePrevActivity</b> ()</td></tr>
-<tr class="separator:a53363a4df2f6446cdf39fdad2f2205c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebc8cd020027324b2c5cec0d73fee693"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#aebc8cd020027324b2c5cec0d73fee693">allocateRestrictedBuffer</a> (float **buf, const char *bufname)</td></tr>
-<tr class="separator:aebc8cd020027324b2c5cec0d73fee693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60536458c87edac02bd49815a7524662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a60536458c87edac02bd49815a7524662">allocateExtendedBuffer</a> (float **buf, const char *bufname)</td></tr>
+<tr class="separator:a60536458c87edac02bd49815a7524662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a148e316c48553d00d8573c7729d1a09f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a148e316c48553d00d8573c7729d1a09f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>allocateGSyn</b> ()</td></tr>
+<tr class="separator:a148e316c48553d00d8573c7729d1a09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad022e20d0737cd95eb2571e0b43b715a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad022e20d0737cd95eb2571e0b43b715a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>allocatePrevActivity</b> ()</td></tr>
+<tr class="separator:ad022e20d0737cd95eb2571e0b43b715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea1a703930c35493f42ea38bf9a0118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#abea1a703930c35493f42ea38bf9a0118">allocateRestrictedBuffer</a> (float **buf, const char *bufname)</td></tr>
+<tr class="separator:abea1a703930c35493f42ea38bf9a0118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019087c84e2ffb0c524141b22e7ef33d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a019087c84e2ffb0c524141b22e7ef33d"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateUpdateKernel</b> ()</td></tr>
 <tr class="separator:a019087c84e2ffb0c524141b22e7ef33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a221f25ffad39a952ae5ee2d69d157660"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a221f25ffad39a952ae5ee2d69d157660"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateV</b> () override</td></tr>
-<tr class="separator:a221f25ffad39a952ae5ee2d69d157660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df5168d4a9f79aedc4485336389d761"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3df5168d4a9f79aedc4485336389d761"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>allocateV</b> () override</td></tr>
+<tr class="separator:a3df5168d4a9f79aedc4485336389d761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea6f0156714b77018973c8b420d770f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea6f0156714b77018973c8b420d770f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calcNumExtended</b> ()</td></tr>
 <tr class="separator:a0ea6f0156714b77018973c8b420d770f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc66df92de5707a71b8c96fb4153fdbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc66df92de5707a71b8c96fb4153fdbc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointPvpActivityFloat</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer, char const *bufferName, float *pvpBuffer, bool extended)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointPvpActivityFloat</b> (Checkpointer *checkpointer, char const *bufferName, float *pvpBuffer, bool extended)</td></tr>
 <tr class="separator:afc66df92de5707a71b8c96fb4153fdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab817a5f2883fe15ae7e8698b3084c70f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab817a5f2883fe15ae7e8698b3084c70f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointRandState</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer, char const *bufferName, <a class="el" href="classPV_1_1Random.html">Random</a> *randState, bool extendedFlag)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointRandState</b> (Checkpointer *checkpointer, char const *bufferName, <a class="el" href="classPV_1_1Random.html">Random</a> *randState, bool extendedFlag)</td></tr>
 <tr class="separator:ab817a5f2883fe15ae7e8698b3084c70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039407452bfcd95dc24a8598fee1ec9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a039407452bfcd95dc24a8598fee1ec9a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>checkValidAnchorString</b> (const char *offsetAnchor)</td></tr>
 <tr class="separator:a039407452bfcd95dc24a8598fee1ec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b350cdafae777da79118917c9c4b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b350cdafae777da79118917c9c4b72"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
-<tr class="separator:ab5b350cdafae777da79118917c9c4b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa225010de8d6190a835f4c2e97884f7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa225010de8d6190a835f4c2e97884f7b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>communicateInitInfo</b> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message) override</td></tr>
-<tr class="separator:aa225010de8d6190a835f4c2e97884f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2739c436c52ac92da3ba7334185a0dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2739c436c52ac92da3ba7334185a0dc8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> () override</td></tr>
-<tr class="separator:a2739c436c52ac92da3ba7334185a0dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845b81d2f93eb136a83e12953286a008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a845b81d2f93eb136a83e12953286a008"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
+<tr class="separator:a845b81d2f93eb136a83e12953286a008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d762d0f093e92fb0d2f9e73aa704a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d762d0f093e92fb0d2f9e73aa704a1"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>communicateInitInfo</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:a58d762d0f093e92fb0d2f9e73aa704a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c9d885d81318414901e772ece9fa7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3c9d885d81318414901e772ece9fa7e"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> () override</td></tr>
+<tr class="separator:ad3c9d885d81318414901e772ece9fa7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e5e72dba302fbad422ff10cf0ccd16"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PvpLayer.html#a49e5e72dba302fbad422ff10cf0ccd16">countInputImages</a> () override</td></tr>
 <tr class="separator:a49e5e72dba302fbad422ff10cf0ccd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3fe91c9d219463a995d13db6d44b1d6"><td class="memTemplParams" colspan="2"><a class="anchor" id="af3fe91c9d219463a995d13db6d44b1d6"></a>
@@ -634,18 +626,18 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initClayer</b>
 <tr class="memitem:a2a28fd22ef355a1d93b0d99d33ef9317"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a28fd22ef355a1d93b0d99d33ef9317"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const char *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:a2a28fd22ef355a1d93b0d99d33ef9317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4adc16f8106e32b4a649bed7559248f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4adc16f8106e32b4a649bed7559248f"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initializeActivity</b> () override</td></tr>
-<tr class="separator:ab4adc16f8106e32b4a649bed7559248f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14293b5d4c8e47170f883acc177e5792"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14293b5d4c8e47170f883acc177e5792"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeActivity</b> () override</td></tr>
+<tr class="separator:a14293b5d4c8e47170f883acc177e5792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad30fa5684dec0897931cb82079169a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad30fa5684dec0897931cb82079169a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeBatchIndexer</b> ()</td></tr>
 <tr class="separator:aad30fa5684dec0897931cb82079169a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac557ba43a1d7709adf32630a34390f90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac557ba43a1d7709adf32630a34390f90"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initializeState</b> () overridefinal</td></tr>
-<tr class="separator:ac557ba43a1d7709adf32630a34390f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad32426e5cce32935ab256224458c0ece"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad32426e5cce32935ab256224458c0ece"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>initializeV</b> () override</td></tr>
-<tr class="separator:ad32426e5cce32935ab256224458c0ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267e43e482e92bf942836f14577afd0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a267e43e482e92bf942836f14577afd0e"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>initializeState</b> () override</td></tr>
+<tr class="separator:a267e43e482e92bf942836f14577afd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e09c82cabf76255760576bd107d3dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e09c82cabf76255760576bd107d3dd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeV</b> () override</td></tr>
+<tr class="separator:a54e09c82cabf76255760576bd107d3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a520caec859f1eeb202d64b177caaa13c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a520caec859f1eeb202d64b177caaa13c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_aspectRatioAdjustment</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:a520caec859f1eeb202d64b177caaa13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -658,6 +650,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_batch
 <tr class="memitem:a70e370c55b507456bbf79ead745d5b83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70e370c55b507456bbf79ead745d5b83"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_displayPeriod</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:a70e370c55b507456bbf79ead745d5b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82aa9eddf8d219595802adb8e1d0d3b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82aa9eddf8d219595802adb8e1d0d3b1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_flipsEnabled</b> (enum ParamsIOFlag ioFlag)</td></tr>
+<tr class="separator:a82aa9eddf8d219595802adb8e1d0d3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff109073838c36c19fd2e4ed90e63955"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff109073838c36c19fd2e4ed90e63955"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_flipsToggle</b> (enum ParamsIOFlag ioFlag)</td></tr>
+<tr class="separator:aff109073838c36c19fd2e4ed90e63955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52c187ac0eedc919213ab2a725e86df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#ae52c187ac0eedc919213ab2a725e86df">ioParam_InitVType</a> (enum ParamsIOFlag ioFlag) override</td></tr>
 <tr class="memdesc:ae52c187ac0eedc919213ab2a725e86df"><td class="mdescLeft">&#160;</td><td class="mdescRight">initVType: Specifies how to initialize the V buffer.  <a href="#ae52c187ac0eedc919213ab2a725e86df">More...</a><br /></td></tr>
 <tr class="separator:ae52c187ac0eedc919213ab2a725e86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -670,6 +668,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_inter
 <tr class="memitem:aa4547ff0e4977cc21360b764f9f0230d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4547ff0e4977cc21360b764f9f0230d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_inverseFlag</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:aa4547ff0e4977cc21360b764f9f0230d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb23731c34375fd8f778dae45d95e4ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb23731c34375fd8f778dae45d95e4ec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_jitterChangeInterval</b> (enum ParamsIOFlag ioFlag)</td></tr>
+<tr class="separator:aeb23731c34375fd8f778dae45d95e4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54e10b70c4e3f1993535a21fac1f70e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa54e10b70c4e3f1993535a21fac1f70e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_maxShifts</b> (enum ParamsIOFlag ioFlag)</td></tr>
+<tr class="separator:aa54e10b70c4e3f1993535a21fac1f70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5840cdb99e338ec281c5e504e6149d33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5840cdb99e338ec281c5e504e6149d33"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_normalizeLuminanceFlag</b> (enum ParamsIOFlag ioFlag)</td></tr>
 <tr class="separator:a5840cdb99e338ec281c5e504e6149d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -709,67 +713,57 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ioParam_write
 <tr class="separator:a09f3fc0e1a7a29e0208f4ab822342c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa228af1576848e24babc60abe05a39"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#a3aa228af1576848e24babc60abe05a39">ioParamsFillGroup</a> (enum ParamsIOFlag ioFlag) override</td></tr>
 <tr class="separator:a3aa228af1576848e24babc60abe05a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e384c9ee929aef35ba67c526ff78fd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a2e384c9ee929aef35ba67c526ff78fd2">isAllInputReady</a> ()</td></tr>
+<tr class="separator:a2e384c9ee929aef35ba67c526ff78fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07cb415a70aedf6cc8fc57e493d17139"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a07cb415a70aedf6cc8fc57e493d17139">needReset</a> (double timed, double dt)</td></tr>
 <tr class="separator:a07cb415a70aedf6cc8fc57e493d17139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26bf0c5bb6534baf23d0a6ee7f6c3ba5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#a26bf0c5bb6534baf23d0a6ee7f6c3ba5">normalizePixels</a> (<a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt; float &gt; &amp;buffer)</td></tr>
-<tr class="separator:a26bf0c5bb6534baf23d0a6ee7f6c3ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09949638cf7d516ce9ad6dfff2475031"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#a09949638cf7d516ce9ad6dfff2475031">normalizePixels</a> (int batchElement)</td></tr>
+<tr class="separator:a09949638cf7d516ce9ad6dfff2475031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77c8d7e087bd2af9b35e40b835b934e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab77c8d7e087bd2af9b35e40b835b934e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>openOutputStateFile</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>openOutputStateFile</b> (Checkpointer *checkpointer)</td></tr>
 <tr class="separator:ab77c8d7e087bd2af9b35e40b835b934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb7d097ddb409efd7ad05579366512c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fb7d097ddb409efd7ad05579366512c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
-<tr class="separator:a0fb7d097ddb409efd7ad05579366512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4513aa3c030574cab9f6b848bf3ccaad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4513aa3c030574cab9f6b848bf3ccaad"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> () override</td></tr>
-<tr class="separator:a4513aa3c030574cab9f6b848bf3ccaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc79c42105ce9106c3de1b73231a79bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc79c42105ce9106c3de1b73231a79bf"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readActivityFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
-<tr class="separator:abc79c42105ce9106c3de1b73231a79bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b73f340eef18e5a2c5abb9e5813b6a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b73f340eef18e5a2c5abb9e5813b6a6"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readDelaysFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
-<tr class="separator:a7b73f340eef18e5a2c5abb9e5813b6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a22e66ee6f0eada9d8deb2f55fdde6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0a22e66ee6f0eada9d8deb2f55fdde6"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:ab0a22e66ee6f0eada9d8deb2f55fdde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058819fc563aeb553f5cc9c8cb6821f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a058819fc563aeb553f5cc9c8cb6821f5"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readVFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
-<tr class="separator:a058819fc563aeb553f5cc9c8cb6821f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebc6246c5c13ac2d4a45f7125290ff0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ebc6246c5c13ac2d4a45f7125290ff0"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> () override</td></tr>
+<tr class="separator:a5ebc6246c5c13ac2d4a45f7125290ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe78223a396a9a6bf533751e2771561f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe78223a396a9a6bf533751e2771561f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>readActivityFromCheckpoint</b> (Checkpointer *checkpointer)</td></tr>
+<tr class="separator:abe78223a396a9a6bf533751e2771561f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d59209d67596ff466278ad3a5445441"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d59209d67596ff466278ad3a5445441"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>readDelaysFromCheckpoint</b> (Checkpointer *checkpointer)</td></tr>
+<tr class="separator:a9d59209d67596ff466278ad3a5445441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad818075a89f7ec5e8259f07b24a4f25e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad818075a89f7ec5e8259f07b24a4f25e"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (Checkpointer *checkpointer) override</td></tr>
+<tr class="separator:ad818075a89f7ec5e8259f07b24a4f25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1097acc228245410ec3fed3f6ae31a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba1097acc228245410ec3fed3f6ae31a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>readVFromCheckpoint</b> (Checkpointer *checkpointer)</td></tr>
+<tr class="separator:aba1097acc228245410ec3fed3f6ae31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad375400ce28e75a536b93c93a86d46d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad375400ce28e75a536b93c93a86d46d7"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>readyForNextFile</b> ()</td></tr>
 <tr class="separator:ad375400ce28e75a536b93c93a86d46d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1960da968bb431dab9ec6e0edd92b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1960da968bb431dab9ec6e0edd92b7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:abf1960da968bb431dab9ec6e0edd92b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a595ea824a70db5d9bd2b07fbb55cd7ba"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a595ea824a70db5d9bd2b07fbb55cd7ba">resetStateOnTrigger</a> ()</td></tr>
-<tr class="separator:a595ea824a70db5d9bd2b07fbb55cd7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79cb5cbaa97207dc87e5d131c9a9d874"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (<a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const *message)</td></tr>
-<tr class="separator:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff396229b0bf91d9ac27c43565845f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adff396229b0bf91d9ac27c43565845f2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (<a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const *message)</td></tr>
-<tr class="separator:adff396229b0bf91d9ac27c43565845f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1ae693fa8e04c2ea08ae840168f97f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message)</td></tr>
-<tr class="separator:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78df1b727320675ddd2cfcf902348add"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78df1b727320675ddd2cfcf902348add"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPUMessage</b> (<a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const *message)</td></tr>
-<tr class="separator:a78df1b727320675ddd2cfcf902348add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43bb4f5ce064f8ff0de1794194e7a25"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (<a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const *message)</td></tr>
-<tr class="separator:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade83d65746a70640711074e6f7f8a758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade83d65746a70640711074e6f7f8a758"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (<a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const *message)</td></tr>
-<tr class="separator:ade83d65746a70640711074e6f7f8a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fffadbdec8131a917eab501677a103a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fffadbdec8131a917eab501677a103a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (<a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const *message)</td></tr>
-<tr class="separator:a5fffadbdec8131a917eab501677a103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3da2fb96c4743f826132f8b14769247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da2fb96c4743f826132f8b14769247"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (<a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:af3da2fb96c4743f826132f8b14769247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b833a0cf0c1922458388a811006af54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b833a0cf0c1922458388a811006af54"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (<a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:a0b833a0cf0c1922458388a811006af54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc952d0ec6cd3711c8553ea14f417cd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PvpLayer.html#a2dc952d0ec6cd3711c8553ea14f417cd">retrieveData</a> (int inputIndex) override</td></tr>
+<tr class="memitem:a8b7006b92c7efd94d423d473b0552863"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b7006b92c7efd94d423d473b0552863"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (Checkpointer *checkpointer) override</td></tr>
+<tr class="separator:a8b7006b92c7efd94d423d473b0552863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06eb20101adacc02c0963e981816dfa2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1HyPerLayer.html#a06eb20101adacc02c0963e981816dfa2">resetStateOnTrigger</a> ()</td></tr>
+<tr class="separator:a06eb20101adacc02c0963e981816dfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad863a4042b40d7726f805995510c30c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad863a4042b40d7726f805995510c30c6"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ad863a4042b40d7726f805995510c30c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e078116ddda23b766338ed3addb412a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e078116ddda23b766338ed3addb412a"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a9e078116ddda23b766338ed3addb412a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067cdeb7c51f047107f28c3de9655956"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a067cdeb7c51f047107f28c3de9655956"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a067cdeb7c51f047107f28c3de9655956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710011d28c2683a2e318ae616bbb3a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a710011d28c2683a2e318ae616bbb3a10"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPU</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a710011d28c2683a2e318ae616bbb3a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47c7879b70636ca2867ec74de77c558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47c7879b70636ca2867ec74de77c558"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:aa47c7879b70636ca2867ec74de77c558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f277fe44fd4b9348fc6daf6beffe27"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondSetCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc952d0ec6cd3711c8553ea14f417cd"><td class="memItemLeft" align="right" valign="top">virtual Buffer&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1PvpLayer.html#a2dc952d0ec6cd3711c8553ea14f417cd">retrieveData</a> (int inputIndex) override</td></tr>
 <tr class="separator:a2dc952d0ec6cd3711c8553ea14f417cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc8d136ac737da1d6dd2e72c286b5b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1InputLayer.html#aabc8d136ac737da1d6dd2e72c286b5b2">retrieveInput</a> (double timef, double dt)</td></tr>
 <tr class="separator:aabc8d136ac737da1d6dd2e72c286b5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -783,14 +777,14 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>runUpdateKerne
 <tr class="memitem:a9d07792f054642f0333f665d73b727cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d07792f054642f0333f665d73b727cf"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setActivity</b> ()</td></tr>
 <tr class="separator:a9d07792f054642f0333f665d73b727cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fb98688aae294fc831a98eff7c4963"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06fb98688aae294fc831a98eff7c4963"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>setCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a06fb98688aae294fc831a98eff7c4963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag</a> ()</td></tr>
 <tr class="separator:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f70db9d095af3ccd8b2779875725d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29f70db9d095af3ccd8b2779875725d8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
-<tr class="separator:a29f70db9d095af3ccd8b2779875725d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83935c1a6fc0c58ba307401a4911e01a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83935c1a6fc0c58ba307401a4911e01a"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setInitialValues</b> ()</td></tr>
-<tr class="separator:a83935c1a6fc0c58ba307401a4911e01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e0247aaf1fc57d8fe1e05b0a6df8da7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
+<tr class="separator:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e51ec8095c3fbb202d08607d2aed485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag</a> ()</td></tr>
 <tr class="separator:a3e51ec8095c3fbb202d08607d2aed485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1072dbfba0a7210053a914d54cc4aa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag</a> ()</td></tr>
@@ -798,18 +792,24 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setInitialValu
 <tr class="memitem:a70dba78a6a2c30d521b96c4f09ccb01f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70dba78a6a2c30d521b96c4f09ccb01f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setLayerLoc</b> (<a class="el" href="structPVLayerLoc__.html">PVLayerLoc</a> *layerLoc, float nxScale, float nyScale, int nf, int numBatches)</td></tr>
 <tr class="separator:a70dba78a6a2c30d521b96c4f09ccb01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af275e55413c516ca79216d774549b45a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af275e55413c516ca79216d774549b45a"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxPhase</b> (int *maxPhase)</td></tr>
+<tr class="separator:af275e55413c516ca79216d774549b45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84334f2802673962a1f4957c5ea49472"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84334f2802673962a1f4957c5ea49472"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (char const *name)</td></tr>
 <tr class="separator:a84334f2802673962a1f4957c5ea49472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac95e70d9c510df496837c3adbf4a34a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac95e70d9c510df496837c3adbf4a34a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setObjectType</b> ()</td></tr>
+<tr class="separator:aac95e70d9c510df496837c3adbf4a34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1d4fbdc63cd8f1aae605937c2a275e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008e072309040514bde19d3a196f8866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a008e072309040514bde19d3a196f8866"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNBands</b> (int numCalls)</td></tr>
 <tr class="separator:a008e072309040514bde19d3a196f8866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3c6baf985951416d601b47a20524fe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3c6baf985951416d601b47a20524fe9"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>updateStateGpu</b> (double timef, double dt)</td></tr>
-<tr class="separator:af3c6baf985951416d601b47a20524fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ef12dca989007d95f29fed6b29cfc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93ef12dca989007d95f29fed6b29cfc9"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>updateStateGpu</b> (double timef, double dt)</td></tr>
+<tr class="separator:a93ef12dca989007d95f29fed6b29cfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -858,9 +858,6 @@ PVDataType&#160;</td><td class="memItemRight" valign="bottom"><b>dataType</b></t
 <tr class="memitem:a13675122d9197e05298bc5d81de699d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13675122d9197e05298bc5d81de699d1"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>dataTypeString</b></td></tr>
 <tr class="separator:a13675122d9197e05298bc5d81de699d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa0aabb8f2168a59d22dc254b1fab7b4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
-<tr class="separator:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa0e7899b7fe428d0c6420af2c0b644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaa0e7899b7fe428d0c6420af2c0b644"></a>
 PVCuda::CudaTimer *&#160;</td><td class="memItemRight" valign="bottom"><b>gpu_recvsyn_timer</b></td></tr>
 <tr class="separator:acaa0e7899b7fe428d0c6420af2c0b644"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -886,7 +883,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>initVTypeString</b>
 PVCuda::CudaKernel *&#160;</td><td class="memItemRight" valign="bottom"><b>krUpdate</b></td></tr>
 <tr class="separator:a90740ae8bc9dfe6d39a9f481100dbb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8913a82c4aee6d467943c33d1fb3d12a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8913a82c4aee6d467943c33d1fb3d12a"></a>
-<a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt; float &gt;::Anchor&#160;</td><td class="memItemRight" valign="bottom"><b>mAnchor</b> = <a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt;float&gt;::CENTER</td></tr>
+Buffer&lt; float &gt;::Anchor&#160;</td><td class="memItemRight" valign="bottom"><b>mAnchor</b> = Buffer&lt;float&gt;::CENTER</td></tr>
 <tr class="separator:a8913a82c4aee6d467943c33d1fb3d12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa189d651a44b5cbcdc11a97858b454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3aa189d651a44b5cbcdc11a97858b454"></a>
 int *&#160;</td><td class="memItemRight" valign="bottom"><b>marginIndices</b></td></tr>
@@ -894,15 +891,15 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marginIndices</b></t
 <tr class="memitem:ab08f57375875572abdcf941d043ec112"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab08f57375875572abdcf941d043ec112"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mAutoResizeFlag</b> = false</td></tr>
 <tr class="separator:ab08f57375875572abdcf941d043ec112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af853276d7a0c88a811fff224f8de8b53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af853276d7a0c88a811fff224f8de8b53"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>maxRate</b></td></tr>
-<tr class="separator:af853276d7a0c88a811fff224f8de8b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9825a4d66b30ee1c146845cc3a0f3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f9825a4d66b30ee1c146845cc3a0f3e"></a>
-std::unique_ptr&lt; <a class="el" href="classPV_1_1BatchIndexer.html">BatchIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mBatchIndexer</b></td></tr>
+std::unique_ptr&lt; BatchIndexer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mBatchIndexer</b></td></tr>
 <tr class="separator:a5f9825a4d66b30ee1c146845cc3a0f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6073e85bf297ef1e091c756e1b987b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b6073e85bf297ef1e091c756e1b987b"></a>
 BatchIndexer::BatchMethod&#160;</td><td class="memItemRight" valign="bottom"><b>mBatchMethod</b></td></tr>
 <tr class="separator:a5b6073e85bf297ef1e091c756e1b987b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b6c41b34252f6f44277aec02df7c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b6c41b34252f6f44277aec02df7c7d"></a>
+PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>mCudaDevice</b> = nullptr</td></tr>
+<tr class="separator:a43b6c41b34252f6f44277aec02df7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d70d1ff36fbbd71de2ddb9dea00272"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2d70d1ff36fbbd71de2ddb9dea00272"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mDataStructuresAllocatedFlag</b> = false</td></tr>
 <tr class="separator:aa2d70d1ff36fbbd71de2ddb9dea00272"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -919,7 +916,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInitialValuesSetFlag
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInitInfoCommunicatedFlag</b> = false</td></tr>
 <tr class="separator:a601b6a66f6507cc6e678dd8b8133562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b5857860524a76c3902b84a4b38905"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9b5857860524a76c3902b84a4b38905"></a>
-<a class="el" href="classPV_1_1BaseInitV.html">BaseInitV</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mInitVObject</b> = nullptr</td></tr>
+BaseInitV *&#160;</td><td class="memItemRight" valign="bottom"><b>mInitVObject</b> = nullptr</td></tr>
 <tr class="separator:af9b5857860524a76c3902b84a4b38905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e4b1323f9c5453f69c1b430f8c7f7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e4b1323f9c5453f69c1b430f8c7f7b4"></a>
 BufferUtils::InterpolationMethod&#160;</td><td class="memItemRight" valign="bottom"><b>mInterpolationMethod</b> = BufferUtils::BICUBIC</td></tr>
@@ -930,12 +927,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInverseFlag</b> = fa
 <tr class="memitem:ad1f5de4cb4fc1ec8b8b65d03d279687b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1f5de4cb4fc1ec8b8b65d03d279687b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mirrorBCflag</b></td></tr>
 <tr class="separator:ad1f5de4cb4fc1ec8b8b65d03d279687b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5265dfa66b8f8691e7936e499d365fd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5265dfa66b8f8691e7936e499d365fd2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mJitterChangeInterval</b> = 1</td></tr>
+<tr class="separator:a5265dfa66b8f8691e7936e499d365fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412584d1f292bf020d42bef650c4c759"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a412584d1f292bf020d42bef650c4c759"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>mLastTriggerTime</b></td></tr>
 <tr class="separator:a412584d1f292bf020d42bef650c4c759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac736f811328acc7f5e9c0692076f5017"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac736f811328acc7f5e9c0692076f5017"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>mLastUpdateTime</b></td></tr>
 <tr class="separator:ac736f811328acc7f5e9c0692076f5017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646afe75e82caf1dc30982a91d70c80c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a646afe75e82caf1dc30982a91d70c80c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxShiftX</b> = 0</td></tr>
+<tr class="separator:a646afe75e82caf1dc30982a91d70c80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c758cf57988ec1a146999a16bc91b45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c758cf57988ec1a146999a16bc91b45"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxShiftY</b> = 0</td></tr>
+<tr class="separator:a4c758cf57988ec1a146999a16bc91b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6de9b4a0a094749af808789ec2bf79aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6de9b4a0a094749af808789ec2bf79aa"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mNeedToPublish</b> = true</td></tr>
 <tr class="separator:a6de9b4a0a094749af808789ec2bf79aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -945,6 +951,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mNormalizeLuminanceFl
 <tr class="memitem:a1a4fb781ddbed045822df421abacfb9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a4fb781ddbed045822df421abacfb9a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mNormalizeStdDev</b> = true</td></tr>
 <tr class="separator:a1a4fb781ddbed045822df421abacfb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004296bae14fa4a57382973a796e75f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a004296bae14fa4a57382973a796e75f1"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mObjectType</b></td></tr>
+<tr class="separator:a004296bae14fa4a57382973a796e75f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac511c12bb09eec15f63a9f795ec14529"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac511c12bb09eec15f63a9f795ec14529"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mOffsetX</b> = 0</td></tr>
 <tr class="separator:ac511c12bb09eec15f63a9f795ec14529"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -952,20 +961,38 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mOffsetX</b> = 0</td><
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mOffsetY</b> = 0</td></tr>
 <tr class="separator:afe2848ef82804cf111ad6aa6cfcd9a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd9b6d9118220c02d3640d276b2e723"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bd9b6d9118220c02d3640d276b2e723"></a>
-<a class="el" href="classPV_1_1CheckpointableFileStream.html">CheckpointableFileStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mOutputStateStream</b> = nullptr</td></tr>
+CheckpointableFileStream *&#160;</td><td class="memItemRight" valign="bottom"><b>mOutputStateStream</b> = nullptr</td></tr>
 <tr class="separator:a6bd9b6d9118220c02d3640d276b2e723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fbfb2e3e0346343c02bb860fe2d11b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fbfb2e3e0346343c02bb860fe2d11b1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mRandomSeed</b> = 123456789</td></tr>
 <tr class="separator:a1fbfb2e3e0346343c02bb860fe2d11b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0433f955ab0a25aaeb0577c94d95da3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0433f955ab0a25aaeb0577c94d95da3e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mRecvGpu</b></td></tr>
+<tr class="separator:a0433f955ab0a25aaeb0577c94d95da3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89597f1ae7c39f39cf759928f5cb3d1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89597f1ae7c39f39cf759928f5cb3d1a"></a>
 BufferUtils::RescaleMethod&#160;</td><td class="memItemRight" valign="bottom"><b>mRescaleMethod</b></td></tr>
 <tr class="separator:a89597f1ae7c39f39cf759928f5cb3d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463123d4738d1c1e9ce3662aba545f48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a463123d4738d1c1e9ce3662aba545f48"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUpdateGpu</b></td></tr>
+<tr class="separator:a463123d4738d1c1e9ce3662aba545f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5232d369747f3658704b377c97dad3d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5232d369747f3658704b377c97dad3d4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUseInputBCflag</b> = false</td></tr>
 <tr class="separator:a5232d369747f3658704b377c97dad3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7344a415af5a81abc822533dc08bf766"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7344a415af5a81abc822533dc08bf766"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUsingGPUFlag</b> = false</td></tr>
 <tr class="separator:a7344a415af5a81abc822533dc08bf766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2274a4070c819045006d4c51a04467d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2274a4070c819045006d4c51a04467d4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mXFlipEnabled</b> = false</td></tr>
+<tr class="separator:a2274a4070c819045006d4c51a04467d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8ac4dcefba85a2d0621e3a17680eb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b8ac4dcefba85a2d0621e3a17680eb0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mXFlipToggle</b> = false</td></tr>
+<tr class="separator:a5b8ac4dcefba85a2d0621e3a17680eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9a0ec4fdcce12233e8f6b66ac61f9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b9a0ec4fdcce12233e8f6b66ac61f9b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mYFlipEnabled</b> = false</td></tr>
+<tr class="separator:a7b9a0ec4fdcce12233e8f6b66ac61f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4517ff97550053abea9bcbd42bb7a05c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4517ff97550053abea9bcbd42bb7a05c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mYFlipToggle</b> = false</td></tr>
+<tr class="separator:a4517ff97550053abea9bcbd42bb7a05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3884fcf692a0037b51509e7736b83180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3884fcf692a0037b51509e7736b83180"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr</td></tr>
 <tr class="separator:a3884fcf692a0037b51509e7736b83180"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1000,7 +1027,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>nyScale</b></td></tr
 int&#160;</td><td class="memItemRight" valign="bottom"><b>phase</b></td></tr>
 <tr class="separator:a4364feb2fd2a7fb20af44711397298cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8a2312dc16b736d4959442ca0997136"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8a2312dc16b736d4959442ca0997136"></a>
-<a class="el" href="classPV_1_1LayerProbe.html">LayerProbe</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>probes</b></td></tr>
+LayerProbe **&#160;</td><td class="memItemRight" valign="bottom"><b>probes</b></td></tr>
 <tr class="separator:ab8a2312dc16b736d4959442ca0997136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af28f4b231c3084fa5851fe48962586b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af28f4b231c3084fa5851fe48962586b4"></a>
 <a class="el" href="classPV_1_1Timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>publish_timer</b></td></tr>
@@ -1011,9 +1038,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>phase</b></td></tr>
 <tr class="memitem:aaf4a43aec7be36641aff7f6fc98f657e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf4a43aec7be36641aff7f6fc98f657e"></a>
 std::vector&lt; <a class="el" href="classPV_1_1BaseConnection.html">BaseConnection</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recvConns</b></td></tr>
 <tr class="separator:aaf4a43aec7be36641aff7f6fc98f657e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80fa781256f72dd4c0a2aebe24487dc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80fa781256f72dd4c0a2aebe24487dc2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>recvGpu</b></td></tr>
-<tr class="separator:a80fa781256f72dd4c0a2aebe24487dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fdce6c244bb658d66c4cae9ea3b025a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fdce6c244bb658d66c4cae9ea3b025a"></a>
 <a class="el" href="classPV_1_1Timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>recvsyn_timer</b></td></tr>
 <tr class="separator:a9fdce6c244bb658d66c4cae9ea3b025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1068,9 +1092,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updatedDeviceDatastor
 <tr class="memitem:a0abac6dccb3d4f433cbbca4570637f4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0abac6dccb3d4f433cbbca4570637f4c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updatedDeviceGSyn</b></td></tr>
 <tr class="separator:a0abac6dccb3d4f433cbbca4570637f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c6a194ab80a3060c800c52d323cf8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22c6a194ab80a3060c800c52d323cf8a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>updateGpu</b></td></tr>
-<tr class="separator:a22c6a194ab80a3060c800c52d323cf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8773851381b0af7818e9d10f31d3ea5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8773851381b0af7818e9d10f31d3ea5"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>valueBC</b></td></tr>
 <tr class="separator:af8773851381b0af7818e9d10f31d3ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1126,7 +1147,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Adds the given connection to the vector of connections to receive input from. The connection's post-synaptic layer must be the layer for which this member function is called. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01224">1224</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01235">1235</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1152,11 +1173,11 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Allocate GPU buffers. This must be called after PVLayer data have been allocated. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01085">1085</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01090">1090</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ce7870845d7a8270a0d5ad8c68cae1e"></a>
+<a class="anchor" id="a60536458c87edac02bd49815a7524662"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1164,7 +1185,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::HyPerLayer::allocateExtendedBuffer </td>
+          <td class="memname">void PV::HyPerLayer::allocateExtendedBuffer </td>
           <td>(</td>
           <td class="paramtype">float **&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
@@ -1189,11 +1210,11 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Allocates an extended buffer (that is, buffer's length is getNumExtendedAllBatches()). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00340">340</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00329">329</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aebc8cd020027324b2c5cec0d73fee693"></a>
+<a class="anchor" id="abea1a703930c35493f42ea38bf9a0118"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1201,7 +1222,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::HyPerLayer::allocateRestrictedBuffer </td>
+          <td class="memname">void PV::HyPerLayer::allocateRestrictedBuffer </td>
           <td>(</td>
           <td class="paramtype">float **&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
@@ -1226,7 +1247,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Allocates a restricted buffer (that is, buffer's length is getNumNeuronsAllBatches()). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00336">336</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00325">325</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1250,11 +1271,11 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This pure virtual function gets called by initializeBatchIndexer in order to give the <a class="el" href="classPV_1_1BatchIndexer.html">BatchIndexer</a> the number of input images. </p>
+<p>This pure virtual function gets called by initializeBatchIndexer in order to give the BatchIndexer the number of input images. </p>
 
 <p>Implements <a class="el" href="classPV_1_1InputLayer.html#abca7df27e7a6356bacf07e20b0043fda">PV::InputLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="PvpLayer_8cpp_source.html#l00021">21</a> of file <a class="el" href="PvpLayer_8cpp_source.html">PvpLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PvpLayer_8cpp_source.html#l00018">18</a> of file <a class="el" href="PvpLayer_8cpp_source.html">PvpLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1304,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 
 <p>Reimplemented in <a class="el" href="classPV_1_1ImageLayer.html#ae865433be52ec28e425c332dedb2c27d">PV::ImageLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="InputLayer_8hpp_source.html#l00182">182</a> of file <a class="el" href="InputLayer_8hpp_source.html">InputLayer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8hpp_source.html#l00201">201</a> of file <a class="el" href="InputLayer_8hpp_source.html">InputLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1308,9 +1329,9 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Frees a buffer created by <a class="el" href="classPV_1_1HyPerLayer.html#aebc8cd020027324b2c5cec0d73fee693">allocateRestrictedBuffer()</a>. Note that there is no checking whether the buffer was created by <a class="el" href="classPV_1_1HyPerLayer.html#a3ce7870845d7a8270a0d5ad8c68cae1e">allocateExtendedBuffer()</a>, or any other allocateBuffer()-related method. </p>
+<p>Frees a buffer created by <a class="el" href="classPV_1_1HyPerLayer.html#abea1a703930c35493f42ea38bf9a0118">allocateRestrictedBuffer()</a>. Note that there is no checking whether the buffer was created by <a class="el" href="classPV_1_1HyPerLayer.html#a60536458c87edac02bd49815a7524662">allocateExtendedBuffer()</a>, or any other allocateBuffer()-related method. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00264">264</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00256">256</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1335,9 +1356,9 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Frees a buffer created by <a class="el" href="classPV_1_1HyPerLayer.html#aebc8cd020027324b2c5cec0d73fee693">allocateRestrictedBuffer()</a>. Note that there is no checking whether the buffer was created by <a class="el" href="classPV_1_1HyPerLayer.html#aebc8cd020027324b2c5cec0d73fee693">allocateRestrictedBuffer()</a>, or any other allocateBuffer()-related method. </p>
+<p>Frees a buffer created by <a class="el" href="classPV_1_1HyPerLayer.html#abea1a703930c35493f42ea38bf9a0118">allocateRestrictedBuffer()</a>. Note that there is no checking whether the buffer was created by <a class="el" href="classPV_1_1HyPerLayer.html#abea1a703930c35493f42ea38bf9a0118">allocateRestrictedBuffer()</a>, or any other allocateBuffer()-related method. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00262">262</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00254">254</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1372,15 +1393,15 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A virtual method to return the filename containing the input of the current batch index. Caveats: updateState advances the batch indices after loading data, so this typically returns the filename that will belong to the <em>next</em> input to be loaded, not the current input. Since only the processes with <a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> rank zero do input/output, the result of this method is only reliable for those processes. </p>
+<p>A virtual method to return the filename containing the input of the current batch index. Caveats: updateState advances the batch indices after loading data, so this typically returns the filename that will belong to the <em>next</em> input to be loaded, not the current input. Since only the processes with MPIBlock rank zero do input/output, the result of this method is only reliable for those processes. </p>
 
 <p>Reimplemented in <a class="el" href="classPV_1_1ImageLayer.html#a509f3154efc936ad9782512f18607910">PV::ImageLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="InputLayer_8hpp_source.html#l00197">197</a> of file <a class="el" href="InputLayer_8hpp_source.html">InputLayer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8hpp_source.html#l00216">216</a> of file <a class="el" href="InputLayer_8hpp_source.html">InputLayer.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9bf468d55824cf21920893c6b7e11b90"></a>
+<a class="anchor" id="a43a76c43e2f797a7ade4555df733196e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1391,7 +1412,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
           <td class="memname">bool PV::BaseObject::getDataStructuresAllocatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1402,7 +1423,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Get-method for mDataStructuresAllocatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00065">65</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00102">102</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1449,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>A function to return the interval between triggering times. A negative value means that the layer never triggers (either there is no triggerLayer or the triggerLayer never updates). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01673">1673</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01686">1686</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1456,13 +1477,11 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 
 <p>Reimplemented from <a class="el" href="classPV_1_1HyPerLayer.html#a7ddccdd0e2b3db084c4c3775341d7664">PV::HyPerLayer</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1ImageFromMemoryBuffer.html#a84472ec480843630d693c9922f2a9633">PV::ImageFromMemoryBuffer</a>.</p>
-
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00309">309</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00406">406</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac17073bd03d7bbee439f49000b2573e0"></a>
+<a class="anchor" id="a3a62297a7528437e9d5495a6c8b33050"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1473,7 +1492,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
           <td class="memname">bool PV::BaseObject::getInitialValuesSetFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1484,11 +1503,11 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Get-method for mInitialValuesSetFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00071">71</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00108">108</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adcbcf6cd9cb65680fd32734eb8880661"></a>
+<a class="anchor" id="a839b37b0b29a957ddcacc670fdacf879"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1499,7 +1518,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
           <td class="memname">bool PV::BaseObject::getInitInfoCommunicatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1510,7 +1529,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Get-method for mInitInfoCommunicatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00058">58</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00095">95</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1537,7 +1556,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Returns the activity data for the layer. This data is in the extended space (with margins). </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01563">1563</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01573">1573</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1566,7 +1585,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>initializeFromCheckpointFlag: If set to true, initialize using checkpoint direcgtory set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>. </p>
 <p>Checkpoint read directory must be set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> to initialize from checkpoint. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00705">705</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00671">671</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1604,7 +1623,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 
 <p>Reimplemented from <a class="el" href="classPV_1_1HyPerLayer.html#a651cb7cee711755c35fd7d9b450cdf5e">PV::HyPerLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00622">622</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00753">753</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1633,7 +1652,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>nxScale: Defines the relationship between the x column size and the layer size. </p>
 <p>Must be 2^n or 1/2^n </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00673">673</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00639">639</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1662,7 +1681,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>nyScale: Defines the relationship between the y column size and the layer size. </p>
 <p>Must be 2^n or 1/2^n </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00677">677</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00643">643</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1694,7 +1713,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <li>"resetStateOnTrigger": On timesteps where the trigger occurs, the membrane potential is copied from the layer specified in triggerResetLayerName and setActivity is called. On nontriggering timesteps, updateState is called. For backward compatibility, this parameter defaults to updateOnlyOnTrigger. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00803">803</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00774">774</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1723,7 +1742,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>triggerFlag: (Deprecated) Specifies if this layer is being triggered </p>
 <p>Defaults to false. This flag is deprecated. To turn triggering off, set triggerLayer to NULL or the empty string. It is an error to set this flag to false and triggerLayer to a nonempty string. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00753">753</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00724">724</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1752,7 +1771,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>triggerOffset: If triggerLayer is set, triggers &lt;triggerOffset&gt; timesteps before target trigger </p>
 <p>Defaults to 0 </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00790">790</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00761">761</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1800,52 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 <p>writeStep: Specifies how often to output a pvp file for this layer </p>
 <p>Defaults to every timestep. -1 specifies not to write at all. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00854">854</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l00825">825</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83e3ba4add9e893209d7fe9b47e9372e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::ioParams </td>
+          <td>(</td>
+          <td class="paramtype">enum ParamsIOFlag&#160;</td>
+          <td class="paramname"><em>ioFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printHeader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFooter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for reading or writing the params from group in the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s parameters. The group from params is selected using the name of the connection.</p>
+<p>If ioFlag is set to write, the printHeader and printFooter flags control whether a header and footer for the parameter group is produces. These flags are set to true for layers, connections, and probes; and set to false for weight initializers and normalizers. If ioFlag is set to read, the printHeader and printFooter flags are ignored.</p>
+<p>Note that ioParams is not virtual. To add parameters in a derived class, override ioParamFillGroup. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00074">74</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
 
 </div>
 </div>
@@ -1808,11 +1872,9 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>The function that calls all ioParam functions </p>
 
-<p>Reimplemented from <a class="el" href="classPV_1_1HyPerLayer.html#ab82dc8ee6525f539445218f683e4b701">PV::HyPerLayer</a>.</p>
+<p>Reimplemented from <a class="el" href="classPV_1_1HyPerLayer.html#adf78265c6f0dc7bb94286934a9e5bd7a">PV::HyPerLayer</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1ImageFromMemoryBuffer.html#a959761c7cf327e33bda92def7d59fe5e">PV::ImageFromMemoryBuffer</a>.</p>
-
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00334">334</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00424">424</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1832,13 +1894,13 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if each layer that delivers input to this layer has finished its MPI exchange for its delay; false if any of them has not. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01911">1911</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01923">1923</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1927,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Returns true if the MPI exchange for the specified delay has finished; false if it is still in process. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01909">1909</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01921">1921</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1891,7 +1953,33 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Returns true if the object requires the GPU; false otherwise. <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> will not initialize the GPU unless one of the objects in its hierarchy returns true </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00079">79</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98b410a1e69fa3d772b8d4b155a27d2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const * PV::BaseObject::lookupKeyword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Look up the keyword of the params group with the same name as the object. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00042">42</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
 
 </div>
 </div>
@@ -1928,7 +2016,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Returns true if the trigger behavior is resetStateOnTrigger and the layer was triggered. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01705">1705</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01718">1718</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1972,13 +2060,13 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns if the update needs to happen </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1ImageFromMemoryBuffer.html#a7a8f3a54eccb1d23b3dc32ffcd28533f">PV::ImageFromMemoryBuffer</a>, <a class="el" href="classPV_1_1FilenameParsingGroundTruthLayer.html#abb34f528c0d659226a3b76f6c05760bd">PV::FilenameParsingGroundTruthLayer</a>, and <a class="el" href="classPV_1_1ConstantLayer.html#ab39deab8874f779bb30ee78d82db7daf">PV::ConstantLayer</a>.</p>
+<p>Reimplemented in <a class="el" href="classPV_1_1InputRegionLayer.html#a4c3de8e539281e1658f4eb4fc4706919">PV::InputRegionLayer</a>, <a class="el" href="classPV_1_1FilenameParsingGroundTruthLayer.html#abb34f528c0d659226a3b76f6c05760bd">PV::FilenameParsingGroundTruthLayer</a>, and <a class="el" href="classPV_1_1ConstantLayer.html#a01aa125ab5bce18634cb20dfb0b59825">PV::ConstantLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01682">1682</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01695">1695</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a26bf0c5bb6534baf23d0a6ee7f6c3ba5"></a>
+<a class="anchor" id="a09949638cf7d516ce9ad6dfff2475031"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1988,8 +2076,8 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
         <tr>
           <td class="memname">void PV::InputLayer::normalizePixels </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt; float &gt; &amp;&#160;</td>
-          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>batchElement</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1999,13 +2087,13 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   </tr>
 </table>
 </div><div class="memdoc">
-<p>normalizePixels transforms the image based on the normalizeLuminanceFlag, normalizeStdDev, and inverseFlag parameters. Overload this to add additional post process steps in subclasses. </p>
+<p>normalizePixels transforms the input on a per-pixel basis specified by the batch element, based on the normalizeLuminanceFlag, normalizeStdDev, and inverseFlag parameters. Overload this to add additional post process steps in subclasses. Pixels not occupied by the actual image (due to offsets, padding, etc.) are not changed. </p>
 
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00223">223</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00279">279</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a595ea824a70db5d9bd2b07fbb55cd7ba"></a>
+<a class="anchor" id="aa231f0cd917d5d96d4c94e7d676621f3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2013,7 +2101,33 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::HyPerLayer::resetStateOnTrigger </td>
+          <td class="memname">void PV::BaseObject::readParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A method that reads the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00062">62</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06eb20101adacc02c0963e981816dfa2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::HyPerLayer::resetStateOnTrigger </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2027,7 +2141,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Called instead of updateState when triggerBehavior is "resetStateOnTrigger" and a triggering event occurs. Copies the membrane potential V from triggerResetLayer and then calls setActivity to update A. </p>
 
-<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01756">1756</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="HyPerLayer_8cpp_source.html#l01769">1769</a> of file <a class="el" href="HyPerLayer_8cpp_source.html">HyPerLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -2039,7 +2153,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPV_1_1Buffer.html">Buffer</a>&lt; float &gt; PV::PvpLayer::retrieveData </td>
+          <td class="memname">Buffer&lt; float &gt; PV::PvpLayer::retrieveData </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>inputIndex</em></td><td>)</td>
@@ -2056,7 +2170,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 
 <p>Implements <a class="el" href="classPV_1_1InputLayer.html#aa5eb79078d3731ba45e778f648fed1a8">PV::InputLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="PvpLayer_8cpp_source.html#l00033">33</a> of file <a class="el" href="PvpLayer_8cpp_source.html">PvpLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PvpLayer_8cpp_source.html#l00030">30</a> of file <a class="el" href="PvpLayer_8cpp_source.html">PvpLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -2093,7 +2207,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Each batch element loads its data with the input specified by the current index for that batch element. The indices are not modified. </p>
 
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00097">97</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00099">99</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -2130,7 +2244,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>Each batch element loads its input by calling <a class="el" href="classPV_1_1InputLayer.html#aabc8d136ac737da1d6dd2e72c286b5b2">retrieveInput()</a>, and then advances its index by the amount specified by skip_frame_index. </p>
 
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00116">116</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00149">149</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -2167,7 +2281,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>This method scatters the mInputData buffer to the activity buffers of the several MPI processes. </p>
 
-<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00126">126</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputLayer_8cpp_source.html#l00159">159</a> of file <a class="el" href="InputLayer_8cpp_source.html">InputLayer.cpp</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2307,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>This method sets mDataStructuresAllocatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00111">111</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00175">175</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -2219,7 +2333,7 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>This method sets the flag returned by getInitialValuesSetFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00180">180</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -2245,7 +2359,33 @@ struct <a class="el" href="structPV_1_1BufferUtils_1_1SparseFileTable.html">Buff
 </div><div class="memdoc">
 <p>This method sets mInitInfoCommunicatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00106">106</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00170">170</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b24e49874218ac1b84418df1d9410ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::writeParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A method that writes the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00069">69</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>

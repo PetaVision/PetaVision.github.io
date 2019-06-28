@@ -364,7 +364,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxThreads</b></td></t
 </div><div class="memdoc">
 <p>Deallocates an array, assuming it was created by a call to <a class="el" href="classPV_1_1PV__Init.html#a0a4fe83d412c788586fcf6c2617b6ebc">getArgsCopy()</a>. It frees argv[0], argv[1], ..., argv[argc-1], and then frees argv. </p>
 
-<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00272">272</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00275">275</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxThreads</b></td></t
 </div><div class="memdoc">
 <p>Returns a copy of the args array. It uses malloc and strdup, so the caller is responsible for freeing getArgs()[k] for each k and for freeing getArgs() (the simplest way to free all the memory at once is to call the static method Argument::freeArgs) The length of the returned array is argc+1, and getArgs()[argc] is NULL. </p>
 
-<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00248">248</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00251">251</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -640,7 +640,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxThreads</b></td></t
 </div><div class="memdoc">
 <p>The method to add a new object type to the <a class="el" href="classPV_1_1PV__Init.html">PV_Init</a> object's class factory. keyword is the string that labels the object type, matching the keyword used in params files. creator is a pointer to a function that takes a name and a <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> pointer, and creates an object of the corresponding keyword, with the given name and parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>. The function should return a pointer of type <a class="el" href="classPV_1_1BaseObject.html">BaseObject</a>, created with the new operator. </p>
 
-<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00238">238</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00241">241</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +659,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxThreads</b></td></t
 </div><div class="memdoc">
 <p>Resets all member variables to their state at the time the object was instantiated. That is, the arguments in the original argv are parsed again, and the effect of any set-method that had been called is discarded. Any previous pointers returned by get-methods, except for getArgs or getArgsCopy are no longer valid. Always returns PV_SUCCESS. If the routine fails, it exits with an error. </p>
 
-<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00233">233</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PV__Init_8cpp_source.html#l00236">236</a> of file <a class="el" href="PV__Init_8cpp_source.html">PV_Init.cpp</a>.</p>
 
 </div>
 </div>

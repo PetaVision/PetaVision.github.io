@@ -17,7 +17,9 @@ var classPV_1_1FileStream =
     [ "read", "classPV_1_1FileStream.html#adc89a90371972e631822d542de9f4deb", null ],
     [ "readable", "classPV_1_1FileStream.html#afcfebc90f2f20c38fd588b50ddf0002c", null ],
     [ "readwrite", "classPV_1_1FileStream.html#a17876d64c356db903bad671c1d234ca6", null ],
+    [ "setInPos", "classPV_1_1FileStream.html#aa07352f36eed7a2c63b1692d7dd5d882", null ],
     [ "setInPos", "classPV_1_1FileStream.html#a9b6b07da2737b6c4aede5e0affc32df7", null ],
+    [ "setOutPos", "classPV_1_1FileStream.html#a04fe412244ee52f099c8f3b9062ecf79", null ],
     [ "setOutPos", "classPV_1_1FileStream.html#aada6079e6cd23cfd078ccb1f14e21b38", null ],
     [ "setOutStream", "classPV_1_1FileStream.html#a924a79dcd0f5b6c1d653672fdc9948f5", null ],
     [ "verifyFlags", "classPV_1_1FileStream.html#a5ab7fe7a67b433ea6d9811af49cfaf13", null ],
@@ -26,5 +28,6 @@ var classPV_1_1FileStream =
     [ "mFileName", "classPV_1_1FileStream.html#af909c014254cbed1ee5853ccc66168c4", null ],
     [ "mFStream", "classPV_1_1FileStream.html#a35eea4d69e064300fb49f0b8b2f53fad", null ],
     [ "mMaxAttempts", "classPV_1_1FileStream.html#ab5226930f5976b22ceedb5fcf7de14ec", null ],
+    [ "mMode", "classPV_1_1FileStream.html#a160346225a9f2c1d470efc27cd08f8d9", null ],
     [ "mVerifyWrites", "classPV_1_1FileStream.html#ac53edb8c8626be1dafb526d4f9b2c355", null ]
 ];

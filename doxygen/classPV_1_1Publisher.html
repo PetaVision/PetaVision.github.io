@@ -116,10 +116,10 @@ $(document).ready(function(){initNavTree('classPV_1_1Publisher.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2ab5e58e5941fa14fb299bd8d624651"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2ab5e58e5941fa14fb299bd8d624651"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Publisher</b> (<a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const &amp;mpiBlock, <a class="el" href="structPVLayerCube__.html">PVLayerCube</a> *cube, int numLevels, bool isSparse)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Publisher</b> (MPIBlock const &amp;mpiBlock, <a class="el" href="structPVLayerCube__.html">PVLayerCube</a> *cube, int numLevels, bool isSparse)</td></tr>
 <tr class="separator:ae2ab5e58e5941fa14fb299bd8d624651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29ef7004c531c739a280a8ae00c36ab4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29ef7004c531c739a280a8ae00c36ab4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointDataStore</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer, char const *objectName, char const *bufferName)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkpointDataStore</b> (Checkpointer *checkpointer, char const *objectName, char const *bufferName)</td></tr>
 <tr class="separator:a29ef7004c531c739a280a8ae00c36ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7112570f86ba629846478f70baa75738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Publisher.html#a7112570f86ba629846478f70baa75738">copyForward</a> (double lastUpdateTime)</td></tr>
 <tr class="separator:a7112570f86ba629846478f70baa75738"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,22 +136,22 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>isExchangeFinished</b>
 <tr class="separator:a2488a8dbe429f6e5d3696b255442c9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab17ca30ec01a0d71b7775430b6ab7299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Publisher.html#ab17ca30ec01a0d71b7775430b6ab7299">publish</a> (double lastUpdateTime)</td></tr>
 <tr class="separator:ab17ca30ec01a0d71b7775430b6ab7299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c3b10d910bea94c8ecd5e5a1aa96e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06c3b10d910bea94c8ecd5e5a1aa96e0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>updateActiveIndices</b> (int delay=0)</td></tr>
-<tr class="separator:a06c3b10d910bea94c8ecd5e5a1aa96e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68a7f39eab1ed4a063d635e27f542d45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68a7f39eab1ed4a063d635e27f542d45"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>updateAllActiveIndices</b> ()</td></tr>
-<tr class="separator:a68a7f39eab1ed4a063d635e27f542d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31cb9bfdae1a562375a7bcc3c3909662"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31cb9bfdae1a562375a7bcc3c3909662"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateActiveIndices</b> (int delay=0)</td></tr>
+<tr class="separator:a31cb9bfdae1a562375a7bcc3c3909662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b47dd80f6f06c8c9ef8be0efe2bc51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55b47dd80f6f06c8c9ef8be0efe2bc51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAllActiveIndices</b> ()</td></tr>
+<tr class="separator:a55b47dd80f6f06c8c9ef8be0efe2bc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30fdc583f793a95583d3a06789bebb96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1Publisher.html#a30fdc583f793a95583d3a06789bebb96">wait</a> (int delay=0)</td></tr>
 <tr class="separator:a30fdc583f793a95583d3a06789bebb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:abb7110911d142769f44c365be2bc8977"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb7110911d142769f44c365be2bc8977"></a>
-<a class="el" href="classPV_1_1SparseList.html">SparseList</a>&lt; float &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><b>recvActiveIndicesBuffer</b> (int bufferId)</td></tr>
+SparseList&lt; float &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><b>recvActiveIndicesBuffer</b> (int bufferId)</td></tr>
 <tr class="separator:abb7110911d142769f44c365be2bc8977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a6fb87ecb0d78a51e4fb2bb6e70dcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39a6fb87ecb0d78a51e4fb2bb6e70dcc"></a>
-<a class="el" href="classPV_1_1SparseList.html">SparseList</a>&lt; float &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><b>recvActiveIndicesBuffer</b> (int bufferId, int delay)</td></tr>
+SparseList&lt; float &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><b>recvActiveIndicesBuffer</b> (int bufferId, int delay)</td></tr>
 <tr class="separator:a39a6fb87ecb0d78a51e4fb2bb6e70dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a079731a47535e3ab2aa0c918855829b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a079731a47535e3ab2aa0c918855829b2"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><b>recvBuffer</b> (int bufferId)</td></tr>
@@ -175,7 +175,7 @@ Private Attributes</h2></td></tr>
 <a class="el" href="structPVLayerCube__.html">PVLayerCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mLayerCube</b></td></tr>
 <tr class="separator:a24a1fb9c51cd054e3f2717b8f286c77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c676e2e2d40d0ccdc284fd6e903d9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71c676e2e2d40d0ccdc284fd6e903d9e"></a>
-<a class="el" href="classPV_1_1RingBuffer.html">RingBuffer</a>&lt; std::vector&lt; MPI_Request &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>mpiRequestsBuffer</b> = nullptr</td></tr>
+RingBuffer&lt; std::vector&lt; MPI_Request &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>mpiRequestsBuffer</b> = nullptr</td></tr>
 <tr class="separator:a71c676e2e2d40d0ccdc284fd6e903d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0399e20f18080fcf72784d14916026e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0399e20f18080fcf72784d14916026e4"></a>
 MPI_Datatype *&#160;</td><td class="memItemRight" valign="bottom"><b>neighborDatatypes</b></td></tr>
@@ -203,7 +203,7 @@ MPI_Datatype *&#160;</td><td class="memItemRight" valign="bottom"><b>neighborDat
 </div><div class="memdoc">
 <p>Keeps the data store in sync if the time advances but the data doesn't change. If the number of levels is greater than one, copy the previous level to the current level; otherwise do nothing. Using this instead of <a class="el" href="classPV_1_1Publisher.html#ab17ca30ec01a0d71b7775430b6ab7299">publish()</a> avoids an unnecessary border exchange. </p>
 
-<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00103">103</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00101">101</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,7 +222,7 @@ MPI_Datatype *&#160;</td><td class="memItemRight" valign="bottom"><b>neighborDat
 </div><div class="memdoc">
 <p>creates a PVLayerCube pointing to the data in the data store at the given delay. This method blocks until any pending border exchange for that delay level are completed. </p>
 
-<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00061">61</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00060">60</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ MPI_Datatype *&#160;</td><td class="memItemRight" valign="bottom"><b>neighborDat
 </div><div class="memdoc">
 <p>Copies the data from the cube to the top level of the data store, and exchanges the border. </p>
 
-<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00079">79</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00077">77</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ MPI_Datatype *&#160;</td><td class="memItemRight" valign="bottom"><b>neighborDat
 </div><div class="memdoc">
 <p>wait until all outstanding published messages have arrived </p>
 
-<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00168">168</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Publisher_8cpp_source.html#l00166">166</a> of file <a class="el" href="Publisher_8cpp_source.html">Publisher.cpp</a>.</p>
 
 </div>
 </div>

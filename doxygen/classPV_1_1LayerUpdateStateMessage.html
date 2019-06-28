@@ -106,8 +106,7 @@ $(document).ready(function(){initNavTree('classPV_1_1LayerUpdateStateMessage.htm
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">PV::LayerUpdateStateMessage Class Reference</div>  </div>
 </div><!--header-->
@@ -118,49 +117,42 @@ Inheritance diagram for PV::LayerUpdateStateMessage:</div>
  <div class="center">
   <img src="classPV_1_1LayerUpdateStateMessage.png" usemap="#PV::LayerUpdateStateMessage_map" alt=""/>
   <map id="PV::LayerUpdateStateMessage_map" name="PV::LayerUpdateStateMessage_map">
-<area href="classPV_1_1BaseMessage.html" alt="PV::BaseMessage" shape="rect" coords="0,0,186,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b8f5eee72effea270739c405e0d35ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b8f5eee72effea270739c405e0d35ef"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LayerUpdateStateMessage</b> (int phase, bool recvOnGpuFlag, bool updateOnGpuFlag, double simTime, double deltaTime)</td></tr>
-<tr class="separator:a2b8f5eee72effea270739c405e0d35ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861225dbf751edb2b62453cbb1bb6a2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a861225dbf751edb2b62453cbb1bb6a2b"></a>
-std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageType</b> () const </td></tr>
-<tr class="separator:a861225dbf751edb2b62453cbb1bb6a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6147c608fb04329b4d8de8b1e7b64ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6147c608fb04329b4d8de8b1e7b64ea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LayerUpdateStateMessage</b> (int phase, bool recvOnGpuFlag, bool updateOnGpuFlag, double simTime, double deltaTime, bool *someLayerIsPending, bool *someLayerHasActed)</td></tr>
+<tr class="separator:af6147c608fb04329b4d8de8b1e7b64ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ae576a3a40629b7eed924bedbec89c37d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae576a3a40629b7eed924bedbec89c37d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>mDeltaT</b></td></tr>
-<tr class="separator:ae576a3a40629b7eed924bedbec89c37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4332a57b03762d5102d8db29588aee3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4332a57b03762d5102d8db29588aee3b"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>mDeltaT</b></td></tr>
+<tr class="separator:a4332a57b03762d5102d8db29588aee3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09026d5a84ac87238e03a2cf28a939be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09026d5a84ac87238e03a2cf28a939be"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mPhase</b></td></tr>
 <tr class="separator:a09026d5a84ac87238e03a2cf28a939be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405fce85a645f731e5504c11c75afc98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405fce85a645f731e5504c11c75afc98"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mRecvOnGpuFlag</b></td></tr>
 <tr class="separator:a405fce85a645f731e5504c11c75afc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ca34b552e525a80d558fae916ae71ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ca34b552e525a80d558fae916ae71ee"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>mTime</b></td></tr>
-<tr class="separator:a0ca34b552e525a80d558fae916ae71ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5f1d4ccd52e55e33989b02d6ed89a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d5f1d4ccd52e55e33989b02d6ed89a7"></a>
+bool *&#160;</td><td class="memItemRight" valign="bottom"><b>mSomeLayerHasActed</b></td></tr>
+<tr class="separator:a1d5f1d4ccd52e55e33989b02d6ed89a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9835fa15c00087e01e5c91ba036c08a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9835fa15c00087e01e5c91ba036c08a"></a>
+bool *&#160;</td><td class="memItemRight" valign="bottom"><b>mSomeLayerIsPending</b></td></tr>
+<tr class="separator:ac9835fa15c00087e01e5c91ba036c08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a621aabf159665d9e769d49b1c7c09a73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a621aabf159665d9e769d49b1c7c09a73"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>mTime</b></td></tr>
+<tr class="separator:a621aabf159665d9e769d49b1c7c09a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ef0d7ff30264cc3d6100e1c5d8ea58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75ef0d7ff30264cc3d6100e1c5d8ea58"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUpdateOnGpuFlag</b></td></tr>
 <tr class="separator:a75ef0d7ff30264cc3d6100e1c5d8ea58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7ed3c3fad47dcef4e66785a05370394e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ed3c3fad47dcef4e66785a05370394e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMessageType</b> (std::string const &amp;messageType)</td></tr>
-<tr class="separator:a7ed3c3fad47dcef4e66785a05370394e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9385623963e78c09ed771da173e82a8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9385623963e78c09ed771da173e82a8e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMessageType</b> (char const *messageType)</td></tr>
-<tr class="separator:a9385623963e78c09ed771da173e82a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Messages_8hpp_source.html#l00124">124</a> of file <a class="el" href="Messages_8hpp_source.html">Messages.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Messages_8hpp_source.html#l00188">188</a> of file <a class="el" href="Messages_8hpp_source.html">Messages.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>OpenPV/src/columns/<a class="el" href="Messages_8hpp_source.html">Messages.hpp</a></li>
 </ul>

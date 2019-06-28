@@ -107,10 +107,10 @@ $(document).ready(function(){initNavTree('classPV_1_1BaseConnection.html','');})
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">PV::BaseConnection Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">PV::BaseConnection Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -119,297 +119,162 @@ Inheritance diagram for PV::BaseConnection:</div>
  <div class="center">
   <img src="classPV_1_1BaseConnection.png" usemap="#PV::BaseConnection_map" alt=""/>
   <map id="PV::BaseConnection_map" name="PV::BaseConnection_map">
-<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="0,112,186,136"/>
-<area href="classPV_1_1CheckpointerDataInterface.html" alt="PV::CheckpointerDataInterface" shape="rect" coords="0,56,186,80"/>
-<area href="classPV_1_1Observer.html" alt="PV::Observer" shape="rect" coords="0,0,186,24"/>
-<area href="classPV_1_1HyPerConn.html" alt="PV::HyPerConn" shape="rect" coords="0,224,186,248"/>
-<area href="classPV_1_1CloneConn.html" alt="PV::CloneConn" shape="rect" coords="196,280,382,304"/>
-<area href="classPV_1_1CopyConn.html" alt="PV::CopyConn" shape="rect" coords="196,336,382,360"/>
-<area href="classPV_1_1GapConn.html" alt="PV::GapConn" shape="rect" coords="196,392,382,416"/>
-<area href="classPV_1_1IdentConn.html" alt="PV::IdentConn" shape="rect" coords="196,448,382,472"/>
-<area href="classPV_1_1ImprintConn.html" alt="PV::ImprintConn" shape="rect" coords="196,504,382,528"/>
-<area href="classPV_1_1KernelConn.html" alt="PV::KernelConn" shape="rect" coords="196,560,382,584"/>
-<area href="classPV_1_1MomentumConn.html" alt="PV::MomentumConn" shape="rect" coords="196,616,382,640"/>
-<area href="classPV_1_1PoolingConn.html" alt="PV::PoolingConn" shape="rect" coords="196,672,382,696"/>
-<area href="classPV_1_1privateTransposeConn.html" alt="PV::privateTransposeConn" shape="rect" coords="196,728,382,752"/>
-<area href="classPV_1_1TransposeConn.html" alt="PV::TransposeConn" shape="rect" coords="196,784,382,808"/>
-<area href="classPV_1_1TransposePoolingConn.html" alt="PV::TransposePoolingConn" shape="rect" coords="196,840,382,864"/>
+<area href="classPV_1_1BaseObject.html" alt="PV::BaseObject" shape="rect" coords="880,56,1046,80"/>
+<area href="classPV_1_1HyPerConn.html" alt="PV::HyPerConn" shape="rect" coords="352,168,518,192"/>
+<area href="classPV_1_1IdentConn.html" alt="PV::IdentConn" shape="rect" coords="880,168,1046,192"/>
+<area href="classPV_1_1PoolingConn.html" alt="PV::PoolingConn" shape="rect" coords="1056,168,1222,192"/>
+<area href="classPV_1_1WTAConn.html" alt="PV::WTAConn" shape="rect" coords="1232,168,1398,192"/>
+<area href="classPV_1_1CloneConn.html" alt="PV::CloneConn" shape="rect" coords="0,224,166,248"/>
+<area href="classPV_1_1CopyConn.html" alt="PV::CopyConn" shape="rect" coords="176,224,342,248"/>
+<area href="classPV_1_1GapConn.html" alt="PV::GapConn" shape="rect" coords="352,224,518,248"/>
+<area href="classPV_1_1MomentumConn.html" alt="PV::MomentumConn" shape="rect" coords="528,224,694,248"/>
+<area href="classPV_1_1TransposeConn.html" alt="PV::TransposeConn" shape="rect" coords="704,224,870,248"/>
+<area href="classPV_1_1RescaleConn.html" alt="PV::RescaleConn" shape="rect" coords="880,224,1046,248"/>
+<area href="classPV_1_1TransposePoolingConn.html" alt="PV::TransposePoolingConn" shape="rect" coords="1056,224,1222,248"/>
+<area href="classPV_1_1PlasticCloneConn.html" alt="PV::PlasticCloneConn" shape="rect" coords="0,280,166,304"/>
+<area href="classPV_1_1FeedbackConn.html" alt="PV::FeedbackConn" shape="rect" coords="704,280,870,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-BaseConnection Parameters</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp2e5c5dc9160e0562c436e5988e0f22a3"></a>List of parameters needed from the <a class="el" href="classPV_1_1BaseConnection.html">BaseConnection</a> class </p>
-</td></tr>
-<tr class="memitem:acb0b03dae570319f6831254008fafa05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb0b03dae570319f6831254008fafa05"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>preLayerName</b></td></tr>
-<tr class="separator:acb0b03dae570319f6831254008fafa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16807530cf6b6689296abfd2513a7d10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16807530cf6b6689296abfd2513a7d10"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>postLayerName</b></td></tr>
-<tr class="separator:a16807530cf6b6689296abfd2513a7d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67eb85575bd12f1fc83d41efc0773dab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67eb85575bd12f1fc83d41efc0773dab"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pre</b></td></tr>
-<tr class="separator:a67eb85575bd12f1fc83d41efc0773dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795cb74f306f0f67a014c32e1632c066"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a795cb74f306f0f67a014c32e1632c066"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>post</b></td></tr>
-<tr class="separator:a795cb74f306f0f67a014c32e1632c066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab85bfd842d7406c7a0f2668fdf31fe38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab85bfd842d7406c7a0f2668fdf31fe38"></a>
-ChannelType&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b></td></tr>
-<tr class="separator:ab85bfd842d7406c7a0f2668fdf31fe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859d432cd907a0ea9cf0c6a8194e9fb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a859d432cd907a0ea9cf0c6a8194e9fb6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numAxonalArborLists</b></td></tr>
-<tr class="separator:a859d432cd907a0ea9cf0c6a8194e9fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4695a78d9aa68b33b1a597e1ef167fd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4695a78d9aa68b33b1a597e1ef167fd3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>plasticityFlag</b></td></tr>
-<tr class="separator:a4695a78d9aa68b33b1a597e1ef167fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25b388826683512d43ec52f6c2f83469"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25b388826683512d43ec52f6c2f83469"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>convertRateToSpikeCount</b></td></tr>
-<tr class="separator:a25b388826683512d43ec52f6c2f83469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73b5c297a06ad9ecf51e0280f93e89d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b5c297a06ad9ecf51e0280f93e89d2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>receiveGpu</b></td></tr>
-<tr class="separator:a73b5c297a06ad9ecf51e0280f93e89d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b667614aa0a284156e2f3c3e14521e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02b667614aa0a284156e2f3c3e14521e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>initializeFromCheckpointFlag</b> = true</td></tr>
-<tr class="separator:a02b667614aa0a284156e2f3c3e14521e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a951a07a28e41920e16ca105ab1ceaba3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a951a07a28e41920e16ca105ab1ceaba3"></a>
-<a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>probes</b></td></tr>
-<tr class="separator:a951a07a28e41920e16ca105ab1ceaba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa983cbd4a723721201f2d22a1b0814a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa983cbd4a723721201f2d22a1b0814a0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numProbes</b></td></tr>
-<tr class="separator:aa983cbd4a723721201f2d22a1b0814a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a426863a787e04966a32a1eeb4205bed4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a426863a787e04966a32a1eeb4205bed4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>initInfoCommunicatedFlag</b></td></tr>
-<tr class="separator:a426863a787e04966a32a1eeb4205bed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af41ef89416d718442dc48a2b024a85a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af41ef89416d718442dc48a2b024a85a8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>dataStructuresAllocatedFlag</b></td></tr>
-<tr class="separator:af41ef89416d718442dc48a2b024a85a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2de21164586d22332c13aa2fd5116ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2de21164586d22332c13aa2fd5116ed"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialValuesSetFlag</b></td></tr>
-<tr class="separator:ac2de21164586d22332c13aa2fd5116ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad690218ecc6f2ceebfb1d6b02a8cd0da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad690218ecc6f2ceebfb1d6b02a8cd0da"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>delayArraySize</b></td></tr>
-<tr class="separator:ad690218ecc6f2ceebfb1d6b02a8cd0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabebe4d4dfba064e308e7d585e260251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabebe4d4dfba064e308e7d585e260251"></a>
-int *&#160;</td><td class="memItemRight" valign="bottom"><b>delays</b></td></tr>
-<tr class="separator:aabebe4d4dfba064e308e7d585e260251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ffb80e676c2b05ccaffe700adafece6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ffb80e676c2b05ccaffe700adafece6"></a>
-float *&#160;</td><td class="memItemRight" valign="bottom"><b>fDelayArray</b></td></tr>
-<tr class="separator:a2ffb80e676c2b05ccaffe700adafece6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67faf9e8d0dec06f57c5db4c596f411"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67faf9e8d0dec06f57c5db4c596f411"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getDelayArraySize</b> ()</td></tr>
-<tr class="separator:ae67faf9e8d0dec06f57c5db4c596f411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae30bac5b87e27c096e160da7a8b07c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#aae30bac5b87e27c096e160da7a8b07c8">ioParam_preLayerName</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:aae30bac5b87e27c096e160da7a8b07c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">preLayerName: Specifies the connection's pre layer  <a href="#aae30bac5b87e27c096e160da7a8b07c8">More...</a><br /></td></tr>
-<tr class="separator:aae30bac5b87e27c096e160da7a8b07c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19364a0244cb16b0025ed2b34a053c12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a19364a0244cb16b0025ed2b34a053c12">ioParam_postLayerName</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a19364a0244cb16b0025ed2b34a053c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">postLayerName: Specifies the connection's post layer  <a href="#a19364a0244cb16b0025ed2b34a053c12">More...</a><br /></td></tr>
-<tr class="separator:a19364a0244cb16b0025ed2b34a053c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a470df62079c60e62e95fd22004a9adb3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a470df62079c60e62e95fd22004a9adb3">ioParam_channelCode</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a470df62079c60e62e95fd22004a9adb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">channelCode: Specifies which channel in the post layer this connection is attached to  <a href="#a470df62079c60e62e95fd22004a9adb3">More...</a><br /></td></tr>
-<tr class="separator:a470df62079c60e62e95fd22004a9adb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad979d27f6d1477c630628323dca3fb12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ad979d27f6d1477c630628323dca3fb12">ioParam_delay</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:ad979d27f6d1477c630628323dca3fb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">delay: Specifies delay(s) which the post layer will receive data  <a href="#ad979d27f6d1477c630628323dca3fb12">More...</a><br /></td></tr>
-<tr class="separator:ad979d27f6d1477c630628323dca3fb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b7d91e993091877cc1dc5ab18c488b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8b7d91e993091877cc1dc5ab18c488b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ae8b7d91e993091877cc1dc5ab18c488b">ioParam_numAxonalArbors</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:ae8b7d91e993091877cc1dc5ab18c488b"><td class="mdescLeft">&#160;</td><td class="mdescRight">numAxonalArbors: Specifies the number of arbors to use in this connection <br /></td></tr>
-<tr class="separator:ae8b7d91e993091877cc1dc5ab18c488b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1902dddd3f69d3fc46f9ec1a63ee2979"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1902dddd3f69d3fc46f9ec1a63ee2979"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a1902dddd3f69d3fc46f9ec1a63ee2979">ioParam_plasticityFlag</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a1902dddd3f69d3fc46f9ec1a63ee2979"><td class="mdescLeft">&#160;</td><td class="mdescRight">plasticityFlag: Specifies if the weights will update <br /></td></tr>
-<tr class="separator:a1902dddd3f69d3fc46f9ec1a63ee2979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa11736d629526f3c58299f78265e3a61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#aa11736d629526f3c58299f78265e3a61">ioParam_convertRateToSpikeCount</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:aa11736d629526f3c58299f78265e3a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">convertRateToSpikeCount: If true, presynaptic activity should be converted from a rate to a count.  <a href="#aa11736d629526f3c58299f78265e3a61">More...</a><br /></td></tr>
-<tr class="separator:aa11736d629526f3c58299f78265e3a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1121921926614fb4af7303fdb91542e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1121921926614fb4af7303fdb91542e6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a1121921926614fb4af7303fdb91542e6">ioParam_receiveGpu</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a1121921926614fb4af7303fdb91542e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">receiveGpu: If PetaVision was compiled with GPU acceleration and this flag is set to true, the connection uses the GPU to update the postsynaptic layer's GSyn. If compiled without GPU acceleration, it is an error to set this flag to true. <br /></td></tr>
-<tr class="separator:a1121921926614fb4af7303fdb91542e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6acb8e53bffb55c4fabaef0ebf88b35f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a6acb8e53bffb55c4fabaef0ebf88b35f">ioParam_initializeFromCheckpointFlag</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="memdesc:a6acb8e53bffb55c4fabaef0ebf88b35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializeFromCheckpointFlag: If set to true, initialize using checkpoint direcgtory set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>.  <a href="#a6acb8e53bffb55c4fabaef0ebf88b35f">More...</a><br /></td></tr>
-<tr class="separator:a6acb8e53bffb55c4fabaef0ebf88b35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53366232c096004e249317148d8e6be3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a53366232c096004e249317148d8e6be3">setInitialValues</a> ()=0</td></tr>
-<tr class="separator:a53366232c096004e249317148d8e6be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8ac667c2d2644e956baeedf053082d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a8ac667c2d2644e956baeedf053082d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionUpdate</b> (<a class="el" href="classPV_1_1ConnectionUpdateMessage.html">ConnectionUpdateMessage</a> const *message)</td></tr>
-<tr class="separator:a3a8ac667c2d2644e956baeedf053082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddd2693f197cfd940ae316efa4b8eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ddd2693f197cfd940ae316efa4b8eb1"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionFinalizeUpdate</b> (<a class="el" href="classPV_1_1ConnectionFinalizeUpdateMessage.html">ConnectionFinalizeUpdateMessage</a> const *message)</td></tr>
-<tr class="separator:a9ddd2693f197cfd940ae316efa4b8eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6382974c8350b214ea8a2bd583130cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6382974c8350b214ea8a2bd583130cd"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionOutput</b> (<a class="el" href="classPV_1_1ConnectionOutputMessage.html">ConnectionOutputMessage</a> const *message)</td></tr>
-<tr class="separator:ad6382974c8350b214ea8a2bd583130cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b2742c810f7fcfc91219f09b3174825"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a6b2742c810f7fcfc91219f09b3174825">needUpdate</a> (double time, double dt)=0</td></tr>
-<tr class="separator:a6b2742c810f7fcfc91219f09b3174825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60370ef49a456d96e388a646c55112b8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a60370ef49a456d96e388a646c55112b8">initializeDelays</a> (const float *fDelayArray, int size)</td></tr>
-<tr class="separator:a60370ef49a456d96e388a646c55112b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f71729c4d22a9ceedeedfbfb7b7a18f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a6f71729c4d22a9ceedeedfbfb7b7a18f">maxDelaySteps</a> ()</td></tr>
-<tr class="separator:a6f71729c4d22a9ceedeedfbfb7b7a18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a410e18b6bbacafa8f7d98a77ba2dc46e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a410e18b6bbacafa8f7d98a77ba2dc46e">initialize_base</a> ()</td></tr>
-<tr class="separator:a410e18b6bbacafa8f7d98a77ba2dc46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade0c77b79042285b7608f7eeb052851a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ade0c77b79042285b7608f7eeb052851a">decodeChannel</a> (int channel_code, ChannelType *channel_type)</td></tr>
-<tr class="separator:ade0c77b79042285b7608f7eeb052851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac3e0a8a65678bfdc6e0467962a6ca4d2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ac3e0a8a65678bfdc6e0467962a6ca4d2">~BaseConnection</a> ()</td></tr>
-<tr class="separator:ac3e0a8a65678bfdc6e0467962a6ca4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138cc02aa11c39048de4dd73a40585e0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo</a> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message) override</td></tr>
-<tr class="separator:a138cc02aa11c39048de4dd73a40585e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad66445aef165085c3c1532723343892c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ad66445aef165085c3c1532723343892c">deliver</a> ()=0</td></tr>
-<tr class="separator:ad66445aef165085c3c1532723343892c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c45f692f702a2bbcbcda61ca37dcaa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#af8c45f692f702a2bbcbcda61ca37dcaa">finalizeUpdate</a> (double timed, double dt)</td></tr>
-<tr class="separator:af8c45f692f702a2bbcbcda61ca37dcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b7fa97e4e991952782e2d5267dbad6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b7fa97e4e991952782e2d5267dbad6c"></a>
-ChannelType&#160;</td><td class="memItemRight" valign="bottom"><b>getChannel</b> ()</td></tr>
-<tr class="separator:a3b7fa97e4e991952782e2d5267dbad6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4156c5a76ca32f25d7c2ed3b2b4d18ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4156c5a76ca32f25d7c2ed3b2b4d18ab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getConvertRateToSpikeCount</b> ()</td></tr>
-<tr class="separator:a4156c5a76ca32f25d7c2ed3b2b4d18ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf468d55824cf21920893c6b7e11b90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a9bf468d55824cf21920893c6b7e11b90">getDataStructuresAllocatedFlag</a> ()</td></tr>
-<tr class="separator:a9bf468d55824cf21920893c6b7e11b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe70c6d11aa83fd6c5a5c0c3bda73e72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#afe70c6d11aa83fd6c5a5c0c3bda73e72">getDelay</a> (int arbor)</td></tr>
-<tr class="separator:afe70c6d11aa83fd6c5a5c0c3bda73e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c415c40c6df0c91f31e72d67ecac861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c415c40c6df0c91f31e72d67ecac861"></a>
-std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const </td></tr>
-<tr class="separator:a7c415c40c6df0c91f31e72d67ecac861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64041ac229aaaec1c17a16f54a8ec47"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription_c</b> () const </td></tr>
-<tr class="separator:ac64041ac229aaaec1c17a16f54a8ec47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17073bd03d7bbee439f49000b2573e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#ac17073bd03d7bbee439f49000b2573e0">getInitialValuesSetFlag</a> ()</td></tr>
-<tr class="separator:ac17073bd03d7bbee439f49000b2573e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbcf6cd9cb65680fd32734eb8880661"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#adcbcf6cd9cb65680fd32734eb8880661">getInitInfoCommunicatedFlag</a> ()</td></tr>
-<tr class="separator:adcbcf6cd9cb65680fd32734eb8880661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0406ed3733882c3f65e5ca55fb32cf"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyword</b> () const </td></tr>
-<tr class="separator:a5c0406ed3733882c3f65e5ca55fb32cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf3dbb4319223e8ca4c3431556bded7"></a>
-<a class="el" href="classPV_1_1MPIBlock.html">MPIBlock</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getMPIBlock</b> ()</td></tr>
-<tr class="separator:a9cf3dbb4319223e8ca4c3431556bded7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151d9c5cd34bca6110160f2afa40d88d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a151d9c5cd34bca6110160f2afa40d88d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BaseConnection</b> (char const *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
+<tr class="separator:a151d9c5cd34bca6110160f2afa40d88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada133c0f5d375ebfb4d7b916a97001d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aada133c0f5d375ebfb4d7b916a97001d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addObserver</b> (Observer *observer) override</td></tr>
+<tr class="separator:aada133c0f5d375ebfb4d7b916a97001d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2cc2a6d84892a9e57ea60a28120bbdf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ae2cc2a6d84892a9e57ea60a28120bbdf">deliver</a> ()</td></tr>
+<tr class="separator:ae2cc2a6d84892a9e57ea60a28120bbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd5983938e2d49e428b31bcf51a7843"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dd5983938e2d49e428b31bcf51a7843"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>deliverUnitInput</b> (float *recvBuffer)</td></tr>
+<tr class="separator:a3dd5983938e2d49e428b31bcf51a7843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec95f6778cbf7b6c38f09f5c49bdeea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adec95f6778cbf7b6c38f09f5c49bdeea"></a>
+ChannelType&#160;</td><td class="memItemRight" valign="bottom"><b>getChannelCode</b> () const </td></tr>
+<tr class="separator:adec95f6778cbf7b6c38f09f5c49bdeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0272bb0bafedaaf516fa1b3200b7ac51"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0272bb0bafedaaf516fa1b3200b7ac51"></a>
+template&lt;typename S &gt; </td></tr>
+<tr class="memitem:a0272bb0bafedaaf516fa1b3200b7ac51"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponentByType</b> ()</td></tr>
+<tr class="separator:a0272bb0bafedaaf516fa1b3200b7ac51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a76c43e2f797a7ade4555df733196e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a43a76c43e2f797a7ade4555df733196e">getDataStructuresAllocatedFlag</a> () const </td></tr>
+<tr class="separator:a43a76c43e2f797a7ade4555df733196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a62297a7528437e9d5495a6c8b33050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3a62297a7528437e9d5495a6c8b33050">getInitialValuesSetFlag</a> () const </td></tr>
+<tr class="separator:a3a62297a7528437e9d5495a6c8b33050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839b37b0b29a957ddcacc670fdacf879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a839b37b0b29a957ddcacc670fdacf879">getInitInfoCommunicatedFlag</a> () const </td></tr>
+<tr class="separator:a839b37b0b29a957ddcacc670fdacf879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef3821a0875ff6179713c80fee2f90f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ef3821a0875ff6179713c80fee2f90f"></a>
 char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:a9ef3821a0875ff6179713c80fee2f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae110837cca7d61443b745992c253778f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ae110837cca7d61443b745992c253778f">getNumProbes</a> ()</td></tr>
-<tr class="separator:ae110837cca7d61443b745992c253778f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5885dab7c1de917eb154686e1d24e5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5885dab7c1de917eb154686e1d24e5e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getPlasticityFlag</b> ()</td></tr>
-<tr class="separator:ae5885dab7c1de917eb154686e1d24e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af41b3bfa3e307b90a82278f77fa1fd71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af41b3bfa3e307b90a82278f77fa1fd71"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPost</b> ()</td></tr>
-<tr class="separator:af41b3bfa3e307b90a82278f77fa1fd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd989c8655830efd1bbc5d0d8068657f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd989c8655830efd1bbc5d0d8068657f"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getPostLayerName</b> ()</td></tr>
-<tr class="separator:abd989c8655830efd1bbc5d0d8068657f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01b5de07581cb4989e617d08c2ef77e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af01b5de07581cb4989e617d08c2ef77e"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPre</b> ()</td></tr>
-<tr class="separator:af01b5de07581cb4989e617d08c2ef77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8183d3bbd51d0a21c50ee31e32d7d138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8183d3bbd51d0a21c50ee31e32d7d138"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getPreLayerName</b> ()</td></tr>
-<tr class="separator:a8183d3bbd51d0a21c50ee31e32d7d138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33f3a5e41b57a6d58e1c41e2b2254ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a33f3a5e41b57a6d58e1c41e2b2254ff9">getProbe</a> (int i)</td></tr>
-<tr class="separator:a33f3a5e41b57a6d58e1c41e2b2254ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b875e9de5267029f3675a9cd781b39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8b875e9de5267029f3675a9cd781b39"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getReceiveGpu</b> ()</td></tr>
-<tr class="separator:af8b875e9de5267029f3675a9cd781b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6581e7aecf6840ac843c02458ab2488c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a6581e7aecf6840ac843c02458ab2488c">initializeState</a> () overridefinal</td></tr>
-<tr class="separator:a6581e7aecf6840ac843c02458ab2488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45f5d3470934a92139919ca17ff4409"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ab45f5d3470934a92139919ca17ff4409">insertProbe</a> (<a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a> *p)</td></tr>
-<tr class="separator:ab45f5d3470934a92139919ca17ff4409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdcc2c5884ce0776d49e41767ef45797"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#acdcc2c5884ce0776d49e41767ef45797">ioParams</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="separator:acdcc2c5884ce0776d49e41767ef45797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7c1411dbf4d057ccdaf0fd269ad00df"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectType</b> () const </td></tr>
+<tr class="separator:aa7c1411dbf4d057ccdaf0fd269ad00df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa285f1b941c5ddd6c9742ba40a7279d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa285f1b941c5ddd6c9742ba40a7279d2"></a>
+<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPost</b> () const </td></tr>
+<tr class="separator:aa285f1b941c5ddd6c9742ba40a7279d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10fb3435038fe18188a2bfe2f17534a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af10fb3435038fe18188a2bfe2f17534a"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getPostLayerName</b> () const </td></tr>
+<tr class="separator:af10fb3435038fe18188a2bfe2f17534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7b966790277bfefc0fa190d94c4fa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b7b966790277bfefc0fa190d94c4fa6"></a>
+<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPre</b> () const </td></tr>
+<tr class="separator:a3b7b966790277bfefc0fa190d94c4fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aef0eec9ba6f4a3a9b5f2deda227209"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3aef0eec9ba6f4a3a9b5f2deda227209"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>getPreLayerName</b> () const </td></tr>
+<tr class="separator:a3aef0eec9ba6f4a3a9b5f2deda227209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3a9dacd6e1389b048ddd1bc3202039"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a3a9dacd6e1389b048ddd1bc3202039"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getReceiveGpu</b> () const </td></tr>
+<tr class="separator:a5a3a9dacd6e1389b048ddd1bc3202039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a83e3ba4add9e893209d7fe9b47e9372e">ioParams</a> (enum ParamsIOFlag ioFlag, bool printHeader, bool printFooter)</td></tr>
+<tr class="separator:a83e3ba4add9e893209d7fe9b47e9372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9bfedd3fc74236847934f31f773cf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c9bfedd3fc74236847934f31f773cf2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAllInputReady</b> ()</td></tr>
+<tr class="separator:a8c9bfedd3fc74236847934f31f773cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5c65491ce48cd9db15e606535db948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3c5c65491ce48cd9db15e606535db948">isUsingGPU</a> () const </td></tr>
 <tr class="separator:a3c5c65491ce48cd9db15e606535db948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac56436c8219192a954518a263d19dcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac56436c8219192a954518a263d19dcb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfAxonalArborLists</b> ()</td></tr>
-<tr class="separator:aac56436c8219192a954518a263d19dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a663d09deb4f978c513ac5e4b6b8dbc89"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a663d09deb4f978c513ac5e4b6b8dbc89">outputProbeParams</a> ()</td></tr>
-<tr class="separator:a663d09deb4f978c513ac5e4b6b8dbc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270063812f475fffead27092e166dcd1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a270063812f475fffead27092e166dcd1">outputState</a> (double timed)=0</td></tr>
-<tr class="separator:a270063812f475fffead27092e166dcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1508ca0356c7a1fa1c5501c314e7eff7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1508ca0356c7a1fa1c5501c314e7eff7"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>postSynapticLayer</b> ()</td></tr>
-<tr class="separator:a1508ca0356c7a1fa1c5501c314e7eff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa462c5ad2cedde5a4626b5bb665aa13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa462c5ad2cedde5a4626b5bb665aa13"></a>
-<a class="el" href="classPV_1_1HyPerLayer.html">HyPerLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>preSynapticLayer</b> ()</td></tr>
-<tr class="separator:afa462c5ad2cedde5a4626b5bb665aa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7158a258ff7d20b095284d896af9681d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7158a258ff7d20b095284d896af9681d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer)</td></tr>
-<tr class="separator:a7158a258ff7d20b095284d896af9681d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf5e5d40beceb5b20ec8e5715d56833b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf5e5d40beceb5b20ec8e5715d56833b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1BaseMessage.html">BaseMessage</a> const  &gt; message) override</td></tr>
-<tr class="separator:aaf5e5d40beceb5b20ec8e5715d56833b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d78988ac21c175c9cbd17b1ad9cf553"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a4d78988ac21c175c9cbd17b1ad9cf553">updateState</a> (double timed, double dt)=0</td></tr>
-<tr class="separator:a4d78988ac21c175c9cbd17b1ad9cf553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a98b410a1e69fa3d772b8d4b155a27d2b">lookupKeyword</a> () const </td></tr>
+<tr class="separator:a98b410a1e69fa3d772b8d4b155a27d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams</a> ()</td></tr>
+<tr class="separator:aa231f0cd917d5d96d4c94e7d676621f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097609fb622a3fd78c020f0f62f441be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a097609fb622a3fd78c020f0f62f441be"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respond</b> (std::shared_ptr&lt; BaseMessage const  &gt; message) override</td></tr>
+<tr class="separator:a097609fb622a3fd78c020f0f62f441be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b24e49874218ac1b84418df1d9410ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams</a> ()</td></tr>
+<tr class="separator:a2b24e49874218ac1b84418df1d9410ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6526e6b9a61301ebd6b5cc1df265b9ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a6526e6b9a61301ebd6b5cc1df265b9ee">BaseConnection</a> ()</td></tr>
-<tr class="separator:a6526e6b9a61301ebd6b5cc1df265b9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6754964b75b2b41d90b757a54c28ef77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6754964b75b2b41d90b757a54c28ef77"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> ()</td></tr>
-<tr class="separator:a6754964b75b2b41d90b757a54c28ef77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b350cdafae777da79118917c9c4b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b350cdafae777da79118917c9c4b72"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
-<tr class="separator:ab5b350cdafae777da79118917c9c4b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afefe3f5e1ecaf0222cf3cf728068160e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afefe3f5e1ecaf0222cf3cf728068160e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> ()</td></tr>
-<tr class="separator:afefe3f5e1ecaf0222cf3cf728068160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5971614aa9ddc817be36c8e18e473aaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a5971614aa9ddc817be36c8e18e473aaf">getPreAndPostLayerNames</a> (const char *name, char **preLayerNamePtr, char **postLayerNamePtr)</td></tr>
-<tr class="separator:a5971614aa9ddc817be36c8e18e473aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af288d6023bba10bc335703cd63d4e8ff"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#af288d6023bba10bc335703cd63d4e8ff">handleMissingPreAndPostLayerNames</a> ()</td></tr>
-<tr class="separator:af288d6023bba10bc335703cd63d4e8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9a439c2eda66dea4c83fb42135e383e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ac9a439c2eda66dea4c83fb42135e383e">initialize</a> (const char *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
-<tr class="separator:ac9a439c2eda66dea4c83fb42135e383e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac472aa90048c60c453855f1bb86134aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#ac472aa90048c60c453855f1bb86134aa">ioParamsFillGroup</a> (enum ParamsIOFlag ioFlag)</td></tr>
-<tr class="separator:ac472aa90048c60c453855f1bb86134aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb7d097ddb409efd7ad05579366512c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fb7d097ddb409efd7ad05579366512c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCheckpointWrite</b> ()</td></tr>
-<tr class="separator:a0fb7d097ddb409efd7ad05579366512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1f91b7b4124dcc805c7d7cab3b1c5d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>processCheckpointRead</b> ()</td></tr>
-<tr class="separator:afa1f91b7b4124dcc805c7d7cab3b1c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca295a8f39968378f834a028db6004ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca295a8f39968378f834a028db6004ea"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (<a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> *checkpointer) override</td></tr>
-<tr class="separator:aca295a8f39968378f834a028db6004ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79cb5cbaa97207dc87e5d131c9a9d874"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (<a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const *message)</td></tr>
-<tr class="separator:a79cb5cbaa97207dc87e5d131c9a9d874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff396229b0bf91d9ac27c43565845f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adff396229b0bf91d9ac27c43565845f2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (<a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const *message)</td></tr>
-<tr class="separator:adff396229b0bf91d9ac27c43565845f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1ae693fa8e04c2ea08ae840168f97f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (<a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *message)</td></tr>
-<tr class="separator:a6a1ae693fa8e04c2ea08ae840168f97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78df1b727320675ddd2cfcf902348add"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78df1b727320675ddd2cfcf902348add"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPUMessage</b> (<a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const *message)</td></tr>
-<tr class="separator:a78df1b727320675ddd2cfcf902348add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43bb4f5ce064f8ff0de1794194e7a25"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (<a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const *message)</td></tr>
-<tr class="separator:ab43bb4f5ce064f8ff0de1794194e7a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade83d65746a70640711074e6f7f8a758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade83d65746a70640711074e6f7f8a758"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondPrepareCheckpointWrite</b> (<a class="el" href="classPV_1_1PrepareCheckpointWriteMessage.html">PrepareCheckpointWriteMessage</a> const *message)</td></tr>
-<tr class="separator:ade83d65746a70640711074e6f7f8a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fffadbdec8131a917eab501677a103a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fffadbdec8131a917eab501677a103a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondProcessCheckpointRead</b> (<a class="el" href="classPV_1_1ProcessCheckpointReadMessage.html">ProcessCheckpointReadMessage</a> const *message)</td></tr>
-<tr class="separator:a5fffadbdec8131a917eab501677a103a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3da2fb96c4743f826132f8b14769247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da2fb96c4743f826132f8b14769247"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondReadStateFromCheckpoint</b> (<a class="el" href="classPV_1_1ReadStateFromCheckpointMessage.html">ReadStateFromCheckpointMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:af3da2fb96c4743f826132f8b14769247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b833a0cf0c1922458388a811006af54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b833a0cf0c1922458388a811006af54"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>respondRegisterData</b> (<a class="el" href="classPV_1_1RegisterDataMessage.html">RegisterDataMessage</a>&lt; <a class="el" href="classPV_1_1Checkpointer.html">Checkpointer</a> &gt; const *message)</td></tr>
-<tr class="separator:a0b833a0cf0c1922458388a811006af54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88fd61a0b40955bb2cb4b5292372a7e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a88fd61a0b40955bb2cb4b5292372a7e8">setChannelType</a> (ChannelType ch)</td></tr>
-<tr class="separator:a88fd61a0b40955bb2cb4b5292372a7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16596840aabceadcca9eeeb5509bb1a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16596840aabceadcca9eeeb5509bb1a2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setConvertRateToSpikeCount</b> (bool convertRateToSpikeCountFlag)</td></tr>
-<tr class="separator:a16596840aabceadcca9eeeb5509bb1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec36201d1271cfca5620a7a49762e8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afec36201d1271cfca5620a7a49762e8a"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>allocateDataStructures</b> () override</td></tr>
+<tr class="separator:afec36201d1271cfca5620a7a49762e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845b81d2f93eb136a83e12953286a008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a845b81d2f93eb136a83e12953286a008"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
+<tr class="separator:a845b81d2f93eb136a83e12953286a008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4768e797bfff9de465afc84a44333c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a4768e797bfff9de465afc84a44333c"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>communicateInitInfo</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:a0a4768e797bfff9de465afc84a44333c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab76e803b59d1badd4be6610951434c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab76e803b59d1badd4be6610951434c4"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>copyInitialStateToGPU</b> ()</td></tr>
+<tr class="separator:aab76e803b59d1badd4be6610951434c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7349102e673f9d9844838be44db6c23d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7349102e673f9d9844838be44db6c23d"></a>
+virtual ConnectionData *&#160;</td><td class="memItemRight" valign="bottom"><b>createConnectionData</b> ()</td></tr>
+<tr class="separator:a7349102e673f9d9844838be44db6c23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c97c070f58b6106d7a34d9035db72e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c97c070f58b6106d7a34d9035db72e4"></a>
+virtual BaseDelivery *&#160;</td><td class="memItemRight" valign="bottom"><b>createDeliveryObject</b> ()</td></tr>
+<tr class="separator:a7c97c070f58b6106d7a34d9035db72e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400fd1a566d0f887ef29c1f5236d5e35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400fd1a566d0f887ef29c1f5236d5e35"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>defineComponents</b> ()</td></tr>
+<tr class="separator:a400fd1a566d0f887ef29c1f5236d5e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b2ecb88be90915581508c016775097"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41b2ecb88be90915581508c016775097"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteComponents</b> ()</td></tr>
+<tr class="separator:a41b2ecb88be90915581508c016775097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205fee78fa4b07b528e841fb02aa26f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a205fee78fa4b07b528e841fb02aa26f8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (char const *name, <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
+<tr class="separator:a205fee78fa4b07b528e841fb02aa26f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f88113a34386d299f46b1a9df5545ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f88113a34386d299f46b1a9df5545ba"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>initializeState</b> ()</td></tr>
+<tr class="separator:a5f88113a34386d299f46b1a9df5545ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9557b2b65c2b17bcf4ed157f8806e760"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a9557b2b65c2b17bcf4ed157f8806e760">ioParamsFillGroup</a> (enum ParamsIOFlag ioFlag) override</td></tr>
+<tr class="separator:a9557b2b65c2b17bcf4ed157f8806e760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4aa9a5740370b7c32996d47954839ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4aa9a5740370b7c32996d47954839ed"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>readStateFromCheckpoint</b> (Checkpointer *checkpointer) override</td></tr>
+<tr class="separator:ab4aa9a5740370b7c32996d47954839ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be5a3e8c19b9adfacc5454109ada9f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4be5a3e8c19b9adfacc5454109ada9f8"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>registerData</b> (Checkpointer *checkpointer) override</td></tr>
+<tr class="separator:a4be5a3e8c19b9adfacc5454109ada9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad863a4042b40d7726f805995510c30c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad863a4042b40d7726f805995510c30c6"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondAllocateData</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1AllocateDataMessage.html">AllocateDataMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:ad863a4042b40d7726f805995510c30c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e078116ddda23b766338ed3addb412a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e078116ddda23b766338ed3addb412a"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCleanup</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CleanupMessage.html">CleanupMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a9e078116ddda23b766338ed3addb412a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067cdeb7c51f047107f28c3de9655956"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a067cdeb7c51f047107f28c3de9655956"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCommunicateInitInfo</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a067cdeb7c51f047107f28c3de9655956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe72963cb51ac2333deacc460a13ba90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe72963cb51ac2333deacc460a13ba90"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionFinalizeUpdate</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ConnectionFinalizeUpdateMessage.html">ConnectionFinalizeUpdateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:afe72963cb51ac2333deacc460a13ba90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059071cbbe4a9026ff58edc60d3a34f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a059071cbbe4a9026ff58edc60d3a34f4"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionOutput</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ConnectionOutputMessage.html">ConnectionOutputMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a059071cbbe4a9026ff58edc60d3a34f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d876823d60859b1116b70fd1aa06ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84d876823d60859b1116b70fd1aa06ff"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondConnectionWriteParams</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1ConnectionWriteParamsMessage.html">ConnectionWriteParamsMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a84d876823d60859b1116b70fd1aa06ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710011d28c2683a2e318ae616bbb3a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a710011d28c2683a2e318ae616bbb3a10"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondCopyInitialStateToGPU</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1CopyInitialStateToGPUMessage.html">CopyInitialStateToGPUMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a710011d28c2683a2e318ae616bbb3a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47c7879b70636ca2867ec74de77c558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47c7879b70636ca2867ec74de77c558"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondInitializeState</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:aa47c7879b70636ca2867ec74de77c558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f277fe44fd4b9348fc6daf6beffe27"></a>
+Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>respondSetCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message)</td></tr>
+<tr class="separator:a91f277fe44fd4b9348fc6daf6beffe27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d3cf4382ecc45907e0600ca4b160c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8d3cf4382ecc45907e0600ca4b160c1"></a>
+virtual Response::Status&#160;</td><td class="memItemRight" valign="bottom"><b>setCudaDevice</b> (std::shared_ptr&lt; <a class="el" href="classPV_1_1SetCudaDeviceMessage.html">SetCudaDeviceMessage</a> const  &gt; message) override</td></tr>
+<tr class="separator:ad8d3cf4382ecc45907e0600ca4b160c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag</a> ()</td></tr>
 <tr class="separator:a8e1c1f66664ad24e163a1ee46e63b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6ab1b208f18f4f030b285c951ca75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a2c6ab1b208f18f4f030b285c951ca75d">setDelay</a> (int arborId, double delay)</td></tr>
-<tr class="separator:a2c6ab1b208f18f4f030b285c951ca75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f70db9d095af3ccd8b2779875725d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29f70db9d095af3ccd8b2779875725d8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
-<tr class="separator:a29f70db9d095af3ccd8b2779875725d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e0247aaf1fc57d8fe1e05b0a6df8da7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> ()</td></tr>
+<tr class="separator:a0e0247aaf1fc57d8fe1e05b0a6df8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e51ec8095c3fbb202d08607d2aed485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag</a> ()</td></tr>
 <tr class="separator:a3e51ec8095c3fbb202d08607d2aed485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1072dbfba0a7210053a914d54cc4aa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag</a> ()</td></tr>
@@ -417,31 +282,21 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription
 <tr class="memitem:a84334f2802673962a1f4957c5ea49472"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84334f2802673962a1f4957c5ea49472"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (char const *name)</td></tr>
 <tr class="separator:a84334f2802673962a1f4957c5ea49472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6be4f8f8e3001a80d63d67a11f5f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a4f6be4f8f8e3001a80d63d67a11f5f95">setNumberOfAxonalArborLists</a> (int numArbors)</td></tr>
-<tr class="separator:a4f6be4f8f8e3001a80d63d67a11f5f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac95e70d9c510df496837c3adbf4a34a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac95e70d9c510df496837c3adbf4a34a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setObjectType</b> ()</td></tr>
+<tr class="separator:aac95e70d9c510df496837c3adbf4a34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1d4fbdc63cd8f1aae605937c2a275e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *hc)</td></tr>
 <tr class="separator:ae1d4fbdc63cd8f1aae605937c2a275e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bbea821845660de6aa34d12e8bed21a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a9bbea821845660de6aa34d12e8bed21a">setPostLayerName</a> (const char *postName)</td></tr>
-<tr class="separator:a9bbea821845660de6aa34d12e8bed21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a305b16e794769ffa39e2e5557025c7c3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#a305b16e794769ffa39e2e5557025c7c3">setPreAndPostLayerNames</a> ()</td></tr>
-<tr class="separator:a305b16e794769ffa39e2e5557025c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee5a7a38697c6e7ab61502d44daea61f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#aee5a7a38697c6e7ab61502d44daea61f">setPreLayerName</a> (const char *preName)</td></tr>
-<tr class="separator:aee5a7a38697c6e7ab61502d44daea61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84b67261072e5e282f54ac1e5785fa8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84b67261072e5e282f54ac1e5785fa8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setReceiveGpu</b> ()</td></tr>
-<tr class="separator:a84b67261072e5e282f54ac1e5785fa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:afca788ce4dea591c69b75e48097ce611"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPV_1_1BaseConnection.html#afca788ce4dea591c69b75e48097ce611">inferPreAndPostFromConnName</a> (const char *name, int rank, char **preLayerNamePtr, char **postLayerNamePtr)</td></tr>
-<tr class="separator:afca788ce4dea591c69b75e48097ce611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa0aabb8f2168a59d22dc254b1fab7b4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
-<tr class="separator:aaa0aabb8f2168a59d22dc254b1fab7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e83d368c7cc91f7a74e71d67c5b56f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9e83d368c7cc91f7a74e71d67c5b56f"></a>
+ObserverTable&#160;</td><td class="memItemRight" valign="bottom"><b>mComponentTable</b></td></tr>
+<tr class="separator:ab9e83d368c7cc91f7a74e71d67c5b56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b6c41b34252f6f44277aec02df7c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b6c41b34252f6f44277aec02df7c7d"></a>
+PVCuda::CudaDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>mCudaDevice</b> = nullptr</td></tr>
+<tr class="separator:a43b6c41b34252f6f44277aec02df7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d70d1ff36fbbd71de2ddb9dea00272"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2d70d1ff36fbbd71de2ddb9dea00272"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mDataStructuresAllocatedFlag</b> = false</td></tr>
 <tr class="separator:aa2d70d1ff36fbbd71de2ddb9dea00272"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -451,6 +306,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInitialValuesSetFlag
 <tr class="memitem:a601b6a66f6507cc6e678dd8b8133562e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601b6a66f6507cc6e678dd8b8133562e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mInitInfoCommunicatedFlag</b> = false</td></tr>
 <tr class="separator:a601b6a66f6507cc6e678dd8b8133562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004296bae14fa4a57382973a796e75f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a004296bae14fa4a57382973a796e75f1"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mObjectType</b></td></tr>
+<tr class="separator:a004296bae14fa4a57382973a796e75f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7344a415af5a81abc822533dc08bf766"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7344a415af5a81abc822533dc08bf766"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mUsingGPUFlag</b> = false</td></tr>
 <tr class="separator:a7344a415af5a81abc822533dc08bf766"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -460,12 +318,24 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 <tr class="memitem:a2d92c5a4830bb51ad38ce85261948098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d92c5a4830bb51ad38ce85261948098"></a>
 <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> = nullptr</td></tr>
 <tr class="separator:a2d92c5a4830bb51ad38ce85261948098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a17f44709eb9312d1e7bf731becbeb21d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17f44709eb9312d1e7bf731becbeb21d"></a>
+ConnectionData *&#160;</td><td class="memItemRight" valign="bottom"><b>mConnectionData</b> = nullptr</td></tr>
+<tr class="separator:a17f44709eb9312d1e7bf731becbeb21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4358876bde944caad7b9038e5bf871"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c4358876bde944caad7b9038e5bf871"></a>
+BaseDelivery *&#160;</td><td class="memItemRight" valign="bottom"><b>mDeliveryObject</b> = nullptr</td></tr>
+<tr class="separator:a8c4358876bde944caad7b9038e5bf871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dc10c8f85ab36cfcf44edbecea1e2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2dc10c8f85ab36cfcf44edbecea1e2d"></a>
+<a class="el" href="classPV_1_1Timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mIOTimer</b> = nullptr</td></tr>
+<tr class="separator:ac2dc10c8f85ab36cfcf44edbecea1e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00027">27</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac3e0a8a65678bfdc6e0467962a6ca4d2"></a>
+<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00023">23</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae2cc2a6d84892a9e57ea60a28120bbdf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -473,7 +343,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">PV::BaseConnection::~BaseConnection </td>
+          <td class="memname">int PV::BaseConnection::deliver </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -481,181 +351,17 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destructor for <a class="el" href="classPV_1_1BaseConnection.html">BaseConnection</a> </p>
+<p>The function that calls the DeliveryObject's deliver method </p>
 
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00601">601</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6526e6b9a61301ebd6b5cc1df265b9ee"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PV::BaseConnection::BaseConnection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The constructor implicitly called by derived classes' constructors. It calls <a class="el" href="classPV_1_1BaseConnection.html#a410e18b6bbacafa8f7d98a77ba2dc46e">initialize_base()</a>, but not <a class="el" href="classPV_1_1BaseConnection.html#ac9a439c2eda66dea4c83fb42135e383e">initialize()</a>.</p>
-<p>Note that <a class="el" href="classPV_1_1BaseConnection.html">BaseConnection</a> has no public constructors; only derived classes can be constructed directly. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00020">20</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00039">39</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a138cc02aa11c39048de4dd73a40585e0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::communicateInitInfo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> const *&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>communicateInitInfo is used to allow connections and layers to set params and related member variables based on what other layers or connections are doing. (For example, <a class="el" href="classPV_1_1CloneConn.html">CloneConn</a> sets many parameters the same as its originalConn.) After a connection is constructed, it is not properly initialized until <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a>, allocateDataStructures(), and <a class="el" href="classPV_1_1BaseConnection.html#a6581e7aecf6840ac843c02458ab2488c">initializeState()</a> have been called.</p>
-<p>Return values: PV_POSTPONE means that <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a> cannot be run until other layers'/connections' own <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a> have been run successfully.</p>
-<p>PV_SUCCESS and PV_FAILURE have their usual meanings.</p>
-<p><a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a> is called by passing a <a class="el" href="classPV_1_1CommunicateInitInfoMessage.html">CommunicateInitInfoMessage</a> to respond(), which is usually done in HyPerCol::run. </p>
-
-<p>Reimplemented from <a class="el" href="classPV_1_1BaseObject.html">PV::BaseObject</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1PlasticCloneConn.html#afa79ab46a6736e3dbc278fdac4742a3a">PV::PlasticCloneConn</a>, <a class="el" href="classPV_1_1HyPerConn.html#adfe42c7e2d52f74e27c6dcc659eb20c8">PV::HyPerConn</a>, <a class="el" href="classPV_1_1TransposePoolingConn.html#aaa64a1f2bee803eb7b6451aeb41fff2b">PV::TransposePoolingConn</a>, <a class="el" href="classPV_1_1PoolingConn.html#a1024194fd99296424004920ba61fc3d3">PV::PoolingConn</a>, <a class="el" href="classPV_1_1IdentConn.html#a1ac518dbfc6a5ccd79a5832f08ba0fd0">PV::IdentConn</a>, <a class="el" href="classPV_1_1privateTransposeConn.html#a2f40b6f6eefa105125535a82c9e23335">PV::privateTransposeConn</a>, <a class="el" href="classPV_1_1CloneConn.html#a7ce03f0c9011edbeb8bd4b2290be377f">PV::CloneConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#a0e49a6642c41b0fdbf5043ade5e1db07">PV::TransposeConn</a>, and <a class="el" href="classPV_1_1CopyConn.html#a505292f1a9fb48d617250a47e217be6e">PV::CopyConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00460">460</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ade0c77b79042285b7608f7eeb052851a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int PV::BaseConnection::decodeChannel </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channel_code</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ChannelType *&#160;</td>
-          <td class="paramname"><em>channel_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Type-safe method of translating an integer channel_code into an allowed channel type. If channel_code corresponds to a recognized channel type, *channel_type is set accordingly and the function returns successfully. Otherwise, *channel_type is undefined and the function returns PV_FAILURE. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00421">421</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad66445aef165085c3c1532723343892c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int PV::BaseConnection::deliver </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A pure virtual function for modifying the post-synaptic layer's GSyn buffer based on the connection and the presynaptic activity </p>
-
-<p>Implemented in <a class="el" href="classPV_1_1HyPerConn.html#a5b4521f229cd37a2d23bf89834a91759">PV::HyPerConn</a>, and <a class="el" href="classPV_1_1privateTransposeConn.html#a6b3b18982a78f027a709640c40fe1be1">PV::privateTransposeConn</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af8c45f692f702a2bbcbcda61ca37dcaa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int PV::BaseConnection::finalizeUpdate </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A virtual function for performing any necessary updates after the normalizers are called. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1HyPerConn.html#aacd7e48a8c2804ded3364d4a6db409fe">PV::HyPerConn</a>, <a class="el" href="classPV_1_1CloneConn.html#a44ad11a1e04b197dd90749bee3ffe74e">PV::CloneConn</a>, <a class="el" href="classPV_1_1PoolingConn.html#acc48b3e12efcc0bb84230b1c1316bf60">PV::PoolingConn</a>, <a class="el" href="classPV_1_1privateTransposeConn.html#af079e7e08c1ed58f421032060be56613">PV::privateTransposeConn</a>, and <a class="el" href="classPV_1_1TransposeConn.html#a4779d000371291b30d0b759a35fe1c2a">PV::TransposeConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00094">94</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9bf468d55824cf21920893c6b7e11b90"></a>
+<a class="anchor" id="a43a76c43e2f797a7ade4555df733196e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -666,7 +372,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
           <td class="memname">bool PV::BaseObject::getDataStructuresAllocatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -677,38 +383,11 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>Get-method for mDataStructuresAllocatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166">setDataStructuresAllocatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00065">65</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00102">102</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afe70c6d11aa83fd6c5a5c0c3bda73e72"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::getDelay </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arbor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the delay (in timesteps) belonging the given arbor. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00156">156</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac17073bd03d7bbee439f49000b2573e0"></a>
+<a class="anchor" id="a3a62297a7528437e9d5495a6c8b33050"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -719,7 +398,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
           <td class="memname">bool PV::BaseObject::getInitialValuesSetFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -730,11 +409,11 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>Get-method for mInitialValuesSetFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485">setInitialValuesSetFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00071">71</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00108">108</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adcbcf6cd9cb65680fd32734eb8880661"></a>
+<a class="anchor" id="a839b37b0b29a957ddcacc670fdacf879"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -745,7 +424,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
           <td class="memname">bool PV::BaseObject::getInitInfoCommunicatedFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -756,11 +435,11 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>Get-method for mInitInfoCommunicatedFlag, which is false on initialization and then becomes true once <a class="el" href="classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d">setInitInfoCommunicatedFlag()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00058">58</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00095">95</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae110837cca7d61443b745992c253778f"></a>
+<a class="anchor" id="a83e3ba4add9e893209d7fe9b47e9372e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -768,48 +447,22 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseConnection::getNumProbes </td>
+          <td class="memname">void PV::BaseObject::ioParams </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the number of probes that have been attached to this connection </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00166">166</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5971614aa9ddc817be36c8e18e473aaf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::getPreAndPostLayerNames </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">enum ParamsIOFlag&#160;</td>
+          <td class="paramname"><em>ioFlag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>preLayerNamePtr</em>, </td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printHeader</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>postLayerNamePtr</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>printFooter</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -819,488 +472,19 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-<p>Sets *preLayerNamePtr and *postLayerNamePtr according to the preLayerName and postLayerName parameters in the parameter group specified by the name and params arguments. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00190">190</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a33f3a5e41b57a6d58e1c41e2b2254ff9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a>* PV::BaseConnection::getProbe </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the probe with the indicated position in the list of probes. It does not do sanity checking on the value of i. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8hpp_source.html#l00172">172</a> of file <a class="el" href="BaseConnection_8hpp_source.html">BaseConnection.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af288d6023bba10bc335703cd63d4e8ff"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::handleMissingPreAndPostLayerNames </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Called by <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">BaseConnection::communicateInitInfo</a> of the params did not set pre- and post- layers. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1FeedbackConn.html#ad8ea7dae28c3ee32ce0b8875509a06c8">PV::FeedbackConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00106">106</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afca788ce4dea591c69b75e48097ce611"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::inferPreAndPostFromConnName </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rank</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>preLayerNamePtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>postLayerNamePtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The default behavior of <a class="el" href="classPV_1_1BaseConnection.html#af288d6023bba10bc335703cd63d4e8ff">BaseConnection::handleMissingPreAndPostLayerNames</a>. It tries to parse the name argument of the connection in the form "PreLayerToPostLayer". Then "PreLayer" put into *preLayerNamePtr and "PostLayer" is put into *postLayerNamePtr, and PV_SUCCESS is returned. If name does not contain the string "To", or if it contains it in more than one place, then PV_FAILURE is returned and *preLayerNamePtr and *postLayerNamePtr are not changed. rank is the rank of the process under MPI; the root process will print a message to the error stream if the routine fails; non-root process will not. This routine uses malloc to fill *{pre,post}LayerNamePtr, so the routine calling this one is responsible for freeing them. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00111">111</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac9a439c2eda66dea4c83fb42135e383e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::initialize </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> *&#160;</td>
-          <td class="paramname"><em>hc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The initialization routine. It should be called during the initialization routine of any derived class.</p>
-<p>It sets the name and parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> to the indicated arguments, and calls (via ioParams) the virtual ioParamsFillGroup method, which reads params from the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s params. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00043">43</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a410e18b6bbacafa8f7d98a77ba2dc46e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::initialize_base </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Called by the constructor, <a class="el" href="classPV_1_1BaseConnection.html#a410e18b6bbacafa8f7d98a77ba2dc46e">initialize_base()</a> sets member variables to safe values (e.g. pointers to NULL) and parameters to default values. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00022">22</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a60370ef49a456d96e388a646c55112b8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::initializeDelays </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>fDelayArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Allocates the delays array and calls <a class="el" href="classPV_1_1BaseConnection.html#a2c6ab1b208f18f4f030b285c951ca75d">setDelay()</a> for each arbor. fDelayArray is an array of length size, of delays, measured in the same units as the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s dt.</p>
-<p>If size=0, all delays are set to zero. If size=1, all delays are set to fDelayArray[0] If size=numArbors, delays[k] is calculated from fDelayArray[k]. If size is any other value, it is an error. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1privateTransposeConn.html#aa74494debe3356f8393ec659d9dc3063">PV::privateTransposeConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00542">542</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6581e7aecf6840ac843c02458ab2488c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::initializeState </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>initializeState is used to set the initial values of the connection.</p>
-<p><a class="el" href="classPV_1_1BaseConnection.html#a6581e7aecf6840ac843c02458ab2488c">initializeState()</a> is typically called by passing an <a class="el" href="classPV_1_1InitializeStateMessage.html">InitializeStateMessage</a> to respond(), which is usually done in HyPerCol::run. </p>
-
-<p>Reimplemented from <a class="el" href="classPV_1_1BaseObject.html">PV::BaseObject</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00599">599</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab45f5d3470934a92139919ca17ff4409"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::insertProbe </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPV_1_1BaseConnectionProbe.html">BaseConnectionProbe</a> *&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Adds the given probe to the list of probes. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1HyPerConn.html#a281dd7b7a55f984677822c39c19c778d">PV::HyPerConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00387">387</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a470df62079c60e62e95fd22004a9adb3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_channelCode </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>channelCode: Specifies which channel in the post layer this connection is attached to </p>
-<p>Channels can be -1 for no update, or &gt;= 0 for channel number. <br />
- 0 is excitatory, 1 is inhibitory </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1HyPerConn.html#a161df1fd86721d53b25a436c4dcc4250">PV::HyPerConn</a>, and <a class="el" href="classPV_1_1GapConn.html#a477d3d91f4c69eb17780e4d8ec8cb30f">PV::GapConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00279">279</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa11736d629526f3c58299f78265e3a61"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_convertRateToSpikeCount </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>convertRateToSpikeCount: If true, presynaptic activity should be converted from a rate to a count. </p>
-<p>If this flag is true and the presynaptic layer is not spiking, the activity will be interpreted as a spike rate, and will be converted to a spike count when delivering activity to the postsynaptic GSyn buffer. If this flag is false, activity will not be converted. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1IdentConn.html#a6499e9abb902522f58bc0f5c2b187b40">PV::IdentConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00349">349</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad979d27f6d1477c630628323dca3fb12"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_delay </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>delay: Specifies delay(s) which the post layer will receive data </p>
-<p>: Delays are specified in units of dt, but are rounded to be integer multiples of dt. If delay is a scalar, all arbors of the connection have that value of delay. If delay is an array, the length must match the number of arbors and the arbors are assigned the delays sequentially. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00302">302</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6acb8e53bffb55c4fabaef0ebf88b35f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_initializeFromCheckpointFlag </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>initializeFromCheckpointFlag: If set to true, initialize using checkpoint direcgtory set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>. </p>
-<p>Checkpoint read directory must be set in <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> to initialize from checkpoint. </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1CloneConn.html#af6f6915035f349eba64ca9fc4bfb1065">PV::CloneConn</a>, <a class="el" href="classPV_1_1CopyConn.html#ac1afaccf8c9a6cf5defe4f8888515312">PV::CopyConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#a2e461068679f5bbea5864b5b1a2ba95d">PV::TransposeConn</a>, <a class="el" href="classPV_1_1PoolingConn.html#ad8bd20d7a2a63b19efad7f58fc9fc15f">PV::PoolingConn</a>, <a class="el" href="classPV_1_1IdentConn.html#a7a04d0ad24963034994984a23c3d37f7">PV::IdentConn</a>, and <a class="el" href="classPV_1_1TransposePoolingConn.html#a3449fc6cfa4ae9297e8b05843651db73">PV::TransposePoolingConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00377">377</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a19364a0244cb16b0025ed2b34a053c12"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_postLayerName </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>postLayerName: Specifies the connection's post layer </p>
-<p>Required parameter </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1FeedbackConn.html#a9ed26ed565b3486aa7ece28874868521">PV::FeedbackConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00274">274</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aae30bac5b87e27c096e160da7a8b07c8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::ioParam_preLayerName </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>preLayerName: Specifies the connection's pre layer </p>
-<p>Required parameter </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1FeedbackConn.html#a13000a0584be8b531e186c068118ee9f">PV::FeedbackConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00269">269</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acdcc2c5884ce0776d49e41767ef45797"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::ioParams </td>
-          <td>(</td>
-          <td class="paramtype">enum ParamsIOFlag&#160;</td>
-          <td class="paramname"><em>ioFlag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 <p>Method for reading or writing the params from group in the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s parameters. The group from params is selected using the name of the connection.</p>
+<p>If ioFlag is set to write, the printHeader and printFooter flags control whether a header and footer for the parameter group is produces. These flags are set to true for layers, connections, and probes; and set to false for weight initializers and normalizers. If ioFlag is set to read, the printHeader and printFooter flags are ignored.</p>
 <p>Note that ioParams is not virtual. To add parameters in a derived class, override ioParamFillGroup. </p>
 
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00240">240</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00074">74</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac472aa90048c60c453855f1bb86134aa"></a>
+<a class="anchor" id="a9557b2b65c2b17bcf4ed157f8806e760"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1317,17 +501,16 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>The virtual method for reading parameters from the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s parameters, and writing to the output params file.</p>
-<p><a class="el" href="classPV_1_1BaseConnection.html#ac472aa90048c60c453855f1bb86134aa">BaseConnection::ioParamsFillGroup</a> reads/writes the paremeters preLayerName, postLayerName, channelCode, delay, numAxonalArbors, and convertRateToSpikeCount.</p>
 <p>Derived classes with additional parameters typically override ioParamsFillGroup to call the base class's ioParamsFillGroup method and then call ioParam_[parametername] for each of their parameters. The ioParam_[parametername] methods should call the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s ioParamValue() and related methods, to ensure that all parameters that get read also get written to the outputParams-generated file. </p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1HyPerConn.html#a83eda1ae74985ea7612b0ad4a8448bfa">PV::HyPerConn</a>, <a class="el" href="classPV_1_1PlasticCloneConn.html#a491af30c2e581cea8d6f7543ee1eb2c9">PV::PlasticCloneConn</a>, <a class="el" href="classPV_1_1CloneConn.html#af49400e620d3957ac7fab2787c23023b">PV::CloneConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#a0407acf3e26729a78bf6bf05b0764b34">PV::TransposeConn</a>, <a class="el" href="classPV_1_1TransposePoolingConn.html#a8b47e5b6c11c0898e7402c7d0bb4973b">PV::TransposePoolingConn</a>, <a class="el" href="classPV_1_1MomentumConn.html#a47e2975f69997f5aa43a7099cc7a3a93">PV::MomentumConn</a>, <a class="el" href="classPV_1_1PoolingConn.html#a9a73440dc0558c589d2f1d6e92596aaf">PV::PoolingConn</a>, <a class="el" href="classPV_1_1privateTransposeConn.html#a4f994ba60d70291c546432d6ac468f2b">PV::privateTransposeConn</a>, <a class="el" href="classPV_1_1IdentConn.html#af09113e449c92e25195d441b626b07fe">PV::IdentConn</a>, <a class="el" href="classPV_1_1ImprintConn.html#a1d04a7e37b28bba0c3e5b7d4d4b00f54">PV::ImprintConn</a>, <a class="el" href="classPV_1_1CopyConn.html#a4ff7269cfadfd3e57b8bfecb789664ae">PV::CopyConn</a>, and <a class="el" href="classPV_1_1RescaleConn.html#a97a058618d821f64e0a26d498b8f29d4">PV::RescaleConn</a>.</p>
+<p>Reimplemented from <a class="el" href="classPV_1_1BaseObject.html#a015eecf222c8a4c77d2bce8cef7a74fd">PV::BaseObject</a>.</p>
 
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00248">248</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00053">53</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
 
 </div>
 </div>
@@ -1353,11 +536,11 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>Returns true if the object requires the GPU; false otherwise. <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a> will not initialize the GPU unless one of the objects in its hierarchy returns true </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00079">79</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6f71729c4d22a9ceedeedfbfb7b7a18f"></a>
+<a class="anchor" id="a98b410a1e69fa3d772b8d4b155a27d2b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1365,7 +548,33 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int PV::BaseConnection::maxDelaySteps </td>
+          <td class="memname">char const * PV::BaseObject::lookupKeyword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Look up the keyword of the params group with the same name as the object. </p>
+
+<p>Definition at line <a class="el" href="BaseObject_8cpp_source.html#l00042">42</a> of file <a class="el" href="BaseObject_8cpp_source.html">BaseObject.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa231f0cd917d5d96d4c94e7d676621f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PV::BaseObject::readParams </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1373,132 +582,13 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the maximum value of the delay array, as a number of timesteps </p>
+<p>A method that reads the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#a2b24e49874218ac1b84418df1d9410ad">writeParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
 
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00577">577</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6b2742c810f7fcfc91219f09b3174825"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool PV::BaseConnection::needUpdate </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A pure virtual method whose implementation returns true if an the weights should update on the given timestep and false if not. </p>
-
-<p>Implemented in <a class="el" href="classPV_1_1HyPerConn.html#a40450e86ab028d7ab5d9910a36f481d9">PV::HyPerConn</a>, <a class="el" href="classPV_1_1TransposePoolingConn.html#a35dce324d0b601c3c3f01fa5548af781">PV::TransposePoolingConn</a>, <a class="el" href="classPV_1_1privateTransposeConn.html#abccdc0c525a5d86d4d29e218e2392951">PV::privateTransposeConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#a38444490f1ea7b3c5901e89a9211cd2c">PV::TransposeConn</a>, and <a class="el" href="classPV_1_1CopyConn.html#ad4e8ad478f1e277bdfafe2b3f22c36ee">PV::CopyConn</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a663d09deb4f978c513ac5e4b6b8dbc89"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::outputProbeParams </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Called by HyPerCol::outputParams to output the params groups for probes whose ownership has been transferred to this connection. (Does this need to be virtual?) </p>
-
-<p>Reimplemented in <a class="el" href="classPV_1_1HyPerConn.html#a22a444505ca744db08c29817803564cc">PV::HyPerConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00449">449</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a270063812f475fffead27092e166dcd1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int PV::BaseConnection::outputState </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A pure virtual function for writing the state of the connection to file(s) in the output directory. For example, <a class="el" href="classPV_1_1HyPerConn.html">HyPerConn</a> writes the weights to a .pvp file with a schedule defined by writeStep and initialWriteTime. </p>
-
-<p>Implemented in <a class="el" href="classPV_1_1HyPerConn.html#ab73093e94589b72c5cb5b1be2c12ab5e">PV::HyPerConn</a>, and <a class="el" href="classPV_1_1CloneConn.html#afb80b92de99358cd6db9fdf35e88b533">PV::CloneConn</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a88fd61a0b40955bb2cb4b5292372a7e8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::setChannelType </td>
-          <td>(</td>
-          <td class="paramtype">ChannelType&#160;</td>
-          <td class="paramname"><em>ch</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the channel to the indicated argument. It is an error to try to change channels after <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a> has completed successfully. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00091">91</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00062">62</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1524,70 +614,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>This method sets mDataStructuresAllocatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00111">111</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2c6ab1b208f18f4f030b285c951ca75d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::setDelay </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arborId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>delay</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the delay of the given arbor to the given amount. delay is specified in the same units that the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s dt parameter is specified in. Internally, the delay is set as an integral number of timesteps, specifically round(delay/dt). </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00588">588</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a53366232c096004e249317148d8e6be3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int PV::BaseConnection::setInitialValues </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A pure virtual method for initializing the connection if we are neither restarting from a checkpoint or initializing the connection from a checkpoint. It should return PV_SUCCESS if successful, or PV_POSTPONE if it needs to wait for other objects to set their initial values before it can set its own initial values. (e.g. <a class="el" href="classPV_1_1TransposeConn.html">TransposeConn</a> has to wait for original conn) </p>
-
-<p>Implemented in <a class="el" href="classPV_1_1HyPerConn.html#a21e8b0947d09b51b374688f88c4d9402">PV::HyPerConn</a>, <a class="el" href="classPV_1_1CopyConn.html#a92456e3090f226e7f01005aab1c729a3">PV::CopyConn</a>, <a class="el" href="classPV_1_1PoolingConn.html#a02a74fd32bb406b97670e1aaca687348">PV::PoolingConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#a0568cd45876dfe2165e91c2c1c7e2f24">PV::TransposeConn</a>, <a class="el" href="classPV_1_1TransposePoolingConn.html#a4e4b9a0c3510173a3c7434a95a351635">PV::TransposePoolingConn</a>, and <a class="el" href="classPV_1_1privateTransposeConn.html#a0231be47a0cb59e68f61c46d0dca778f">PV::privateTransposeConn</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00175">175</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +640,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>This method sets the flag returned by getInitialValuesSetFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00116">116</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00180">180</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -1639,11 +666,11 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
 </div><div class="memdoc">
 <p>This method sets mInitInfoCommunicatedFlag to true. </p>
 
-<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00106">106</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00170">170</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4f6be4f8f8e3001a80d63d67a11f5f95"></a>
+<a class="anchor" id="a2b24e49874218ac1b84418df1d9410ad"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1651,61 +678,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PV::BaseConnection::setNumberOfAxonalArborLists </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numArbors</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the number of arbors to the indicated argument. It is an error to try to change numArbors after <a class="el" href="classPV_1_1BaseConnection.html#a138cc02aa11c39048de4dd73a40585e0">communicateInitInfo()</a> has completed successfully. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00096">96</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9bbea821845660de6aa34d12e8bed21a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::setPostLayerName </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>postName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the postsynaptic layer name to the given string. It is an error to try to set postLayerName after it has already been set, or to call <a class="el" href="classPV_1_1BaseConnection.html#a9bbea821845660de6aa34d12e8bed21a">setPostLayerName()</a> with a NULL argument. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00074">74</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a305b16e794769ffa39e2e5557025c7c3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PV::BaseConnection::setPreAndPostLayerNames </td>
+          <td class="memname">void PV::BaseObject::writeParams </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1713,79 +686,13 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = nullptr<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the pre- and post-synaptic layer names according to the parent <a class="el" href="classPV_1_1HyPerCol.html">HyPerCol</a>'s params. Virtual to allow subclasses to infer layer names in other ways (for example, <a class="el" href="classPV_1_1FeedbackConn.html">FeedbackConn</a> flips pre- and post- layers from originalConn). </p>
+<p>A method that writes the parameters for the group whose name matches the name of the object. It, along with <a class="el" href="classPV_1_1BaseObject.html#aa231f0cd917d5d96d4c94e7d676621f3">readParams()</a>, is a wrapper around ioParams, so that readParams and writeParams automatically run through the same parameters in the same order. </p>
 
-<p>Reimplemented in <a class="el" href="classPV_1_1FeedbackConn.html#a9dfa61d605006bdf8adc85fa66c8b95a">PV::FeedbackConn</a>.</p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00052">52</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aee5a7a38697c6e7ab61502d44daea61f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PV::BaseConnection::setPreLayerName </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>preName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the presynaptic layer name to the given string. It is an error to try to set preLayerName after it has already been set, or to call <a class="el" href="classPV_1_1BaseConnection.html#aee5a7a38697c6e7ab61502d44daea61f">setPreLayerName()</a> with a NULL argument. </p>
-
-<p>Definition at line <a class="el" href="BaseConnection_8cpp_source.html#l00056">56</a> of file <a class="el" href="BaseConnection_8cpp_source.html">BaseConnection.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4d78988ac21c175c9cbd17b1ad9cf553"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int PV::BaseConnection::updateState </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A pure virtual function for updating the state of the connection. timed is simulation time, and dt is the time increment between steps. </p>
-
-<p>Implemented in <a class="el" href="classPV_1_1HyPerConn.html#aafd06ba12b71ac1bc652980bad195298">PV::HyPerConn</a>, <a class="el" href="classPV_1_1TransposePoolingConn.html#a2bc5b4baccfd08dfda01596e965c6287">PV::TransposePoolingConn</a>, <a class="el" href="classPV_1_1privateTransposeConn.html#a0615563708abb9f093399effaa6a0788">PV::privateTransposeConn</a>, <a class="el" href="classPV_1_1TransposeConn.html#ae2aea466de90ad8fdf15358ca3e703a6">PV::TransposeConn</a>, <a class="el" href="classPV_1_1CloneConn.html#ab971fcc58db2848ea45bd208c007a1fd">PV::CloneConn</a>, and <a class="el" href="classPV_1_1CopyConn.html#af8f45a966a3de56c879522e7985096e9">PV::CopyConn</a>.</p>
+<p>Definition at line <a class="el" href="BaseObject_8hpp_source.html#l00069">69</a> of file <a class="el" href="BaseObject_8hpp_source.html">BaseObject.hpp</a>.</p>
 
 </div>
 </div>

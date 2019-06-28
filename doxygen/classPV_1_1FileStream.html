@@ -119,8 +119,7 @@ Inheritance diagram for PV::FileStream:</div>
  <div class="center">
   <img src="classPV_1_1FileStream.png" usemap="#PV::FileStream_map" alt=""/>
   <map id="PV::FileStream_map" name="PV::FileStream_map">
-<area href="classPV_1_1PrintStream.html" alt="PV::PrintStream" shape="rect" coords="0,0,182,24"/>
-<area href="classPV_1_1CheckpointableFileStream.html" alt="PV::CheckpointableFileStream" shape="rect" coords="0,112,182,136"/>
+<area href="classPV_1_1PrintStream.html" alt="PV::PrintStream" shape="rect" coords="0,0,100,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -169,9 +168,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>readable</b> ()</td><
 <tr class="memitem:a17876d64c356db903bad671c1d234ca6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17876d64c356db903bad671c1d234ca6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>readwrite</b> ()</td></tr>
 <tr class="separator:a17876d64c356db903bad671c1d234ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07352f36eed7a2c63b1692d7dd5d882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa07352f36eed7a2c63b1692d7dd5d882"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInPos</b> (long pos, std::ios_base::seekdir seekAnchor)</td></tr>
+<tr class="separator:aa07352f36eed7a2c63b1692d7dd5d882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b6b07da2737b6c4aede5e0affc32df7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b6b07da2737b6c4aede5e0affc32df7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInPos</b> (long pos, bool fromBeginning)</td></tr>
 <tr class="separator:a9b6b07da2737b6c4aede5e0affc32df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fe412244ee52f099c8f3b9062ecf79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fe412244ee52f099c8f3b9062ecf79"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutPos</b> (long pos, std::ios_base::seekdir seekAnchor)</td></tr>
+<tr class="separator:a04fe412244ee52f099c8f3b9062ecf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aada6079e6cd23cfd078ccb1f14e21b38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aada6079e6cd23cfd078ccb1f14e21b38"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutPos</b> (long pos, bool fromBeginning)</td></tr>
 <tr class="separator:aada6079e6cd23cfd078ccb1f14e21b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +213,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab5226930f5976b22ceedb5fcf7de14ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5226930f5976b22ceedb5fcf7de14ec"></a>
 int const&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxAttempts</b> = 5</td></tr>
 <tr class="separator:ab5226930f5976b22ceedb5fcf7de14ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160346225a9f2c1d470efc27cd08f8d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a160346225a9f2c1d470efc27cd08f8d9"></a>
+std::ios_base::openmode&#160;</td><td class="memItemRight" valign="bottom"><b>mMode</b></td></tr>
+<tr class="separator:a160346225a9f2c1d470efc27cd08f8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53edb8c8626be1dafb526d4f9b2c355"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac53edb8c8626be1dafb526d4f9b2c355"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mVerifyWrites</b> = false</td></tr>
 <tr class="separator:ac53edb8c8626be1dafb526d4f9b2c355"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['quotientcolprobe',['QuotientColProbe',['../classPV_1_1QuotientColProbe.html#affae6cd8a5a354f0fe461845970cad54',1,'PV::QuotientColProbe::QuotientColProbe(const char *probename, HyPerCol *hc)'],['../classPV_1_1QuotientColProbe.html#a564e76d9398959520a04a36288753fa4',1,'PV::QuotientColProbe::QuotientColProbe()']]]
+  ['scatterinput',['scatterInput',['../classPV_1_1InputLayer.html#a0939032acfe75d5bab94c439b8233a70',1,'PV::InputLayer']]],
+  ['sendoffset',['sendOffset',['../classPV_1_1BorderExchange.html#af73bd5de57a4e7fccfa73e5b21d660ed',1,'PV::BorderExchange']]],
+  ['setbooleanargument',['setBooleanArgument',['../classPV_1_1Arguments.html#a1239e4483037a63ed5929b3ecffbc1c7',1,'PV::Arguments']]],
+  ['setdatastructuresallocatedflag',['setDataStructuresAllocatedFlag',['../classPV_1_1BaseObject.html#a8e1c1f66664ad24e163a1ee46e63b166',1,'PV::BaseObject']]],
+  ['setinitialvaluessetflag',['setInitialValuesSetFlag',['../classPV_1_1BaseObject.html#a3e51ec8095c3fbb202d08607d2aed485',1,'PV::BaseObject']]],
+  ['setinitinfocommunicatedflag',['setInitInfoCommunicatedFlag',['../classPV_1_1BaseObject.html#a1072dbfba0a7210053a914d54cc4aa1d',1,'PV::BaseObject']]],
+  ['setintegerargument',['setIntegerArgument',['../classPV_1_1Arguments.html#a2891fec98bbab75a0c6ce0e05dd8daf9',1,'PV::Arguments']]],
+  ['setintoptionalargument',['setIntOptionalArgument',['../classPV_1_1Arguments.html#a1111530ae14ba1d9edaa3105710b93fe',1,'PV::Arguments']]],
+  ['setlogfile',['setLogFile',['../classPV_1_1PV__Init.html#a03cda833293d97fa9ee25289c16f676f',1,'PV::PV_Init']]],
+  ['setmpiconfiguration',['setMPIConfiguration',['../classPV_1_1PV__Init.html#a76ddaa4bbec84fb6b3467ff9cf5cd46c',1,'PV::PV_Init']]],
+  ['setnumthreads',['setNumThreads',['../classPV_1_1HyPerCol.html#aad537a81f305b3084361911680895b4a',1,'PV::HyPerCol']]],
+  ['setparams',['setParams',['../classPV_1_1PV__Init.html#a43d37a3ce45397c27c20eb7525b01ec1',1,'PV::PV_Init']]],
+  ['setslopes',['setSlopes',['../classPV_1_1ANNLayer.html#a8b60e41672dc37d00b26d94dc06c2cdd',1,'PV::ANNLayer']]],
+  ['setstringargument',['setStringArgument',['../classPV_1_1Arguments.html#a2f3315cc2af6f5e4624e5c7ed55bba4c',1,'PV::Arguments']]],
+  ['setunsignedintargument',['setUnsignedIntArgument',['../classPV_1_1Arguments.html#ae7d66b273244711dc95d4d0fa8489f3c',1,'PV::Arguments']]],
+  ['setvertices',['setVertices',['../classPV_1_1ANNErrorLayer.html#a7302468db296eea5d18cfc1a726b039d',1,'PV::ANNErrorLayer::setVertices()'],['../classPV_1_1ANNLayer.html#ab73cc8d474da7f7ae5e941f0784f898d',1,'PV::ANNLayer::setVertices()']]],
+  ['south',['south',['../classPV_1_1Communicator.html#a99c83c405976a7809e786afc97e6476c',1,'PV::Communicator']]],
+  ['southeast',['southeast',['../classPV_1_1Communicator.html#afb09ff9fcbe6e60062041c0ae8984ba9',1,'PV::Communicator']]],
+  ['southwest',['southwest',['../classPV_1_1Communicator.html#accaebe967f690adebe3bfb1229ed9de3',1,'PV::Communicator']]],
+  ['stripleadingtrailingwhitespace',['stripLeadingTrailingWhitespace',['../classPV_1_1ConfigParser.html#aa7cf3c14639318096dcae901d34a0769',1,'PV::ConfigParser']]]
 ];

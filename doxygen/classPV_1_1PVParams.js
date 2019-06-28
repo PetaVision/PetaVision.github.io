@@ -27,7 +27,7 @@ var classPV_1_1PVParams =
     [ "arrayPresent", "classPV_1_1PVParams.html#a6bd8d302a7dddc467ccdaa543de31c69", null ],
     [ "arrayValues", "classPV_1_1PVParams.html#acda1f20c2537169b7bf0635400ebe20e", null ],
     [ "arrayValuesDbl", "classPV_1_1PVParams.html#a2b1d6c0c5aabd99e2799cb3f85713d76", null ],
-    [ "checkDuplicates", "classPV_1_1PVParams.html#a11fb18357f91a1c359e0802ce00918ec", null ],
+    [ "checkDuplicates", "classPV_1_1PVParams.html#a06bba1269a8010232126dc22648d3a4e", null ],
     [ "clearHasBeenReadFlags", "classPV_1_1PVParams.html#ad795b1d3d877c0c567c13031a076b659", null ],
     [ "convertParamToInt", "classPV_1_1PVParams.html#a2c2ed9e3e20c1f27e3323afee4829dc4", null ],
     [ "getParameterSweepSize", "classPV_1_1PVParams.html#a7b1f2e9a398e24f9f2fa6ef04590f21a", null ],
